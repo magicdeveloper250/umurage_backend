@@ -1,0 +1,45 @@
+from flask import Blueprint, request, jsonify, send_file
+import db.painter as database
+from helperfunctions import convertToObject
+import os
+from werkzeug.utils import secure_filename
+import os
+
+painter = Blueprint(name="painter", import_name="painter")
+
+
+@painter.route("/add_new_painter", methods=["POST"])
+def add_new_painter():
+    new_painter = {}
+    id = os.urandom(24).hex()
+    new_painter["id"] = id
+    new_painter["email"] = request.form.get("fullname")
+    new_painter["username"] = request.form.get("username")
+    new_painter["password"] = request.form.get("password")
+    new_painter["phonenumber"] = request.form.get("phonenumber")
+    profilepicture = request.files.get("profilepicture")
+    filename = (
+        request.form.get("username") + "_profilepicture_" + profilepicture.filename
+    )
+
+    new_painter["profilepicture"] = filename
+
+    profilepicture.save(
+        os.path.join(os.getcwd() + f"/images/painters", secure_filename(filename))
+    )
+    database.add_new_painter(new_painter)
+    return jsonify({"success": True})
+
+
+@painter.route("/get_painters", methods=["GET"])
+def list_painters():
+    painters = database.get_painters()
+    print(painters)
+    headers = ["id", "username", "phone", "email", "phone"]
+    return jsonify(convertToObject(headers, painters))
+
+
+@painter.route("/delete_painter/<id>", methods=["DELETE"])
+def delete_painter(id):
+    database.delete_painter(id)
+    return jsonify({"success": True})

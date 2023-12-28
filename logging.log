@@ -1,0 +1,37 @@
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.0.110:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 139-233-991
+INFO:werkzeug:127.0.0.1 - - [28/Dec/2023 17:21:22] "OPTIONS /api/payment/create-paypal-order HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Dec/2023 17:22:15] "POST /api/payment/create-paypal-order HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Dec/2023 17:28:06] "OPTIONS /api/payment/capture_order/2B084003S65124036 HTTP/1.1" 200 -
+INFO:werkzeug: * Detected change in 'C:\\Users\\MMMMM\\Desktop\\painting_ecommerce_website\\backend\\api\\payment.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 139-233-991
+INFO:werkzeug: * Detected change in 'C:\\Users\\MMMMM\\Desktop\\painting_ecommerce_website\\backend\\api\\payment.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 139-233-991
+INFO:werkzeug:127.0.0.1 - - [28/Dec/2023 17:29:39] "OPTIONS /api/payment/create-paypal-order HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Dec/2023 17:30:15] "POST /api/payment/create-paypal-order HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Dec/2023 17:31:35] "OPTIONS /api/payment/capture_order/343780533N2700304 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Dec/2023 17:32:10] "POST /api/payment/capture_order/343780533N2700304 HTTP/1.1" 200 -
+INFO:werkzeug: * Detected change in 'C:\\Users\\MMMMM\\Desktop\\painting_ecommerce_website\\backend\\api\\payment.py', reloading
+INFO:werkzeug: * Restarting with stat
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.0.110:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 139-233-991
+INFO:werkzeug:127.0.0.1 - - [28/Dec/2023 17:36:50] "OPTIONS /api/payment/create-paypal-order HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Dec/2023 17:37:18] "POST /api/payment/create-paypal-order HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Dec/2023 17:37:59] "OPTIONS /api/payment/capture_order/18E09500F4686482D HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Dec/2023 17:38:14] "POST /api/payment/capture_order/18E09500F4686482D HTTP/1.1" 200 -
