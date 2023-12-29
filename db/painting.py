@@ -31,7 +31,7 @@ def get_paintings():
         with get_db() as connection:
             with contextlib.closing(connection.cursor()) as cursor:
                 cursor.execute("SET search_path TO public")
-                stmt = "SELECT g_id, g_name, p_username, g_category, g_image, p_phone  "
+                stmt = "SELECT g_id, g_name, username, g_category, g_image, phone  "
                 stmt += "FROM paintings g, painters p "
                 stmt += "WHERE g.g_owner=p.id "
                 cursor.execute(stmt)
