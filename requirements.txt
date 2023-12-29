@@ -1,8 +1,11 @@
-flask==2.1.2
+flask==2.3.3
+Flask-Cors==4.0.0
+Flask-Login==0.6.3
+cryptocode==0.1
 gunicorn==20.1.0
-flask_cors==3.0.10
-flask_login==0.6.1
-psycopg2==2.9.5
+Werkzeug==2.3.7
+bcrypt==4.1.1
+pyscopg2==66.0.2
 psycopg2_binary==2.9.5
-requests==2.29.0
-bcrypt==3.2.2
+requests==2.31.0
+ 
