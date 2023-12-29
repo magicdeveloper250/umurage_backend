@@ -4,7 +4,7 @@ from psycopg2 import pool
 
 
 # Database configuration
-DB_URL = "postgresql://postgres:manzisql123.@localhost/galleryWebsite"
+DB_URL = "postgres://umuragearthubadmin:kkKzFp04w6rNUfNIyZbkYbyftSj9XNw4@dpg-cm78fj6d3nmc73cfmr20-a/umuragearthub_w087"
 MAX_CONNECTIONS = 1000
 
 pool = pool.ThreadedConnectionPool(minconn=1, maxconn=MAX_CONNECTIONS, dsn=DB_URL)
