@@ -30,6 +30,6 @@ app.register_blueprint(auth)
 app.register_blueprint(payment)
 CORS(
     app,
-    origins=["http://localhost:5173"],
+    origins=["https://umuragearthubf.onrender.com"],
 )
 loginmanager.init_app(app)
