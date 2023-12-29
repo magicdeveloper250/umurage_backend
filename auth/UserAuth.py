@@ -30,7 +30,7 @@ GOOGLE_CLIENT_ID = (
 )
 GOOGLE_CLIENT_SECRET = "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"
 GOOGLE_DISCOVERY_URL = "https://accounts.google.com/.well-known/openid-configuration"
-AFTER_LOGIN_URL = "http://localhost:5173/profile"
+AFTER_LOGIN_URL = "https://www.umuragearthubf.onrender.com/profile"
 # app setup
 auth = Blueprint(name="UserAuth", import_name="auth")
 
