@@ -3,6 +3,7 @@ Flask-Cors==4.0.0
 Flask-Login==0.6.3
 cryptocode==0.1
 gunicorn==20.1.0
+oauthlib==3.2.2
 Werkzeug==2.3.7
 bcrypt==4.1.1
 pyscopg2==66.0.2
