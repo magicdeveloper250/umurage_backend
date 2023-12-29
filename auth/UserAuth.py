@@ -58,7 +58,7 @@ def login():
 
     request_uri = client.prepare_request_uri(
         authorization_endpoint,
-        redirect_uri=request.base_url.replace("/login", "/login/callback"),
+        redirect_uri="https://www.umuragearthub.onrender.com/login/callback",
         scope=["openid", "email", "profile"],
     )
     return redirect(request_uri)
