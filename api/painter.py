@@ -16,7 +16,7 @@ def add_new_painter():
     new_painter["id"] = id
     new_painter["email"] = request.form.get("fullname")
     new_painter["username"] = request.form.get("username")
-    hashedpw = bcrypt.hashpw(request.form.get("password"), bcrypt.gensalt())
+    hashedpw = bcrypt.hashpw(request.form.get("password").encode(), bcrypt.gensalt())
     new_painter["password"] = str(hashedpw).removeprefix("b'").removesuffix("'")
     new_painter["phonenumber"] = request.form.get("phonenumber")
     profilepicture = request.files.get("profilepicture")

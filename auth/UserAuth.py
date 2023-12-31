@@ -106,7 +106,7 @@ def callback():
     if not User.get(uniqueid):
         User.create(uniqueid, username, email, picture)
     login_user(user)
-    return redirect(AFTER_LOGIN_URL + "/{0}".format(user.get_id()))
+    return redirect(AFTER_LOGIN_URL + "/{0}".format(user.get_id(), SESSION_KEY))
 
 
 @auth.route("/logout", methods=["GET"])
@@ -154,7 +154,7 @@ def custom_login():
                     {
                         "message": True,
                         "session": cryptocode.encrypt(authorization_key, SESSION_KEY),
-                        "userId": cryptocode.encrypt(user.id, SESSION_KEY),
+                        "userId": user.id,
                     }
                 )
 

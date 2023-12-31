@@ -6,63 +6,28 @@ from . import get_db
 
 
 def add_new_painter(painter):
+    print(painter)
     try:
         with get_db() as connection:
             with contextlib.closing(connection.cursor()) as cursor:
                 cursor.execute("SET search_path TO public")
                 cursor.execute("BEGIN")
-                stmt = "INSERT INTO painters (id, username,email,phone, picture, password) "
-                stmt += "VALUES ({0}, {1}, {2},{3},{4})"
+                stmt = (
+                    "INSERT INTO painters (id,username,email,phone, picture, password) "
+                )
+                stmt += "VALUES ({0}, {1}, {2},{3},{4},{5})"
                 query = sql.SQL(stmt).format(
                     sql.Literal(painter.get("id")),
                     sql.Literal(painter.get("username")),
                     sql.Literal(painter.get("email")),
                     sql.Literal(painter.get("phonenumber")),
-                    sql.Literal(painter.get("picture")),
+                    sql.Literal(painter.get("profilepicture")),
                     sql.Literal(painter.get("password")),
                 )
                 cursor.execute(query)
                 cursor.execute("COMMIT")
-    except psycopg2.DatabaseError as error:
-        return error
-
-
-# def add_new_painter(painter):
-#     try:
-#         with DB_CONNECTION as connection:
-#             with contextlib.closing(connection.cursor()) as cursor:
-#                 cursor.execute("SET search_path TO public")
-#                 cursor.execute("BEGIN")
-#                 stmt = "INSERT INTO painters (p_fullname, p_username, p_password, p_role, p_phone, p_avatar) "
-#                 stmt += "VALUES ({0}, {1}, {2},{3},{4}, {5})"
-#                 query = sql.SQL(stmt).format(
-#                     sql.Literal(painter.get("fullname")),
-#                     sql.Literal(painter.get("username")),
-#                     sql.Literal(painter.get("password")),
-#                     sql.Literal("painter"),
-#                     sql.Literal(painter.get("phonenumber")),
-#                     sql.Literal(painter.get("profilepicture")),
-#                 )
-#                 cursor.execute(query)
-#                 cursor.execute("COMMIT")
-#     except psycopg2.DatabaseError as error:
-#         return error
-
-
-# def get_painter(username):
-#     try:
-#         with DB_CONNECTION as connection:
-#             with contextlib.closing(connection.cursor()) as cursor:
-#                 cursor.execute("SET search_path TO public")
-#                 stmt = "SELECT p_id, p_username, p_password "
-#                 stmt += "FROM painters "
-#                 stmt += "WHERE p_username={0}"
-#                 query = sql.SQL(stmt).format(sql.Literal(username))
-#                 cursor.execute(query)
-#                 painter = cursor.fetchone()
-#                 return painter
-#     except psycopg2.DatabaseError as error:
-#         return error
+    except Exception as error:
+        print(error)
 
 
 def get_painter(id):
@@ -76,7 +41,6 @@ def get_painter(id):
                 query = sql.SQL(stmt).format(sql.Literal(id))
                 cursor.execute(query)
                 painter = cursor.fetchone()
-                # print(painter)
                 return painter
     except psycopg2.DatabaseError as error:
         return error
