@@ -2209,3 +2209,57 @@ INFO:werkzeug:127.0.0.1 - - [31/Dec/2023 08:28:59] "POST /get_paintings HTTP/1.1
 INFO:werkzeug:127.0.0.1 - - [31/Dec/2023 08:28:59] "GET /get_exhibitions HTTP/1.1" 200 -
 INFO:werkzeug:127.0.0.1 - - [31/Dec/2023 08:28:59] "POST /get_paintings HTTP/1.1" 200 -
 INFO:werkzeug:127.0.0.1 - - [31/Dec/2023 08:29:00] "GET /get_exhibitions HTTP/1.1" 200 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.0.102:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 139-233-991
+INFO:werkzeug:127.0.0.1 - - [31/Dec/2023 10:45:29] "OPTIONS /get_paintings HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [31/Dec/2023 10:45:29] "OPTIONS /get_paintings HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [31/Dec/2023 10:45:29] "OPTIONS /get_exhibitions HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [31/Dec/2023 10:45:29] "POST /get_paintings HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [31/Dec/2023 10:45:31] "POST /get_paintings HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [31/Dec/2023 10:45:32] "GET /get_exhibitions HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [31/Dec/2023 10:45:32] "[36mGET /images/paintings/923533f4-f351-4564-b58c-9097a56d33ee_painting_Screenshot_20231116-123400.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [31/Dec/2023 10:45:32] "[36mGET /images/paintings/4bbb5d19-4dee-40d8-a2d8-1b75da3e9d01_painting_potrait1.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [31/Dec/2023 10:45:32] "GET /images/paintings/4bbb5d19-4dee-40d8-a2d8-1b75da3e9d01_painting_IMG-20231116-WA0047.jpg HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [31/Dec/2023 10:45:32] "[36mGET /images/paintings/923533f4-f351-4564-b58c-9097a56d33ee_painting_Screenshot_20231116-123400.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [31/Dec/2023 10:45:33] "[36mGET /images/paintings/4bbb5d19-4dee-40d8-a2d8-1b75da3e9d01_painting_ntyaze-bwo.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [31/Dec/2023 10:45:33] "[36mGET /images/paintings/4bbb5d19-4dee-40d8-a2d8-1b75da3e9d01_painting_shade.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [31/Dec/2023 10:45:33] "[36mGET /images/paintings/4bbb5d19-4dee-40d8-a2d8-1b75da3e9d01_painting_IMG-20231116-WA0047.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [31/Dec/2023 10:45:33] "[36mGET /images/paintings/4bbb5d19-4dee-40d8-a2d8-1b75da3e9d01_painting_nyiramubande-mu-cyogajuru.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [31/Dec/2023 10:45:33] "[36mGET /images/paintings/4bbb5d19-4dee-40d8-a2d8-1b75da3e9d01_painting_ntyaze-bwo.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [31/Dec/2023 10:45:33] "[36mGET /images/paintings/4bbb5d19-4dee-40d8-a2d8-1b75da3e9d01_painting_shade.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [31/Dec/2023 10:45:33] "[36mGET /images/paintings/4bbb5d19-4dee-40d8-a2d8-1b75da3e9d01_painting_own-words.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [31/Dec/2023 10:45:33] "[36mGET /images/paintings/4bbb5d19-4dee-40d8-a2d8-1b75da3e9d01_painting_nyiramubande-mu-cyogajuru.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [31/Dec/2023 10:45:33] "[36mGET /images/paintings/4bbb5d19-4dee-40d8-a2d8-1b75da3e9d01_painting_own-words.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [31/Dec/2023 10:45:34] "[36mGET /images/paintings/4bbb5d19-4dee-40d8-a2d8-1b75da3e9d01_painting_potrait1.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [31/Dec/2023 10:45:34] "[36mGET /images/paintings/4bbb5d19-4dee-40d8-a2d8-1b75da3e9d01_painting_potrait2.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [31/Dec/2023 10:45:34] "[36mGET /images/paintings/4bbb5d19-4dee-40d8-a2d8-1b75da3e9d01_painting_potrait3.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [31/Dec/2023 10:45:34] "[36mGET /images/exhibitions/Screenshot%20(3).png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [31/Dec/2023 10:45:34] "[36mGET /images/exhibitions/Screenshot_20231116-123400.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [31/Dec/2023 10:45:34] "GET /images/exhibitions/Screenshot%20(2).png HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [31/Dec/2023 10:45:34] "GET /get_exhibitions HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [31/Dec/2023 10:45:34] "GET /images/exhibitions/Screenshot%20(7).png HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [31/Dec/2023 10:45:34] "[36mGET /images/paintings/4bbb5d19-4dee-40d8-a2d8-1b75da3e9d01_painting_potrait4.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [31/Dec/2023 10:45:34] "[36mGET /images/exhibitions/exhibition1.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [31/Dec/2023 10:45:34] "GET /images/exhibitions/exhibition2.jpg HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [31/Dec/2023 10:45:35] "[36mGET /images/exhibitions/exhibition3.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [31/Dec/2023 10:45:35] "[36mGET /images/exhibitions/Screenshot%20(6).png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [31/Dec/2023 10:45:35] "[36mGET /images/exhibitions/Screenshot%20(4).png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [31/Dec/2023 10:45:44] "POST /custom-login HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [31/Dec/2023 10:45:44] "GET /get_paintings HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [31/Dec/2023 10:45:44] "GET /get_paintings HTTP/1.1" 200 -
+INFO:werkzeug: * Detected change in 'C:\\Users\\MMMMM\\Desktop\\painting_ecommerce_website\\backend\\auth\\UserAuth.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 139-233-991
+INFO:werkzeug: * Detected change in 'C:\\Users\\MMMMM\\Desktop\\painting_ecommerce_website\\backend\\auth\\UserAuth.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 139-233-991
+INFO:werkzeug: * Detected change in 'C:\\Users\\MMMMM\\Desktop\\painting_ecommerce_website\\backend\\db\\__init__.py', reloading
+INFO:werkzeug: * Restarting with stat

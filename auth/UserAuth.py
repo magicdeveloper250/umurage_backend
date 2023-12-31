@@ -1,5 +1,6 @@
 import json, os, sqlite3, requests
 from db.auth import get_user
+import logging
 from flask import (
     Flask,
     abort,
@@ -122,47 +123,56 @@ def logout():
 
 @auth.route("/custom-login", methods=["POST"])
 def custom_login():
-    username = request.form.get("username")
-    password = request.form.get("password")
-    error = None
-    authorization_key = None
-    if username and password:
-        # getting user from database
-        user = User.getByUsername(username)
+    try:
+        username = request.form.get("username")
+        password = request.form.get("password")
+        error = None
+        authorization_key = None
+        if username and password:
+            # getting user from database
+            user = User.getByUsername(username)
 
-        try:
-            if not user:
-                return jsonify({"message": False})
-            if bcrypt.checkpw(password.encode(), user.password.encode()) == False:
-                return jsonify({"message": False})
-            else:
-                authorization_key = os.urandom(24).hex()
-                # adding user to the sessiondb
-                with sqlite3.connect(SESSION_DB_URL) as connection:
-                    with contextlib.closing(connection.cursor()) as cursor:
-                        stmt = "SELECT * FROM session WHERE username=?"
-                        cursor.execute(stmt, [user.name])
-                        session_user = cursor.fetchone()
-                        if session_user:
-                            stmt = "DELETE FROM session WHERE username=?"
+            try:
+                if not user:
+                    return jsonify({"message": False})
+                if bcrypt.checkpw(password.encode(), user.password.encode()) == False:
+                    return jsonify({"message": False})
+                else:
+                    authorization_key = os.urandom(24).hex()
+                    # adding user to the sessiondb
+                    with sqlite3.connect(SESSION_DB_URL) as connection:
+                        with contextlib.closing(connection.cursor()) as cursor:
+                            stmt = "SELECT * FROM session WHERE username=?"
                             cursor.execute(stmt, [user.name])
-                        stmt = "INSERT INTO session (session_id, username, auth_key) "
-                        stmt += "VALUES (?,?,?)"
-                        cursor.execute(stmt, [user.id, user.name, authorization_key])
+                            session_user = cursor.fetchone()
+                            if session_user:
+                                stmt = "DELETE FROM session WHERE username=?"
+                                cursor.execute(stmt, [user.name])
+                            stmt = (
+                                "INSERT INTO session (session_id, username, auth_key) "
+                            )
+                            stmt += "VALUES (?,?,?)"
+                            cursor.execute(
+                                stmt, [user.id, user.name, authorization_key]
+                            )
 
-                return jsonify(
-                    {
-                        "message": True,
-                        "session": cryptocode.encrypt(authorization_key, SESSION_KEY),
-                        "userId": cryptocode.encrypt(user.id, SESSION_KEY),
-                    }
-                )
+                    return jsonify(
+                        {
+                            "message": True,
+                            "session": cryptocode.encrypt(
+                                authorization_key, SESSION_KEY
+                            ),
+                            "userId": cryptocode.encrypt(user.id, SESSION_KEY),
+                        }
+                    )
 
-        except:
+            except:
+                return jsonify({"message": False})
+
+        else:
             return jsonify({"message": False})
-
-    else:
-        return jsonify({"message": False})
+    except Exception as error:
+        logging.info(error)
 
 
 @auth.route("/custom-logout", methods=["GET"])
