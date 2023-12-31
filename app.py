@@ -19,6 +19,7 @@ from auth.UserAuth import auth, loginmanager
 import click
 
 SECRET_KEY = "4bbb5d19-4dee-40d8-a2d8-1b75da3e9d01"
+
 app = Flask(__name__)
 app.secret_key = SECRET_KEY
 app.register_blueprint(painter)
@@ -30,6 +31,6 @@ app.register_blueprint(auth)
 app.register_blueprint(payment)
 CORS(
     app,
-    origins=["https://umuragearthubf.onrender.com"],
+    origins=["https://umuragearthubf.onrender.com", "http://localhost:5173"],
 )
 loginmanager.init_app(app)

@@ -2,9 +2,10 @@ import psycopg2
 import psycopg2.extensions  # For cursor optimization
 from psycopg2 import pool
 
-
 # Database configuration
-DB_URL = "postgres://umuragearthubadmin:kkKzFp04w6rNUfNIyZbkYbyftSj9XNw4@dpg-cm78fj6d3nmc73cfmr20-a/umuragearthub_w087"
+INTERNAL_DB_CONNECTION = "postgres://postgres:manzisql123.@localhost/galleryWebsite"
+EXTERNAL_DB_CONNECTION = "postgres://umuragearthubadmin:kkKzFp04w6rNUfNIyZbkYbyftSj9XNw4@dpg-cm78fj6d3nmc73cfmr20-a/umuragearthub_w087"
+DB_URL = EXTERNAL_DB_CONNECTION
 MAX_CONNECTIONS = 1000
 
 pool = pool.ThreadedConnectionPool(minconn=1, maxconn=MAX_CONNECTIONS, dsn=DB_URL)

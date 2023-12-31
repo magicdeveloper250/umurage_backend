@@ -37,7 +37,7 @@ def get_exhibition(id):
                 stmt = "SELECT e_id, e_name, e_start_date, e_end_date, e_host, e_entrace_fees, e_banner FROM exhibitions WHERE e_id={0}"
                 query = sql.SQL(stmt).format(sql.Literal(id))
                 cursor.execute(query)
-                record = cursor.fetchone()
+                record = cursor.fetchall()
                 return record
     except psycopg2.DatabaseError as error:
         print(error)

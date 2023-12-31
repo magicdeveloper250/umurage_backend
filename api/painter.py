@@ -4,6 +4,7 @@ from helperfunctions import convertToObject
 import os
 from werkzeug.utils import secure_filename
 import os
+import bcrypt
 
 painter = Blueprint(name="painter", import_name="painter")
 
@@ -15,7 +16,8 @@ def add_new_painter():
     new_painter["id"] = id
     new_painter["email"] = request.form.get("fullname")
     new_painter["username"] = request.form.get("username")
-    new_painter["password"] = request.form.get("password")
+    hashedpw = bcrypt.hashpw(request.form.get("password"), bcrypt.gensalt())
+    new_painter["password"] = str(hashedpw).removeprefix("b'").removesuffix("'")
     new_painter["phonenumber"] = request.form.get("phonenumber")
     profilepicture = request.files.get("profilepicture")
     filename = (

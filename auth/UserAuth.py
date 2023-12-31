@@ -1,5 +1,5 @@
 import json, os, sqlite3, requests
-
+from db.auth import get_user
 from flask import (
     Flask,
     abort,
@@ -12,7 +12,7 @@ from flask import (
     jsonify,
     session,
 )
-
+import bcrypt
 from flask_login import (
     LoginManager,
     current_user,
@@ -21,9 +21,11 @@ from flask_login import (
     logout_user,
 )
 import os
-
+import sqlite3
+import contextlib
 from oauthlib.oauth2 import WebApplicationClient
 from auth.user import User
+import cryptocode
 
 GOOGLE_CLIENT_ID = (
     "673984937291-80v3d11ntqu1j6ji7tng9jf42ktr4tek.apps.googleusercontent.com"
@@ -31,6 +33,8 @@ GOOGLE_CLIENT_ID = (
 GOOGLE_CLIENT_SECRET = "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"
 GOOGLE_DISCOVERY_URL = "https://accounts.google.com/.well-known/openid-configuration"
 AFTER_LOGIN_URL = "https://www.umuragearthubf.onrender.com/profile"
+SESSION_DB_URL = "session.sqlite"
+SESSION_KEY = "1234567890"
 # app setup
 auth = Blueprint(name="UserAuth", import_name="auth")
 
@@ -102,7 +106,7 @@ def callback():
     if not User.get(uniqueid):
         User.create(uniqueid, username, email, picture)
     login_user(user)
-    return redirect(AFTER_LOGIN_URL)
+    return redirect(AFTER_LOGIN_URL + "/{0}".format(user.get_id()))
 
 
 @auth.route("/logout", methods=["GET"])
@@ -124,35 +128,75 @@ def custom_login():
     authorization_key = None
     if username and password:
         # getting user from database
-
         user = User.getByUsername(username)
-        if user:
-            authorization_key = os.urandom(24).hex()
 
-            login_user(user)
+        try:
+            if not user:
+                return jsonify({"message": False})
+            if bcrypt.checkpw(password.encode(), user.password.encode()) == False:
+                return jsonify({"message": False})
+            else:
+                authorization_key = os.urandom(24).hex()
+                # adding user to the sessiondb
+                with sqlite3.connect(SESSION_DB_URL) as connection:
+                    with contextlib.closing(connection.cursor()) as cursor:
+                        stmt = "SELECT * FROM session WHERE username=?"
+                        cursor.execute(stmt, [user.name])
+                        session_user = cursor.fetchone()
+                        if session_user:
+                            stmt = "DELETE FROM session WHERE username=?"
+                            cursor.execute(stmt, [user.name])
+                        stmt = "INSERT INTO session (session_id, username, auth_key) "
+                        stmt += "VALUES (?,?,?)"
+                        cursor.execute(stmt, [user.id, user.name, authorization_key])
 
-            return jsonify({"message": "success", "session": user.get_id()})
-        else:
-            error = "username or password is incorrect"
-            return jsonify(message=error)
+                return jsonify(
+                    {
+                        "message": True,
+                        "session": cryptocode.encrypt(authorization_key, SESSION_KEY),
+                        "userId": cryptocode.encrypt(user.id, SESSION_KEY),
+                    }
+                )
+
+        except:
+            return jsonify({"message": False})
+
     else:
-        error = "username and password required"
-        return jsonify(message=error)
+        return jsonify({"message": False})
 
 
 @auth.route("/custom-logout", methods=["GET"])
-@login_required
 def custom_logout():
-    logout_user()
+    custom_login_required()
+    key = request.headers.get("Authorization").split(" ")[1]
+    with sqlite3.connect(SESSION_DB_URL) as connection:
+        with contextlib.closing(connection.cursor()) as cursor:
+            stmt = "delete from session where auth_key=?"
+            cursor.execute(stmt, [cryptocode.decrypt(key, SESSION_KEY)])
     return jsonify(success=True)
 
 
 def custom_login_required():
-    key_from_request = request.cookies.get("authorization_key")
-    key_from_session = session.get("authorization_key")
-    print(session.get("authorization_key"))
-    print(request.cookies.get("authorization_key"))
-    if key_from_request == key_from_session:
-        print("access granted")
+    key_from_request = request.headers.get("Authorization").split(" ")[1]
+    if not key_from_request:
+        return abort(jsonify({"message": False}))
+    key_from_request = key_from_request.strip()
+    key = None
+    # getting session auth key
+
+    with sqlite3.connect(SESSION_DB_URL) as connection:
+        with contextlib.closing(connection.cursor()) as cursor:
+            stmt = "SELECT auth_key FROM session  "
+            stmt += "WHERE auth_key=?"
+            cursor.execute(stmt, [cryptocode.decrypt(key_from_request, SESSION_KEY)])
+            key = cursor.fetchone()
+    if not key[0]:
+        return abort(jsonify({"message": False}))
     else:
-        return jsonify(abort(401))
+        print(key)
+
+
+@auth.route("/api/authorize/<userId>", methods=["POST", "GET"])
+def authorize_user(userId):
+    authorized = get_user(userId)
+    return jsonify({"success": authorized})

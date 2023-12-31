@@ -5,6 +5,7 @@ from werkzeug.utils import secure_filename
 import os
 from auth.UserAuth import custom_login_required
 from flask_login import login_required
+from auth.UserAuth import custom_login_required
 
 exhibition = Blueprint(name="exhibition", import_name="exhibition")
 
@@ -41,15 +42,15 @@ def add_exhibition():
     return jsonify({"success": True})
 
 
-@exhibition.route("/get_exhibition/<string:id>", methods=["GET"])
+@exhibition.route("/get_exhibition/<id>", methods=["GET"])
 def get_exhibition(id):
     exhibition = database.get_exhibition(id)
+
     headers = ["id", "name", "startdate", "enddate", "host", "fees", "image"]
-    return jsonify(convertToObject(headers, exhibition))
+    return jsonify(convertToObject(headers, exhibition)[0])
 
 
 @exhibition.route("/get_exhibitions", methods=["GET"])
-# @login_required
 def get_exhibitions():
     # custom_login_required()
     exhibitions = database.get_exhibitions()

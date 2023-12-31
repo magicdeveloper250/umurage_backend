@@ -11,7 +11,7 @@ def add_new_painter(painter):
             with contextlib.closing(connection.cursor()) as cursor:
                 cursor.execute("SET search_path TO public")
                 cursor.execute("BEGIN")
-                stmt = "INSERT INTO painters (id, username,email,phone, picture) "
+                stmt = "INSERT INTO painters (id, username,email,phone, picture, password) "
                 stmt += "VALUES ({0}, {1}, {2},{3},{4})"
                 query = sql.SQL(stmt).format(
                     sql.Literal(painter.get("id")),
@@ -19,6 +19,7 @@ def add_new_painter(painter):
                     sql.Literal(painter.get("email")),
                     sql.Literal(painter.get("phonenumber")),
                     sql.Literal(painter.get("picture")),
+                    sql.Literal(painter.get("password")),
                 )
                 cursor.execute(query)
                 cursor.execute("COMMIT")
@@ -75,7 +76,7 @@ def get_painter(id):
                 query = sql.SQL(stmt).format(sql.Literal(id))
                 cursor.execute(query)
                 painter = cursor.fetchone()
-                print(painter)
+                # print(painter)
                 return painter
     except psycopg2.DatabaseError as error:
         return error
@@ -85,7 +86,9 @@ def get_painter_by_username(username):
     with get_db() as connection:
         with contextlib.closing(connection.cursor()) as cursor:
             cursor.execute("SET search_path TO public")
-            stmt = "SELECT * FROM painters WHERE username={0}"
+            stmt = "SELECT  id, username,email,phone, picture, password "
+            stmt += " FROM painters "
+            stmt += "WHERE username={0}"
             query = sql.SQL(stmt).format(sql.Literal(username))
             cursor.execute(query)
             user = cursor.fetchone()
