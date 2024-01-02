@@ -4,13 +4,14 @@ from db import painter as database
 
 
 class User(UserMixin):
-    def __init__(self, id_, name, email, profile_pic, phone, password=None):
+    def __init__(self, id_, name, email, profile_pic, phone, password=None, role=None):
         self.id = id_
         self.name = name
         self.email = email
         self.password = password
         self.profile_pic = profile_pic
         self.phone = phone
+        self.role = role
 
     @staticmethod
     def get(user_id):
@@ -19,7 +20,13 @@ class User(UserMixin):
         if not user:
             return None
         else:
-            user = User(id_=user[0], name=user[1], email=user[2], profile_pic=user[3])
+            user = User(
+                id_=user[0],
+                name=user[1],
+                email=user[2],
+                profile_pic=user[3],
+                role=user[5],
+            )
             return user
 
     @staticmethod
@@ -34,6 +41,7 @@ class User(UserMixin):
                 phone=user[3],
                 profile_pic=user[4],
                 password=user[5],
+                role=user[6],
             )
         else:
             return None

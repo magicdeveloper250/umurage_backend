@@ -6,7 +6,6 @@ from . import get_db
 
 
 def add_new_painter(painter):
-    print(painter)
     try:
         with get_db() as connection:
             with contextlib.closing(connection.cursor()) as cursor:
@@ -50,7 +49,7 @@ def get_painter_by_username(username):
     with get_db() as connection:
         with contextlib.closing(connection.cursor()) as cursor:
             cursor.execute("SET search_path TO public")
-            stmt = "SELECT  id, username,email,phone, picture, password "
+            stmt = "SELECT  id, username,email,phone, picture, password,role "
             stmt += " FROM painters "
             stmt += "WHERE username={0}"
             query = sql.SQL(stmt).format(sql.Literal(username))
@@ -74,15 +73,12 @@ def get_painters():
 
 
 def delete_painter(id):
-    try:
-        with get_db() as connection:
-            with contextlib.closing(connection.cursor()) as cursor:
-                cursor.execute("SET search_path TO public")
-                cursor.execute("BEGIN")
-                stmt = "DELETE FROM painters "
-                stmt += "WHERE p_id ={0}"
-                query = sql.SQL(stmt).format(sql.Literal(id))
-                cursor.execute(query)
-                cursor.execute("COMMIT")
-    except psycopg2.DatabaseError as error:
-        return error
+    with get_db() as connection:
+        with contextlib.closing(connection.cursor()) as cursor:
+            cursor.execute("SET search_path TO public")
+            cursor.execute("BEGIN")
+            stmt = "DELETE FROM painters "
+            stmt += "WHERE id ={0}"
+            query = sql.SQL(stmt).format(sql.Literal(id))
+            cursor.execute(query)
+            cursor.execute("COMMIT")

@@ -29,6 +29,18 @@ def add_new_exhibition(exhibition):
         print(error)
 
 
+def delete_exhibition(id):
+    with get_db() as connection:
+        with contextlib.closing(connection.cursor()) as cursor:
+            cursor.execute("SET search_path TO public")
+            cursor.execute("BEGIN")
+            stmt = "DELETE FROM exhibitions "
+            stmt += "WHERE e_id={0}"
+            query = sql.SQL(stmt).format(sql.Literal(id))
+            cursor.execute(query)
+            cursor.execute("COMMIT")
+
+
 def get_exhibition(id):
     try:
         with get_db() as connection:

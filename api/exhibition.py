@@ -12,34 +12,37 @@ exhibition = Blueprint(name="exhibition", import_name="exhibition")
 
 @exhibition.route("/add_new_exhibition", methods=["PUT"])
 def add_exhibition():
-    exhibition = {}
-    exhibition["name"] = request.form.get("name")
-    exhibition["start_date"] = request.form.get("start_date")
-    exhibition["end_date"] = request.form.get("end_date")
-    exhibition["host"] = request.form.get("host")
-    exhibition["entrace_fees"] = request.form.get("entrace_fees")
-    exhibition_banner_file = request.files.get("banner")
-    banner_fname = (
-        request.base_url.replace("/add_new_exhibition", "")
-        + "/images/exhibitions/"
-        + exhibition_banner_file.filename
-    )
-
-    exhibition["banner"] = banner_fname
-
-    database.add_new_exhibition(exhibition)
-    exhibition_banner_file.save(
-        os.path.join(
-            os.getcwd() + "/images/exhibitions",
-            secure_filename(exhibition_banner_file.filename),
+    try:
+        exhibition = {}
+        exhibition["name"] = request.form.get("name")
+        exhibition["start_date"] = request.form.get("start_date")
+        exhibition["end_date"] = request.form.get("end_date")
+        exhibition["host"] = request.form.get("host")
+        exhibition["entrace_fees"] = request.form.get("entrace_fees")
+        exhibition_banner_file = request.files.get("banner")
+        banner_fname = (
+            request.base_url.replace("/add_new_exhibition", "")
+            + "/images/exhibitions/"
+            + exhibition_banner_file.filename
         )
-    )
-    # creating exhibition folder to be used after while adding paintings
-    CURRENT_FOLDER = os.getcwd()
-    os.chdir(os.getcwd() + "/images/exhibition_paintings")
-    os.mkdir(exhibition["name"])
-    os.chdir(CURRENT_FOLDER)
-    return jsonify({"success": True})
+
+        exhibition["banner"] = banner_fname
+
+        database.add_new_exhibition(exhibition)
+        exhibition_banner_file.save(
+            os.path.join(
+                os.getcwd() + "/images/exhibitions",
+                secure_filename(exhibition_banner_file.filename),
+            )
+        )
+        # creating exhibition folder to be used after while adding paintings
+        CURRENT_FOLDER = os.getcwd()
+        os.chdir(os.getcwd() + "/images/exhibition_paintings")
+        os.mkdir(exhibition["name"])
+        os.chdir(CURRENT_FOLDER)
+        return jsonify({"success": True})
+    except FileExistsError as error:
+        return jsonify({"exhibitionExist": True})
 
 
 @exhibition.route("/get_exhibition/<id>", methods=["GET"])
@@ -63,3 +66,15 @@ def send_exhibition_image(filename):
     fname = secure_filename(filename)
     file = os.path.join(os.getcwd() + "/images/exhibitions", fname)
     return send_file(file)
+
+
+@exhibition.route("/delete_exhibition/<id>", methods=["DELETE"])
+def delete_exhibition(id):
+    try:
+        database.delete_exhibition(id)
+        exhibitions = database.get_exhibitions()
+        headers = ["id", "name", "startdate", "enddate", "host", "fees", "image"]
+        return jsonify({"success": True, "data": convertToObject(headers, exhibitions)})
+    except Exception as error:
+        print(error)
+        return jsonify({"success": False})

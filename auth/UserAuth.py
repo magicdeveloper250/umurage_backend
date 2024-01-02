@@ -146,19 +146,24 @@ def custom_login():
                         if session_user:
                             stmt = "DELETE FROM session WHERE username=?"
                             cursor.execute(stmt, [user.name])
-                        stmt = "INSERT INTO session (session_id, username, auth_key) "
-                        stmt += "VALUES (?,?,?)"
-                        cursor.execute(stmt, [user.id, user.name, authorization_key])
+                        stmt = "INSERT INTO session (session_id, username, auth_key, role) "
+                        stmt += "VALUES (?,?,?,?)"
+                        cursor.execute(
+                            stmt, [user.id, user.name, authorization_key, user.role]
+                        )
 
                 return jsonify(
                     {
                         "message": True,
                         "session": cryptocode.encrypt(authorization_key, SESSION_KEY),
                         "userId": user.id,
+                        "role": user.role,
+                        "username": user.name,
                     }
                 )
 
-        except:
+        except Exception as error:
+            print(error)
             return jsonify({"message": False})
 
     else:
@@ -176,6 +181,27 @@ def custom_logout():
     return jsonify(success=True)
 
 
+def admin_required():
+    key_from_request = request.headers.get("Authorization").split(" ")[1]
+    if not key_from_request:
+        return abort(jsonify({"message": False}))
+    key_from_request = key_from_request.strip()
+    key = None
+    # getting session auth key
+    if not key[0]:
+        return abort(jsonify({"message": False}))
+    else:
+        pass
+    with sqlite3.connect(SESSION_DB_URL) as connection:
+        with contextlib.closing(connection.cursor()) as cursor:
+            stmt = "SELECT * FROM session  "
+            stmt += "WHERE auth_key=?"
+            cursor.execute(stmt, [cryptocode.decrypt(key_from_request, SESSION_KEY)])
+            key = cursor.fetchone()
+            if key[3] != "admin":
+                return abort(jsonify({"message": False, "unauthorized": True}))
+
+
 def custom_login_required():
     key_from_request = request.headers.get("Authorization").split(" ")[1]
     if not key_from_request:
@@ -191,7 +217,11 @@ def custom_login_required():
             cursor.execute(stmt, [cryptocode.decrypt(key_from_request, SESSION_KEY)])
             key = cursor.fetchone()
     if not key[0]:
-        return abort(jsonify({"message": False}))
+        return abort(
+            jsonify(
+                {"message": False, "unauthorized": True},
+            )
+        )
     else:
         print(key)
 

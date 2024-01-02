@@ -6,36 +6,53 @@ from datetime import datetime
 
 
 def add_new_painting(painting):
-    try:
-        with get_db() as connection:
-            with contextlib.closing(connection.cursor()) as cursor:
-                cursor.execute("SET search_path TO public")
-                cursor.execute("BEGIN")
-                stmt = "INSERT INTO galleries (g_name, g_category, g_owner, g_created, g_image) "
-                stmt += "VALUES ({0},{1},{2},{3},{4})"
-                query = sql.SQL(stmt).format(
-                    sql.Literal(painting.get("name")),
-                    sql.Literal(painting.get("category")),
-                    sql.Literal("4bbb5d19-4dee-40d8-a2d8-1b75da3e9d01"),
-                    sql.Literal(str(datetime.now())),
-                    sql.Literal(painting.get("image")),
-                )
-                cursor.execute(query)
-                cursor.execute("COMMIT")
-    except psycopg2.DatabaseError as error:
-        return error
+    with get_db() as connection:
+        with contextlib.closing(connection.cursor()) as cursor:
+            cursor.execute("SET search_path TO public")
+            cursor.execute("BEGIN")
+            stmt = "INSERT INTO paintings (g_name, g_category, g_owner, g_created, g_image) "
+            stmt += "VALUES ({0},{1},{2},{3},{4})"
+            query = sql.SQL(stmt).format(
+                sql.Literal(painting.get("name")),
+                sql.Literal(painting.get("category")),
+                sql.Literal(painting.get("owner")),
+                sql.Literal(str(datetime.now())),
+                sql.Literal(painting.get("image")),
+            )
+            cursor.execute(query)
+            cursor.execute("COMMIT")
 
 
 def get_paintings():
-    try:
-        with get_db() as connection:
-            with contextlib.closing(connection.cursor()) as cursor:
-                cursor.execute("SET search_path TO public")
-                stmt = "SELECT g_id, g_name, username, g_category, g_image, phone  "
-                stmt += "FROM paintings g, painters p "
-                stmt += "WHERE g.g_owner=p.id "
-                cursor.execute(stmt)
-                paintings = cursor.fetchall()
-                return paintings
-    except psycopg2.DatabaseError as error:
-        print(error)
+    with get_db() as connection:
+        with contextlib.closing(connection.cursor()) as cursor:
+            cursor.execute("SET search_path TO public")
+            stmt = "SELECT g_id, g_name, username, g_category, g_image, phone  "
+            stmt += "FROM paintings g, painters p "
+            stmt += "WHERE g.g_owner=p.id "
+            cursor.execute(stmt)
+            paintings = cursor.fetchall()
+            return paintings
+
+
+def get_painting_by_id(userId):
+    with get_db() as connection:
+        with contextlib.closing(connection.cursor()) as cursor:
+            cursor.execute("SET search_path TO public")
+            stmt = "SELECT g_id, g_name,g_category, g_image "
+            stmt += "FROM paintings "
+            stmt += "WHERE g_owner={0} "
+            query = sql.SQL(stmt).format(sql.Literal(userId))
+            cursor.execute(query)
+            paintings = cursor.fetchall()
+            return paintings
+
+
+def delete_painting(id):
+    with get_db() as connection:
+        with contextlib.closing(connection.cursor()) as cursor:
+            cursor.execute("SET search_path TO public")
+            stmt = "DELETE FROM paintings "
+            stmt += "WHERE g_id={0}"
+            query = sql.SQL(stmt).format(sql.Literal(id))
+            cursor.execute(query)

@@ -36,12 +36,17 @@ def add_new_painter():
 @painter.route("/get_painters", methods=["GET"])
 def list_painters():
     painters = database.get_painters()
-    print(painters)
     headers = ["id", "username", "phone", "email", "phone"]
     return jsonify(convertToObject(headers, painters))
 
 
 @painter.route("/delete_painter/<id>", methods=["DELETE"])
 def delete_painter(id):
-    database.delete_painter(id)
-    return jsonify({"success": True})
+    try:
+        database.delete_painter(id)
+        painters = database.get_painters()
+        headers = ["id", "username", "phone", "email", "phone"]
+        return jsonify({"success": True, "data": convertToObject(headers, painters)})
+    except Exception as error:
+        print(error)
+        return jsonify({"success": False})

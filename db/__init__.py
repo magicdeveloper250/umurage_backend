@@ -4,8 +4,8 @@ from psycopg2 import pool
 
 # Database configuration
 INTERNAL_DB_CONNECTION = "postgres://postgres:manzisql123.@localhost/galleryWebsite"
-EXTERNAL_DB_CONNECTION = "postgres://umuragearthubadmin:9Va4XFtZSYFGdwjYM3Aj4cOKfH98qAhT@dpg-cm8po60cmk4c739398ng-a/umuragearthub_kj00"
-DB_URL = EXTERNAL_DB_CONNECTION
+EXTERNAL_DB_CONNECTION = "postgres://umuragearthubadmin:s6S3e7o6dWfoshUgKDFeKGUoFjbsIn2C@dpg-cm9r2bocmk4c739fs7q0-a/umuragearthubdb"
+DB_URL = INTERNAL_DB_CONNECTION
 MAX_CONNECTIONS = 1000
 
 pool = pool.ThreadedConnectionPool(minconn=1, maxconn=MAX_CONNECTIONS, dsn=DB_URL)
