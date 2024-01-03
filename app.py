@@ -17,6 +17,7 @@ from flask import redirect
 from flask_login import LoginManager, login_required, login_user, logout_user, utils
 from auth.UserAuth import auth, loginmanager
 import click
+from api.customer import customer
 
 SECRET_KEY = "4bbb5d19-4dee-40d8-a2d8-1b75da3e9d01"
 
@@ -29,6 +30,7 @@ app.register_blueprint(exhibition)
 app.register_blueprint(exhibition_paintings)
 app.register_blueprint(auth)
 app.register_blueprint(payment)
+app.register_blueprint(customer)
 CORS(
     app,
     origins=["https://umuragearthubf.onrender.com", "http://localhost:5173"],

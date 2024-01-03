@@ -1,12 +1,9 @@
-from flask import Blueprint, request, jsonify, send_file, make_response, g
+from flask import Blueprint, request, abort, jsonify, send_file, make_response, g
 import db.painting as database
-from flask_login import login_required
 from helperfunctions import convertToObject
 import os
 from werkzeug.utils import secure_filename
 from auth.UserAuth import custom_login_required
-
-# from auth.UserAuth import authorize
 from helperfunctions import authorize
 
 painting = Blueprint(name="painting", import_name="painting")
@@ -26,30 +23,31 @@ def add_new_painting():
         new_painting["image"] = (
             request.base_url.replace("/add_new_painting", "")
             + "/images/paintings/"
-            + image_filename
+            + secure_filename(image_filename)
         )
         database.add_new_painting(new_painting)
-        image_file.save(os.path.join(os.getcwd() + "/images/paintings", image_filename))
+        image_file.save(
+            os.path.join(
+                os.getcwd() + "/images/paintings", secure_filename(image_filename)
+            )
+        )
 
         return jsonify({"success": True})
     except Exception as error:
         print(error)
-        return jsonify({"success": False})
+        return abort(jsonify({"success": False}))
 
 
 @painting.route("/get_paintings", methods=["GET", "POST"])
 def get_paintings():
     try:
         painters = database.get_paintings()
-        headers = ["id", "name", "category", "image"]
-        response = jsonify(
-            {"success": True, "data": convertToObject(headers, painters)}
-        )
+        headers = ["id", "name", "owner", "category", "image", "phone"]
 
-        return response
+        return jsonify({"success": True, "data": convertToObject(headers, painters)})
     except Exception as error:
         print(error)
-        jsonify({"success": False})
+        return abort(jsonify({"success": False}))
 
 
 @painting.route("/images/paintings/<filename>")
@@ -68,7 +66,7 @@ def delete_painting(id):
         return jsonify({"success": True, "data": convertToObject(headers, painters)})
     except Exception as error:
         print(error)
-        return jsonify({"success": False})
+        return abort(jsonify({"success": False}))
 
 
 @painting.route("/get_user_paintings/<id>", methods=["GET", "POST"])
@@ -76,7 +74,7 @@ def get_user_paintings(id):
     custom_login_required()
     try:
         painters = database.get_painting_by_id(id)
-        headers = ["id", "name", "owner", "category", "image", "phone"]
+        headers = ["id", "name", "category", "image"]
         response = jsonify(
             {"success": True, "data": convertToObject(headers, painters)}
         )
@@ -84,4 +82,4 @@ def get_user_paintings(id):
         return response
     except Exception as error:
         print(error)
-        return jsonify({"success": False})
+        return abort(jsonify({"success": False}))

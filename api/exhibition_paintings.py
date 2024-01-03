@@ -12,7 +12,6 @@ exhibition_paintings = Blueprint(
 @exhibition_paintings.route("/add_exhibition_painting", methods=["POST"])
 def add_painting():
     painting = {}
-    print(request.form)
     painting["name"] = request.form.get("name")
     painting["description"] = request.form.get("description")
     painting["painter"] = request.form.get("painter")
@@ -71,8 +70,6 @@ def get_exhibition_painting(id):
     "/images/exhibition_paintings/<exhibition_id>/<filename>", methods=["GET"]
 )
 def get_painting_file(exhibition_id, filename):
-    # print(os.getcwd() + f"images/{exhibition_id}/{filename}")
-
     fName, extension = os.path.splitext(
         os.getcwd() + f"images/{exhibition_id}/{filename}"
     )

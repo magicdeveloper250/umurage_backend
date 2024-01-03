@@ -11,6 +11,9 @@
 import bcrypt
 
 password = "RU6w&2s-9ZT44wr"
-hashedpw = bcrypt.hashpw(password.encode(), bcrypt.gensalt())
-print(hashedpw)
-print(str(hashedpw).removeprefix("b'").removesuffix("'"))
+print(
+    bcrypt.checkpw(
+        password.encode(),
+        "$2b$12$RsfBB6Fl87eROwP0X8u5mu58LPGZOcWRmkgNRevI/TNgrx3wd2sfO".encode(),
+    )
+)
