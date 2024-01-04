@@ -4,7 +4,7 @@ from psycopg2 import pool
 
 # Database configuration
 INTERNAL_DB_CONNECTION = "postgres://postgres:manzisql123.@localhost/galleryWebsite"
-EXTERNAL_DB_CONNECTION = "postgres://umuragearthubadmin:kUzZK1pKUMBR1Oxdpp4RMroUOfe0ApcR@dpg-cmatbmda73kc73bn55sg-a/umuragearthub_hvbo"
+EXTERNAL_DB_CONNECTION = "postgres://umuragearthubadmin:2k1L9evHqIWYnqc8cRQwvVKfNgpX2ajX@dpg-cmb9krta73kc73bralkg-a/umuragearthub_b22h"
 DB_URL = EXTERNAL_DB_CONNECTION
 MAX_CONNECTIONS = 1000
 
