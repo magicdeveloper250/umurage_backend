@@ -1,19 +1,35 @@
 import psycopg2
-import psycopg2.extensions  # For cursor optimization
+import psycopg2.extensions
 from psycopg2 import pool
+from queue import Queue
+from queue import Empty
 
 # Database configuration
 INTERNAL_DB_CONNECTION = "postgres://postgres:manzisql123.@localhost/galleryWebsite"
-EXTERNAL_DB_CONNECTION = "postgres://umuragearthubadmin:2k1L9evHqIWYnqc8cRQwvVKfNgpX2ajX@dpg-cmb9krta73kc73bralkg-a/umuragearthub_b22h"
+EXTERNAL_DB_CONNECTION = "postgres://umuragearthubadmin:RkumKHLgya1cKCRa2SbA4Dq3tbIRSUSI@dpg-cmf4riacn0vc73bvjm9g-a/umuragearthubdb_6u6g"
 DB_URL = EXTERNAL_DB_CONNECTION
 MAX_CONNECTIONS = 1000
 
 pool = pool.ThreadedConnectionPool(minconn=1, maxconn=MAX_CONNECTIONS, dsn=DB_URL)
 
+db_pool = Queue()
+
+
+def putconn(conn):
+    conn = db_pool.put(conn)
+
 
 def get_db():
-    """Gets a database connection from the pool within the Flask context."""
-    return pool.getconn()
+    try:
+        conn = db_pool.get(block=False)
+
+        return conn
+    except Empty as bd_queu_is_empty:
+        conn = psycopg2.connect(DB_URL)
+        putconn(conn)
+        return db_pool.get(block=False)
+
+    # return pool.getconn()
 
 
 # def close_connection(exception):

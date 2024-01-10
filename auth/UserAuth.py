@@ -181,52 +181,133 @@ def custom_logout():
     return jsonify(success=True)
 
 
-def admin_required():
-    key_from_request = request.headers.get("Authorization").split(" ")[1]
-    if not key_from_request:
-        return abort(jsonify({"message": False}))
-    key_from_request = key_from_request.strip()
-    key = None
-    # getting session auth key
-    if not key[0]:
-        return abort(jsonify({"message": False}))
-    else:
-        pass
+@auth.route("/custom-admin-logout", methods=["GET"])
+def custom_admin_logout():
+    admin_required()
+    key = request.headers.get("Authorization").split(" ")[1]
     with sqlite3.connect(SESSION_DB_URL) as connection:
         with contextlib.closing(connection.cursor()) as cursor:
             stmt = "SELECT * FROM session  "
             stmt += "WHERE auth_key=?"
-            cursor.execute(stmt, [cryptocode.decrypt(key_from_request, SESSION_KEY)])
-            key = cursor.fetchone()
-            if key[3] != "admin":
+            cursor.execute(stmt, [cryptocode.decrypt(key, SESSION_KEY)])
+            ukey = cursor.fetchone()
+            if ukey[3] != "admin":
                 return abort(jsonify({"message": False, "unauthorized": True}))
+            else:
+                stmt = "DELETE FROM  session "
+                stmt += "WHERE role=? AND auth_key=?"
+                cursor.execute(stmt, ["admin", cryptocode.decrypt(key, SESSION_KEY)])
+    return jsonify(success=True)
+
+
+def admin_required():
+    try:
+        key_from_request = request.headers.get("Authorization").split(" ")[1]
+        if not key_from_request:
+            return abort(jsonify({"message": False}))
+        else:
+            pass
+        with sqlite3.connect(SESSION_DB_URL) as connection:
+            with contextlib.closing(connection.cursor()) as cursor:
+                stmt = "SELECT * FROM session  "
+                stmt += "WHERE auth_key=?"
+                cursor.execute(
+                    stmt, [cryptocode.decrypt(key_from_request, SESSION_KEY)]
+                )
+                key = cursor.fetchone()
+                if key[3] != "admin":
+                    return abort(jsonify({"message": False, "unauthorized": True}))
+    except Exception as error:
+        print(error)
+        return abort(jsonify({"message": False, "unauthorized": True}))
 
 
 def custom_login_required():
-    key_from_request = request.headers.get("Authorization").split(" ")[1]
-    if not key_from_request:
-        return abort(jsonify({"message": False}))
-    key_from_request = key_from_request.strip()
-    key = None
-    # getting session auth key
+    try:
+        key_from_request = request.headers.get("Authorization").split(" ")[1]
+        if not key_from_request:
+            return abort(jsonify({"message": False}))
+        key_from_request = key_from_request.strip()
+        key = None
+        # getting session auth key
 
-    with sqlite3.connect(SESSION_DB_URL) as connection:
-        with contextlib.closing(connection.cursor()) as cursor:
-            stmt = "SELECT auth_key FROM session  "
-            stmt += "WHERE auth_key=?"
-            cursor.execute(stmt, [cryptocode.decrypt(key_from_request, SESSION_KEY)])
-            key = cursor.fetchone()
-    if not key[0]:
+        with sqlite3.connect(SESSION_DB_URL) as connection:
+            with contextlib.closing(connection.cursor()) as cursor:
+                stmt = "SELECT auth_key FROM session  "
+                stmt += "WHERE auth_key=?"
+                cursor.execute(
+                    stmt, [cryptocode.decrypt(key_from_request, SESSION_KEY)]
+                )
+                key = cursor.fetchone()
+        if not key[0]:
+            return abort(
+                jsonify(
+                    {"message": False, "unauthorized": True},
+                )
+            )
+        else:
+            pass
+    except Exception:
         return abort(
             jsonify(
                 {"message": False, "unauthorized": True},
             )
         )
-    else:
-        print(key)
 
 
 @auth.route("/api/authorize/<userId>", methods=["POST", "GET"])
 def authorize_user(userId):
+    admin_required()
     authorized = get_user(userId)
-    return jsonify({"success": authorized})
+
+    return jsonify({"message": True if authorized != None else False})
+
+
+def payment_required():
+    from db.customer import check_payment
+
+    try:
+        id = request.headers.get("clientId")
+        exId = request.headers.get("exId")
+        paid = check_payment(id, exId)
+        if paid:
+            pass
+        else:
+            return abort(
+                jsonify(
+                    {"message": False, "unauthorized": True},
+                )
+            )
+
+    except Exception as error:
+        print(error)
+        return abort(
+            jsonify(
+                {"message": False, "unauthorized": True},
+            )
+        )
+
+
+def image_protected():
+    from db.customer import check_payment
+
+    try:
+        id = request.args.get("clientId")
+        exId = request.args.get("exId")
+        paid = check_payment(id, exId)
+        if paid:
+            pass
+        else:
+            return abort(
+                jsonify(
+                    {"message": False, "unauthorized": True},
+                )
+            )
+
+    except Exception as error:
+        print(error)
+        return abort(
+            jsonify(
+                {"message": False, "unauthorized": True},
+            )
+        )

@@ -1,6 +1,7 @@
 from flask import jsonify, request, Blueprint, abort
 import db.customer as database
 from helperfunctions import convertToObject
+from auth.UserAuth import admin_required
 
 customer = Blueprint(name="customer", import_name="customer")
 
@@ -29,6 +30,7 @@ def add_customer():
 
 @customer.route("/get_customers", methods=["GET"])
 def get_customers():
+    admin_required()
     try:
         customers = database.get_customers()
 
@@ -40,6 +42,7 @@ def get_customers():
 
 @customer.route("/update_customer_status", methods=["POST"])
 def update_customer_status():
+    admin_required()
     customer_id, current_status = request.form.get("customer_id"), request.form.get(
         "current_status"
     )
@@ -56,6 +59,7 @@ def update_customer_status():
 
 @customer.route("/delete_customer", methods=["DELETE"])
 def delete_customer():
+    admin_required()
     customer_id = request.form.get("customer_id")
     try:
         database.delete_customer(customer_id)

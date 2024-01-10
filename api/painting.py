@@ -42,7 +42,16 @@ def add_new_painting():
 def get_paintings():
     try:
         painters = database.get_paintings()
-        headers = ["id", "name", "owner", "category", "image", "phone"]
+        headers = [
+            "id",
+            "name",
+            "owner",
+            "category",
+            "created",
+            "image",
+            "phone",
+            "likes",
+        ]
 
         return jsonify({"success": True, "data": convertToObject(headers, painters)})
     except Exception as error:
@@ -62,7 +71,16 @@ def delete_painting(id):
     try:
         database.delete_painting(id)
         painters = database.get_paintings()
-        headers = ["id", "name", "owner", "category", "image", "phone"]
+        headers = [
+            "id",
+            "name",
+            "owner",
+            "category",
+            "created",
+            "image",
+            "phone",
+            "likes",
+        ]
         return jsonify({"success": True, "data": convertToObject(headers, painters)})
     except Exception as error:
         print(error)
@@ -74,7 +92,7 @@ def get_user_paintings(id):
     custom_login_required()
     try:
         painters = database.get_painting_by_id(id)
-        headers = ["id", "name", "category", "image"]
+        headers = ["id", "name", "category", "image", "likes"]
         response = jsonify(
             {"success": True, "data": convertToObject(headers, painters)}
         )
@@ -83,3 +101,48 @@ def get_user_paintings(id):
     except Exception as error:
         print(error)
         return abort(jsonify({"success": False}))
+
+
+@painting.route("/like/<painting_id>", methods=["POST"])
+def like(painting_id):
+    try:
+        liked = database.like(painting_id)
+        if liked:
+            likes = database.get_likes(painting_id)
+            print(likes)
+            return jsonify({"success": True, "likes": likes[0]})
+        else:
+            return jsonify(
+                {
+                    "success": False,
+                }
+            )
+    except Exception as error:
+        print(error)
+        return jsonify(
+            {
+                "success": False,
+            }
+        )
+
+
+@painting.route("/dislike/<painting_id>", methods=["POST"])
+def dislike(painting_id):
+    try:
+        liked = database.dislike(painting_id)
+        if liked:
+            likes = database.get_likes(painting_id)
+            return jsonify({"success": True, "likes": likes[0]})
+        else:
+            return jsonify(
+                {
+                    "success": False,
+                }
+            )
+    except Exception as error:
+        print(error)
+        return jsonify(
+            {
+                "success": False,
+            }
+        )

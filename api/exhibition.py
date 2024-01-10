@@ -3,7 +3,7 @@ import db.exhibition as database
 from helperfunctions import convertToObject
 from werkzeug.utils import secure_filename
 import os
-from auth.UserAuth import custom_login_required
+from auth.UserAuth import custom_login_required, admin_required
 from flask_login import login_required
 from auth.UserAuth import custom_login_required
 
@@ -12,6 +12,7 @@ exhibition = Blueprint(name="exhibition", import_name="exhibition")
 
 @exhibition.route("/add_new_exhibition", methods=["PUT"])
 def add_exhibition():
+    admin_required()
     try:
         exhibition = {}
         exhibition["name"] = request.form.get("name")
@@ -55,7 +56,6 @@ def get_exhibition(id):
 
 @exhibition.route("/get_exhibitions", methods=["GET"])
 def get_exhibitions():
-    # custom_login_required()
     exhibitions = database.get_exhibitions()
     headers = ["id", "name", "startdate", "enddate", "host", "fees", "image"]
     return jsonify(convertToObject(headers, exhibitions))
@@ -70,6 +70,7 @@ def send_exhibition_image(filename):
 
 @exhibition.route("/delete_exhibition/<id>", methods=["DELETE"])
 def delete_exhibition(id):
+    admin_required()
     try:
         database.delete_exhibition(id)
         exhibitions = database.get_exhibitions()

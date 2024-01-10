@@ -79,7 +79,6 @@ def check_payment(id, e_id):
             query = sql.SQL(stmt).format(sql.Literal(id), sql.Literal(e_id))
             cursor.execute(query)
             response = cursor.fetchone()
-            print(response)
             if response[0] == "active":
                 return True
             return False

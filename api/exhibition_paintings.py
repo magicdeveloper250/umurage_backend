@@ -3,6 +3,7 @@ from helperfunctions import convertToObject, generate_mime
 from werkzeug.utils import secure_filename
 import os
 import db.exhibition_paintings as database
+from auth.UserAuth import admin_required, payment_required, image_protected
 
 exhibition_paintings = Blueprint(
     name="exhibition_paintings", import_name="exhibition_paintings"
@@ -11,6 +12,7 @@ exhibition_paintings = Blueprint(
 
 @exhibition_paintings.route("/add_exhibition_painting", methods=["POST"])
 def add_painting():
+    admin_required()
     painting = {}
     painting["name"] = request.form.get("name")
     painting["description"] = request.form.get("description")
@@ -61,6 +63,7 @@ def add_painting():
 
 @exhibition_paintings.route("/get_exhibition_paintings/<id>", methods=["GET"])
 def get_exhibition_painting(id):
+    payment_required()
     paintings = database.get_exhibition_painting(id)
     headers = ("id", "name", "description", "image", "audio", "owner", "painter")
     return jsonify(convertToObject(headers, paintings))
@@ -70,6 +73,7 @@ def get_exhibition_painting(id):
     "/images/exhibition_paintings/<exhibition_id>/<filename>", methods=["GET"]
 )
 def get_painting_file(exhibition_id, filename):
+    image_protected()
     fName, extension = os.path.splitext(
         os.getcwd() + f"images/{exhibition_id}/{filename}"
     )

@@ -5,43 +5,59 @@ import os
 from werkzeug.utils import secure_filename
 import os
 import bcrypt
+from auth.UserAuth import admin_required
 
 painter = Blueprint(name="painter", import_name="painter")
 
 
 @painter.route("/add_new_painter", methods=["POST"])
 def add_new_painter():
-    new_painter = {}
-    id = os.urandom(24).hex()
-    new_painter["id"] = id
-    new_painter["email"] = request.form.get("fullname")
-    new_painter["username"] = request.form.get("username")
-    hashedpw = bcrypt.hashpw(request.form.get("password").encode(), bcrypt.gensalt())
-    new_painter["password"] = str(hashedpw).removeprefix("b'").removesuffix("'")
-    new_painter["phonenumber"] = request.form.get("phonenumber")
-    profilepicture = request.files.get("profilepicture")
-    filename = (
-        request.form.get("username") + "_profilepicture_" + profilepicture.filename
-    )
+    # admin_required()
+    try:
+        new_painter = {}
+        id = os.urandom(24).hex()
+        new_painter["id"] = id
+        new_painter["email"] = request.form.get("fullname")
+        new_painter["username"] = request.form.get("username")
+        hashedpw = bcrypt.hashpw(
+            request.form.get("password").encode(), bcrypt.gensalt()
+        )
+        new_painter["password"] = str(hashedpw).removeprefix("b'").removesuffix("'")
+        new_painter["phonenumber"] = request.form.get("phonenumber")
+        profilepicture = request.files.get("profilepicture")
+        filename = (
+            request.form.get("username") + "_profilepicture_" + profilepicture.filename
+        )
 
-    new_painter["profilepicture"] = filename
+        new_painter["profilepicture"] = (
+            request.base_url.replace("/add_new_painter", "")
+            + f"/images/painters/"
+            + secure_filename(filename)
+        )
 
-    profilepicture.save(
-        os.path.join(os.getcwd() + f"/images/painters", secure_filename(filename))
-    )
-    database.add_new_painter(new_painter)
-    return jsonify({"success": True})
+        profilepicture.save(
+            os.path.join(os.getcwd() + f"/images/painters", secure_filename(filename))
+        )
+        database.add_new_painter(new_painter)
+        return jsonify({"success": True})
+    except Exception as error:
+        print(error)
 
 
 @painter.route("/get_painters", methods=["GET"])
 def list_painters():
-    painters = database.get_painters()
-    headers = ["id", "username", "phone", "email", "phone"]
-    return jsonify(convertToObject(headers, painters))
+    admin_required()
+    try:
+        painters = database.get_painters()
+        headers = ["id", "username", "email", "phone", "image"]
+        return jsonify(convertToObject(headers, painters))
+    except Exception as error:
+        print(error)
 
 
 @painter.route("/delete_painter/<id>", methods=["DELETE"])
 def delete_painter(id):
+    admin_required()
     try:
         database.delete_painter(id)
         painters = database.get_painters()
@@ -50,3 +66,10 @@ def delete_painter(id):
     except Exception as error:
         print(error)
         return jsonify({"success": False})
+
+
+@painter.route("/images/painters/<filename>")
+def send_painting(filename):
+    fname = secure_filename(filename)
+    file = os.path.join(os.getcwd() + "/images/painters", fname)
+    return send_file(file)
