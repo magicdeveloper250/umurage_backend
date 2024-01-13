@@ -1,0 +1,37 @@
+ENVIRONMENT VARIABLES
+
+APP CONFIGURATION
+
+SECRET_KEY: "4bbb5d19-4dee-40d8-a2d8-1b75da3e9d01"
+
+
+PAYMENT/PAYPAL
+
+
+PAYPAL_CLIENT_ID:"ATXE7I-Cou4tO1E9__yFBYMxdsx_p4cuzWTLd58CCBCRCl8kCLfyf2aOPptkY1xodLyYaicBMtWPaDC2"
+PAYPAL_CLIENT_SECRET:"EIQTb81lOWndJETP5hDje903u_mbWFVOJICbu_LGz4Nn0jjtfmWAnJbwhVhCjAiM2LxQGBTAsfyFOzjG"
+BASE_URL: "https://api-m.sandbox.paypal.com"
+
+
+
+DATABASE CONFIGURATION
+
+
+INTERNAL_DB_CONNECTION:"postgres://postgres:manzisql123.@localhost/galleryWebsite"
+EXTERNAL_DB_CONNECTION:"postgres://umuragearthubadmin:RkumKHLgya1cKCRa2SbA4Dq3tbIRSUSI@dpg-cmf4riacn0vc73bvjm9g-a/umuragearthubdb_6u6g"
+
+
+GOOGLE LOGIN CONFIGURATION
+
+
+GOOGLE_CLIENT_ID:"673984937291-80v3d11ntqu1j6ji7tng9jf42ktr4tek.apps.googleusercontent.com"
+GOOGLE_CLIENT_SECRET: "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"
+GOOGLE_DISCOVERY_URL:"https://accounts.google.com/.well-known/openid-configuration"
+AFTER_LOGIN_URL:"https://www.umuragearthubf.onrender.com/profile"
+
+
+APP SESSION CONFIGURATION
+
+
+SESSION_DB_URL: "session.sqlite"
+SESSION_KEY:"1234567890"

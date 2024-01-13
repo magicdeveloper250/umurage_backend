@@ -11,18 +11,33 @@ headers = [
     "lastName",
     "email",
     "phone",
-    "ex Id",
-    "ex name",
+    "exId",
+    "exName",
     "status",
 ]
 
 
 @customer.route("/add_customer", methods=["POST"])
 def add_customer():
+    header = [
+        "id",
+        "firstName",
+        "lastName",
+        "email",
+        "phone",
+        "exId",
+        "status",
+    ]
+
     try:
         customer = request.form
-        database.add_customer(customer)
-        return jsonify({"success": True})
+        added_customer = database.add_customer(customer)
+        return jsonify(
+            {
+                "success": True,
+                "data": convertToObject(header, added_customer),
+            },
+        )
     except Exception as error:
         print(error)
         return jsonify({"success": False})

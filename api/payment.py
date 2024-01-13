@@ -4,6 +4,9 @@ from flask import request, jsonify
 import json
 import base64
 import logging
+import db.payment as database
+import db.customer as customer_database
+from helperfunctions import convertToObject
 
 payment = Blueprint(name="payment", import_name="payment")
 logging.basicConfig(filename="./logging.log", filemode="a")
@@ -48,7 +51,7 @@ def create_paypal_order():
             {
                 "amount": {
                     "currency_code": "USD",
-                    "value": "100.00",  # Replace with actual cart amount
+                    "value": f"{product.get('price')}",  # Replace with actual cart amount
                 }
             }
         ],
@@ -82,8 +85,46 @@ def capture_order(order_id):
             "Authorization": "Bearer {0}".format(access_token),
         },
     )
-    # print(response.json())
 
     logging.info("Transaction completed successfully.")
 
     return jsonify(response.json())
+
+
+@payment.route("/confirm_payment", methods=["POST"])
+def confirm_payment():
+    order = request.form
+    payment = {}
+    payment["pay_for"] = order.get("exId")
+    payment["pay_customer"] = order.get("c_id")
+    payment["pay_value"] = order.get("price")
+    payment["pay_via"] = "Paypal/Credit Card"
+    payment["pay_phone_number"] = order.get("phone")
+    try:
+        database.add_payment(payment)
+        customer_database.update_customer_status(order.get("c_id"), "active")
+        return jsonify({"success": True})
+    except Exception as error:
+        print(error)
+        return jsonify({"success": False})
+
+
+@payment.route("/delete_payment/<id>", methods=["POST"])
+def delete_payment(id):
+    try:
+        database.delete_payments(id)
+        headers = [
+            "id",
+            "exhibition",
+            "customer",
+            "amount",
+            "time",
+            "paid via",
+            "phone",
+        ]
+        return jsonify(
+            {"success": True, "data": convertToObject(headers, database.get_payments)}
+        )
+    except Exception as error:
+        print(error)
+        return jsonify({"success": False})

@@ -2,7 +2,7 @@ import psycopg2
 import contextlib
 from psycopg2 import sql
 from . import get_db
-from datetime import datetime
+import time
 from auth.UserAuth import custom_login_required
 
 
@@ -17,7 +17,7 @@ def add_new_painting(painting):
                 sql.Literal(painting.get("name")),
                 sql.Literal(painting.get("category")),
                 sql.Literal(painting.get("owner")),
-                sql.Literal(str(datetime.now())),
+                sql.Literal(time.asctime()),
                 sql.Literal(painting.get("image")),
             )
             cursor.execute(query)
@@ -50,32 +50,33 @@ def get_painting_by_id(userId):
             return paintings
 
 
-def delete_painting(id):
+def delete_painting(id, owner):
     custom_login_required()
     with get_db() as connection:
         with contextlib.closing(connection.cursor()) as cursor:
             cursor.execute("SET search_path TO public")
-            cursor.execute("BEGIN")
-            stmt = "DELETE FROM paintings "
-            stmt += "WHERE g_id={0}"
+            stmt = " BEGIN ;"
+            stmt += "DELETE FROM paintings "
+            stmt += "WHERE g_id={0};"
 
-            query = sql.SQL(stmt).format(sql.Literal(id))
+            stmt += "COMMIT "
+            query = sql.SQL(stmt).format(sql.Literal(id), sql.Literal(owner))
             cursor.execute(query)
-            cursor.execute("COMMIT")
 
 
 def like(painting_id):
     with get_db() as connection:
         with contextlib.closing(connection.cursor()) as cursor:
             cursor.execute("SET search_path TO public")
-            cursor.execute("BEGIN")
-            stmt = "UPDATE paintings "
+            stmt = "BEGIN;"
+            stmt += "UPDATE paintings "
             stmt += "SET likes= likes+1 "
-            stmt += "WHERE g_id={0} "
+            stmt += "WHERE g_id={0}; "
+            stmt += "COMMIT;"
 
             query = sql.SQL(stmt).format(sql.Literal(painting_id))
             cursor.execute(query)
-            cursor.execute("COMMIT")
+
             return True
 
 
@@ -83,14 +84,14 @@ def dislike(painting_id):
     with get_db() as connection:
         with contextlib.closing(connection.cursor()) as cursor:
             cursor.execute("SET search_path TO public")
-            cursor.execute("BEGIN")
-            stmt = "UPDATE paintings "
+            stmt = "BEGIN;"
+            stmt += "UPDATE paintings "
             stmt += "SET likes= likes-1 "
-            stmt += "WHERE g_id={0} "
+            stmt += "WHERE g_id={0} ;"
+            stmt += "COMMIT;"
 
             query = sql.SQL(stmt).format(sql.Literal(painting_id))
             cursor.execute(query)
-            cursor.execute("COMMIT")
             return True
 
 

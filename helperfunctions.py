@@ -1,4 +1,5 @@
 import cryptocode
+from typing import OrderedDict
 
 
 KEY = "12345678"

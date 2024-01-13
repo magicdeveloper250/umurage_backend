@@ -8,7 +8,8 @@ def add_customer(customer):
         with contextlib.closing(connection.cursor()) as cursor:
             cursor.execute("SET search_path TO public")
             stmt = "INSERT INTO customers (c_first_name, c_last_name, c_email, c_phone, registered_for,status ) "
-            stmt += "VALUES ({0},{1},{2},{3},{4},{5} )"
+            stmt += "VALUES ({0},{1},{2},{3},{4},{5} ) "
+            stmt += "RETURNING c_id,c_first_name, c_last_name, c_email, c_phone, registered_for,status"
             query = sql.SQL(stmt).format(
                 sql.Literal(customer.get("firstname")),
                 sql.Literal(customer.get("lastName")),
@@ -19,6 +20,7 @@ def add_customer(customer):
             )
 
             cursor.execute(query)
+            return cursor.fetchall()
 
 
 def get_customers(id=None):
@@ -45,25 +47,26 @@ def update_customer_status(customerid, new_status):
     with get_db() as connection:
         with contextlib.closing(connection.cursor()) as cursor:
             cursor.execute("SET search_path TO public")
-            cursor.execute("BEGIN")
-            stmt = "UPDATE customers SET status={0}"
-            stmt += " WHERE c_id ={1}"
+            stmt = "BEGIN;"
+            stmt += "UPDATE customers SET status={0}"
+            stmt += " WHERE c_id ={1};"
+            stmt += "COMMIT;"
             query = sql.SQL(stmt).format(
                 sql.Literal(new_status),
                 sql.Literal(customerid),
             )
 
             cursor.execute(query)
-            cursor.execute("COMMIT")
 
 
 def delete_customer(id):
     with get_db() as connection:
         with contextlib.closing(connection.cursor()) as cursor:
             cursor.execute("SET search_path TO public")
-            cursor.execute("BEGIN")
-            stmt = "DELETE FROM customers "
-            stmt += "WHERE c_id={0}"
+            stmt = "BEGIN;"
+            stmt += "DELETE FROM customers "
+            stmt += "WHERE c_id={0};"
+            stmt += "COMMIT;"
             query = sql.SQL(stmt).format(sql.Literal(id))
             cursor.execute(query)
 

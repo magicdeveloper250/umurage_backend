@@ -68,19 +68,13 @@ def send_painting(filename):
 
 @painting.route("/delete_painting/<id>", methods=["DELETE"])
 def delete_painting(id):
+    custom_login_required()
+
+    userId = request.headers.get("userId")
     try:
-        database.delete_painting(id)
-        painters = database.get_paintings()
-        headers = [
-            "id",
-            "name",
-            "owner",
-            "category",
-            "created",
-            "image",
-            "phone",
-            "likes",
-        ]
+        database.delete_painting(id, userId)
+        painters = database.get_painting_by_id(userId)
+        headers = ["id", "name", "category", "image", "likes"]
         return jsonify({"success": True, "data": convertToObject(headers, painters)})
     except Exception as error:
         print(error)

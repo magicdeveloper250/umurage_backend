@@ -11,8 +11,8 @@ from flask_login import (
 )
 
 from oauthlib.oauth2 import WebApplicationClient
-from user_db import init_db_command
-from user import User
+from auth.user_db import init_db_command
+from test.user import User
 
 GOOGLE_CLIENT_ID = (
     "673984937291-80v3d11ntqu1j6ji7tng9jf42ktr4tek.apps.googleusercontent.com"

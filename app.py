@@ -6,17 +6,9 @@ from api.exhibition import exhibition
 from api.exhibition_paintings import exhibition_paintings
 
 from auth.UserAuth import auth
-import db.painter as database
-from db import painter as database
 from api.payment import payment
-from flask import make_response
-import cryptocode
-from auth.user import User
 from flask_cors import CORS
-from flask import redirect
-from flask_login import LoginManager, login_required, login_user, logout_user, utils
 from auth.UserAuth import auth, loginmanager
-import click
 from api.customer import customer
 
 SECRET_KEY = "4bbb5d19-4dee-40d8-a2d8-1b75da3e9d01"
