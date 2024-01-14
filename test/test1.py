@@ -1,5 +1,6 @@
 import time
 import datetime
+import os
 
-
-print(time.asctime())
+for i in os.environ:
+    print(i)
