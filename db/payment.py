@@ -9,10 +9,8 @@ def add_payment(payment_info):
         with contextlib.closing(connection.cursor()) as cursor:
             cursor.execute("SET search_path TO public")
             stmt = "INSERT INTO payments "
-            stmt += (
-                "pay_for, pay_customer, pay_value, pay_time, pay_via, pay_phone_number "
-            )
-            stmt += "VALUES {0}, {1},{2}, {3},{4},{5} "
+            stmt += "(pay_for, pay_customer, pay_value, pay_time, pay_via, pay_phone_number) "
+            stmt += "VALUES ({0},{1},{2}, {3},{4},{5}) "
             query = sql.SQL(stmt).format(
                 sql.Literal(payment_info["pay_for"]),
                 sql.Literal(payment_info["pay_customer"]),

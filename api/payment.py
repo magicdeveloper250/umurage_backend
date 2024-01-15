@@ -51,7 +51,7 @@ def create_paypal_order():
             {
                 "amount": {
                     "currency_code": "USD",
-                    "value": f"{product.get('price')}",  # Replace with actual cart amount
+                    "value": f"100",  # Replace with actual cart amount
                 }
             }
         ],
