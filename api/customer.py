@@ -101,14 +101,16 @@ def get_customer(customer_id):
 
 @customer.route("/check_payment", methods=["POST"])
 def check_payment():
+    print("checking")
     try:
         id = request.form.get("customerId")
         exId = request.form.get("exhibitionId")
         response = database.check_payment(id=id, e_id=exId)
+        print(response)
         if response:
             return jsonify({"success": True, "id": exId})
         else:
-            return jsonify({"success": False})
+            return jsonify({"success": False, "error": False})
     except Exception as error:
         print(error)
-        return jsonify({"success": False})
+        return jsonify({"success": False, "error": True})
