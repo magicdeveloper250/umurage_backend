@@ -7,7 +7,7 @@ from queue import Empty
 # Database configuration
 INTERNAL_DB_CONNECTION = "postgres://postgres:manzisql123.@localhost/galleryWebsite"
 EXTERNAL_DB_CONNECTION = "postgres://umuragearthubadmin:RkumKHLgya1cKCRa2SbA4Dq3tbIRSUSI@dpg-cmf4riacn0vc73bvjm9g-a/umuragearthubdb_6u6g"
-DB_URL = EXTERNAL_DB_CONNECTION
+DB_URL = INTERNAL_DB_CONNECTION
 MAX_CONNECTIONS = 1000
 
 pool = pool.ThreadedConnectionPool(minconn=1, maxconn=MAX_CONNECTIONS, dsn=DB_URL)
