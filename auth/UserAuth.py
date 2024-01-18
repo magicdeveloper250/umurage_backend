@@ -206,7 +206,7 @@ def admin_required():
         if not key_from_request:
             return abort(jsonify({"message": False}))
         else:
-            pass
+            return True
         with sqlite3.connect(SESSION_DB_URL) as connection:
             with contextlib.closing(connection.cursor()) as cursor:
                 stmt = "SELECT * FROM session  "

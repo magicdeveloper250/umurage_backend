@@ -3,7 +3,7 @@ import db.painting as database
 from helperfunctions import convertToObject
 import os
 from werkzeug.utils import secure_filename
-from auth.UserAuth import custom_login_required
+from auth.UserAuth import custom_login_required, admin_required
 from helperfunctions import authorize
 
 painting = Blueprint(name="painting", import_name="painting")
@@ -69,12 +69,30 @@ def send_painting(filename):
 @painting.route("/delete_painting/<id>", methods=["DELETE"])
 def delete_painting(id):
     custom_login_required()
+    admin = admin_required()
 
     userId = request.headers.get("userId")
     try:
         database.delete_painting(id, userId)
-        painters = database.get_painting_by_id(userId)
-        headers = ["id", "name", "category", "image", "likes"]
+        painters = (
+            database.get_painting_by_id(userId)
+            if not admin
+            else database.get_paintings()
+        )
+        headers = (
+            ["id", "name", "category", "image", "likes"]
+            if not admin
+            else [
+                "id",
+                "name",
+                "owner",
+                "category",
+                "created",
+                "image",
+                "phone",
+                "likes",
+            ]
+        )
         return jsonify({"success": True, "data": convertToObject(headers, painters)})
     except Exception as error:
         print(error)

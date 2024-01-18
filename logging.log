@@ -2040,3 +2040,1201 @@ INFO:werkzeug:127.0.0.1 - - [17/Jan/2024 07:30:01] "[36mGET /images/paintings/f
 INFO:werkzeug:127.0.0.1 - - [17/Jan/2024 07:30:01] "[36mGET /images/paintings/fd76636e1cedaedd2ca6dba38168a5fde683e28fe8a908f3_painting_painting_10.png HTTP/1.1[0m" 304 -
 INFO:werkzeug:127.0.0.1 - - [17/Jan/2024 07:30:01] "[36mGET /images/paintings/fd76636e1cedaedd2ca6dba38168a5fde683e28fe8a908f3_painting_painting_9.png HTTP/1.1[0m" 304 -
 INFO:werkzeug:127.0.0.1 - - [17/Jan/2024 07:30:46] "POST /custom-login HTTP/1.1" 200 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://172.20.10.2:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 900-351-896
+INFO:werkzeug:127.0.0.1 - - [17/Jan/2024 07:57:20] "OPTIONS /get_exhibitions HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Jan/2024 07:57:21] "OPTIONS /get_paintings HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Jan/2024 07:57:21] "OPTIONS /get_exhibitions HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Jan/2024 07:57:21] "OPTIONS /get_paintings HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Jan/2024 07:57:22] "POST /get_paintings HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Jan/2024 07:57:23] "POST /get_paintings HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Jan/2024 07:57:23] "[36mGET /images/exhibitions/painting%20(5).png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [17/Jan/2024 07:57:23] "[36mGET /images/paintings/4bbb5d19-4dee-40d8-a2d8-1b75da3e9d01_painting_potrait1.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [17/Jan/2024 07:57:23] "[36mGET /images/paintings/923533f4-f351-4564-b58c-9097a56d33ee_painting_painting_7.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [17/Jan/2024 07:57:23] "[36mGET /images/paintings/923533f4-f351-4564-b58c-9097a56d33ee_painting_painting_11.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [17/Jan/2024 07:57:24] "[36mGET /images/paintings/fd76636e1cedaedd2ca6dba38168a5fde683e28fe8a908f3_painting_painting_7.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [17/Jan/2024 07:57:24] "[36mGET /images/paintings/4bbb5d19-4dee-40d8-a2d8-1b75da3e9d01_painting_own-words.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [17/Jan/2024 07:57:24] "[36mGET /images/paintings/fd76636e1cedaedd2ca6dba38168a5fde683e28fe8a908f3_painting_painting_6.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [17/Jan/2024 07:57:24] "[36mGET /images/paintings/fd76636e1cedaedd2ca6dba38168a5fde683e28fe8a908f3_painting_painting_10.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [17/Jan/2024 07:57:24] "[36mGET /images/paintings/fd76636e1cedaedd2ca6dba38168a5fde683e28fe8a908f3_painting_painting_9.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [17/Jan/2024 07:57:24] "[36mGET /images/paintings/4bbb5d19-4dee-40d8-a2d8-1b75da3e9d01_painting_own-words.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [17/Jan/2024 07:57:24] "[36mGET /images/paintings/4bbb5d19-4dee-40d8-a2d8-1b75da3e9d01_painting_potrait1.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [17/Jan/2024 07:57:24] "[36mGET /images/paintings/923533f4-f351-4564-b58c-9097a56d33ee_painting_painting_7.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [17/Jan/2024 07:57:25] "[36mGET /images/paintings/923533f4-f351-4564-b58c-9097a56d33ee_painting_painting_11.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [17/Jan/2024 07:57:25] "[36mGET /images/paintings/fd76636e1cedaedd2ca6dba38168a5fde683e28fe8a908f3_painting_painting_7.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [17/Jan/2024 07:57:25] "[36mGET /images/paintings/fd76636e1cedaedd2ca6dba38168a5fde683e28fe8a908f3_painting_painting_6.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [17/Jan/2024 07:57:25] "[36mGET /images/paintings/fd76636e1cedaedd2ca6dba38168a5fde683e28fe8a908f3_painting_painting_10.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [17/Jan/2024 07:57:25] "[36mGET /images/paintings/fd76636e1cedaedd2ca6dba38168a5fde683e28fe8a908f3_painting_painting_9.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [17/Jan/2024 07:57:29] "POST /custom-login HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Jan/2024 07:57:47] "OPTIONS /get_customers HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Jan/2024 07:57:50] "GET /get_customers HTTP/1.1" 200 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 900-351-896
+ERROR:werkzeug:127.0.0.1 - - [17/Jan/2024 20:34:26] code 400, message Bad request version ('q\x06|\x00"\x13\x01\x13\x03\x13\x02À+À/Ì©Ì¨À,À0À')
+INFO:werkzeug:127.0.0.1 - - [17/Jan/2024 20:34:26] "[31m[1m\x16\x03\x01\x02\x8c\x01\x00\x02\x88\x03\x03~k\x7f\x0cØá\x0fÝíGl«¿/\x01áºo#\x14\x18ÄîÈ9\x8e\x191\x0fÑ\x95v ØCÂÎ¦\x87\x96s`§\x13¾}¬­\x8eH·Úî\x06Ê¸\x80¹G`\x91 q\x06|\x00"\x13\x01\x13\x03\x13\x02À+À/Ì©Ì¨À,À0À[0m" 400 -
+ERROR:werkzeug:127.0.0.1 - - [17/Jan/2024 20:34:26] code 400, message Bad request version ('\x00"\x13\x01\x13\x03\x13\x02À+À/Ì©Ì¨À,À0À')
+INFO:werkzeug:127.0.0.1 - - [17/Jan/2024 20:34:26] "[31m[1m\x16\x03\x01\x02\x8c\x01\x00\x02\x88\x03\x03\x95\x08ã×ÈñDµ\x00±\x0cõæÜ\x02Ëõ\x81¦%\x0c\x1ehw¤\x85F\x81P¡Õe ï÷Ú±yj®cc\x14 \x15û×Ù¤\x99\x1aÀåñ\x0fwî\x92\x17]Þ.Ï¤\x09\x00"\x13\x01\x13\x03\x13\x02À+À/Ì©Ì¨À,À0À[0m" 400 -
+ERROR:werkzeug:127.0.0.1 - - [17/Jan/2024 20:34:27] code 400, message Bad request version ('\x8cÈç<Âm\x96Ø\x05(\x11-\x00"\x13\x01\x13\x03\x13\x02À+À/Ì©Ì¨À,À0À')
+INFO:werkzeug:127.0.0.1 - - [17/Jan/2024 20:34:27] "[31m[1m\x16\x03\x01\x02\x8c\x01\x00\x02\x88\x03\x03Ð\x16Ój½;ç\x13\x92êI\x9eõ|¢j\x03¿ÆIl<\x1fU\x86«)B-#é\x1c *@\x13}:u\\o\x01ë4ÒÇCåOR\x11× \x8cÈç<Âm\x96Ø\x05(\x11-\x00"\x13\x01\x13\x03\x13\x02À+À/Ì©Ì¨À,À0À[0m" 400 -
+ERROR:werkzeug:127.0.0.1 - - [17/Jan/2024 20:34:27] code 400, message Bad HTTP/0.9 request type ('\x16\x03\x01\x02\x8c\x01\x00\x02\x88\x03\x03/\x12¢÷W2µHÕD,\x03\x04¥àQKÖNÊh@ÿ\x82Ó¾¤)\x8aðèý')
+INFO:werkzeug:127.0.0.1 - - [17/Jan/2024 20:34:27] "[31m[1m\x16\x03\x01\x02\x8c\x01\x00\x02\x88\x03\x03/\x12¢÷W2µHÕD,\x03\x04¥àQKÖNÊh@ÿ\x82Ó¾¤)\x8aðèý \x89\x9b=4\x8b½rº\x8fÓÿ\x02\x06«\x8bÜ'ýK\x15}½¼>\x11Ïs\x9c&\x16þû\x00"\x13\x01\x13\x03\x13\x02À+À/Ì©Ì¨À,À0À[0m" 400 -
+ERROR:werkzeug:127.0.0.1 - - [17/Jan/2024 20:34:27] code 400, message Bad request version ('Ë(K\x00"\x13\x01\x13\x03\x13\x02À+À/Ì©Ì¨À,À0À')
+INFO:werkzeug:127.0.0.1 - - [17/Jan/2024 20:34:27] "[31m[1m\x16\x03\x01\x02\x8c\x01\x00\x02\x88\x03\x03ÈÈË£©\x1fæe:\x1fÓ\x7f\x00I\x99®\x11téh¦BC\x90!^F÷\x19¿]# "êµX\x01 \x06k¥Ä\x97\x16\x16_ø¦·+\x14|"d§7X¶üó\x0cË(K\x00"\x13\x01\x13\x03\x13\x02À+À/Ì©Ì¨À,À0À[0m" 400 -
+ERROR:werkzeug:127.0.0.1 - - [17/Jan/2024 20:34:27] code 400, message Bad request syntax ('\x16\x03\x01\x02\x8c\x01\x00\x02\x88\x03\x03\x18¨9x³ø\x8b\x16Þ£þmáõA/áát\x97')
+INFO:werkzeug:127.0.0.1 - - [17/Jan/2024 20:34:27] "[31m[1m\x16\x03\x01\x02\x8c\x01\x00\x02\x88\x03\x03\x18¨9x³ø\x8b\x16Þ£þmáõA/áát\x97[0m" 400 -
+ERROR:werkzeug:127.0.0.1 - - [17/Jan/2024 20:34:27] code 400, message Bad request version ('k¼üZ\xad§«ø¢Ë¤ËÚç|,3¸D@\x89\x81M\x15\x08q\x98`=\x10b\x80\x00"\x13\x01\x13\x03\x13\x02À+À/Ì©Ì¨À,À0À')
+INFO:werkzeug:127.0.0.1 - - [17/Jan/2024 20:34:27] "[31m[1m\x16\x03\x01\x02\x8c\x01\x00\x02\x88\x03\x03\x11Q@^Sú\x04Mª)Ù'\x0f\x0d\x95°\x07\x85\x8cüIøÌÈói'ÈÝÓR\x1e k¼üZ­§«ø¢Ë¤ËÚç|,3¸D@\x89\x81M\x15\x08q\x98`=\x10b\x80\x00"\x13\x01\x13\x03\x13\x02À+À/Ì©Ì¨À,À0À[0m" 400 -
+INFO:werkzeug:127.0.0.1 - - [17/Jan/2024 20:35:11] "OPTIONS /get_paintings HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Jan/2024 20:35:11] "OPTIONS /get_paintings HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Jan/2024 20:35:11] "OPTIONS /get_exhibitions HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Jan/2024 20:35:11] "OPTIONS /get_exhibitions HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Jan/2024 20:35:12] "[36mGET /images/exhibitions/painting%20(5).png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [17/Jan/2024 20:35:13] "POST /get_paintings HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Jan/2024 20:35:13] "POST /get_paintings HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Jan/2024 20:35:14] "[36mGET /images/paintings/4bbb5d19-4dee-40d8-a2d8-1b75da3e9d01_painting_own-words.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [17/Jan/2024 20:35:14] "[36mGET /images/paintings/923533f4-f351-4564-b58c-9097a56d33ee_painting_painting_7.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [17/Jan/2024 20:35:14] "[36mGET /images/paintings/4bbb5d19-4dee-40d8-a2d8-1b75da3e9d01_painting_potrait1.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [17/Jan/2024 20:35:14] "[36mGET /images/paintings/fd76636e1cedaedd2ca6dba38168a5fde683e28fe8a908f3_painting_painting_7.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [17/Jan/2024 20:35:14] "[36mGET /images/paintings/923533f4-f351-4564-b58c-9097a56d33ee_painting_painting_11.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [17/Jan/2024 20:35:14] "[36mGET /images/paintings/fd76636e1cedaedd2ca6dba38168a5fde683e28fe8a908f3_painting_painting_6.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [17/Jan/2024 20:35:14] "[36mGET /images/paintings/fd76636e1cedaedd2ca6dba38168a5fde683e28fe8a908f3_painting_painting_10.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [17/Jan/2024 20:35:14] "[36mGET /images/paintings/fd76636e1cedaedd2ca6dba38168a5fde683e28fe8a908f3_painting_painting_9.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [17/Jan/2024 20:35:28] "POST /custom-login HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Jan/2024 20:36:07] "OPTIONS /get_customers HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Jan/2024 20:36:10] "GET /get_customers HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Jan/2024 20:36:42] "OPTIONS /get_exhibitions HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Jan/2024 20:36:42] "OPTIONS /get_paintings HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Jan/2024 20:36:42] "OPTIONS /get_exhibitions HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Jan/2024 20:36:42] "OPTIONS /get_paintings HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Jan/2024 20:36:43] "[36mGET /images/exhibitions/painting%20(5).png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [17/Jan/2024 20:36:43] "POST /get_paintings HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Jan/2024 20:36:43] "POST /get_paintings HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Jan/2024 20:36:44] "[36mGET /images/paintings/4bbb5d19-4dee-40d8-a2d8-1b75da3e9d01_painting_own-words.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [17/Jan/2024 20:36:44] "[36mGET /images/paintings/4bbb5d19-4dee-40d8-a2d8-1b75da3e9d01_painting_potrait1.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [17/Jan/2024 20:36:44] "[36mGET /images/paintings/923533f4-f351-4564-b58c-9097a56d33ee_painting_painting_7.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [17/Jan/2024 20:36:44] "[36mGET /images/paintings/fd76636e1cedaedd2ca6dba38168a5fde683e28fe8a908f3_painting_painting_7.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [17/Jan/2024 20:36:44] "[36mGET /images/paintings/923533f4-f351-4564-b58c-9097a56d33ee_painting_painting_11.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [17/Jan/2024 20:36:44] "[36mGET /images/paintings/fd76636e1cedaedd2ca6dba38168a5fde683e28fe8a908f3_painting_painting_6.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [17/Jan/2024 20:36:44] "[36mGET /images/paintings/fd76636e1cedaedd2ca6dba38168a5fde683e28fe8a908f3_painting_painting_10.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [17/Jan/2024 20:36:44] "[36mGET /images/paintings/fd76636e1cedaedd2ca6dba38168a5fde683e28fe8a908f3_painting_painting_9.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [17/Jan/2024 20:36:44] "[36mGET /images/paintings/4bbb5d19-4dee-40d8-a2d8-1b75da3e9d01_painting_own-words.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [17/Jan/2024 20:36:44] "[36mGET /images/paintings/4bbb5d19-4dee-40d8-a2d8-1b75da3e9d01_painting_potrait1.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [17/Jan/2024 20:36:44] "[36mGET /images/paintings/923533f4-f351-4564-b58c-9097a56d33ee_painting_painting_7.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [17/Jan/2024 20:36:44] "[36mGET /images/paintings/923533f4-f351-4564-b58c-9097a56d33ee_painting_painting_11.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [17/Jan/2024 20:36:44] "[36mGET /images/paintings/fd76636e1cedaedd2ca6dba38168a5fde683e28fe8a908f3_painting_painting_7.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [17/Jan/2024 20:36:45] "[36mGET /images/paintings/fd76636e1cedaedd2ca6dba38168a5fde683e28fe8a908f3_painting_painting_6.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [17/Jan/2024 20:36:45] "[36mGET /images/paintings/fd76636e1cedaedd2ca6dba38168a5fde683e28fe8a908f3_painting_painting_10.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [17/Jan/2024 20:36:45] "[36mGET /images/paintings/fd76636e1cedaedd2ca6dba38168a5fde683e28fe8a908f3_painting_painting_9.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [17/Jan/2024 20:36:46] "GET /get_exhibition/1723e172-d48a-48b0-a6b9-8689793a93ee HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Jan/2024 20:36:46] "GET /get_exhibition/1723e172-d48a-48b0-a6b9-8689793a93ee HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Jan/2024 20:36:57] "POST /check_payment HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Jan/2024 20:36:57] "OPTIONS /get_exhibition_paintings/1723e172-d48a-48b0-a6b9-8689793a93ee HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Jan/2024 20:36:58] "GET /get_exhibition_paintings/1723e172-d48a-48b0-a6b9-8689793a93ee HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Jan/2024 20:36:58] "GET /get_exhibition_paintings/1723e172-d48a-48b0-a6b9-8689793a93ee HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Jan/2024 20:36:58] "[36mGET /images/exhibition_paintings/exhibition7/exhibition7_mmnmn_painting_8.png?clientId=0315ed8c-20d9-4a6b-8274-fe2c946a15a3&exId=1723e172-d48a-48b0-a6b9-8689793a93ee HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [17/Jan/2024 20:36:58] "[36mGET /images/exhibition_paintings/exhibition7/exhibition7_mmnmn_painting_8.png?clientId=0315ed8c-20d9-4a6b-8274-fe2c946a15a3&exId=1723e172-d48a-48b0-a6b9-8689793a93ee HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [17/Jan/2024 20:36:59] "[36mGET /images/exhibition_paintings/exhibition7/exhibition7_igihugu_painting_1.png?clientId=0315ed8c-20d9-4a6b-8274-fe2c946a15a3&exId=1723e172-d48a-48b0-a6b9-8689793a93ee HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [17/Jan/2024 20:37:04] "[36mGET /images/exhibition_paintings/exhibition7/exhibition7_igihugu_painting_1.png?clientId=0315ed8c-20d9-4a6b-8274-fe2c946a15a3&exId=1723e172-d48a-48b0-a6b9-8689793a93ee HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [17/Jan/2024 20:37:05] "[35m[1mGET /images/exhibition_paintings/exhibition7/exhibition7igihugu02_Track_2.mp3?clientId=0315ed8c-20d9-4a6b-8274-fe2c946a15a3&exId=1723e172-d48a-48b0-a6b9-8689793a93ee HTTP/1.1[0m" 206 -
+INFO:werkzeug:127.0.0.1 - - [17/Jan/2024 20:48:31] "[35m[1mGET /images/exhibition_paintings/exhibition7/exhibition7igihugu02_Track_2.mp3?clientId=0315ed8c-20d9-4a6b-8274-fe2c946a15a3&exId=1723e172-d48a-48b0-a6b9-8689793a93ee HTTP/1.1[0m" 206 -
+INFO:werkzeug:127.0.0.1 - - [17/Jan/2024 20:48:33] "[35m[1mGET /images/exhibition_paintings/exhibition7/exhibition7igihugu02_Track_2.mp3?clientId=0315ed8c-20d9-4a6b-8274-fe2c946a15a3&exId=1723e172-d48a-48b0-a6b9-8689793a93ee HTTP/1.1[0m" 206 -
+INFO:werkzeug:127.0.0.1 - - [17/Jan/2024 20:50:49] "[36mGET /images/exhibition_paintings/exhibition7/exhibition7_igihugu_painting_1.png?clientId=0315ed8c-20d9-4a6b-8274-fe2c946a15a3&exId=1723e172-d48a-48b0-a6b9-8689793a93ee HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [17/Jan/2024 20:50:49] "[36mGET /images/exhibition_paintings/exhibition7/exhibition7_igihugu_painting_1.png?clientId=0315ed8c-20d9-4a6b-8274-fe2c946a15a3&exId=1723e172-d48a-48b0-a6b9-8689793a93ee HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [17/Jan/2024 20:51:07] "[36mGET /images/exhibition_paintings/exhibition7/exhibition7_igihugu_painting_1.png?clientId=0315ed8c-20d9-4a6b-8274-fe2c946a15a3&exId=1723e172-d48a-48b0-a6b9-8689793a93ee HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [17/Jan/2024 20:52:02] "[36mGET /images/exhibition_paintings/exhibition7/exhibition7_igihugu_painting_1.png?clientId=0315ed8c-20d9-4a6b-8274-fe2c946a15a3&exId=1723e172-d48a-48b0-a6b9-8689793a93ee HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [17/Jan/2024 20:52:02] "[35m[1mGET /images/exhibition_paintings/exhibition7/exhibition7igihugu02_Track_2.mp3?clientId=0315ed8c-20d9-4a6b-8274-fe2c946a15a3&exId=1723e172-d48a-48b0-a6b9-8689793a93ee HTTP/1.1[0m" 206 -
+INFO:werkzeug:127.0.0.1 - - [17/Jan/2024 20:52:23] "[36mGET /images/exhibition_paintings/exhibition7/exhibition7_igihugu_painting_1.png?clientId=0315ed8c-20d9-4a6b-8274-fe2c946a15a3&exId=1723e172-d48a-48b0-a6b9-8689793a93ee HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [17/Jan/2024 20:52:24] "[35m[1mGET /images/exhibition_paintings/exhibition7/exhibition7igihugu02_Track_2.mp3?clientId=0315ed8c-20d9-4a6b-8274-fe2c946a15a3&exId=1723e172-d48a-48b0-a6b9-8689793a93ee HTTP/1.1[0m" 206 -
+INFO:werkzeug:127.0.0.1 - - [17/Jan/2024 20:53:56] "[35m[1mGET /images/exhibition_paintings/exhibition7/exhibition7igihugu02_Track_2.mp3?clientId=0315ed8c-20d9-4a6b-8274-fe2c946a15a3&exId=1723e172-d48a-48b0-a6b9-8689793a93ee HTTP/1.1[0m" 206 -
+INFO:werkzeug:127.0.0.1 - - [17/Jan/2024 20:56:20] "[36mGET /images/exhibition_paintings/exhibition7/exhibition7_igihugu_painting_1.png?clientId=0315ed8c-20d9-4a6b-8274-fe2c946a15a3&exId=1723e172-d48a-48b0-a6b9-8689793a93ee HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [17/Jan/2024 20:56:51] "[35m[1mGET /images/exhibition_paintings/exhibition7/exhibition7igihugu02_Track_2.mp3?clientId=0315ed8c-20d9-4a6b-8274-fe2c946a15a3&exId=1723e172-d48a-48b0-a6b9-8689793a93ee HTTP/1.1[0m" 206 -
+INFO:werkzeug:127.0.0.1 - - [17/Jan/2024 20:59:43] "[35m[1mGET /images/exhibition_paintings/exhibition7/exhibition7igihugu02_Track_2.mp3?clientId=0315ed8c-20d9-4a6b-8274-fe2c946a15a3&exId=1723e172-d48a-48b0-a6b9-8689793a93ee HTTP/1.1[0m" 206 -
+INFO:werkzeug:127.0.0.1 - - [17/Jan/2024 21:02:27] "[35m[1mGET /images/exhibition_paintings/exhibition7/exhibition7igihugu02_Track_2.mp3?clientId=0315ed8c-20d9-4a6b-8274-fe2c946a15a3&exId=1723e172-d48a-48b0-a6b9-8689793a93ee HTTP/1.1[0m" 206 -
+INFO:werkzeug:127.0.0.1 - - [17/Jan/2024 21:18:01] "[36mGET /images/exhibition_paintings/exhibition7/exhibition7_igihugu_painting_1.png?clientId=0315ed8c-20d9-4a6b-8274-fe2c946a15a3&exId=1723e172-d48a-48b0-a6b9-8689793a93ee HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [17/Jan/2024 21:18:42] "[36mGET /images/exhibition_paintings/exhibition7/exhibition7_igihugu_painting_1.png?clientId=0315ed8c-20d9-4a6b-8274-fe2c946a15a3&exId=1723e172-d48a-48b0-a6b9-8689793a93ee HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [17/Jan/2024 21:18:42] "[35m[1mGET /images/exhibition_paintings/exhibition7/exhibition7igihugu02_Track_2.mp3?clientId=0315ed8c-20d9-4a6b-8274-fe2c946a15a3&exId=1723e172-d48a-48b0-a6b9-8689793a93ee HTTP/1.1[0m" 206 -
+INFO:werkzeug:127.0.0.1 - - [17/Jan/2024 21:22:04] "OPTIONS /get_exhibitions HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Jan/2024 21:22:04] "OPTIONS /get_paintings HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Jan/2024 21:22:05] "OPTIONS /get_exhibitions HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Jan/2024 21:22:05] "OPTIONS /get_paintings HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Jan/2024 21:22:05] "[36mGET /images/exhibitions/painting%20(5).png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [17/Jan/2024 21:22:05] "POST /get_paintings HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Jan/2024 21:22:05] "POST /get_paintings HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Jan/2024 21:22:05] "[36mGET /images/paintings/4bbb5d19-4dee-40d8-a2d8-1b75da3e9d01_painting_own-words.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [17/Jan/2024 21:22:06] "[36mGET /images/paintings/4bbb5d19-4dee-40d8-a2d8-1b75da3e9d01_painting_potrait1.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [17/Jan/2024 21:22:06] "[36mGET /images/paintings/923533f4-f351-4564-b58c-9097a56d33ee_painting_painting_7.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [17/Jan/2024 21:22:06] "[36mGET /images/paintings/923533f4-f351-4564-b58c-9097a56d33ee_painting_painting_11.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [17/Jan/2024 21:22:06] "[36mGET /images/paintings/fd76636e1cedaedd2ca6dba38168a5fde683e28fe8a908f3_painting_painting_7.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [17/Jan/2024 21:22:06] "[36mGET /images/paintings/fd76636e1cedaedd2ca6dba38168a5fde683e28fe8a908f3_painting_painting_6.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [17/Jan/2024 21:22:06] "[36mGET /images/paintings/fd76636e1cedaedd2ca6dba38168a5fde683e28fe8a908f3_painting_painting_10.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [17/Jan/2024 21:22:06] "[36mGET /images/paintings/fd76636e1cedaedd2ca6dba38168a5fde683e28fe8a908f3_painting_painting_9.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [17/Jan/2024 21:22:06] "[36mGET /images/paintings/4bbb5d19-4dee-40d8-a2d8-1b75da3e9d01_painting_own-words.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [17/Jan/2024 21:22:06] "[36mGET /images/paintings/923533f4-f351-4564-b58c-9097a56d33ee_painting_painting_11.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [17/Jan/2024 21:22:06] "[36mGET /images/paintings/4bbb5d19-4dee-40d8-a2d8-1b75da3e9d01_painting_potrait1.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [17/Jan/2024 21:22:06] "[36mGET /images/paintings/923533f4-f351-4564-b58c-9097a56d33ee_painting_painting_7.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [17/Jan/2024 21:22:06] "[36mGET /images/paintings/fd76636e1cedaedd2ca6dba38168a5fde683e28fe8a908f3_painting_painting_7.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [17/Jan/2024 21:22:06] "[36mGET /images/paintings/fd76636e1cedaedd2ca6dba38168a5fde683e28fe8a908f3_painting_painting_6.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [17/Jan/2024 21:22:07] "[36mGET /images/paintings/fd76636e1cedaedd2ca6dba38168a5fde683e28fe8a908f3_painting_painting_10.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [17/Jan/2024 21:22:07] "[36mGET /images/paintings/fd76636e1cedaedd2ca6dba38168a5fde683e28fe8a908f3_painting_painting_9.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [17/Jan/2024 21:22:08] "GET /get_exhibition/1723e172-d48a-48b0-a6b9-8689793a93ee HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Jan/2024 21:22:08] "GET /get_exhibition/1723e172-d48a-48b0-a6b9-8689793a93ee HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Jan/2024 21:22:15] "GET /get_exhibitions HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Jan/2024 21:22:15] "GET /get_exhibitions HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Jan/2024 21:22:32] "POST /add_customer HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Jan/2024 21:22:45] "GET /get_exhibition/1723e172-d48a-48b0-a6b9-8689793a93ee HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Jan/2024 21:22:45] "GET /get_exhibition/1723e172-d48a-48b0-a6b9-8689793a93ee HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Jan/2024 21:22:45] "[36mGET /images/exhibitions/painting%20(5).png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [17/Jan/2024 21:25:19] "GET /get_exhibitions HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Jan/2024 21:25:19] "GET /get_exhibitions HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Jan/2024 21:25:32] "POST /add_customer HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Jan/2024 21:25:36] "POST /add_customer HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Jan/2024 21:25:57] "POST /add_customer HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Jan/2024 21:26:18] "POST /add_customer HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Jan/2024 21:26:19] "POST /add_customer HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Jan/2024 21:26:20] "POST /add_customer HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Jan/2024 21:26:23] "POST /add_customer HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Jan/2024 21:31:03] "GET /get_exhibitions HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Jan/2024 21:33:29] "GET /get_exhibitions HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Jan/2024 21:33:53] "POST /add_customer HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Jan/2024 21:35:22] "GET /get_exhibitions HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Jan/2024 21:36:23] "POST /add_customer HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Jan/2024 21:38:11] "GET /get_exhibitions HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Jan/2024 21:38:26] "POST /add_customer HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Jan/2024 21:38:30] "POST /add_customer HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Jan/2024 21:39:02] "GET /get_exhibitions HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Jan/2024 21:39:04] "POST /add_customer HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Jan/2024 21:39:19] "POST /add_customer HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Jan/2024 21:42:49] "GET /get_exhibitions HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Jan/2024 21:42:49] "GET /get_exhibitions HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Jan/2024 21:43:32] "GET /get_exhibitions HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Jan/2024 21:44:50] "POST /add_customer HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Jan/2024 21:46:43] "GET /get_exhibitions HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Jan/2024 21:47:12] "POST /add_customer HTTP/1.1" 200 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 900-351-896
+INFO:werkzeug:127.0.0.1 - - [17/Jan/2024 21:48:41] "GET /get_exhibition/1723e172-d48a-48b0-a6b9-8689793a93ee HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Jan/2024 21:48:41] "GET /get_exhibition/1723e172-d48a-48b0-a6b9-8689793a93ee HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Jan/2024 21:48:42] "[36mGET /images/exhibitions/painting%20(5).png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [17/Jan/2024 21:49:02] "GET /get_exhibitions HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Jan/2024 21:49:02] "GET /get_exhibitions HTTP/1.1" 200 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 900-351-896
+INFO:werkzeug:127.0.0.1 - - [17/Jan/2024 21:53:41] "GET /get_exhibitions HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Jan/2024 21:53:41] "GET /get_exhibitions HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Jan/2024 21:53:58] "POST /add_customer HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Jan/2024 21:54:26] "GET /get_exhibitions HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Jan/2024 21:54:27] "GET /get_exhibitions HTTP/1.1" 200 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 900-351-896
+INFO:werkzeug:127.0.0.1 - - [17/Jan/2024 21:55:37] "GET /get_exhibitions HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Jan/2024 21:56:06] "GET /get_exhibitions HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Jan/2024 21:56:06] "GET /get_exhibitions HTTP/1.1" 200 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 900-351-896
+INFO:werkzeug:127.0.0.1 - - [17/Jan/2024 22:03:05] "GET /get_exhibitions HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Jan/2024 22:03:10] "GET /get_exhibitions HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Jan/2024 22:03:10] "GET /get_exhibitions HTTP/1.1" 200 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 900-351-896
+INFO:werkzeug:127.0.0.1 - - [17/Jan/2024 22:06:57] "GET /get_exhibitions HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Jan/2024 22:06:58] "GET /get_exhibitions HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Jan/2024 22:06:58] "GET /get_exhibitions HTTP/1.1" 200 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 900-351-896
+INFO:werkzeug:127.0.0.1 - - [17/Jan/2024 22:09:35] "GET /get_exhibitions HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Jan/2024 22:09:35] "GET /get_exhibitions HTTP/1.1" 200 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 900-351-896
+INFO:werkzeug:127.0.0.1 - - [17/Jan/2024 22:14:13] "GET /get_exhibitions HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Jan/2024 22:14:14] "GET /get_exhibitions HTTP/1.1" 200 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 900-351-896
+INFO:werkzeug:127.0.0.1 - - [17/Jan/2024 22:16:22] "GET /get_exhibitions HTTP/1.1" 200 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 900-351-896
+INFO:werkzeug:127.0.0.1 - - [17/Jan/2024 22:20:52] "OPTIONS /get_exhibitions HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Jan/2024 22:20:52] "GET /get_exhibitions HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Jan/2024 22:20:53] "POST /custom-login HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Jan/2024 22:27:51] "OPTIONS /add_new_exhibition HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Jan/2024 22:27:52] "PUT /add_new_exhibition HTTP/1.1" 200 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 900-351-896
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 900-351-896
+INFO:werkzeug:127.0.0.1 - - [17/Jan/2024 22:38:01] "GET /get_exhibitions HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Jan/2024 22:38:01] "OPTIONS /get_painters HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Jan/2024 22:38:01] "GET /get_painters HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Jan/2024 22:45:06] "GET /get_exhibitions HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Jan/2024 22:45:07] "GET /get_exhibitions HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Jan/2024 22:45:07] "OPTIONS /get_painters HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Jan/2024 22:45:09] "GET /get_painters HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Jan/2024 22:45:12] "GET /get_painters HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Jan/2024 22:45:54] "OPTIONS /add_exhibition_painting HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Jan/2024 22:45:55] "POST /add_exhibition_painting HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Jan/2024 22:46:50] "GET /get_exhibitions HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Jan/2024 22:46:51] "OPTIONS /get_painters HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Jan/2024 22:46:51] "GET /get_exhibitions HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Jan/2024 22:46:53] "GET /get_painters HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Jan/2024 22:46:55] "GET /get_painters HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Jan/2024 22:47:46] "OPTIONS /add_exhibition_painting HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Jan/2024 22:47:47] "[35m[1mPOST /add_exhibition_painting HTTP/1.1[0m" 500 -
+INFO:werkzeug:127.0.0.1 - - [17/Jan/2024 22:48:34] "OPTIONS /add_exhibition_painting HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Jan/2024 22:48:35] "POST /add_exhibition_painting HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Jan/2024 22:52:05] "GET /get_exhibitions HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Jan/2024 22:52:06] "OPTIONS /get_painters HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Jan/2024 22:52:07] "GET /get_exhibitions HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Jan/2024 22:52:08] "GET /get_painters HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Jan/2024 22:52:10] "GET /get_painters HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Jan/2024 22:54:18] "GET /get_exhibitions HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Jan/2024 22:54:18] "OPTIONS /get_painters HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Jan/2024 22:54:18] "GET /get_exhibitions HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Jan/2024 22:54:19] "GET /get_painters HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Jan/2024 22:54:21] "GET /get_painters HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Jan/2024 22:55:28] "GET /get_exhibitions HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Jan/2024 22:55:29] "OPTIONS /get_painters HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Jan/2024 22:55:29] "GET /get_exhibitions HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Jan/2024 22:55:31] "GET /get_painters HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Jan/2024 22:55:33] "GET /get_painters HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Jan/2024 22:56:37] "GET /get_exhibitions HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Jan/2024 22:56:38] "OPTIONS /get_painters HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Jan/2024 22:56:38] "GET /get_exhibitions HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Jan/2024 22:56:39] "GET /get_painters HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Jan/2024 22:56:41] "GET /get_painters HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Jan/2024 22:57:15] "GET /get_exhibitions HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Jan/2024 22:57:15] "GET /get_exhibitions HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Jan/2024 22:57:16] "OPTIONS /get_painters HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Jan/2024 22:57:17] "GET /get_painters HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Jan/2024 22:57:18] "GET /get_painters HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Jan/2024 22:58:04] "GET /get_exhibitions HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Jan/2024 22:58:04] "GET /get_exhibitions HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Jan/2024 22:58:04] "OPTIONS /get_painters HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Jan/2024 22:58:05] "GET /get_painters HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Jan/2024 22:58:06] "GET /get_painters HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Jan/2024 22:58:17] "GET /get_exhibitions HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Jan/2024 22:58:17] "GET /get_exhibitions HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Jan/2024 22:58:17] "OPTIONS /get_painters HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Jan/2024 22:58:18] "GET /get_painters HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Jan/2024 22:58:19] "GET /get_painters HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Jan/2024 23:00:05] "OPTIONS /add_exhibition_painting HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Jan/2024 23:00:06] "POST /add_exhibition_painting HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Jan/2024 23:01:28] "GET /get_exhibitions HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Jan/2024 23:01:28] "GET /get_exhibitions HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Jan/2024 23:01:28] "OPTIONS /get_painters HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Jan/2024 23:01:29] "GET /get_painters HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Jan/2024 23:01:30] "GET /get_painters HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Jan/2024 23:01:41] "GET /get_exhibitions HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Jan/2024 23:01:42] "OPTIONS /get_painters HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Jan/2024 23:01:42] "GET /get_exhibitions HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Jan/2024 23:01:43] "GET /get_painters HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Jan/2024 23:01:45] "GET /get_painters HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Jan/2024 23:18:37] "OPTIONS /add_new_painter HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Jan/2024 23:18:39] "POST /add_new_painter HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Jan/2024 23:20:35] "OPTIONS /add_new_painter HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Jan/2024 23:20:37] "POST /add_new_painter HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Jan/2024 23:25:44] "GET /get_exhibitions HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Jan/2024 23:25:44] "OPTIONS /get_painters HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Jan/2024 23:25:45] "GET /get_painters HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Jan/2024 23:27:25] "GET /get_exhibitions HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Jan/2024 23:27:36] "GET /images/exhibitions/painting%20(4).png HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Jan/2024 23:31:26] "GET /get_paintings HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Jan/2024 23:36:22] "OPTIONS /get_customers HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Jan/2024 23:36:23] "GET /get_customers HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Jan/2024 23:39:21] "OPTIONS /update_customer_status HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Jan/2024 23:39:22] "POST /update_customer_status HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Jan/2024 23:39:44] "OPTIONS /update_customer_status HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Jan/2024 23:39:44] "POST /update_customer_status HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Jan/2024 23:42:54] "OPTIONS /get_painters HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Jan/2024 23:42:57] "GET /get_painters HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Jan/2024 23:43:03] "GET /images/painters/yuhuuu_profilepicture_painting_6.png HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Jan/2024 23:43:06] "GET /images/painters/im_profilepicture_painting_1.png HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Jan/2024 23:43:12] "GET /images/painters/uu_profilepicture_painting_8.png HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Jan/2024 23:50:15] "OPTIONS /get_painters HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Jan/2024 23:50:16] "GET /get_painters HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Jan/2024 23:50:26] "GET /get_paintings HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Jan/2024 23:50:31] "OPTIONS /get_painters HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Jan/2024 23:50:32] "GET /get_painters HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Jan/2024 23:50:40] "GET /get_exhibitions HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Jan/2024 23:50:40] "OPTIONS /get_painters HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Jan/2024 23:50:40] "GET /get_painters HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Jan/2024 23:51:11] "GET /get_exhibitions HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Jan/2024 23:51:23] "GET /get_exhibitions HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Jan/2024 23:51:23] "OPTIONS /get_painters HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Jan/2024 23:51:23] "GET /get_painters HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Jan/2024 23:51:39] "OPTIONS /get_customers HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Jan/2024 23:51:40] "GET /get_customers HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Jan/2024 23:54:59] "OPTIONS /delete_customer HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Jan/2024 23:55:00] "DELETE /delete_customer HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Jan/2024 23:55:11] "OPTIONS /delete_customer HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Jan/2024 23:55:11] "DELETE /delete_customer HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Jan/2024 23:55:20] "OPTIONS /delete_customer HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Jan/2024 23:55:21] "DELETE /delete_customer HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Jan/2024 23:55:32] "OPTIONS /delete_customer HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Jan/2024 23:55:33] "DELETE /delete_customer HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Jan/2024 23:55:40] "OPTIONS /delete_customer HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Jan/2024 23:55:41] "DELETE /delete_customer HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Jan/2024 23:55:51] "OPTIONS /delete_customer HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Jan/2024 23:55:52] "DELETE /delete_customer HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Jan/2024 23:56:30] "OPTIONS /get_painters HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Jan/2024 23:56:31] "GET /get_painters HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Jan/2024 23:56:41] "GET /get_exhibitions HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Jan/2024 23:56:47] "OPTIONS /get_customers HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Jan/2024 23:56:48] "GET /get_customers HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Jan/2024 23:58:23] "OPTIONS /get_customers HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Jan/2024 23:58:24] "GET /get_customers HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Jan/2024 23:59:01] "OPTIONS /get_painters HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Jan/2024 23:59:02] "GET /get_painters HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Jan/2024 23:59:09] "[35m[1mGET /api/blog/get_blogs HTTP/1.1[0m" 500 -
+INFO:werkzeug:127.0.0.1 - - [17/Jan/2024 23:59:19] "OPTIONS /get_painters HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Jan/2024 23:59:20] "GET /get_painters HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Jan/2024 23:59:46] "OPTIONS /get_customers HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Jan/2024 23:59:47] "GET /get_customers HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Jan/2024 00:10:11] "OPTIONS /add_new_painting HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Jan/2024 00:10:13] "PUT /add_new_painting HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Jan/2024 00:11:17] "OPTIONS /add_new_painting HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Jan/2024 00:11:17] "PUT /add_new_painting HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Jan/2024 00:13:07] "OPTIONS /get_customers HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Jan/2024 00:13:08] "GET /get_customers HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Jan/2024 00:16:00] "OPTIONS /api/blog/add_new_blog HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Jan/2024 00:16:00] "[35m[1mPUT /api/blog/add_new_blog HTTP/1.1[0m" 500 -
+INFO:werkzeug:127.0.0.1 - - [18/Jan/2024 00:19:29] "GET /get_paintings HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Jan/2024 00:19:35] "GET /images/paintings/4bbb5d19-4dee-40d8-a2d8-1b75da3e9d01_painting_painting_10.png HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Jan/2024 00:19:40] "GET /images/paintings/4bbb5d19-4dee-40d8-a2d8-1b75da3e9d01_painting_painting_9.png HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Jan/2024 00:19:49] "OPTIONS /delete_painting/98191806-c81e-4312-a2f4-c2985bf93cd6 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Jan/2024 00:19:50] "DELETE /delete_painting/98191806-c81e-4312-a2f4-c2985bf93cd6 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Jan/2024 00:20:48] "GET /get_paintings HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Jan/2024 00:21:05] "OPTIONS /delete_painting/2b6179b8-5eaf-4fb0-b6a8-18423edea536 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Jan/2024 00:21:06] "DELETE /delete_painting/2b6179b8-5eaf-4fb0-b6a8-18423edea536 HTTP/1.1" 200 -
+INFO:werkzeug: * Detected change in 'C:\\Users\\MMMMM\\Desktop\\painting_ecommerce_website\\backend\\auth\\UserAuth.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 900-351-896
+INFO:werkzeug: * Detected change in 'C:\\Users\\MMMMM\\Desktop\\painting_ecommerce_website\\backend\\api\\painting.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 900-351-896
+INFO:werkzeug:127.0.0.1 - - [18/Jan/2024 00:31:00] "GET /get_paintings HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Jan/2024 00:31:08] "OPTIONS /delete_painting/09121d09-26e0-4482-a203-c851a1b035d4 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Jan/2024 00:31:09] "DELETE /delete_painting/09121d09-26e0-4482-a203-c851a1b035d4 HTTP/1.1" 200 -
+INFO:werkzeug: * Detected change in 'C:\\Users\\MMMMM\\Desktop\\painting_ecommerce_website\\backend\\api\\painting.py', reloading
+INFO:werkzeug: * Restarting with stat
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 900-351-896
+INFO:werkzeug:127.0.0.1 - - [18/Jan/2024 00:34:03] "GET /get_paintings HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Jan/2024 00:34:14] "OPTIONS /delete_painting/58ae925b-e411-4d0f-90a9-1dee31b82b8a HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Jan/2024 00:34:15] "DELETE /delete_painting/58ae925b-e411-4d0f-90a9-1dee31b82b8a HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Jan/2024 00:36:42] "OPTIONS /custom-admin-logout HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Jan/2024 00:36:43] "GET /custom-admin-logout HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Jan/2024 00:37:03] "POST /custom-login HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Jan/2024 00:37:03] "OPTIONS /get_user_paintings/923533f4-f351-4564-b58c-9097a56d33ee HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Jan/2024 00:37:04] "GET /get_user_paintings/923533f4-f351-4564-b58c-9097a56d33ee HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Jan/2024 00:37:05] "GET /get_user_paintings/923533f4-f351-4564-b58c-9097a56d33ee HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Jan/2024 00:38:17] "POST /custom-login HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Jan/2024 00:50:09] "OPTIONS /get_painters HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Jan/2024 00:50:10] "GET /get_painters HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Jan/2024 00:50:18] "OPTIONS /delete_painter/47ccd1cb2f2e6ad853c8356f0c690d2dbd074f6e31f51ff6 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Jan/2024 00:50:19] "DELETE /delete_painter/47ccd1cb2f2e6ad853c8356f0c690d2dbd074f6e31f51ff6 HTTP/1.1" 200 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 900-351-896
+INFO:werkzeug:127.0.0.1 - - [18/Jan/2024 00:52:52] "OPTIONS /get_painters HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Jan/2024 00:52:52] "GET /get_painters HTTP/1.1" 200 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 900-351-896
+INFO:werkzeug:127.0.0.1 - - [18/Jan/2024 00:54:54] "OPTIONS /delete_painter/1bd420c9570f031588bfb49febbc0fe029c36ffb15789b44 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Jan/2024 00:54:55] "DELETE /delete_painter/1bd420c9570f031588bfb49febbc0fe029c36ffb15789b44 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Jan/2024 00:55:03] "OPTIONS /delete_painter/2fcde92f13643a5c17c728a88cde22472d9b1beac8d4165d HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Jan/2024 00:55:03] "DELETE /delete_painter/2fcde92f13643a5c17c728a88cde22472d9b1beac8d4165d HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Jan/2024 00:55:19] "OPTIONS /delete_painter/5165bae06dda8bf4ef575be9e18b211cab67ef8020e9459f HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Jan/2024 00:55:20] "DELETE /delete_painter/5165bae06dda8bf4ef575be9e18b211cab67ef8020e9459f HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Jan/2024 00:55:31] "OPTIONS /delete_painter/fd76636e1cedaedd2ca6dba38168a5fde683e28fe8a908f3 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Jan/2024 00:55:31] "DELETE /delete_painter/fd76636e1cedaedd2ca6dba38168a5fde683e28fe8a908f3 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Jan/2024 00:56:09] "OPTIONS /get_painters HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Jan/2024 00:56:10] "GET /get_painters HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Jan/2024 00:57:28] "GET /get_exhibitions HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Jan/2024 00:58:38] "GET /get_paintings HTTP/1.1" 200 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 900-351-896
+INFO:werkzeug:127.0.0.1 - - [18/Jan/2024 01:04:11] "OPTIONS /get_customers HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Jan/2024 01:04:11] "GET /get_customers HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Jan/2024 01:04:21] "OPTIONS /delete_customer HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Jan/2024 01:04:22] "DELETE /delete_customer HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Jan/2024 01:06:19] "OPTIONS /get_customers HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Jan/2024 01:06:20] "GET /get_customers HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Jan/2024 01:07:41] "OPTIONS /get_customers HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Jan/2024 01:07:42] "GET /get_customers HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Jan/2024 01:07:52] "OPTIONS /delete_customer HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Jan/2024 01:07:53] "DELETE /delete_customer HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Jan/2024 01:08:04] "OPTIONS /delete_customer HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Jan/2024 01:08:05] "DELETE /delete_customer HTTP/1.1" 200 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 900-351-896
+INFO:werkzeug:127.0.0.1 - - [18/Jan/2024 01:11:47] "OPTIONS /get_customers HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Jan/2024 01:11:47] "GET /get_customers HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Jan/2024 01:11:57] "OPTIONS /delete_customer HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Jan/2024 01:11:58] "DELETE /delete_customer HTTP/1.1" 200 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 900-351-896
+INFO:werkzeug:127.0.0.1 - - [18/Jan/2024 01:15:13] "OPTIONS /get_customers HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Jan/2024 01:15:14] "GET /get_customers HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Jan/2024 01:15:20] "OPTIONS /delete_customer HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Jan/2024 01:15:21] "DELETE /delete_customer HTTP/1.1" 200 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 900-351-896
+INFO:werkzeug:127.0.0.1 - - [18/Jan/2024 01:21:48] "OPTIONS /get_customers HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Jan/2024 01:21:48] "GET /get_customers HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Jan/2024 01:21:57] "OPTIONS /delete_customer HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Jan/2024 01:21:58] "DELETE /delete_customer HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Jan/2024 01:22:13] "OPTIONS /delete_customer HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Jan/2024 01:22:14] "DELETE /delete_customer HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Jan/2024 01:22:34] "OPTIONS /delete_customer HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Jan/2024 01:22:36] "DELETE /delete_customer HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Jan/2024 01:23:08] "OPTIONS /delete_customer HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Jan/2024 01:23:09] "DELETE /delete_customer HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Jan/2024 01:23:18] "OPTIONS /delete_customer HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Jan/2024 01:23:19] "DELETE /delete_customer HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Jan/2024 01:23:28] "OPTIONS /delete_customer HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Jan/2024 01:23:29] "DELETE /delete_customer HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Jan/2024 01:23:37] "OPTIONS /delete_customer HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Jan/2024 01:23:38] "DELETE /delete_customer HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Jan/2024 01:23:45] "OPTIONS /delete_customer HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Jan/2024 01:23:46] "DELETE /delete_customer HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Jan/2024 01:23:54] "OPTIONS /delete_customer HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Jan/2024 01:23:55] "DELETE /delete_customer HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Jan/2024 01:24:02] "OPTIONS /delete_customer HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Jan/2024 01:24:03] "DELETE /delete_customer HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Jan/2024 01:24:08] "OPTIONS /delete_customer HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Jan/2024 01:24:09] "DELETE /delete_customer HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Jan/2024 01:24:14] "OPTIONS /delete_customer HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Jan/2024 01:24:15] "DELETE /delete_customer HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Jan/2024 01:25:48] "OPTIONS /get_customers HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Jan/2024 01:25:49] "GET /get_customers HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Jan/2024 01:25:57] "OPTIONS /delete_customer HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Jan/2024 01:25:58] "DELETE /delete_customer HTTP/1.1" 200 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 900-351-896
+INFO:werkzeug:127.0.0.1 - - [18/Jan/2024 01:29:29] "OPTIONS /get_customers HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Jan/2024 01:29:30] "GET /get_customers HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Jan/2024 01:29:40] "OPTIONS /delete_customer HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Jan/2024 01:29:41] "DELETE /delete_customer HTTP/1.1" 200 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 900-351-896
+INFO:werkzeug:127.0.0.1 - - [18/Jan/2024 01:35:00] "OPTIONS /delete_customer HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Jan/2024 01:35:01] "DELETE /delete_customer HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Jan/2024 01:35:05] "OPTIONS /delete_customer HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Jan/2024 01:35:06] "DELETE /delete_customer HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Jan/2024 01:35:15] "OPTIONS /delete_customer HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Jan/2024 01:35:15] "DELETE /delete_customer HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Jan/2024 01:35:37] "OPTIONS /delete_customer HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Jan/2024 01:35:38] "DELETE /delete_customer HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Jan/2024 01:35:49] "OPTIONS /delete_customer HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Jan/2024 01:35:49] "DELETE /delete_customer HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Jan/2024 01:37:01] "OPTIONS /get_painters HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Jan/2024 01:37:02] "GET /get_painters HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Jan/2024 01:37:18] "OPTIONS /delete_painter/0eb3cb53508cc300b04fdc0711e290ff28631170ab439740 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Jan/2024 01:37:18] "DELETE /delete_painter/0eb3cb53508cc300b04fdc0711e290ff28631170ab439740 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Jan/2024 01:37:27] "OPTIONS /custom-admin-logout HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Jan/2024 01:37:29] "GET /custom-admin-logout HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Jan/2024 01:37:51] "OPTIONS /get_exhibitions HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Jan/2024 01:37:51] "OPTIONS /get_paintings HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Jan/2024 01:37:52] "OPTIONS /get_paintings HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Jan/2024 01:37:52] "POST /get_paintings HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Jan/2024 01:37:53] "GET /get_exhibitions HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Jan/2024 01:37:53] "POST /get_paintings HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Jan/2024 01:37:54] "[36mGET /images/paintings/923533f4-f351-4564-b58c-9097a56d33ee_painting_painting_11.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [18/Jan/2024 01:37:54] "[36mGET /images/paintings/923533f4-f351-4564-b58c-9097a56d33ee_painting_painting_7.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [18/Jan/2024 01:37:55] "[36mGET /images/exhibitions/painting%20(5).png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [18/Jan/2024 01:37:55] "[36mGET /images/exhibitions/painting%20(4).png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [18/Jan/2024 01:38:12] "GET /get_paintings HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Jan/2024 01:38:12] "GET /get_paintings HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Jan/2024 01:38:17] "POST /like/77514d90-6a12-4072-91c7-27b16575eeed HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Jan/2024 01:39:09] "OPTIONS /get_exhibitions HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Jan/2024 01:39:09] "OPTIONS /get_paintings HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Jan/2024 01:39:09] "OPTIONS /get_exhibitions HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Jan/2024 01:39:09] "OPTIONS /get_paintings HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Jan/2024 01:39:09] "POST /get_paintings HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Jan/2024 01:39:09] "POST /get_paintings HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Jan/2024 01:39:11] "GET /get_exhibition/1723e172-d48a-48b0-a6b9-8689793a93ee HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Jan/2024 01:39:12] "GET /get_exhibition/1723e172-d48a-48b0-a6b9-8689793a93ee HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Jan/2024 01:39:50] "GET /get_exhibition/1723e172-d48a-48b0-a6b9-8689793a93ee HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Jan/2024 01:39:51] "GET /get_exhibition/1723e172-d48a-48b0-a6b9-8689793a93ee HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Jan/2024 01:40:25] "GET /get_exhibition/1723e172-d48a-48b0-a6b9-8689793a93ee HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Jan/2024 01:40:26] "GET /get_exhibition/1723e172-d48a-48b0-a6b9-8689793a93ee HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Jan/2024 01:40:47] "GET /get_exhibitions HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Jan/2024 01:40:47] "GET /get_exhibitions HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Jan/2024 01:41:10] "GET /get_exhibition/1723e172-d48a-48b0-a6b9-8689793a93ee HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Jan/2024 01:41:10] "GET /get_exhibition/1723e172-d48a-48b0-a6b9-8689793a93ee HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Jan/2024 01:41:10] "[36mGET /images/exhibitions/painting%20(5).png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [18/Jan/2024 01:44:19] "GET /get_exhibition/1723e172-d48a-48b0-a6b9-8689793a93ee HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Jan/2024 01:44:20] "GET /get_exhibition/1723e172-d48a-48b0-a6b9-8689793a93ee HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Jan/2024 01:45:27] "GET /get_exhibition/1723e172-d48a-48b0-a6b9-8689793a93ee HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Jan/2024 01:45:28] "GET /get_exhibition/1723e172-d48a-48b0-a6b9-8689793a93ee HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Jan/2024 01:45:41] "OPTIONS /get_paintings HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Jan/2024 01:45:41] "OPTIONS /get_exhibitions HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Jan/2024 01:45:42] "OPTIONS /get_paintings HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Jan/2024 01:45:44] "POST /get_paintings HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Jan/2024 01:45:45] "[36mGET /images/paintings/923533f4-f351-4564-b58c-9097a56d33ee_painting_painting_11.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [18/Jan/2024 01:45:45] "[36mGET /images/paintings/923533f4-f351-4564-b58c-9097a56d33ee_painting_painting_7.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [18/Jan/2024 01:45:45] "[36mGET /images/paintings/923533f4-f351-4564-b58c-9097a56d33ee_painting_painting_11.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [18/Jan/2024 01:45:45] "GET /get_exhibitions HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Jan/2024 01:45:45] "POST /get_paintings HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Jan/2024 01:45:45] "[36mGET /images/paintings/923533f4-f351-4564-b58c-9097a56d33ee_painting_painting_7.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [18/Jan/2024 01:45:45] "[36mGET /images/exhibitions/painting%20(4).png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [18/Jan/2024 01:45:45] "[36mGET /images/exhibitions/painting%20(4).png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [18/Jan/2024 01:45:51] "GET /get_exhibition/4544e1b6-acb8-4e21-99cc-5aad842544a8 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Jan/2024 01:45:51] "GET /get_exhibition/4544e1b6-acb8-4e21-99cc-5aad842544a8 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Jan/2024 01:46:32] "GET /get_exhibition/4544e1b6-acb8-4e21-99cc-5aad842544a8 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Jan/2024 01:46:32] "GET /get_exhibition/4544e1b6-acb8-4e21-99cc-5aad842544a8 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Jan/2024 01:46:32] "[36mGET /images/exhibitions/painting%20(5).png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [18/Jan/2024 01:46:42] "GET /get_exhibitions HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Jan/2024 01:46:43] "GET /get_exhibitions HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Jan/2024 01:46:56] "GET /get_exhibition/4544e1b6-acb8-4e21-99cc-5aad842544a8 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Jan/2024 01:46:56] "GET /get_exhibition/4544e1b6-acb8-4e21-99cc-5aad842544a8 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Jan/2024 01:46:56] "[36mGET /images/exhibitions/painting%20(5).png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [18/Jan/2024 01:47:55] "OPTIONS /get_exhibitions HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Jan/2024 01:47:55] "OPTIONS /get_paintings HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Jan/2024 01:47:55] "OPTIONS /get_paintings HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Jan/2024 01:47:55] "GET /get_exhibitions HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Jan/2024 01:47:56] "[36mGET /images/exhibitions/painting%20(4).png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [18/Jan/2024 01:47:56] "POST /get_paintings HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Jan/2024 01:47:56] "[36mGET /images/paintings/923533f4-f351-4564-b58c-9097a56d33ee_painting_painting_11.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [18/Jan/2024 01:47:56] "POST /get_paintings HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Jan/2024 01:47:56] "[36mGET /images/paintings/923533f4-f351-4564-b58c-9097a56d33ee_painting_painting_7.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [18/Jan/2024 01:48:29] "POST /custom-login HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Jan/2024 01:48:41] "GET /get_exhibitions HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Jan/2024 01:48:41] "OPTIONS /get_painters HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Jan/2024 01:48:42] "GET /get_painters HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Jan/2024 01:49:57] "GET /get_exhibitions HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Jan/2024 01:49:58] "OPTIONS /get_painters HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Jan/2024 01:49:58] "GET /get_painters HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Jan/2024 01:50:21] "GET /get_exhibitions HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Jan/2024 01:50:22] "OPTIONS /get_painters HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Jan/2024 01:50:22] "GET /get_painters HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Jan/2024 01:50:34] "GET /get_exhibitions HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Jan/2024 01:50:34] "OPTIONS /get_painters HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Jan/2024 01:50:35] "GET /get_painters HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Jan/2024 01:51:50] "GET /get_exhibitions HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Jan/2024 01:51:51] "OPTIONS /get_painters HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Jan/2024 01:51:51] "GET /get_painters HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Jan/2024 01:52:16] "GET /get_exhibitions HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Jan/2024 01:52:16] "OPTIONS /get_painters HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Jan/2024 01:52:17] "GET /get_painters HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Jan/2024 01:54:13] "GET /get_exhibitions HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Jan/2024 01:54:13] "OPTIONS /get_painters HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Jan/2024 01:54:14] "GET /get_painters HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Jan/2024 01:54:42] "GET /get_exhibitions HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Jan/2024 01:54:42] "OPTIONS /get_painters HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Jan/2024 01:54:43] "GET /get_painters HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Jan/2024 01:55:24] "GET /get_exhibitions HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Jan/2024 01:55:24] "OPTIONS /get_painters HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Jan/2024 01:55:25] "GET /get_painters HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Jan/2024 01:55:37] "GET /get_exhibitions HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Jan/2024 01:55:37] "OPTIONS /get_painters HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Jan/2024 01:55:38] "GET /get_painters HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Jan/2024 01:56:07] "GET /get_exhibitions HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Jan/2024 01:56:07] "OPTIONS /get_painters HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Jan/2024 01:56:08] "GET /get_painters HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Jan/2024 01:58:11] "GET /get_exhibitions HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Jan/2024 01:58:11] "OPTIONS /get_painters HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Jan/2024 01:58:12] "GET /get_painters HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Jan/2024 02:05:20] "OPTIONS /custom-admin-logout HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Jan/2024 02:05:21] "GET /custom-admin-logout HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Jan/2024 02:13:24] "POST /custom-login HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Jan/2024 02:14:37] "POST /custom-login HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Jan/2024 02:14:44] "OPTIONS /custom-admin-logout HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Jan/2024 02:14:45] "GET /custom-admin-logout HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Jan/2024 02:14:53] "POST /custom-login HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Jan/2024 02:18:57] "POST /custom-login HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Jan/2024 02:19:09] "OPTIONS /custom-admin-logout HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Jan/2024 02:19:11] "GET /custom-admin-logout HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Jan/2024 02:19:18] "POST /custom-login HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Jan/2024 02:20:32] "POST /custom-login HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Jan/2024 02:20:41] "POST /custom-login HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Jan/2024 02:20:47] "POST /custom-login HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Jan/2024 02:20:55] "POST /custom-login HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Jan/2024 02:21:12] "POST /custom-login HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Jan/2024 02:21:19] "POST /custom-login HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Jan/2024 02:21:27] "POST /custom-login HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Jan/2024 02:21:33] "POST /custom-login HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Jan/2024 02:21:41] "POST /custom-login HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Jan/2024 02:21:50] "POST /custom-login HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Jan/2024 02:23:15] "POST /custom-login HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Jan/2024 02:23:37] "OPTIONS /get_paintings HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Jan/2024 02:23:37] "OPTIONS /get_exhibitions HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Jan/2024 02:23:37] "POST /get_paintings HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Jan/2024 02:23:37] "GET /get_exhibitions HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Jan/2024 02:23:38] "POST /get_paintings HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Jan/2024 02:23:38] "[36mGET /images/exhibitions/painting%20(5).png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [18/Jan/2024 02:23:38] "[36mGET /images/exhibitions/painting%20(4).png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [18/Jan/2024 02:23:38] "[36mGET /images/paintings/923533f4-f351-4564-b58c-9097a56d33ee_painting_painting_11.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [18/Jan/2024 02:23:38] "[36mGET /images/paintings/923533f4-f351-4564-b58c-9097a56d33ee_painting_painting_7.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [18/Jan/2024 02:23:38] "[36mGET /images/exhibitions/painting%20(4).png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [18/Jan/2024 02:23:38] "[36mGET /images/paintings/923533f4-f351-4564-b58c-9097a56d33ee_painting_painting_7.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [18/Jan/2024 02:23:38] "[36mGET /images/paintings/923533f4-f351-4564-b58c-9097a56d33ee_painting_painting_11.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [18/Jan/2024 02:23:47] "OPTIONS /get_exhibitions HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Jan/2024 02:23:47] "OPTIONS /get_paintings HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Jan/2024 02:23:47] "OPTIONS /get_exhibitions HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Jan/2024 02:23:47] "OPTIONS /get_paintings HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Jan/2024 02:23:48] "POST /get_paintings HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Jan/2024 02:23:48] "POST /get_paintings HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Jan/2024 02:24:09] "POST /custom-login HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Jan/2024 02:24:18] "POST /custom-login HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Jan/2024 02:26:24] "POST /custom-login HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Jan/2024 02:26:31] "POST /custom-login HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Jan/2024 02:26:38] "POST /custom-login HTTP/1.1" 200 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 900-351-896
+INFO:werkzeug:127.0.0.1 - - [18/Jan/2024 02:29:00] "POST /custom-login HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Jan/2024 02:29:14] "GET /get_exhibitions HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Jan/2024 02:29:21] "OPTIONS /custom-admin-logout HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Jan/2024 02:29:22] "GET /custom-admin-logout HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Jan/2024 02:29:27] "OPTIONS /get_exhibitions HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Jan/2024 02:29:27] "OPTIONS /get_paintings HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Jan/2024 02:29:27] "OPTIONS /get_paintings HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Jan/2024 02:29:27] "GET /get_exhibitions HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Jan/2024 02:29:28] "POST /get_paintings HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Jan/2024 02:29:28] "POST /get_paintings HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Jan/2024 02:29:48] "POST /custom-login HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Jan/2024 02:30:12] "OPTIONS /get_exhibitions HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Jan/2024 02:30:12] "OPTIONS /get_paintings HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Jan/2024 02:30:13] "OPTIONS /get_exhibitions HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Jan/2024 02:30:13] "OPTIONS /get_paintings HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Jan/2024 02:30:13] "POST /get_paintings HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Jan/2024 02:30:14] "POST /get_paintings HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Jan/2024 02:30:16] "GET /get_exhibition/5c37dd96-65b5-4153-97cc-833a5525a980 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Jan/2024 02:30:16] "GET /get_exhibition/5c37dd96-65b5-4153-97cc-833a5525a980 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Jan/2024 02:30:35] "GET /get_exhibitions HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Jan/2024 02:30:35] "GET /get_exhibitions HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Jan/2024 02:30:56] "GET /get_exhibition/5c37dd96-65b5-4153-97cc-833a5525a980 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Jan/2024 02:30:56] "GET /get_exhibition/5c37dd96-65b5-4153-97cc-833a5525a980 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Jan/2024 02:30:56] "[36mGET /images/exhibitions/painting%20(4).png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [18/Jan/2024 02:30:58] "OPTIONS /get_exhibitions HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Jan/2024 02:30:59] "OPTIONS /get_paintings HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Jan/2024 02:30:59] "OPTIONS /get_paintings HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Jan/2024 02:30:59] "POST /get_paintings HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Jan/2024 02:30:59] "[36mGET /images/paintings/923533f4-f351-4564-b58c-9097a56d33ee_painting_painting_11.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [18/Jan/2024 02:30:59] "[36mGET /images/paintings/923533f4-f351-4564-b58c-9097a56d33ee_painting_painting_7.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [18/Jan/2024 02:31:00] "GET /get_exhibitions HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Jan/2024 02:31:00] "POST /get_paintings HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Jan/2024 02:31:00] "[36mGET /images/exhibitions/painting%20(5).png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [18/Jan/2024 02:31:11] "GET /get_paintings HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Jan/2024 02:31:11] "GET /get_paintings HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Jan/2024 02:35:09] "GET /get_paintings HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Jan/2024 02:35:33] "GET /get_paintings HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Jan/2024 02:35:36] "OPTIONS /get_exhibitions HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Jan/2024 02:35:37] "OPTIONS /get_paintings HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Jan/2024 02:35:37] "OPTIONS /get_exhibitions HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Jan/2024 02:35:37] "OPTIONS /get_paintings HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Jan/2024 02:35:39] "POST /get_paintings HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Jan/2024 02:35:39] "POST /get_paintings HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Jan/2024 02:35:45] "GET /get_paintings HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Jan/2024 02:35:45] "GET /get_paintings HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Jan/2024 02:35:48] "OPTIONS /get_exhibitions HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Jan/2024 02:35:48] "OPTIONS /get_paintings HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Jan/2024 02:35:48] "OPTIONS /get_exhibitions HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Jan/2024 02:35:48] "OPTIONS /get_paintings HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Jan/2024 02:35:48] "POST /get_paintings HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Jan/2024 02:35:49] "POST /get_paintings HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Jan/2024 02:35:54] "GET /get_paintings HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Jan/2024 02:35:54] "GET /get_paintings HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Jan/2024 02:36:37] "GET /get_paintings HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Jan/2024 02:37:54] "GET /get_paintings HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Jan/2024 02:38:53] "GET /get_paintings HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Jan/2024 02:38:55] "GET /get_paintings HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Jan/2024 02:39:29] "GET /get_paintings HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Jan/2024 02:39:39] "OPTIONS /get_exhibitions HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Jan/2024 02:39:39] "OPTIONS /get_paintings HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Jan/2024 02:39:39] "OPTIONS /get_exhibitions HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Jan/2024 02:39:40] "OPTIONS /get_paintings HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Jan/2024 02:39:40] "POST /get_paintings HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Jan/2024 02:39:41] "POST /get_paintings HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Jan/2024 02:39:56] "POST /custom-login HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Jan/2024 02:40:18] "POST /custom-login HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Jan/2024 02:40:18] "OPTIONS /get_user_paintings/923533f4-f351-4564-b58c-9097a56d33ee HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Jan/2024 02:40:19] "GET /get_user_paintings/923533f4-f351-4564-b58c-9097a56d33ee HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Jan/2024 02:40:20] "GET /get_user_paintings/923533f4-f351-4564-b58c-9097a56d33ee HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Jan/2024 02:45:12] "OPTIONS /get_user_paintings/923533f4-f351-4564-b58c-9097a56d33ee HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Jan/2024 02:45:13] "GET /get_user_paintings/923533f4-f351-4564-b58c-9097a56d33ee HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Jan/2024 02:52:32] "OPTIONS /get_user_paintings/923533f4-f351-4564-b58c-9097a56d33ee HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Jan/2024 02:52:33] "GET /get_user_paintings/923533f4-f351-4564-b58c-9097a56d33ee HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Jan/2024 02:59:19] "OPTIONS /get_user_paintings/923533f4-f351-4564-b58c-9097a56d33ee HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Jan/2024 02:59:20] "GET /get_user_paintings/923533f4-f351-4564-b58c-9097a56d33ee HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Jan/2024 02:59:21] "GET /get_user_paintings/923533f4-f351-4564-b58c-9097a56d33ee HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Jan/2024 03:00:26] "OPTIONS /get_user_paintings/923533f4-f351-4564-b58c-9097a56d33ee HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Jan/2024 03:00:27] "GET /get_user_paintings/923533f4-f351-4564-b58c-9097a56d33ee HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Jan/2024 03:00:28] "GET /get_user_paintings/923533f4-f351-4564-b58c-9097a56d33ee HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Jan/2024 03:02:04] "OPTIONS /get_exhibitions HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Jan/2024 03:02:04] "OPTIONS /get_paintings HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Jan/2024 03:02:05] "OPTIONS /get_paintings HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Jan/2024 03:02:05] "OPTIONS /get_exhibitions HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Jan/2024 03:02:05] "[36mGET /images/exhibitions/painting%20(5).png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [18/Jan/2024 03:02:05] "[36mGET /images/exhibitions/painting%20(4).png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [18/Jan/2024 03:02:05] "[36mGET /images/exhibitions/painting%20(4).png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [18/Jan/2024 03:02:05] "POST /get_paintings HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Jan/2024 03:02:06] "[36mGET /images/paintings/923533f4-f351-4564-b58c-9097a56d33ee_painting_painting_11.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [18/Jan/2024 03:02:06] "[36mGET /images/paintings/923533f4-f351-4564-b58c-9097a56d33ee_painting_painting_7.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [18/Jan/2024 03:02:06] "POST /get_paintings HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Jan/2024 03:08:50] "OPTIONS /get_exhibitions HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Jan/2024 03:08:51] "OPTIONS /get_paintings HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Jan/2024 03:08:51] "OPTIONS /get_exhibitions HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Jan/2024 03:08:51] "OPTIONS /get_paintings HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Jan/2024 03:08:51] "POST /get_paintings HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Jan/2024 03:08:52] "POST /get_paintings HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Jan/2024 03:11:51] "OPTIONS /get_exhibitions HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Jan/2024 03:11:51] "OPTIONS /get_paintings HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Jan/2024 03:11:51] "OPTIONS /get_exhibitions HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Jan/2024 03:11:51] "OPTIONS /get_paintings HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Jan/2024 03:11:51] "POST /get_paintings HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Jan/2024 03:11:52] "POST /get_paintings HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Jan/2024 03:12:00] "OPTIONS /get_exhibitions HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Jan/2024 03:12:00] "OPTIONS /get_paintings HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Jan/2024 03:12:00] "OPTIONS /get_exhibitions HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Jan/2024 03:12:00] "OPTIONS /get_paintings HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Jan/2024 03:12:01] "POST /get_paintings HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Jan/2024 03:12:01] "POST /get_paintings HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Jan/2024 03:12:27] "POST /custom-login HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Jan/2024 03:12:39] "OPTIONS /get_exhibitions HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Jan/2024 03:12:39] "OPTIONS /get_paintings HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Jan/2024 03:12:39] "OPTIONS /get_exhibitions HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Jan/2024 03:12:39] "OPTIONS /get_paintings HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Jan/2024 03:12:39] "POST /get_paintings HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Jan/2024 03:12:39] "POST /get_paintings HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Jan/2024 03:13:22] "OPTIONS /get_exhibitions HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Jan/2024 03:13:22] "OPTIONS /get_paintings HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Jan/2024 03:13:22] "OPTIONS /get_exhibitions HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Jan/2024 03:13:22] "OPTIONS /get_paintings HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Jan/2024 03:13:23] "POST /get_paintings HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Jan/2024 03:13:23] "POST /get_paintings HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Jan/2024 03:13:59] "OPTIONS /custom-logout HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Jan/2024 03:14:00] "GET /custom-logout HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Jan/2024 03:14:00] "OPTIONS /get_exhibitions HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Jan/2024 03:14:00] "OPTIONS /get_paintings HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Jan/2024 03:14:00] "OPTIONS /get_exhibitions HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Jan/2024 03:14:00] "OPTIONS /get_paintings HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Jan/2024 03:14:01] "POST /get_paintings HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Jan/2024 03:14:01] "POST /get_paintings HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Jan/2024 03:14:47] "POST /custom-login HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Jan/2024 03:15:02] "OPTIONS /get_exhibitions HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Jan/2024 03:15:02] "OPTIONS /get_paintings HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Jan/2024 03:15:02] "OPTIONS /get_exhibitions HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Jan/2024 03:15:02] "OPTIONS /get_paintings HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Jan/2024 03:15:03] "POST /get_paintings HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Jan/2024 03:15:03] "POST /get_paintings HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Jan/2024 03:15:47] "GET /get_exhibition/4544e1b6-acb8-4e21-99cc-5aad842544a8 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Jan/2024 03:15:47] "GET /get_exhibition/4544e1b6-acb8-4e21-99cc-5aad842544a8 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Jan/2024 03:15:56] "OPTIONS /get_exhibitions HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Jan/2024 03:15:56] "OPTIONS /get_paintings HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Jan/2024 03:15:56] "OPTIONS /get_exhibitions HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Jan/2024 03:15:56] "OPTIONS /get_paintings HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Jan/2024 03:15:57] "POST /get_paintings HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Jan/2024 03:15:57] "POST /get_paintings HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Jan/2024 03:18:09] "GET /get_exhibition/4544e1b6-acb8-4e21-99cc-5aad842544a8 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Jan/2024 03:18:09] "GET /get_exhibition/4544e1b6-acb8-4e21-99cc-5aad842544a8 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Jan/2024 03:18:50] "GET /get_exhibitions HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Jan/2024 03:18:51] "GET /get_exhibitions HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Jan/2024 03:19:16] "GET /get_exhibition/4544e1b6-acb8-4e21-99cc-5aad842544a8 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Jan/2024 03:19:17] "[36mGET /images/exhibitions/painting%20(5).png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [18/Jan/2024 03:19:17] "GET /get_exhibition/4544e1b6-acb8-4e21-99cc-5aad842544a8 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Jan/2024 03:19:21] "OPTIONS /get_exhibitions HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Jan/2024 03:19:21] "OPTIONS /get_paintings HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Jan/2024 03:19:21] "OPTIONS /get_paintings HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Jan/2024 03:19:21] "POST /get_paintings HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Jan/2024 03:19:22] "GET /get_exhibitions HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Jan/2024 03:19:22] "[36mGET /images/paintings/923533f4-f351-4564-b58c-9097a56d33ee_painting_painting_11.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [18/Jan/2024 03:19:22] "[36mGET /images/paintings/923533f4-f351-4564-b58c-9097a56d33ee_painting_painting_7.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [18/Jan/2024 03:19:22] "[36mGET /images/exhibitions/painting%20(4).png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [18/Jan/2024 03:19:22] "POST /get_paintings HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Jan/2024 03:19:34] "GET /get_paintings HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Jan/2024 03:19:35] "GET /get_paintings HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Jan/2024 03:28:42] "OPTIONS /get_exhibitions HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Jan/2024 03:28:42] "OPTIONS /get_paintings HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Jan/2024 03:28:42] "OPTIONS /get_exhibitions HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Jan/2024 03:28:42] "OPTIONS /get_paintings HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Jan/2024 03:28:43] "POST /get_paintings HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Jan/2024 03:28:43] "POST /get_paintings HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Jan/2024 03:28:46] "GET /get_exhibition/5c37dd96-65b5-4153-97cc-833a5525a980 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Jan/2024 03:28:46] "GET /get_exhibition/5c37dd96-65b5-4153-97cc-833a5525a980 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Jan/2024 03:28:59] "OPTIONS /get_exhibitions HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Jan/2024 03:28:59] "OPTIONS /get_paintings HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Jan/2024 03:28:59] "OPTIONS /get_exhibitions HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Jan/2024 03:28:59] "OPTIONS /get_paintings HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Jan/2024 03:29:00] "POST /get_paintings HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Jan/2024 03:29:00] "POST /get_paintings HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Jan/2024 03:29:06] "POST /custom-login HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Jan/2024 03:39:56] "OPTIONS /custom-admin-logout HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Jan/2024 03:39:57] "GET /custom-admin-logout HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Jan/2024 03:40:03] "POST /custom-login HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Jan/2024 03:40:47] "OPTIONS /get_customers HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Jan/2024 03:40:47] "GET /get_customers HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Jan/2024 03:42:39] "OPTIONS /get_customers HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Jan/2024 03:42:40] "GET /get_customers HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Jan/2024 03:42:45] "OPTIONS /delete_customer HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Jan/2024 03:42:48] "DELETE /delete_customer HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Jan/2024 03:43:29] "OPTIONS /custom-admin-logout HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Jan/2024 03:43:29] "GET /custom-admin-logout HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Jan/2024 03:43:41] "OPTIONS /get_exhibitions HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Jan/2024 03:43:41] "OPTIONS /get_paintings HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Jan/2024 03:43:41] "OPTIONS /get_exhibitions HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Jan/2024 03:43:42] "OPTIONS /get_paintings HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Jan/2024 03:43:42] "POST /get_paintings HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Jan/2024 03:43:42] "POST /get_paintings HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Jan/2024 03:43:49] "OPTIONS /get_exhibitions HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Jan/2024 03:43:49] "OPTIONS /get_paintings HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Jan/2024 03:43:49] "OPTIONS /get_exhibitions HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Jan/2024 03:43:49] "OPTIONS /get_paintings HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Jan/2024 03:43:50] "POST /get_paintings HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Jan/2024 03:43:50] "POST /get_paintings HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Jan/2024 03:43:52] "GET /get_exhibition/5c37dd96-65b5-4153-97cc-833a5525a980 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Jan/2024 03:43:52] "GET /get_exhibition/5c37dd96-65b5-4153-97cc-833a5525a980 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Jan/2024 03:44:09] "OPTIONS /get_exhibitions HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Jan/2024 03:44:09] "OPTIONS /get_paintings HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Jan/2024 03:44:09] "OPTIONS /get_exhibitions HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Jan/2024 03:44:09] "OPTIONS /get_paintings HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Jan/2024 03:44:10] "POST /get_paintings HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Jan/2024 03:44:10] "POST /get_paintings HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Jan/2024 03:44:16] "GET /get_paintings HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Jan/2024 03:44:16] "GET /get_paintings HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Jan/2024 03:44:22] "OPTIONS /get_exhibitions HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Jan/2024 03:44:22] "OPTIONS /get_paintings HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Jan/2024 03:44:22] "OPTIONS /get_exhibitions HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Jan/2024 03:44:22] "OPTIONS /get_paintings HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Jan/2024 03:44:22] "POST /get_paintings HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Jan/2024 03:44:23] "POST /get_paintings HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Jan/2024 03:44:41] "POST /custom-login HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Jan/2024 03:44:51] "GET /get_paintings HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Jan/2024 03:45:10] "GET /get_exhibitions HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Jan/2024 03:45:10] "OPTIONS /get_painters HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Jan/2024 03:45:10] "GET /get_painters HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Jan/2024 03:46:30] "GET /get_exhibitions HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Jan/2024 03:46:30] "OPTIONS /get_painters HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Jan/2024 03:46:30] "GET /get_painters HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Jan/2024 03:48:44] "OPTIONS /custom-admin-logout HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Jan/2024 03:48:45] "GET /custom-admin-logout HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Jan/2024 03:48:50] "OPTIONS /get_exhibitions HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Jan/2024 03:48:50] "OPTIONS /get_paintings HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Jan/2024 03:48:50] "OPTIONS /get_paintings HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Jan/2024 03:48:50] "GET /get_exhibitions HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Jan/2024 03:48:51] "POST /get_paintings HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Jan/2024 03:48:51] "POST /get_paintings HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Jan/2024 03:48:54] "GET /get_exhibition/1723e172-d48a-48b0-a6b9-8689793a93ee HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Jan/2024 03:48:54] "GET /get_exhibition/1723e172-d48a-48b0-a6b9-8689793a93ee HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Jan/2024 03:49:05] "GET /get_exhibitions HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Jan/2024 03:49:06] "GET /get_exhibitions HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Jan/2024 03:49:40] "GET /get_exhibition/1723e172-d48a-48b0-a6b9-8689793a93ee HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Jan/2024 03:49:40] "GET /get_exhibition/1723e172-d48a-48b0-a6b9-8689793a93ee HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Jan/2024 03:49:40] "[36mGET /images/exhibitions/painting%20(5).png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [18/Jan/2024 03:49:44] "OPTIONS /get_exhibitions HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Jan/2024 03:49:44] "OPTIONS /get_paintings HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Jan/2024 03:49:44] "OPTIONS /get_paintings HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Jan/2024 03:49:45] "GET /get_exhibitions HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Jan/2024 03:49:45] "[36mGET /images/exhibitions/painting%20(4).png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [18/Jan/2024 03:49:45] "POST /get_paintings HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Jan/2024 03:49:45] "POST /get_paintings HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Jan/2024 03:49:45] "[36mGET /images/paintings/923533f4-f351-4564-b58c-9097a56d33ee_painting_painting_11.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [18/Jan/2024 03:49:45] "[36mGET /images/paintings/923533f4-f351-4564-b58c-9097a56d33ee_painting_painting_7.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [18/Jan/2024 03:50:01] "GET /get_paintings HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Jan/2024 03:50:01] "GET /get_paintings HTTP/1.1" 200 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.229.170:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 900-351-896
+INFO:werkzeug:127.0.0.1 - - [18/Jan/2024 11:12:30] "OPTIONS /get_exhibitions HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Jan/2024 11:12:30] "OPTIONS /get_paintings HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Jan/2024 11:12:31] "OPTIONS /get_exhibitions HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Jan/2024 11:12:31] "OPTIONS /get_paintings HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Jan/2024 11:12:32] "[36mGET /images/exhibitions/painting%20(5).png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [18/Jan/2024 11:12:32] "[36mGET /images/exhibitions/painting%20(4).png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [18/Jan/2024 11:12:32] "[36mGET /images/exhibitions/painting%20(4).png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [18/Jan/2024 11:12:33] "POST /get_paintings HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Jan/2024 11:12:33] "POST /get_paintings HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Jan/2024 11:12:33] "[36mGET /images/paintings/923533f4-f351-4564-b58c-9097a56d33ee_painting_painting_11.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [18/Jan/2024 11:12:33] "[36mGET /images/paintings/923533f4-f351-4564-b58c-9097a56d33ee_painting_painting_7.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [18/Jan/2024 11:12:55] "GET /get_paintings HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Jan/2024 11:12:55] "GET /get_paintings HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Jan/2024 11:12:59] "OPTIONS /get_exhibitions HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Jan/2024 11:12:59] "OPTIONS /get_paintings HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Jan/2024 11:12:59] "OPTIONS /get_exhibitions HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Jan/2024 11:12:59] "OPTIONS /get_paintings HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Jan/2024 11:12:59] "POST /get_paintings HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Jan/2024 11:13:00] "POST /get_paintings HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Jan/2024 11:13:15] "POST /custom-login HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Jan/2024 11:13:25] "GET /get_exhibitions HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Jan/2024 11:13:25] "OPTIONS /get_painters HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Jan/2024 11:13:25] "GET /get_painters HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Jan/2024 11:13:36] "[35m[1mGET /api/blog/get_blogs HTTP/1.1[0m" 500 -
+INFO:werkzeug:127.0.0.1 - - [18/Jan/2024 11:13:45] "GET /get_paintings HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Jan/2024 11:13:54] "OPTIONS /custom-admin-logout HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Jan/2024 11:13:55] "GET /custom-admin-logout HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Jan/2024 11:14:12] "OPTIONS /get_exhibitions HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Jan/2024 11:14:12] "OPTIONS /get_paintings HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Jan/2024 11:14:12] "OPTIONS /get_paintings HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Jan/2024 11:14:13] "GET /get_exhibitions HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Jan/2024 11:14:13] "[36mGET /images/exhibitions/painting%20(5).png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [18/Jan/2024 11:14:13] "[36mGET /images/exhibitions/painting%20(4).png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [18/Jan/2024 11:14:13] "POST /get_paintings HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Jan/2024 11:14:14] "[36mGET /images/paintings/923533f4-f351-4564-b58c-9097a56d33ee_painting_painting_11.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [18/Jan/2024 11:14:14] "POST /get_paintings HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Jan/2024 11:14:14] "[36mGET /images/paintings/923533f4-f351-4564-b58c-9097a56d33ee_painting_painting_7.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [18/Jan/2024 11:15:59] "POST /custom-login HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Jan/2024 11:18:27] "GET /get_paintings HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Jan/2024 11:27:08] "OPTIONS /custom-admin-logout HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Jan/2024 11:27:08] "GET /custom-admin-logout HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Jan/2024 11:27:19] "OPTIONS /get_exhibitions HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Jan/2024 11:27:19] "OPTIONS /get_paintings HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Jan/2024 11:27:20] "OPTIONS /get_exhibitions HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Jan/2024 11:27:20] "OPTIONS /get_paintings HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Jan/2024 11:27:20] "[36mGET /images/exhibitions/painting%20(5).png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [18/Jan/2024 11:27:20] "POST /get_paintings HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Jan/2024 11:27:20] "[36mGET /images/exhibitions/painting%20(4).png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [18/Jan/2024 11:27:20] "[36mGET /images/paintings/923533f4-f351-4564-b58c-9097a56d33ee_painting_painting_11.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [18/Jan/2024 11:27:20] "[36mGET /images/paintings/923533f4-f351-4564-b58c-9097a56d33ee_painting_painting_7.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [18/Jan/2024 11:27:21] "POST /get_paintings HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Jan/2024 11:27:39] "GET /get_paintings HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Jan/2024 11:27:39] "GET /get_paintings HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Jan/2024 11:27:42] "OPTIONS /get_exhibitions HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Jan/2024 11:27:42] "OPTIONS /get_paintings HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Jan/2024 11:27:42] "OPTIONS /get_exhibitions HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Jan/2024 11:27:42] "OPTIONS /get_paintings HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Jan/2024 11:27:43] "POST /get_paintings HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Jan/2024 11:27:43] "POST /get_paintings HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Jan/2024 11:27:47] "GET /get_exhibition/5c37dd96-65b5-4153-97cc-833a5525a980 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Jan/2024 11:27:47] "GET /get_exhibition/5c37dd96-65b5-4153-97cc-833a5525a980 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Jan/2024 11:27:50] "OPTIONS /get_exhibitions HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Jan/2024 11:27:50] "OPTIONS /get_paintings HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Jan/2024 11:27:50] "OPTIONS /get_exhibitions HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Jan/2024 11:27:50] "OPTIONS /get_paintings HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Jan/2024 11:27:51] "POST /get_paintings HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Jan/2024 11:27:51] "POST /get_paintings HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Jan/2024 11:34:44] "OPTIONS /get_exhibitions HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Jan/2024 11:34:44] "OPTIONS /get_paintings HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Jan/2024 11:34:44] "OPTIONS /get_exhibitions HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Jan/2024 11:34:44] "OPTIONS /get_paintings HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Jan/2024 11:34:44] "POST /get_paintings HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Jan/2024 11:34:44] "POST /get_paintings HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Jan/2024 11:34:48] "GET /get_exhibition/1723e172-d48a-48b0-a6b9-8689793a93ee HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Jan/2024 11:34:48] "GET /get_exhibition/1723e172-d48a-48b0-a6b9-8689793a93ee HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Jan/2024 11:34:55] "OPTIONS /get_exhibitions HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Jan/2024 11:34:55] "OPTIONS /get_paintings HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Jan/2024 11:34:55] "OPTIONS /get_exhibitions HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Jan/2024 11:34:55] "OPTIONS /get_paintings HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Jan/2024 11:34:57] "POST /get_paintings HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Jan/2024 11:34:58] "POST /get_paintings HTTP/1.1" 200 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 900-351-896
+INFO:werkzeug:127.0.0.1 - - [18/Jan/2024 21:03:08] "OPTIONS /get_exhibitions HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Jan/2024 21:03:08] "OPTIONS /get_exhibitions HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Jan/2024 21:03:08] "OPTIONS /get_paintings HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Jan/2024 21:03:08] "OPTIONS /get_paintings HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Jan/2024 21:03:09] "[36mGET /images/exhibitions/painting%20(5).png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [18/Jan/2024 21:03:09] "POST /get_paintings HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Jan/2024 21:03:09] "[36mGET /images/exhibitions/painting%20(4).png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [18/Jan/2024 21:03:09] "[36mGET /images/exhibitions/painting%20(4).png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [18/Jan/2024 21:03:09] "POST /get_paintings HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Jan/2024 21:03:09] "[36mGET /images/paintings/923533f4-f351-4564-b58c-9097a56d33ee_painting_painting_11.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [18/Jan/2024 21:03:09] "[36mGET /images/paintings/923533f4-f351-4564-b58c-9097a56d33ee_painting_painting_7.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [18/Jan/2024 21:03:22] "POST /custom-login HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Jan/2024 21:03:38] "OPTIONS /custom-admin-logout HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Jan/2024 21:03:39] "GET /custom-admin-logout HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Jan/2024 21:04:01] "OPTIONS /get_exhibitions HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Jan/2024 21:04:01] "OPTIONS /get_paintings HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Jan/2024 21:04:01] "OPTIONS /get_exhibitions HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Jan/2024 21:04:01] "OPTIONS /get_paintings HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Jan/2024 21:04:01] "[36mGET /images/exhibitions/painting%20(5).png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [18/Jan/2024 21:04:02] "[36mGET /images/exhibitions/painting%20(4).png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [18/Jan/2024 21:04:02] "POST /get_paintings HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Jan/2024 21:04:02] "[36mGET /images/paintings/923533f4-f351-4564-b58c-9097a56d33ee_painting_painting_11.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [18/Jan/2024 21:04:02] "[36mGET /images/paintings/923533f4-f351-4564-b58c-9097a56d33ee_painting_painting_7.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [18/Jan/2024 21:04:02] "POST /get_paintings HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Jan/2024 21:04:28] "GET /get_paintings HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Jan/2024 21:04:28] "GET /get_paintings HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Jan/2024 21:05:11] "OPTIONS /get_exhibitions HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Jan/2024 21:05:11] "OPTIONS /get_paintings HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Jan/2024 21:05:11] "OPTIONS /get_exhibitions HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Jan/2024 21:05:11] "OPTIONS /get_paintings HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Jan/2024 21:05:11] "POST /get_paintings HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Jan/2024 21:05:12] "POST /get_paintings HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Jan/2024 21:05:27] "OPTIONS /get_exhibitions HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Jan/2024 21:05:27] "OPTIONS /get_paintings HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Jan/2024 21:05:27] "OPTIONS /get_exhibitions HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Jan/2024 21:05:27] "OPTIONS /get_paintings HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Jan/2024 21:05:27] "[36mGET /images/exhibitions/painting%20(5).png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [18/Jan/2024 21:05:27] "[36mGET /images/exhibitions/painting%20(4).png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [18/Jan/2024 21:05:28] "POST /get_paintings HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Jan/2024 21:05:28] "POST /get_paintings HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Jan/2024 21:05:28] "[36mGET /images/paintings/923533f4-f351-4564-b58c-9097a56d33ee_painting_painting_11.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [18/Jan/2024 21:05:29] "[36mGET /images/paintings/923533f4-f351-4564-b58c-9097a56d33ee_painting_painting_7.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [18/Jan/2024 21:05:35] "GET /get_exhibition/5c37dd96-65b5-4153-97cc-833a5525a980 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Jan/2024 21:05:35] "GET /get_exhibition/5c37dd96-65b5-4153-97cc-833a5525a980 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Jan/2024 21:05:44] "GET /get_exhibitions HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Jan/2024 21:05:45] "GET /get_exhibitions HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Jan/2024 21:08:16] "GET /get_exhibition/5c37dd96-65b5-4153-97cc-833a5525a980 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Jan/2024 21:08:16] "GET /get_exhibition/5c37dd96-65b5-4153-97cc-833a5525a980 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Jan/2024 21:08:17] "[36mGET /images/exhibitions/painting%20(4).png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [18/Jan/2024 21:08:19] "OPTIONS /get_exhibitions HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Jan/2024 21:08:19] "OPTIONS /get_paintings HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Jan/2024 21:08:19] "OPTIONS /get_paintings HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Jan/2024 21:08:20] "GET /get_exhibitions HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Jan/2024 21:08:21] "POST /get_paintings HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Jan/2024 21:08:21] "POST /get_paintings HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Jan/2024 21:08:21] "[36mGET /images/exhibitions/painting%20(5).png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [18/Jan/2024 21:08:22] "[36mGET /images/paintings/923533f4-f351-4564-b58c-9097a56d33ee_painting_painting_11.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [18/Jan/2024 21:08:22] "[36mGET /images/paintings/923533f4-f351-4564-b58c-9097a56d33ee_painting_painting_7.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [18/Jan/2024 21:08:36] "POST /custom-login HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Jan/2024 21:09:45] "OPTIONS /custom-admin-logout HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Jan/2024 21:09:46] "GET /custom-admin-logout HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Jan/2024 21:09:50] "POST /custom-login HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Jan/2024 21:12:11] "OPTIONS /get_painters HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Jan/2024 21:12:11] "GET /get_painters HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Jan/2024 21:12:22] "OPTIONS /get_painters HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Jan/2024 21:12:22] "GET /get_painters HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Jan/2024 21:12:47] "GET /get_exhibitions HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Jan/2024 21:12:47] "OPTIONS /get_painters HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Jan/2024 21:12:47] "GET /get_painters HTTP/1.1" 200 -
+INFO:werkzeug: * Detected change in 'C:\\Users\\MMMMM\\Desktop\\painting_ecommerce_website\\backend\\db\\__init__.py', reloading
+INFO:werkzeug: * Restarting with stat
