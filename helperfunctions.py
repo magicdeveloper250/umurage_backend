@@ -1,5 +1,5 @@
 import cryptocode
-from typing import OrderedDict
+from collections import OrderedDict
 
 
 KEY = "12345678"
@@ -8,9 +8,10 @@ KEY = "12345678"
 def convertToObject(keys, values):
     my_objects = []
     for i in range(len(values)):
-        object = {}
+        arr = []
         for j in range(len(values[i])):
-            object[keys[j]] = values[i][j]
+            arr.append((keys[j], values[i][j]))
+        object = OrderedDict(arr)
         my_objects.append(object)
     return my_objects
 

@@ -3238,3 +3238,40 @@ INFO:werkzeug:127.0.0.1 - - [18/Jan/2024 21:12:47] "OPTIONS /get_painters HTTP/1
 INFO:werkzeug:127.0.0.1 - - [18/Jan/2024 21:12:47] "GET /get_painters HTTP/1.1" 200 -
 INFO:werkzeug: * Detected change in 'C:\\Users\\MMMMM\\Desktop\\painting_ecommerce_website\\backend\\db\\__init__.py', reloading
 INFO:werkzeug: * Restarting with stat
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://10.2.0.2:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 900-351-896
+INFO:werkzeug: * Detected change in 'C:\\Users\\MMMMM\\Desktop\\painting_ecommerce_website\\backend\\helperfunctions.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 900-351-896
+INFO:werkzeug:127.0.0.1 - - [19/Jan/2024 01:36:59] "OPTIONS /get_paintings HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [19/Jan/2024 01:37:00] "OPTIONS /get_exhibitions HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [19/Jan/2024 01:37:00] "OPTIONS /get_paintings HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [19/Jan/2024 01:37:04] "GET /get_exhibitions HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [19/Jan/2024 01:37:05] "POST /get_paintings HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [19/Jan/2024 01:37:05] "POST /get_paintings HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [19/Jan/2024 01:37:08] "[36mGET /images/exhibitions/painting%20(5).png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [19/Jan/2024 01:37:08] "[36mGET /images/exhibitions/painting%20(4).png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [19/Jan/2024 01:37:08] "[36mGET /images/exhibitions/painting%20(4).png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [19/Jan/2024 01:37:08] "[36mGET /images/paintings/923533f4-f351-4564-b58c-9097a56d33ee_painting_painting_7.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [19/Jan/2024 01:37:09] "[36mGET /images/paintings/923533f4-f351-4564-b58c-9097a56d33ee_painting_painting_11.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [19/Jan/2024 01:37:10] "[36mGET /images/paintings/923533f4-f351-4564-b58c-9097a56d33ee_painting_painting_7.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [19/Jan/2024 01:37:36] "POST /custom-login HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [19/Jan/2024 01:37:44] "OPTIONS /get_customers HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [19/Jan/2024 01:37:47] "GET /get_customers HTTP/1.1" 200 -
+INFO:werkzeug: * Detected change in 'C:\\Users\\MMMMM\\Desktop\\painting_ecommerce_website\\backend\\helperfunctions.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 900-351-896
+INFO:werkzeug:127.0.0.1 - - [19/Jan/2024 01:43:16] "OPTIONS /get_customers HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [19/Jan/2024 01:43:17] "GET /get_customers HTTP/1.1" 200 -
+INFO:werkzeug: * Detected change in 'C:\\Users\\MMMMM\\Desktop\\painting_ecommerce_website\\backend\\helperfunctions.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 900-351-896
