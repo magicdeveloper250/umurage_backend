@@ -6,9 +6,10 @@ from queue import Empty
 
 # Database configuration
 INTERNAL_DB_CONNECTION = "postgres://postgres:manzisql123.@localhost/galleryWebsite"
-EXTERNAL_DB_CONNECTION = "postgres://umuragearthubadmin:RkumKHLgya1cKCRa2SbA4Dq3tbIRSUSI@dpg-cmf4riacn0vc73bvjm9g-a/umuragearthubdb_6u6g"
+EXTERNAL_DB_CONNECTION = "postgres://umuragearthubadmin:icsba7282JdItIQapnLb8z5nNUEsEYmF@dpg-cml9er7109ks73a827t0-a/umuragearthubdb_wds7"
 AEXTERNAL = "postgres://umuragearthubadmin:RkumKHLgya1cKCRa2SbA4Dq3tbIRSUSI@dpg-cmf4riacn0vc73bvjm9g-a.oregon-postgres.render.com/umuragearthubdb_6u6g"
-DB_URL = INTERNAL_DB_CONNECTION
+INTERNAL2 = "postgres://umuragearthubadmin:icsba7282JdItIQapnLb8z5nNUEsEYmF@dpg-cml9er7109ks73a827t0-a.oregon-postgres.render.com/umuragearthubdb_wds7"
+DB_URL = EXTERNAL_DB_CONNECTION
 MAX_CONNECTIONS = 1000
 
 pool = pool.ThreadedConnectionPool(minconn=1, maxconn=MAX_CONNECTIONS, dsn=DB_URL)
