@@ -4112,3 +4112,194 @@ INFO:werkzeug:127.0.0.1 - - [19/Jan/2024 18:34:20] "GET /images/paintings/4bbb5d
 INFO:werkzeug:127.0.0.1 - - [19/Jan/2024 18:34:20] "GET /images/paintings/4bbb5d19-4dee-40d8-a2d8-1b75da3e9d01_painting_WhatsApp_Image_2024-01-19_at_7.04.13_PM.jpeg HTTP/1.1" 200 -
 INFO:werkzeug:127.0.0.1 - - [19/Jan/2024 18:34:36] "GET /get_paintings HTTP/1.1" 200 -
 INFO:werkzeug:127.0.0.1 - - [19/Jan/2024 18:34:36] "GET /get_paintings HTTP/1.1" 200 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://172.20.10.2:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 900-351-896
+INFO:werkzeug:127.0.0.1 - - [20/Jan/2024 07:24:35] "OPTIONS /get_exhibitions HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [20/Jan/2024 07:24:35] "OPTIONS /get_paintings HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [20/Jan/2024 07:24:35] "OPTIONS /get_exhibitions HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [20/Jan/2024 07:24:35] "OPTIONS /get_paintings HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [20/Jan/2024 07:24:36] "[36mGET /images/exhibitions/Untitled-2-01.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [20/Jan/2024 07:24:36] "[36mGET /images/exhibitions/Untitled-2-01.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [20/Jan/2024 07:24:45] "POST /get_paintings HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [20/Jan/2024 07:24:46] "POST /get_paintings HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [20/Jan/2024 07:24:49] "GET /get_exhibition/8c854899-0c38-43dd-8c8e-8a2642735a03 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [20/Jan/2024 07:24:50] "GET /get_exhibition/8c854899-0c38-43dd-8c8e-8a2642735a03 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [20/Jan/2024 07:25:04] "GET /get_exhibitions HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [20/Jan/2024 07:25:07] "GET /get_exhibitions HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [20/Jan/2024 07:25:39] "POST /add_customer HTTP/1.1" 200 -
+INFO:werkzeug: * Detected change in 'C:\\Users\\MMMMM\\Desktop\\painting_ecommerce_website\\backend\\api\\customer.py', reloading
+INFO:werkzeug: * Restarting with stat
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://172.20.10.2:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 900-351-896
+INFO:werkzeug:127.0.0.1 - - [20/Jan/2024 07:30:45] "POST /add_customer HTTP/1.1" 200 -
+INFO:werkzeug: * Detected change in 'C:\\Users\\MMMMM\\Desktop\\painting_ecommerce_website\\backend\\api\\customer.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 900-351-896
+INFO:werkzeug:127.0.0.1 - - [20/Jan/2024 07:32:43] "POST /add_customer HTTP/1.1" 200 -
+INFO:werkzeug: * Detected change in 'C:\\Users\\MMMMM\\Desktop\\painting_ecommerce_website\\backend\\api\\customer.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 900-351-896
+INFO:werkzeug:127.0.0.1 - - [20/Jan/2024 07:34:57] "POST /add_customer HTTP/1.1" 200 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://172.20.10.2:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 900-351-896
+INFO:werkzeug:127.0.0.1 - - [20/Jan/2024 07:36:00] "POST /add_customer HTTP/1.1" 200 -
+INFO:werkzeug: * Detected change in 'C:\\Users\\MMMMM\\Desktop\\painting_ecommerce_website\\backend\\api\\customer.py', reloading
+INFO:werkzeug: * Restarting with stat
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://172.20.10.2:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 900-351-896
+INFO:werkzeug:127.0.0.1 - - [20/Jan/2024 07:38:21] "POST /add_customer HTTP/1.1" 200 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://172.20.10.2:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 900-351-896
+INFO:werkzeug:127.0.0.1 - - [20/Jan/2024 07:40:31] "POST /add_customer HTTP/1.1" 200 -
+INFO:werkzeug: * Detected change in 'C:\\Users\\MMMMM\\Desktop\\painting_ecommerce_website\\backend\\api\\customer.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 900-351-896
+INFO:werkzeug:127.0.0.1 - - [20/Jan/2024 07:42:44] "POST /add_customer HTTP/1.1" 200 -
+INFO:werkzeug: * Detected change in 'C:\\Users\\MMMMM\\Desktop\\painting_ecommerce_website\\backend\\api\\customer.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 900-351-896
+INFO:werkzeug:127.0.0.1 - - [20/Jan/2024 07:46:09] "GET /get_exhibition/8c854899-0c38-43dd-8c8e-8a2642735a03 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [20/Jan/2024 07:46:15] "GET /get_exhibition/8c854899-0c38-43dd-8c8e-8a2642735a03 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [20/Jan/2024 07:46:16] "[36mGET /images/exhibitions/Untitled-2-01.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [20/Jan/2024 07:46:21] "GET /get_exhibition/8c854899-0c38-43dd-8c8e-8a2642735a03 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [20/Jan/2024 07:46:54] "GET /get_exhibition/8c854899-0c38-43dd-8c8e-8a2642735a03 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [20/Jan/2024 07:47:02] "GET /get_exhibitions HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [20/Jan/2024 07:47:03] "GET /get_exhibitions HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [20/Jan/2024 07:48:06] "POST /add_customer HTTP/1.1" 200 -
+INFO:werkzeug: * Detected change in 'C:\\Users\\MMMMM\\Desktop\\painting_ecommerce_website\\backend\\send_email\\customer.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 900-351-896
+INFO:werkzeug:127.0.0.1 - - [20/Jan/2024 07:51:27] "GET /get_exhibitions HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [20/Jan/2024 07:51:32] "GET /get_exhibitions HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [20/Jan/2024 07:52:19] "POST /add_customer HTTP/1.1" 200 -
+INFO:werkzeug: * Detected change in 'C:\\Users\\MMMMM\\Desktop\\painting_ecommerce_website\\backend\\api\\customer.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 900-351-896
+INFO:werkzeug:127.0.0.1 - - [20/Jan/2024 07:59:06] "GET /get_exhibitions HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [20/Jan/2024 07:59:06] "GET /get_exhibitions HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [20/Jan/2024 07:59:36] "POST /add_customer HTTP/1.1" 200 -
+INFO:werkzeug: * Detected change in 'C:\\Users\\MMMMM\\Desktop\\painting_ecommerce_website\\backend\\api\\customer.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 900-351-896
+INFO:werkzeug:127.0.0.1 - - [20/Jan/2024 08:01:49] "POST /add_customer HTTP/1.1" 200 -
+INFO:werkzeug: * Detected change in 'C:\\Users\\MMMMM\\Desktop\\painting_ecommerce_website\\backend\\api\\customer.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 900-351-896
+INFO:werkzeug:127.0.0.1 - - [20/Jan/2024 08:05:00] "GET /get_exhibitions HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [20/Jan/2024 08:05:01] "GET /get_exhibitions HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [20/Jan/2024 08:05:22] "POST /add_customer HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [20/Jan/2024 08:09:58] "OPTIONS /get_paintings HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [20/Jan/2024 08:09:59] "OPTIONS /get_exhibitions HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [20/Jan/2024 08:09:59] "OPTIONS /get_paintings HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [20/Jan/2024 08:10:08] "GET /get_exhibitions HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [20/Jan/2024 08:10:08] "OPTIONS /get_exhibitions HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [20/Jan/2024 08:10:10] "POST /get_paintings HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [20/Jan/2024 08:10:13] "POST /get_paintings HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [20/Jan/2024 08:10:19] "[36mGET /images/exhibitions/Untitled-2-01.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [20/Jan/2024 08:10:19] "GET /images/paintings/4bbb5d19-4dee-40d8-a2d8-1b75da3e9d01_painting_WhatsApp_Image_2024-01-19_at_7.04.11_PM.jpeg HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [20/Jan/2024 08:10:19] "GET /images/paintings/4b60134da1b234c2dcb02bfc2f9166da0b6cc77d6abf93a3_painting_my_angel.jpg HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [20/Jan/2024 08:10:19] "GET /images/paintings/4b60134da1b234c2dcb02bfc2f9166da0b6cc77d6abf93a3_painting_my_tender.jpg HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [20/Jan/2024 08:10:19] "GET /images/paintings/67f0df506fafcbaf72e1bef584e4588ddb5b79cefd6b685d_painting_boxing_survival.jpg HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [20/Jan/2024 08:10:19] "GET /images/paintings/67f0df506fafcbaf72e1bef584e4588ddb5b79cefd6b685d_painting_gicanda.jpg HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [20/Jan/2024 08:10:19] "[36mGET /images/exhibitions/Untitled-2-01.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [20/Jan/2024 08:10:19] "[36mGET /images/paintings/4bbb5d19-4dee-40d8-a2d8-1b75da3e9d01_painting_WhatsApp_Image_2024-01-19_at_7.04.11_PM.jpeg HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [20/Jan/2024 08:10:19] "GET /images/paintings/4bbb5d19-4dee-40d8-a2d8-1b75da3e9d01_painting_WhatsApp_Image_2024-01-19_at_7.04.13_PM.jpeg HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [20/Jan/2024 08:10:19] "[36mGET /images/paintings/4bbb5d19-4dee-40d8-a2d8-1b75da3e9d01_painting_WhatsApp_Image_2024-01-19_at_7.04.13_PM.jpeg HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [20/Jan/2024 08:10:19] "GET /images/paintings/4bbb5d19-4dee-40d8-a2d8-1b75da3e9d01_painting_WhatsApp_Image_2024-01-19_at_7.04.12_PM_1.jpeg HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [20/Jan/2024 08:10:20] "GET /images/paintings/4bbb5d19-4dee-40d8-a2d8-1b75da3e9d01_painting_WhatsApp_Image_2024-01-19_at_7.04.12_PM_2.jpeg HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [20/Jan/2024 08:10:20] "[36mGET /images/paintings/4bbb5d19-4dee-40d8-a2d8-1b75da3e9d01_painting_WhatsApp_Image_2024-01-19_at_7.04.12_PM_1.jpeg HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [20/Jan/2024 08:10:20] "[36mGET /images/paintings/4bbb5d19-4dee-40d8-a2d8-1b75da3e9d01_painting_WhatsApp_Image_2024-01-19_at_7.04.12_PM_2.jpeg HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [20/Jan/2024 08:10:20] "[36mGET /images/paintings/4b60134da1b234c2dcb02bfc2f9166da0b6cc77d6abf93a3_painting_nyirabyo.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [20/Jan/2024 08:10:20] "GET /images/paintings/4bbb5d19-4dee-40d8-a2d8-1b75da3e9d01_painting_WhatsApp_Image_2024-01-19_at_7.04.12_PM.jpeg HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [20/Jan/2024 08:10:20] "[36mGET /images/paintings/4bbb5d19-4dee-40d8-a2d8-1b75da3e9d01_painting_WhatsApp_Image_2024-01-19_at_7.04.12_PM.jpeg HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [20/Jan/2024 08:10:20] "[36mGET /images/paintings/4b60134da1b234c2dcb02bfc2f9166da0b6cc77d6abf93a3_painting_my_angel.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [20/Jan/2024 08:10:20] "GET /images/paintings/4b60134da1b234c2dcb02bfc2f9166da0b6cc77d6abf93a3_painting_nyirabyo.jpg HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [20/Jan/2024 08:10:20] "[36mGET /images/paintings/4b60134da1b234c2dcb02bfc2f9166da0b6cc77d6abf93a3_painting_my_tender.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [20/Jan/2024 08:10:20] "[36mGET /images/paintings/67f0df506fafcbaf72e1bef584e4588ddb5b79cefd6b685d_painting_boxing_survival.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [20/Jan/2024 08:10:20] "[36mGET /images/paintings/67f0df506fafcbaf72e1bef584e4588ddb5b79cefd6b685d_painting_gicanda.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [20/Jan/2024 08:11:58] "GET /get_paintings HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [20/Jan/2024 08:11:59] "GET /get_paintings HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [20/Jan/2024 08:12:20] "OPTIONS /get_paintings HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [20/Jan/2024 08:12:20] "OPTIONS /get_paintings HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [20/Jan/2024 08:12:25] "POST /get_paintings HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [20/Jan/2024 08:12:27] "POST /get_paintings HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [20/Jan/2024 08:12:27] "GET /get_exhibitions HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [20/Jan/2024 08:12:28] "OPTIONS /get_exhibitions HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [20/Jan/2024 08:12:30] "GET /get_exhibitions HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [20/Jan/2024 08:12:33] "GET /get_exhibitions HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [20/Jan/2024 08:12:39] "GET /get_paintings HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [20/Jan/2024 08:12:42] "GET /get_paintings HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [20/Jan/2024 08:13:00] "POST /add_customer HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [20/Jan/2024 08:13:05] "GET /get_exhibitions HTTP/1.1" 200 -
+INFO:werkzeug: * Detected change in 'C:\\Users\\MMMMM\\Desktop\\painting_ecommerce_website\\backend\\api\\customer.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 900-351-896
+INFO:werkzeug: * Detected change in 'C:\\Users\\MMMMM\\Desktop\\painting_ecommerce_website\\backend\\api\\customer.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 900-351-896
+INFO:werkzeug:127.0.0.1 - - [20/Jan/2024 08:17:07] "GET /get_exhibitions HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [20/Jan/2024 08:17:10] "GET /get_exhibitions HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [20/Jan/2024 08:17:31] "POST /add_customer HTTP/1.1" 200 -
+INFO:werkzeug: * Detected change in 'C:\\Users\\MMMMM\\Desktop\\painting_ecommerce_website\\backend\\api\\customer.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 900-351-896
+INFO:werkzeug:127.0.0.1 - - [20/Jan/2024 08:19:26] "GET /get_exhibitions HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [20/Jan/2024 08:19:41] "GET /get_exhibitions HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [20/Jan/2024 08:20:07] "POST /add_customer HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [20/Jan/2024 08:23:45] "GET /get_exhibitions HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [20/Jan/2024 08:23:47] "GET /get_exhibitions HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [20/Jan/2024 08:24:42] "POST /add_customer HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [20/Jan/2024 08:28:10] "OPTIONS /get_exhibitions HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [20/Jan/2024 08:28:10] "OPTIONS /get_paintings HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [20/Jan/2024 08:28:10] "OPTIONS /get_paintings HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [20/Jan/2024 08:28:18] "POST /get_paintings HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [20/Jan/2024 08:28:20] "POST /get_paintings HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [20/Jan/2024 08:28:21] "GET /get_exhibitions HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [20/Jan/2024 08:28:21] "OPTIONS /get_exhibitions HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [20/Jan/2024 08:28:27] "POST /custom-login HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [20/Jan/2024 08:28:34] "OPTIONS /get_painters HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [20/Jan/2024 08:28:39] "GET /get_painters HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [20/Jan/2024 08:28:40] "[35m[1mGET /images/painters/erico_profilepicture_IMG-20240119-WA0017.jpg HTTP/1.1[0m" 500 -
+INFO:werkzeug:127.0.0.1 - - [20/Jan/2024 08:28:40] "[35m[1mGET /images/painters/david_profilepicture_IMG-20240119-WA0013.jpg HTTP/1.1[0m" 500 -
+INFO:werkzeug:127.0.0.1 - - [20/Jan/2024 08:29:01] "OPTIONS /delete_painter/67f0df506fafcbaf72e1bef584e4588ddb5b79cefd6b685d HTTP/1.1" 200 -

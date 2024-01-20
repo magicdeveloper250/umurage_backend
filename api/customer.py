@@ -2,6 +2,8 @@ from flask import jsonify, request, Blueprint, abort
 import db.customer as database
 from helperfunctions import convertToObject
 from auth.UserAuth import admin_required
+import send_email.customer as email
+import threading
 
 customer = Blueprint(name="customer", import_name="customer")
 
@@ -32,12 +34,31 @@ def add_customer():
     try:
         customer = request.form
         added_customer = database.add_customer(customer)
+        message = f"""
+<div style='font-family:verdana font-size:1.5rem'>
+<b>EXHIBITION REGISTRATION INFO</b>
+<p>Dear, thank you for registering to our exhibition.</p>
+<p>Your customer id is <b>{added_customer[0][0]}<b/></p>
+<em>Keep it safe, you will use it after payment<em/><br/>
+ <em><b>Umurage art hub</b> </em>
+</div>"""
+        email_threading = threading.Thread(
+            target=email.send_html_email,
+            args=[
+                customer.get("email"),
+                "EXHIBITION REGISTRATION INFO",
+                message,
+            ],
+        )
+        email_threading.start()
+
         return jsonify(
             {
                 "success": True,
                 "data": convertToObject(header, added_customer),
             },
         )
+
     except Exception as error:
         print(error)
         return jsonify({"success": False})
