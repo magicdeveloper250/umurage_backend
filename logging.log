@@ -4303,3 +4303,49 @@ INFO:werkzeug:127.0.0.1 - - [20/Jan/2024 08:28:39] "GET /get_painters HTTP/1.1" 
 INFO:werkzeug:127.0.0.1 - - [20/Jan/2024 08:28:40] "[35m[1mGET /images/painters/erico_profilepicture_IMG-20240119-WA0017.jpg HTTP/1.1[0m" 500 -
 INFO:werkzeug:127.0.0.1 - - [20/Jan/2024 08:28:40] "[35m[1mGET /images/painters/david_profilepicture_IMG-20240119-WA0013.jpg HTTP/1.1[0m" 500 -
 INFO:werkzeug:127.0.0.1 - - [20/Jan/2024 08:29:01] "OPTIONS /delete_painter/67f0df506fafcbaf72e1bef584e4588ddb5b79cefd6b685d HTTP/1.1" 200 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://172.20.10.2:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 900-351-896
+INFO:werkzeug:127.0.0.1 - - [20/Jan/2024 08:36:19] "OPTIONS /get_painters HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [20/Jan/2024 08:36:31] "GET /get_painters HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [20/Jan/2024 08:36:32] "[35m[1mGET /images/painters/david_profilepicture_IMG-20240119-WA0013.jpg HTTP/1.1[0m" 500 -
+INFO:werkzeug:127.0.0.1 - - [20/Jan/2024 08:38:59] "GET /get_paintings HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [20/Jan/2024 08:39:06] "[36mGET /images/paintings/4bbb5d19-4dee-40d8-a2d8-1b75da3e9d01_painting_WhatsApp_Image_2024-01-19_at_7.04.13_PM.jpeg HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [20/Jan/2024 08:39:06] "[36mGET /images/paintings/4bbb5d19-4dee-40d8-a2d8-1b75da3e9d01_painting_WhatsApp_Image_2024-01-19_at_7.04.11_PM.jpeg HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [20/Jan/2024 08:39:47] "[36mGET /images/paintings/4bbb5d19-4dee-40d8-a2d8-1b75da3e9d01_painting_WhatsApp_Image_2024-01-19_at_7.04.12_PM_1.jpeg HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [20/Jan/2024 08:39:47] "[36mGET /images/paintings/4b60134da1b234c2dcb02bfc2f9166da0b6cc77d6abf93a3_painting_nyirabyo.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [20/Jan/2024 08:39:51] "[36mGET /images/paintings/4b60134da1b234c2dcb02bfc2f9166da0b6cc77d6abf93a3_painting_my_angel.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [20/Jan/2024 08:39:59] "[36mGET /images/paintings/4bbb5d19-4dee-40d8-a2d8-1b75da3e9d01_painting_WhatsApp_Image_2024-01-19_at_7.04.12_PM_2.jpeg HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [20/Jan/2024 08:40:01] "[36mGET /images/paintings/4bbb5d19-4dee-40d8-a2d8-1b75da3e9d01_painting_WhatsApp_Image_2024-01-19_at_7.04.12_PM.jpeg HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [20/Jan/2024 08:40:01] "[36mGET /images/paintings/4b60134da1b234c2dcb02bfc2f9166da0b6cc77d6abf93a3_painting_my_tender.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [20/Jan/2024 08:42:54] "OPTIONS /get_exhibitions HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [20/Jan/2024 08:42:54] "OPTIONS /get_paintings HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [20/Jan/2024 08:42:54] "OPTIONS /get_paintings HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [20/Jan/2024 08:42:54] "[36mGET /images/exhibitions/Untitled-2-01.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [20/Jan/2024 08:42:54] "[36mGET /images/exhibitions/Untitled-2-01.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [20/Jan/2024 08:43:06] "POST /get_paintings HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [20/Jan/2024 08:43:07] "[36mGET /images/paintings/4bbb5d19-4dee-40d8-a2d8-1b75da3e9d01_painting_WhatsApp_Image_2024-01-19_at_7.04.11_PM.jpeg HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [20/Jan/2024 08:43:07] "[36mGET /images/paintings/4bbb5d19-4dee-40d8-a2d8-1b75da3e9d01_painting_WhatsApp_Image_2024-01-19_at_7.04.13_PM.jpeg HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [20/Jan/2024 08:43:07] "[36mGET /images/paintings/4bbb5d19-4dee-40d8-a2d8-1b75da3e9d01_painting_WhatsApp_Image_2024-01-19_at_7.04.12_PM_1.jpeg HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [20/Jan/2024 08:43:07] "[36mGET /images/paintings/4bbb5d19-4dee-40d8-a2d8-1b75da3e9d01_painting_WhatsApp_Image_2024-01-19_at_7.04.12_PM_2.jpeg HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [20/Jan/2024 08:43:07] "[36mGET /images/paintings/4bbb5d19-4dee-40d8-a2d8-1b75da3e9d01_painting_WhatsApp_Image_2024-01-19_at_7.04.12_PM.jpeg HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [20/Jan/2024 08:43:07] "[36mGET /images/paintings/4b60134da1b234c2dcb02bfc2f9166da0b6cc77d6abf93a3_painting_nyirabyo.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [20/Jan/2024 08:43:07] "[36mGET /images/paintings/4b60134da1b234c2dcb02bfc2f9166da0b6cc77d6abf93a3_painting_my_angel.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [20/Jan/2024 08:43:08] "[36mGET /images/paintings/4b60134da1b234c2dcb02bfc2f9166da0b6cc77d6abf93a3_painting_my_tender.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [20/Jan/2024 08:43:08] "[36mGET /images/paintings/4bbb5d19-4dee-40d8-a2d8-1b75da3e9d01_painting_WhatsApp_Image_2024-01-19_at_7.04.11_PM.jpeg HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [20/Jan/2024 08:43:08] "[36mGET /images/paintings/4bbb5d19-4dee-40d8-a2d8-1b75da3e9d01_painting_WhatsApp_Image_2024-01-19_at_7.04.13_PM.jpeg HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [20/Jan/2024 08:43:08] "[36mGET /images/paintings/4bbb5d19-4dee-40d8-a2d8-1b75da3e9d01_painting_WhatsApp_Image_2024-01-19_at_7.04.12_PM_1.jpeg HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [20/Jan/2024 08:43:08] "[36mGET /images/paintings/4bbb5d19-4dee-40d8-a2d8-1b75da3e9d01_painting_WhatsApp_Image_2024-01-19_at_7.04.12_PM_2.jpeg HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [20/Jan/2024 08:43:08] "[36mGET /images/paintings/4bbb5d19-4dee-40d8-a2d8-1b75da3e9d01_painting_WhatsApp_Image_2024-01-19_at_7.04.12_PM.jpeg HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [20/Jan/2024 08:43:08] "[36mGET /images/paintings/4b60134da1b234c2dcb02bfc2f9166da0b6cc77d6abf93a3_painting_nyirabyo.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [20/Jan/2024 08:43:11] "POST /get_paintings HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [20/Jan/2024 08:43:12] "[36mGET /images/paintings/4b60134da1b234c2dcb02bfc2f9166da0b6cc77d6abf93a3_painting_my_angel.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [20/Jan/2024 08:43:12] "[36mGET /images/paintings/4b60134da1b234c2dcb02bfc2f9166da0b6cc77d6abf93a3_painting_my_tender.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [20/Jan/2024 08:43:50] "OPTIONS /get_customers HTTP/1.1" 200 -
+INFO:werkzeug: * Detected change in 'C:\\Users\\MMMMM\\Desktop\\painting_ecommerce_website\\backend\\api\\customer.py', reloading
+INFO:werkzeug: * Restarting with stat

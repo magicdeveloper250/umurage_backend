@@ -35,7 +35,7 @@ def add_customer():
         customer = request.form
         added_customer = database.add_customer(customer)
         message = f"""
-<div style='font-family:verdana font-size:1.5rem'>
+<div style='font-family:verdana; font-size:1.5rem'>
 <b>EXHIBITION REGISTRATION INFO</b>
 <p>Dear, thank you for registering to our exhibition.</p>
 <p>Your customer id is <b>{added_customer[0][0]}<b/></p>
