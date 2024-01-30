@@ -128,3 +128,9 @@ def delete_payment(id):
     except Exception as error:
         print(error)
         return jsonify({"success": False})
+
+
+@payment.route("/mtnmomocallback", methods=["POST", "GET", "PUT"])
+def momo():
+    print(request)
+    return "hi"

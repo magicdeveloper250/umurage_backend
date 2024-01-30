@@ -5,6 +5,7 @@ import os
 from werkzeug.utils import secure_filename
 from auth.UserAuth import custom_login_required, admin_required
 from helperfunctions import authorize
+import time
 
 painting = Blueprint(name="painting", import_name="painting")
 
@@ -18,7 +19,10 @@ def add_new_painting():
         new_painting["owner"] = request.form.get("owner")
         image_file = request.files.get("painting")
         image_filename = (
-            f"{request.form.get('owner')}" + "_painting_" + image_file.filename
+            f"{request.form.get('owner')}"
+            + "_painting_"
+            + str(time.asctime())
+            + image_file.filename.replace(" ", "_")
         )
         new_painting["image"] = (
             request.base_url.replace("/add_new_painting", "")

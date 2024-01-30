@@ -3,7 +3,6 @@ import db.painter as database
 from helperfunctions import convertToObject
 import os
 from werkzeug.utils import secure_filename
-import os
 import bcrypt
 from auth.UserAuth import admin_required
 
@@ -49,7 +48,7 @@ def list_painters():
     admin_required()
     try:
         painters = database.get_painters()
-        headers = ["id", "username", "email", "phone", "image"]
+        headers = ["id", "username", "fullname", "phone", "image"]
         return jsonify(convertToObject(headers, painters))
     except Exception as error:
         print(error)
@@ -61,7 +60,7 @@ def delete_painter(id):
     try:
         database.delete_painter(id)
         painters = database.get_painters()
-        headers = ["id", "username", "phone", "email", "phone"]
+        headers = ["id", "username", "fullname", "phone", "image"]
         return jsonify({"success": True, "data": convertToObject(headers, painters)})
     except Exception as error:
         print(error)

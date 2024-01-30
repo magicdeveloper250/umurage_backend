@@ -1,6 +1,3 @@
-import time
-import datetime
-import os
-
-for i in os.environ:
-    print(i)
+import bcrypt 
+password= "password123".encode()
+print(bcrypt.hashpw(password, bcrypt.gensalt()))

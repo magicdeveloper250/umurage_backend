@@ -63,7 +63,7 @@ def get_painters():
         with get_db() as connection:
             with contextlib.closing(connection.cursor()) as cursor:
                 cursor.execute("SET search_path TO public")
-                stmt = "SELECT id,username, email, phone, picture "
+                stmt = "SELECT id,username,email,phone,picture "
                 stmt += "FROM painters"
                 cursor.execute(stmt)
                 painters = cursor.fetchall()

@@ -156,7 +156,9 @@ def custom_login():
                     {
                         "message": True,
                         "session": cryptocode.encrypt(authorization_key, SESSION_KEY),
-                        "userId": user.id,
+                        "id": user.id,
+                        "fullname":user.email,
+                        "phone":user.phone,
                         "role": user.role,
                         "username": user.name,
                     }
