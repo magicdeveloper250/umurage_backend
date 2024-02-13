@@ -7,7 +7,7 @@ from queue import Empty
 # Database configuration
 INTERNAL_DB_CONNECTION = "postgres://postgres:manzisql123.@localhost/galleryWebsite"
 EXTERNAL_DB_CONNECTION = "postgres://umuragearthubadmin:icsba7282JdItIQapnLb8z5nNUEsEYmF@dpg-cml9er7109ks73a827t0-a/umuragearthubdb_wds7"
-AEXTERNAL = "postgres://umuragearthubadmin:RkumKHLgya1cKCRa2SbA4Dq3tbIRSUSI@dpg-cmf4riacn0vc73bvjm9g-a.oregon-postgres.render.com/umuragearthubdb_6u6g"
+AEXTERNAL = "postgres://umuragearthubadmin:icsba7282JdItIQapnLb8z5nNUEsEYmF@dpg-cml9er7109ks73a827t0-a.oregon-postgres.render.com/umuragearthubdb_wds7"
 INTERNAL2 = "postgres://umuragearthubadmin:icsba7282JdItIQapnLb8z5nNUEsEYmF@dpg-cml9er7109ks73a827t0-a.oregon-postgres.render.com/umuragearthubdb_wds7"
 DB_URL = AEXTERNAL
 MAX_CONNECTIONS = 1000
