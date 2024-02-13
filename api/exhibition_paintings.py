@@ -79,10 +79,6 @@ def get_painting_file(exhibition_id, filename):
     )
     mime = generate_mime(extension)
     response = send_file(
-        os.path.join(
-            os.getcwd() + f"/images/exhibition_paintings",
-            secure_filename(f"{exhibition_id}") + "/" + secure_filename(f"{filename}"),
-        ),
-        mimetype=mime if mime else "",
+        os.getcwd() + f"/images/exhibition_paintings/{exhibition_id}/{secure_filename(filename)}",mimetype=mime if mime else ""
     )
     return response

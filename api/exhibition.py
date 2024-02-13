@@ -3,15 +3,16 @@ import db.exhibition as database
 from helperfunctions import convertToObject
 from werkzeug.utils import secure_filename
 import os
-from auth.UserAuth import custom_login_required, admin_required
-from flask_login import login_required
-from auth.UserAuth import custom_login_required
+from auth.UserAuth import admin_required
+from psycopg2 import IntegrityError
+import shutil
+
 
 exhibition = Blueprint(name="exhibition", import_name="exhibition")
 
 
 def delete_exhibition_file(exhibition_name):
-    os.removedirs(
+    shutil.rmtree(
         os.path.join(os.getcwd() + "/images/exhibition_paintings", exhibition_name)
     )
 
@@ -53,7 +54,7 @@ def add_exhibition():
 
         exhibition["banner"] = banner_fname
 
-        database.add_new_exhibition(exhibition)
+        new_item = database.add_new_exhibition(exhibition)
         exhibition_banner_file.save(
             os.path.join(
                 os.getcwd() + "/images/exhibitions",
@@ -65,10 +66,15 @@ def add_exhibition():
         os.chdir(os.getcwd() + "/images/exhibition_paintings")
         os.mkdir(exhibition["name"])
         os.chdir(CURRENT_FOLDER)
-
-        return jsonify({"success": True})
-    except FileExistsError as error:
+        headers = ["id", "name", "startdate", "enddate", "host", "fees", "image"]
+        return jsonify({"success": True, "data": convertToObject(headers, new_item)})
+    except IntegrityError:
         return jsonify({"exhibitionExist": True})
+    except FileExistsError:
+        return jsonify({"exhibitionExist": True})
+    except Exception as error:
+        print(error)
+        return jsonify({"success": False})
 
 
 @exhibition.route("/get_exhibition/<id>", methods=["GET"])
@@ -97,11 +103,14 @@ def send_exhibition_image(filename):
 def delete_exhibition(id, name):
     admin_required()
     try:
-        database.delete_exhibition(id)
-        exhibitions = database.get_exhibitions()
+        deleted_exhibition = database.delete_exhibition(id)
+
+        # exhibitions = database.get_exhibitions()
         headers = ["id", "name", "startdate", "enddate", "host", "fees", "image"]
         delete_exhibition_file(name)
-        return jsonify({"success": True, "data": convertToObject(headers, exhibitions)})
+        return jsonify(
+            {"success": True, "data": convertToObject(headers, deleted_exhibition)}
+        )
     except Exception as error:
         print(error)
         return jsonify({"success": False})

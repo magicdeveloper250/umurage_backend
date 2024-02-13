@@ -1,3 +1,9 @@
-import bcrypt 
-password= "password123".encode()
-print(bcrypt.hashpw(password, bcrypt.gensalt()))
+def factorial(n):
+    if n<0:
+        return None
+    if n==0 or n==1:
+        return 1
+    return n*factorial(n-1)
+
+
+print(factorial(-1))

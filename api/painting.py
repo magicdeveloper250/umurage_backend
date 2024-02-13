@@ -9,6 +9,17 @@ import time
 
 painting = Blueprint(name="painting", import_name="painting")
 
+headers = [
+    "id",
+    "name",
+    "owner",
+    "category",
+    "created",
+    "image",
+    "phone",
+    "likes",
+]
+
 
 @painting.route("/add_new_painting", methods=["PUT"])
 def add_new_painting():
@@ -29,14 +40,16 @@ def add_new_painting():
             + "/images/paintings/"
             + secure_filename(image_filename)
         )
-        database.add_new_painting(new_painting)
+        added_painting = database.add_new_painting(new_painting)
         image_file.save(
             os.path.join(
                 os.getcwd() + "/images/paintings", secure_filename(image_filename)
             )
         )
 
-        return jsonify({"success": True})
+        return jsonify(
+            {"success": True, "data": convertToObject(headers, added_painting)}
+        )
     except Exception as error:
         print(error)
         return abort(jsonify({"success": False}))
@@ -46,16 +59,6 @@ def add_new_painting():
 def get_paintings():
     try:
         painters = database.get_paintings()
-        headers = [
-            "id",
-            "name",
-            "owner",
-            "category",
-            "created",
-            "image",
-            "phone",
-            "likes",
-        ]
 
         return jsonify({"success": True, "data": convertToObject(headers, painters)})
     except Exception as error:

@@ -36,3 +36,6 @@ def generate_mime(extension):
     elif extension in audio:
         return f"audio/{extension}".replace(".", "")
     return None
+
+
+ 

@@ -13,6 +13,7 @@ def add_new_painting(painting):
             cursor.execute("BEGIN")
             stmt = "INSERT INTO paintings (g_name, g_category, g_owner, g_created, g_image) "
             stmt += "VALUES ({0},{1},{2},{3},{4})"
+            stmt += " RETURNING g_id,g_name, g_category, g_owner, g_created, g_image;"
             query = sql.SQL(stmt).format(
                 sql.Literal(painting.get("name")),
                 sql.Literal(painting.get("category")),
@@ -21,7 +22,9 @@ def add_new_painting(painting):
                 sql.Literal(painting.get("image")),
             )
             cursor.execute(query)
+            added_painting = cursor.fetchall()
             cursor.execute("COMMIT")
+            return added_painting
 
 
 def get_paintings():
@@ -57,8 +60,7 @@ def delete_painting(id, owner):
             cursor.execute("SET search_path TO public")
             stmt = " BEGIN ;"
             stmt += "DELETE FROM paintings "
-            stmt += "WHERE g_id={0};"
-
+            stmt += "WHERE g_id={0}; "
             stmt += "COMMIT "
             query = sql.SQL(stmt).format(sql.Literal(id), sql.Literal(owner))
             cursor.execute(query)

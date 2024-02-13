@@ -5,6 +5,8 @@ import os
 from werkzeug.utils import secure_filename
 import bcrypt
 from auth.UserAuth import admin_required
+from psycopg2 import IntegrityError
+import threading
 
 painter = Blueprint(name="painter", import_name="painter")
 
@@ -34,13 +36,17 @@ def add_new_painter():
             + secure_filename(filename)
         )
 
-        profilepicture.save(
+        save_thread= threading.Thread(target=lambda:  profilepicture.save(
             os.path.join(os.getcwd() + f"/images/painters", secure_filename(filename))
-        )
+        ))
+        save_thread.start()
         database.add_new_painter(new_painter)
         return jsonify({"success": True})
-    except Exception as error:
-        print(error)
+    except IntegrityError:
+         
+        return jsonify({"userExist": True})
+    except:
+        return jsonify({"success": False})
 
 
 @painter.route("/get_painters", methods=["GET"])

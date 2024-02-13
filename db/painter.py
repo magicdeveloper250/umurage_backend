@@ -6,27 +6,26 @@ from . import get_db
 
 
 def add_new_painter(painter):
-    try:
-        with get_db() as connection:
-            with contextlib.closing(connection.cursor()) as cursor:
-                cursor.execute("SET search_path TO public")
-                cursor.execute("BEGIN")
-                stmt = (
-                    "INSERT INTO painters (id,username,email,phone, picture, password) "
-                )
-                stmt += "VALUES ({0}, {1}, {2},{3},{4},{5})"
-                query = sql.SQL(stmt).format(
-                    sql.Literal(painter.get("id")),
-                    sql.Literal(painter.get("username")),
-                    sql.Literal(painter.get("email")),
-                    sql.Literal(painter.get("phonenumber")),
-                    sql.Literal(painter.get("profilepicture")),
-                    sql.Literal(painter.get("password")),
-                )
-                cursor.execute(query)
-                cursor.execute("COMMIT")
-    except Exception as error:
-        print(error)
+ 
+    with get_db() as connection:
+        with contextlib.closing(connection.cursor()) as cursor:
+            cursor.execute("SET search_path TO public")
+            cursor.execute("BEGIN")
+            stmt = (
+                "INSERT INTO painters (id,username,email,phone, picture, password) "
+            )
+            stmt += "VALUES ({0}, {1}, {2},{3},{4},{5})"
+            query = sql.SQL(stmt).format(
+                sql.Literal(painter.get("id")),
+                sql.Literal(painter.get("username")),
+                sql.Literal(painter.get("email")),
+                sql.Literal(painter.get("phonenumber")),
+                sql.Literal(painter.get("profilepicture")),
+                sql.Literal(painter.get("password")),
+            )
+            cursor.execute(query)
+            cursor.execute("COMMIT")
+     
 
 
 def get_painter(id):
