@@ -1,10 +1,9 @@
-from flask import Blueprint, request, abort, jsonify, send_file, make_response, g
-import db.painting as database
-from helperfunctions import convertToObject
-import os
-from werkzeug.utils import secure_filename
 from auth.UserAuth import custom_login_required, admin_required
-from helperfunctions import authorize
+from flask import Blueprint, request, abort, jsonify, send_file
+from helperfunctions import convertToObject
+from werkzeug.utils import secure_filename
+import db.painting as database
+import os
 import time
 
 painting = Blueprint(name="painting", import_name="painting")
@@ -23,6 +22,7 @@ headers = [
 
 @painting.route("/add_new_painting", methods=["PUT"])
 def add_new_painting():
+    global headers
     try:
         new_painting = {}
         new_painting["name"] = request.form.get("name")
@@ -57,9 +57,9 @@ def add_new_painting():
 
 @painting.route("/get_paintings", methods=["GET", "POST"])
 def get_paintings():
+    global headers
     try:
         painters = database.get_paintings()
-
         return jsonify({"success": True, "data": convertToObject(headers, painters)})
     except Exception as error:
         print(error)
@@ -75,9 +75,9 @@ def send_painting(filename):
 
 @painting.route("/delete_painting/<id>", methods=["DELETE"])
 def delete_painting(id):
+    global headers
     custom_login_required()
     admin = admin_required()
-
     userId = request.headers.get("userId")
     try:
         database.delete_painting(id, userId)
@@ -102,7 +102,6 @@ def delete_painting(id):
         )
         return jsonify({"success": True, "data": convertToObject(headers, painters)})
     except Exception as error:
-        print(error)
         return abort(jsonify({"success": False}))
 
 
@@ -118,7 +117,6 @@ def get_user_paintings(id):
 
         return response
     except Exception as error:
-        print(error)
         return abort(jsonify({"success": False}))
 
 
@@ -137,12 +135,7 @@ def like(painting_id):
                 }
             )
     except Exception as error:
-        print(error)
-        return jsonify(
-            {
-                "success": False,
-            }
-        )
+        return jsonify({"success": False, "error": error})
 
 
 @painting.route("/dislike/<painting_id>", methods=["POST"])
@@ -159,9 +152,4 @@ def dislike(painting_id):
                 }
             )
     except Exception as error:
-        print(error)
-        return jsonify(
-            {
-                "success": False,
-            }
-        )
+        return jsonify({"success": False, "error": error})

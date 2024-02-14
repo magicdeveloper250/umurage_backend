@@ -1,18 +1,12 @@
-import json, os, sqlite3, requests
+from auth.user import User
 from db.auth import get_user
 from flask import (
-    Flask,
     abort,
-    make_response,
     request,
     redirect,
-    url_for,
     Blueprint,
-    current_app,
     jsonify,
-    session,
 )
-import bcrypt
 from flask_login import (
     LoginManager,
     current_user,
@@ -20,13 +14,16 @@ from flask_login import (
     login_user,
     logout_user,
 )
+from oauthlib.oauth2 import WebApplicationClient
+import bcrypt
+import contextlib
+import cryptocode
+import json, os, sqlite3, requests
 import os
 import sqlite3
-import contextlib
-from oauthlib.oauth2 import WebApplicationClient
-from auth.user import User
-import cryptocode
 
+
+"""APPLICATION LOGIN SYSTEM SECURITY KEYS"""
 GOOGLE_CLIENT_ID = (
     "673984937291-80v3d11ntqu1j6ji7tng9jf42ktr4tek.apps.googleusercontent.com"
 )
@@ -35,18 +32,22 @@ GOOGLE_DISCOVERY_URL = "https://accounts.google.com/.well-known/openid-configura
 AFTER_LOGIN_URL = "https://www.umuragearthubf.onrender.com/profile"
 SESSION_DB_URL = "session.sqlite"
 SESSION_KEY = "1234567890"
-# app setup
-auth = Blueprint(name="UserAuth", import_name="auth")
+"""END OF LOGIN SYSTEM SECURITY KEYS"""
 
+
+"""APPLICATION SETUP"""
+auth = Blueprint(name="UserAuth", import_name="auth")
 loginmanager = LoginManager()
+client = WebApplicationClient(GOOGLE_CLIENT_ID)
+"""END OF APPLICATION SETUP"""
+
+
+"""GOOGLE LOGIN SETUP"""
 
 
 @loginmanager.user_loader
 def load_user(user_id):
     return User.get(user_id)
-
-
-client = WebApplicationClient(GOOGLE_CLIENT_ID)
 
 
 def get_google_provider_cfg():
@@ -117,7 +118,10 @@ def logout():
     return redirect(AFTER_LOGIN_URL, 302)
 
 
-# custom user authorization
+"""END OF GOOGLE LOGIN"""
+
+
+"""CUSTOM LOGIN SYSTEM"""
 
 
 @auth.route("/custom-login", methods=["POST"])
@@ -129,7 +133,6 @@ def custom_login():
     if username and password:
         # getting user from database
         user = User.getByUsername(username)
-
         try:
             if not user:
                 return jsonify({"message": False})
@@ -157,15 +160,14 @@ def custom_login():
                         "message": True,
                         "session": cryptocode.encrypt(authorization_key, SESSION_KEY),
                         "id": user.id,
-                        "fullname":user.email,
-                        "phone":user.phone,
+                        "fullname": user.email,
+                        "phone": user.phone,
                         "role": user.role,
                         "username": user.name,
                     }
                 )
 
         except Exception as error:
-            print(error)
             return jsonify({"message": False})
 
     else:
@@ -202,25 +204,36 @@ def custom_admin_logout():
     return jsonify(success=True)
 
 
+@auth.route("/api/authorize/<userId>", methods=["POST", "GET"])
+def authorize_user(userId):
+    admin_required()
+    authorized = get_user(userId)
+
+    return jsonify({"message": True if authorized != None else False})
+
+
+# CUSTOM LOGIN SYSTEM HELPER FUNCTIONS
+
+
 def admin_required():
     try:
         key_from_request = request.headers.get("Authorization").split(" ")[1]
         if not key_from_request:
             return abort(jsonify({"message": False}))
         else:
-            return True
-        with sqlite3.connect(SESSION_DB_URL) as connection:
-            with contextlib.closing(connection.cursor()) as cursor:
-                stmt = "SELECT * FROM session  "
-                stmt += "WHERE auth_key=?"
-                cursor.execute(
-                    stmt, [cryptocode.decrypt(key_from_request, SESSION_KEY)]
-                )
-                key = cursor.fetchone()
-                if key[3] != "admin":
-                    return abort(jsonify({"message": False, "unauthorized": True}))
+            with sqlite3.connect(SESSION_DB_URL) as connection:
+                with contextlib.closing(connection.cursor()) as cursor:
+                    stmt = "SELECT * FROM session  "
+                    stmt += "WHERE auth_key=?"
+                    cursor.execute(
+                        stmt, [cryptocode.decrypt(key_from_request, SESSION_KEY)]
+                    )
+                    key = cursor.fetchone()
+                    if key[3] != "admin":
+                        return abort(jsonify({"message": False, "unauthorized": True}))
+                    else:
+                        return True
     except Exception as error:
-        print(error)
         return abort(jsonify({"message": False, "unauthorized": True}))
 
 
@@ -257,14 +270,6 @@ def custom_login_required():
         )
 
 
-@auth.route("/api/authorize/<userId>", methods=["POST", "GET"])
-def authorize_user(userId):
-    admin_required()
-    authorized = get_user(userId)
-
-    return jsonify({"message": True if authorized != None else False})
-
-
 def payment_required():
     from db.customer import check_payment
 
@@ -282,7 +287,6 @@ def payment_required():
             )
 
     except Exception as error:
-        print(error)
         return abort(
             jsonify(
                 {"message": False, "unauthorized": True},
@@ -307,9 +311,11 @@ def image_protected():
             )
 
     except Exception as error:
-        print(error)
         return abort(
             jsonify(
                 {"message": False, "unauthorized": True},
             )
         )
+
+
+"""END CUSTOM LOGIN SYSTEM"""

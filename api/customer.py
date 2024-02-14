@@ -127,7 +127,6 @@ def check_payment():
         id = request.form.get("customerId")
         exId = request.form.get("exhibitionId")
         response = database.check_payment(id=id, e_id=exId)
-        print(response)
         if response:
             return jsonify({"success": True, "id": exId})
         else:

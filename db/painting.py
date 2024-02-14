@@ -1,4 +1,3 @@
-import psycopg2
 import contextlib
 from psycopg2 import sql
 from . import get_db
@@ -75,10 +74,8 @@ def like(painting_id):
             stmt += "SET likes= likes+1 "
             stmt += "WHERE g_id={0}; "
             stmt += "COMMIT;"
-
             query = sql.SQL(stmt).format(sql.Literal(painting_id))
             cursor.execute(query)
-
             return True
 
 
@@ -91,7 +88,6 @@ def dislike(painting_id):
             stmt += "SET likes= likes-1 "
             stmt += "WHERE g_id={0} ;"
             stmt += "COMMIT;"
-
             query = sql.SQL(stmt).format(sql.Literal(painting_id))
             cursor.execute(query)
             return True
@@ -104,7 +100,6 @@ def get_likes(painting_id):
             stmt = "SELECT likes "
             stmt += "FROM paintings "
             stmt += "WHERE g_id={0} "
-
             query = sql.SQL(stmt).format(sql.Literal(painting_id))
             cursor.execute(query)
             likes = cursor.fetchone()
