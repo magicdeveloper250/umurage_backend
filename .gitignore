@@ -1,6 +1,2 @@
 __pycache__
-auth/__pycache__
-db/__pycache__
-api/__pycache__
-email/__pycache__
-env_vars.txt
+*/__pycache__

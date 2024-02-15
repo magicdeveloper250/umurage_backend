@@ -215,11 +215,11 @@ def authorize_user(userId):
 # CUSTOM LOGIN SYSTEM HELPER FUNCTIONS
 
 
-def admin_required():
+def admin_required(vary=False):
     try:
         key_from_request = request.headers.get("Authorization").split(" ")[1]
         if not key_from_request:
-            return abort(jsonify({"message": False}))
+            return abort(jsonify({"message": False, "unauthorized": True}))
         else:
             with sqlite3.connect(SESSION_DB_URL) as connection:
                 with contextlib.closing(connection.cursor()) as cursor:
@@ -230,14 +230,19 @@ def admin_required():
                     )
                     key = cursor.fetchone()
                     if key[3] != "admin":
-                        return abort(jsonify({"message": False, "unauthorized": True}))
+                        if vary:
+                            return False
+                        else:
+                            abort(jsonify({"message": False, "unauthorized": True}))
+
                     else:
                         return True
     except Exception as error:
+
         return abort(jsonify({"message": False, "unauthorized": True}))
 
 
-def custom_login_required():
+def custom_login_required(vary=False):
     try:
         key_from_request = request.headers.get("Authorization").split(" ")[1]
         if not key_from_request:
@@ -255,13 +260,12 @@ def custom_login_required():
                 )
                 key = cursor.fetchone()
         if not key[0]:
-            return abort(
-                jsonify(
-                    {"message": False, "unauthorized": True},
-                )
-            )
+            if vary:
+                return False
+            else:
+                abort(jsonify({"message": False, "unauthorized": True}))
         else:
-            pass
+            return True
     except Exception:
         return abort(
             jsonify(
@@ -292,6 +296,16 @@ def payment_required():
                 {"message": False, "unauthorized": True},
             )
         )
+
+
+def user_or_admin_required():
+    user = custom_login_required(vary=True)
+    admin = admin_required(vary=True)
+
+    if not (user or admin):
+        return abort(jsonify({"message": False, "unauthorized": True}))
+
+    return (user, admin)
 
 
 def image_protected():

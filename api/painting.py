@@ -1,4 +1,4 @@
-from auth.UserAuth import custom_login_required, admin_required
+from auth.UserAuth import custom_login_required, user_or_admin_required
 from flask import Blueprint, request, abort, jsonify, send_file
 from helperfunctions import convertToObject
 from werkzeug.utils import secure_filename
@@ -76,8 +76,8 @@ def send_painting(filename):
 @painting.route("/delete_painting/<id>", methods=["DELETE"])
 def delete_painting(id):
     global headers
-    custom_login_required()
-    admin = admin_required()
+    user, admin = user_or_admin_required()
+
     userId = request.headers.get("userId")
     try:
         database.delete_painting(id, userId)
