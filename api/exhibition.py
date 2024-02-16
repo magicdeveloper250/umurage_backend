@@ -1,42 +1,19 @@
-from flask import Blueprint, request, jsonify, send_file
-import db.exhibition as database
-from helperfunctions import convertToObject
-from werkzeug.utils import secure_filename
-import os
 from auth.UserAuth import admin_required
+from filemanagement import filemanager
+from flask import Blueprint, request, jsonify, send_file
+from helperfunctions import convertToObject
 from psycopg2 import IntegrityError
-import shutil
+from werkzeug.utils import secure_filename
+import db.exhibition as database
 
 
 exhibition = Blueprint(name="exhibition", import_name="exhibition")
-
-
-def delete_exhibition_file(exhibition_name):
-    shutil.rmtree(
-        os.path.join(os.getcwd() + "/images/exhibition_paintings", exhibition_name)
-    )
-
-
-def add_exhibition_folder(name):
-    CURRENT_FOLDER = os.getcwd()
-    os.chdir(os.getcwd() + "/images/exhibition_paintings")
-    os.mkdir(name)
-    os.chdir(CURRENT_FOLDER)
-
-
-def rename_exhibition_folder(old, new):
-    CURRENT_FOLDER = os.getcwd()
-    os.chdir(os.getcwd() + f"/images/exhibition_paintings")
-    os.rename(
-        f"{old}",
-        f"{new}",
-    )
-
-    os.chdir(CURRENT_FOLDER)
+HEADERS = ["id", "name", "startdate", "enddate", "host", "fees", "image"]
 
 
 @exhibition.route("/add_new_exhibition", methods=["PUT"])
 def add_exhibition():
+    global HEADERS
     admin_required()
     try:
         exhibition = {}
@@ -48,26 +25,15 @@ def add_exhibition():
         exhibition_banner_file = request.files.get("banner")
         banner_fname = (
             request.base_url.replace("/add_new_exhibition", "")
-            + "/images/exhibitions/"
-            + exhibition_banner_file.filename
+            + "/uploads/exhibitions/"
+            + secure_filename(exhibition_banner_file.filename)
         )
 
         exhibition["banner"] = banner_fname
-
         new_item = database.add_new_exhibition(exhibition)
-        exhibition_banner_file.save(
-            os.path.join(
-                os.getcwd() + "/images/exhibitions",
-                secure_filename(exhibition_banner_file.filename),
-            )
-        )
-        # creating exhibition folder to be used after while adding paintings
-        CURRENT_FOLDER = os.getcwd()
-        os.chdir(os.getcwd() + "/images/exhibition_paintings")
-        os.mkdir(exhibition["name"])
-        os.chdir(CURRENT_FOLDER)
-        headers = ["id", "name", "startdate", "enddate", "host", "fees", "image"]
-        return jsonify({"success": True, "data": convertToObject(headers, new_item)})
+        filemanager.save_exhibition_banner_file(exhibition_banner_file)
+        filemanager.create_exhibition_painting_dir(exhibition["name"])
+        return jsonify({"success": True, "data": convertToObject(HEADERS, new_item)})
     except IntegrityError:
         return jsonify({"exhibitionExist": True})
     except FileExistsError:
@@ -79,37 +45,34 @@ def add_exhibition():
 
 @exhibition.route("/get_exhibition/<id>", methods=["GET"])
 def get_exhibition(id):
+    global HEADERS
     exhibition = database.get_exhibition(id)
-
-    headers = ["id", "name", "startdate", "enddate", "host", "fees", "image"]
-    return jsonify(convertToObject(headers, exhibition)[0])
+    return jsonify(convertToObject(HEADERS, exhibition)[0])
 
 
 @exhibition.route("/get_exhibitions", methods=["GET"])
 def get_exhibitions():
+    global HEADERS
     exhibitions = database.get_exhibitions()
-    headers = ["id", "name", "startdate", "enddate", "host", "fees", "image"]
-    return jsonify(convertToObject(headers, exhibitions))
+    return jsonify(convertToObject(HEADERS, exhibitions))
 
 
-@exhibition.route("/images/exhibitions/<filename>")
+@exhibition.route("/uploads/exhibitions/<filename>")
 def send_exhibition_image(filename):
-    fname = secure_filename(filename)
-    file = os.path.join(os.getcwd() + "/images/exhibitions", fname)
+    file = filemanager.get_exhibition_banner_path(filename)
     return send_file(file)
 
 
 @exhibition.route("/delete_exhibition/<id>/<name>", methods=["DELETE"])
 def delete_exhibition(id, name):
+    global HEADERS
     admin_required()
     try:
         deleted_exhibition = database.delete_exhibition(id)
-
-        # exhibitions = database.get_exhibitions()
-        headers = ["id", "name", "startdate", "enddate", "host", "fees", "image"]
-        delete_exhibition_file(name)
+        filemanager.delete_exhibition_painting_dir(name)
+        filemanager.delete_exhibition_banner_file(deleted_exhibition[0][6])
         return jsonify(
-            {"success": True, "data": convertToObject(headers, deleted_exhibition)}
+            {"success": True, "data": convertToObject(HEADERS, deleted_exhibition)}
         )
     except Exception as error:
         print(error)
@@ -129,20 +92,13 @@ def update_exhibition(id, name):
         exhibition_banner_file = request.files.get("banner")
         banner_fname = (
             request.base_url.replace(f"/update_exhibition/{id}/{name}/", "")
-            + "/images/exhibitions/"
+            + "/uploads/exhibitions/"
             + exhibition_banner_file.filename
         )
-
         exhibition["banner"] = banner_fname
-
         database.update_exhibition(exhibition, id)
-        exhibition_banner_file.save(
-            os.path.join(
-                os.getcwd() + "/images/exhibitions",
-                secure_filename(exhibition_banner_file.filename),
-            )
-        )
-        rename_exhibition_folder(name, exhibition["name"])
+        filemanager.save_exhibition_banner_file(exhibition_banner_file)
+        filemanager.rename_exhibition_folder_name(name, exhibition["name"])
         return jsonify({"success": True})
     except FileExistsError as error:
         return jsonify({"exhibitionExist": True})

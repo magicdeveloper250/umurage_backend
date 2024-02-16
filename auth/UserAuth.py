@@ -1,3 +1,12 @@
+from . import (
+    GOOGLE_CLIENT_ID,
+    GOOGLE_CLIENT_SECRET,
+    GOOGLE_DISCOVERY_URL,
+    SESSION_DB_URL,
+    SESSION_KEY,
+    AFTER_LOGIN_URL,
+    GOOGLE_REDIRECT_URL,
+)
 from auth.user import User
 from db.auth import get_user
 from flask import (
@@ -19,30 +28,11 @@ import bcrypt
 import contextlib
 import cryptocode
 import json, os, sqlite3, requests
-import os
-import sqlite3
 
 
-"""APPLICATION LOGIN SYSTEM SECURITY KEYS"""
-GOOGLE_CLIENT_ID = (
-    "673984937291-80v3d11ntqu1j6ji7tng9jf42ktr4tek.apps.googleusercontent.com"
-)
-GOOGLE_CLIENT_SECRET = "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"
-GOOGLE_DISCOVERY_URL = "https://accounts.google.com/.well-known/openid-configuration"
-AFTER_LOGIN_URL = "https://www.umuragearthubf.onrender.com/profile"
-SESSION_DB_URL = "session.sqlite"
-SESSION_KEY = "1234567890"
-"""END OF LOGIN SYSTEM SECURITY KEYS"""
-
-
-"""APPLICATION SETUP"""
 auth = Blueprint(name="UserAuth", import_name="auth")
 loginmanager = LoginManager()
 client = WebApplicationClient(GOOGLE_CLIENT_ID)
-"""END OF APPLICATION SETUP"""
-
-
-"""GOOGLE LOGIN SETUP"""
 
 
 @loginmanager.user_loader
@@ -60,10 +50,9 @@ def login():
     google_provider_cfg = get_google_provider_cfg()
     authorization_endpoint = google_provider_cfg["authorization_endpoint"]
     # preparing request uri
-
     request_uri = client.prepare_request_uri(
         authorization_endpoint,
-        redirect_uri="https://www.umuragearthub.onrender.com/login/callback",
+        redirect_uri=GOOGLE_REDIRECT_URL,
         scope=["openid", "email", "profile"],
     )
     return redirect(request_uri)

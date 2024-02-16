@@ -1,8 +1,9 @@
 from app import app
-import ssl
+from filemanagement.filemanager import init_directories
+
 
 app = app
 if __name__ == "__main__":
-    # context = ssl.SSLContext(ssl.PROTOCOL_SSLv23)
-    # context.load_cert_chain("/ssl/cert.pem", "/ssl/key.pem")
+    init_directories()
+
     app.run(debug=True, host="0.0.0.0")

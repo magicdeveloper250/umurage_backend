@@ -1,14 +1,15 @@
+from auth.UserAuth import admin_required
+from filemanagement import filemanager
 from flask import Blueprint, request, jsonify, send_file
-import db.painter as database
 from helperfunctions import convertToObject
-import os
+from psycopg2 import IntegrityError
 from werkzeug.utils import secure_filename
 import bcrypt
-from auth.UserAuth import admin_required
-from psycopg2 import IntegrityError
-import threading
+import db.painter as database
+import os
 
 painter = Blueprint(name="painter", import_name="painter")
+HEADERS = ["id", "username", "fullname", "phone", "image"]
 
 
 @painter.route("/add_new_painter", methods=["POST"])
@@ -32,30 +33,27 @@ def add_new_painter():
 
         new_painter["profilepicture"] = (
             request.base_url.replace("/add_new_painter", "")
-            + f"/images/painters/"
+            + f"/uploads/profiles/"
             + secure_filename(filename)
         )
-
-        save_thread= threading.Thread(target=lambda:  profilepicture.save(
-            os.path.join(os.getcwd() + f"/images/painters", secure_filename(filename))
-        ))
-        save_thread.start()
         database.add_new_painter(new_painter)
+        filemanager.add_user_profile_file(profilepicture, filename)
         return jsonify({"success": True})
-    except IntegrityError:
-         
+    except IntegrityError as error:
+        print(error)
         return jsonify({"userExist": True})
-    except:
+    except Exception as error:
+        print(error)
         return jsonify({"success": False})
 
 
 @painter.route("/get_painters", methods=["GET"])
 def list_painters():
+    global HEADERS
     admin_required()
     try:
         painters = database.get_painters()
-        headers = ["id", "username", "fullname", "phone", "image"]
-        return jsonify(convertToObject(headers, painters))
+        return jsonify(convertToObject(HEADERS, painters))
     except Exception as error:
         print(error)
 
@@ -64,17 +62,16 @@ def list_painters():
 def delete_painter(id):
     admin_required()
     try:
-        database.delete_painter(id)
+        deleted_painter = database.delete_painter(id)
         painters = database.get_painters()
-        headers = ["id", "username", "fullname", "phone", "image"]
-        return jsonify({"success": True, "data": convertToObject(headers, painters)})
+        filemanager.delete_user_profile_file(deleted_painter[0][4])
+        return jsonify({"success": True, "data": convertToObject(HEADERS, painters)})
     except Exception as error:
         print(error)
         return jsonify({"success": False})
 
 
-@painter.route("/images/painters/<filename>")
-def send_painting(filename):
-    fname = secure_filename(filename)
-    file = os.path.join(os.getcwd() + "/images/painters", fname)
-    return send_file(file)
+@painter.route("/uploads/profiles/<filename>")
+def send_painter_profile(filename):
+    path = filemanager.get_user_profile_file_path(filename)
+    return send_file(path)

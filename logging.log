@@ -1,714 +1,234 @@
- INFO:werkzeug:127.0.0.1 - - [15/Feb/2024 10:39:37] "OPTIONS /get_exhibitions HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [15/Feb/2024 10:39:37] "GET /get_paintings HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [15/Feb/2024 10:39:37] "GET /get_exhibitions HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [15/Feb/2024 10:39:37] "GET /get_paintings HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [15/Feb/2024 10:39:37] "GET /get_exhibitions HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [15/Feb/2024 10:39:38] "[36mGET /images/exhibitions/amagara%20niyp%20gishoro.jpg HTTP/1.1[0m" 304 -
-INFO:werkzeug:127.0.0.1 - - [15/Feb/2024 10:41:36] "[36mGET /images/paintings/2df8795188de91bd941352d944718192442f2cc6c64ca880_painting_Sun_Feb_11_152321_2024painting_10.png HTTP/1.1[0m" 304 -
-INFO:werkzeug:127.0.0.1 - - [15/Feb/2024 10:41:36] "[36mGET /images/paintings/2df8795188de91bd941352d944718192442f2cc6c64ca880_painting_Sun_Feb_11_152117_2024painting_2.png HTTP/1.1[0m" 304 -
-INFO:werkzeug:127.0.0.1 - - [15/Feb/2024 10:41:36] "[36mGET /images/paintings/2df8795188de91bd941352d944718192442f2cc6c64ca880_painting_Sun_Feb_11_152158_2024painting_5.png HTTP/1.1[0m" 304 -
-INFO:werkzeug:127.0.0.1 - - [15/Feb/2024 10:41:36] "[36mGET /images/paintings/2df8795188de91bd941352d944718192442f2cc6c64ca880_painting_Sun_Feb_11_152250_2024painting_8.png HTTP/1.1[0m" 304 -
-INFO:werkzeug:127.0.0.1 - - [15/Feb/2024 10:41:36] "[36mGET /images/paintings/2df8795188de91bd941352d944718192442f2cc6c64ca880_painting_Sun_Feb_11_152338_2024painting_11.png HTTP/1.1[0m" 304 -
-INFO:werkzeug:127.0.0.1 - - [15/Feb/2024 10:41:36] "[36mGET /images/paintings/2df8795188de91bd941352d944718192442f2cc6c64ca880_painting_Sun_Feb_11_152133_2024painting_3.png HTTP/1.1[0m" 304 -
-INFO:werkzeug:127.0.0.1 - - [15/Feb/2024 10:41:36] "[36mGET /images/paintings/2df8795188de91bd941352d944718192442f2cc6c64ca880_painting_Sun_Feb_11_152213_2024painting_6.png HTTP/1.1[0m" 304 -
-INFO:werkzeug:127.0.0.1 - - [15/Feb/2024 10:41:36] "[36mGET /images/paintings/2df8795188de91bd941352d944718192442f2cc6c64ca880_painting_Sun_Feb_11_152306_2024painting_9.png HTTP/1.1[0m" 304 -
-INFO:werkzeug:127.0.0.1 - - [15/Feb/2024 10:41:36] "[36mGET /images/paintings/693d395be67f636fd24329c26b4fd2695bb7361edba7dc18_painting_Thu_Feb_15_095827_2024nyirabyo.jpg HTTP/1.1[0m" 304 -
-INFO:werkzeug:127.0.0.1 - - [15/Feb/2024 10:52:04] "OPTIONS /get_exhibitions HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [15/Feb/2024 10:52:05] "GET /get_exhibitions HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [15/Feb/2024 10:52:05] "GET /get_paintings HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [15/Feb/2024 10:52:05] "GET /get_paintings HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [15/Feb/2024 10:52:05] "[36mGET /images/exhibitions/amagara%20niyp%20gishoro.jpg HTTP/1.1[0m" 304 -
-INFO:werkzeug:127.0.0.1 - - [15/Feb/2024 10:52:05] "[36mGET /images/exhibitions/amagara%20niyp%20gishoro.jpg HTTP/1.1[0m" 304 -
-INFO:werkzeug:127.0.0.1 - - [15/Feb/2024 10:52:05] "[36mGET /images/paintings/2df8795188de91bd941352d944718192442f2cc6c64ca880_painting_Sun_Feb_11_152321_2024painting_10.png HTTP/1.1[0m" 304 -
-INFO:werkzeug:127.0.0.1 - - [15/Feb/2024 10:52:05] "[36mGET /images/paintings/2df8795188de91bd941352d944718192442f2cc6c64ca880_painting_Sun_Feb_11_152117_2024painting_2.png HTTP/1.1[0m" 304 -
-INFO:werkzeug:127.0.0.1 - - [15/Feb/2024 10:52:05] "[36mGET /images/paintings/2df8795188de91bd941352d944718192442f2cc6c64ca880_painting_Sun_Feb_11_152158_2024painting_5.png HTTP/1.1[0m" 304 -
-INFO:werkzeug:127.0.0.1 - - [15/Feb/2024 10:52:05] "[36mGET /images/paintings/2df8795188de91bd941352d944718192442f2cc6c64ca880_painting_Sun_Feb_11_152250_2024painting_8.png HTTP/1.1[0m" 304 -
-INFO:werkzeug:127.0.0.1 - - [15/Feb/2024 10:52:05] "GET /get_exhibitions HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [15/Feb/2024 10:52:05] "[36mGET /images/paintings/2df8795188de91bd941352d944718192442f2cc6c64ca880_painting_Sun_Feb_11_152338_2024painting_11.png HTTP/1.1[0m" 304 -
-INFO:werkzeug:127.0.0.1 - - [15/Feb/2024 10:52:05] "[36mGET /images/paintings/2df8795188de91bd941352d944718192442f2cc6c64ca880_painting_Sun_Feb_11_152133_2024painting_3.png HTTP/1.1[0m" 304 -
-INFO:werkzeug:127.0.0.1 - - [15/Feb/2024 10:52:05] "[36mGET /images/paintings/2df8795188de91bd941352d944718192442f2cc6c64ca880_painting_Sun_Feb_11_152213_2024painting_6.png HTTP/1.1[0m" 304 -
-INFO:werkzeug:127.0.0.1 - - [15/Feb/2024 10:52:05] "[36mGET /images/paintings/2df8795188de91bd941352d944718192442f2cc6c64ca880_painting_Sun_Feb_11_152306_2024painting_9.png HTTP/1.1[0m" 304 -
-INFO:werkzeug:127.0.0.1 - - [15/Feb/2024 10:52:05] "[36mGET /images/paintings/693d395be67f636fd24329c26b4fd2695bb7361edba7dc18_painting_Thu_Feb_15_095827_2024nyirabyo.jpg HTTP/1.1[0m" 304 -
-INFO:werkzeug:127.0.0.1 - - [15/Feb/2024 10:52:05] "[36mGET /images/paintings/2df8795188de91bd941352d944718192442f2cc6c64ca880_painting_Sun_Feb_11_152321_2024painting_10.png HTTP/1.1[0m" 304 -
-INFO:werkzeug:127.0.0.1 - - [15/Feb/2024 10:52:05] "[36mGET /images/paintings/2df8795188de91bd941352d944718192442f2cc6c64ca880_painting_Sun_Feb_11_152117_2024painting_2.png HTTP/1.1[0m" 304 -
-INFO:werkzeug:127.0.0.1 - - [15/Feb/2024 10:52:05] "[36mGET /images/paintings/2df8795188de91bd941352d944718192442f2cc6c64ca880_painting_Sun_Feb_11_152158_2024painting_5.png HTTP/1.1[0m" 304 -
-INFO:werkzeug:127.0.0.1 - - [15/Feb/2024 10:52:05] "[36mGET /images/paintings/2df8795188de91bd941352d944718192442f2cc6c64ca880_painting_Sun_Feb_11_152250_2024painting_8.png HTTP/1.1[0m" 304 -
-INFO:werkzeug:127.0.0.1 - - [15/Feb/2024 10:52:05] "[36mGET /images/paintings/2df8795188de91bd941352d944718192442f2cc6c64ca880_painting_Sun_Feb_11_152133_2024painting_3.png HTTP/1.1[0m" 304 -
-INFO:werkzeug:127.0.0.1 - - [15/Feb/2024 10:52:05] "[36mGET /images/paintings/2df8795188de91bd941352d944718192442f2cc6c64ca880_painting_Sun_Feb_11_152338_2024painting_11.png HTTP/1.1[0m" 304 -
-INFO:werkzeug:127.0.0.1 - - [15/Feb/2024 10:52:05] "[36mGET /images/paintings/2df8795188de91bd941352d944718192442f2cc6c64ca880_painting_Sun_Feb_11_152213_2024painting_6.png HTTP/1.1[0m" 304 -
-INFO:werkzeug:127.0.0.1 - - [15/Feb/2024 10:52:05] "[36mGET /images/paintings/693d395be67f636fd24329c26b4fd2695bb7361edba7dc18_painting_Thu_Feb_15_095827_2024nyirabyo.jpg HTTP/1.1[0m" 304 -
-INFO:werkzeug:127.0.0.1 - - [15/Feb/2024 10:52:05] "[36mGET /images/paintings/2df8795188de91bd941352d944718192442f2cc6c64ca880_painting_Sun_Feb_11_152306_2024painting_9.png HTTP/1.1[0m" 304 -
-INFO:werkzeug:127.0.0.1 - - [15/Feb/2024 10:56:21] "OPTIONS /get_exhibitions HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [15/Feb/2024 10:56:21] "GET /get_exhibitions HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [15/Feb/2024 10:56:21] "GET /get_paintings HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [15/Feb/2024 10:56:23] "GET /get_paintings HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [15/Feb/2024 10:56:23] "GET /get_exhibitions HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [15/Feb/2024 10:56:27] "OPTIONS /get_exhibitions HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [15/Feb/2024 10:56:27] "GET /get_paintings HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [15/Feb/2024 10:56:27] "GET /get_paintings HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [15/Feb/2024 10:56:27] "GET /get_exhibitions HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [15/Feb/2024 10:56:27] "[36mGET /images/exhibitions/amagara%20niyp%20gishoro.jpg HTTP/1.1[0m" 304 -
-INFO:werkzeug:127.0.0.1 - - [15/Feb/2024 10:56:27] "[36mGET /images/paintings/2df8795188de91bd941352d944718192442f2cc6c64ca880_painting_Sun_Feb_11_152321_2024painting_10.png HTTP/1.1[0m" 304 -
-INFO:werkzeug:127.0.0.1 - - [15/Feb/2024 10:56:27] "GET /get_exhibitions HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [15/Feb/2024 10:56:27] "[36mGET /images/paintings/2df8795188de91bd941352d944718192442f2cc6c64ca880_painting_Sun_Feb_11_152117_2024painting_2.png HTTP/1.1[0m" 304 -
-INFO:werkzeug:127.0.0.1 - - [15/Feb/2024 10:56:27] "[36mGET /images/paintings/2df8795188de91bd941352d944718192442f2cc6c64ca880_painting_Sun_Feb_11_152158_2024painting_5.png HTTP/1.1[0m" 304 -
-INFO:werkzeug:127.0.0.1 - - [15/Feb/2024 10:56:27] "[36mGET /images/paintings/2df8795188de91bd941352d944718192442f2cc6c64ca880_painting_Sun_Feb_11_152250_2024painting_8.png HTTP/1.1[0m" 304 -
-INFO:werkzeug:127.0.0.1 - - [15/Feb/2024 10:56:27] "[36mGET /images/paintings/2df8795188de91bd941352d944718192442f2cc6c64ca880_painting_Sun_Feb_11_152338_2024painting_11.png HTTP/1.1[0m" 304 -
-INFO:werkzeug:127.0.0.1 - - [15/Feb/2024 10:56:27] "[36mGET /images/paintings/2df8795188de91bd941352d944718192442f2cc6c64ca880_painting_Sun_Feb_11_152133_2024painting_3.png HTTP/1.1[0m" 304 -
-INFO:werkzeug:127.0.0.1 - - [15/Feb/2024 10:56:27] "[36mGET /images/paintings/2df8795188de91bd941352d944718192442f2cc6c64ca880_painting_Sun_Feb_11_152306_2024painting_9.png HTTP/1.1[0m" 304 -
-INFO:werkzeug:127.0.0.1 - - [15/Feb/2024 10:56:27] "[36mGET /images/paintings/2df8795188de91bd941352d944718192442f2cc6c64ca880_painting_Sun_Feb_11_152213_2024painting_6.png HTTP/1.1[0m" 304 -
-INFO:werkzeug:127.0.0.1 - - [15/Feb/2024 10:56:27] "[36mGET /images/paintings/693d395be67f636fd24329c26b4fd2695bb7361edba7dc18_painting_Thu_Feb_15_095827_2024nyirabyo.jpg HTTP/1.1[0m" 304 -
-INFO:werkzeug:127.0.0.1 - - [15/Feb/2024 10:56:28] "GET /get_exhibitions HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [15/Feb/2024 10:56:28] "GET /get_paintings HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [15/Feb/2024 10:56:28] "GET /get_paintings HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [15/Feb/2024 10:56:28] "[36mGET /images/exhibitions/amagara%20niyp%20gishoro.jpg HTTP/1.1[0m" 304 -
-INFO:werkzeug:127.0.0.1 - - [15/Feb/2024 10:56:28] "[36mGET /images/paintings/2df8795188de91bd941352d944718192442f2cc6c64ca880_painting_Sun_Feb_11_152321_2024painting_10.png HTTP/1.1[0m" 304 -
-INFO:werkzeug:127.0.0.1 - - [15/Feb/2024 10:56:28] "[36mGET /images/paintings/2df8795188de91bd941352d944718192442f2cc6c64ca880_painting_Sun_Feb_11_152117_2024painting_2.png HTTP/1.1[0m" 304 -
-INFO:werkzeug:127.0.0.1 - - [15/Feb/2024 10:56:28] "[36mGET /images/paintings/2df8795188de91bd941352d944718192442f2cc6c64ca880_painting_Sun_Feb_11_152158_2024painting_5.png HTTP/1.1[0m" 304 -
-INFO:werkzeug:127.0.0.1 - - [15/Feb/2024 10:56:28] "[36mGET /images/paintings/2df8795188de91bd941352d944718192442f2cc6c64ca880_painting_Sun_Feb_11_152250_2024painting_8.png HTTP/1.1[0m" 304 -
-INFO:werkzeug:127.0.0.1 - - [15/Feb/2024 10:56:28] "GET /get_exhibitions HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [15/Feb/2024 10:56:28] "[36mGET /images/paintings/2df8795188de91bd941352d944718192442f2cc6c64ca880_painting_Sun_Feb_11_152338_2024painting_11.png HTTP/1.1[0m" 304 -
-INFO:werkzeug:127.0.0.1 - - [15/Feb/2024 10:56:28] "[36mGET /images/paintings/2df8795188de91bd941352d944718192442f2cc6c64ca880_painting_Sun_Feb_11_152133_2024painting_3.png HTTP/1.1[0m" 304 -
-INFO:werkzeug:127.0.0.1 - - [15/Feb/2024 10:56:28] "[36mGET /images/paintings/2df8795188de91bd941352d944718192442f2cc6c64ca880_painting_Sun_Feb_11_152213_2024painting_6.png HTTP/1.1[0m" 304 -
-INFO:werkzeug:127.0.0.1 - - [15/Feb/2024 10:56:28] "[36mGET /images/paintings/2df8795188de91bd941352d944718192442f2cc6c64ca880_painting_Sun_Feb_11_152306_2024painting_9.png HTTP/1.1[0m" 304 -
-INFO:werkzeug:127.0.0.1 - - [15/Feb/2024 10:56:28] "[36mGET /images/paintings/693d395be67f636fd24329c26b4fd2695bb7361edba7dc18_painting_Thu_Feb_15_095827_2024nyirabyo.jpg HTTP/1.1[0m" 304 -
-INFO:werkzeug:127.0.0.1 - - [15/Feb/2024 10:56:30] "GET /get_exhibitions HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [15/Feb/2024 10:56:30] "GET /get_paintings HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [15/Feb/2024 10:56:30] "GET /get_paintings HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [15/Feb/2024 10:56:30] "GET /get_exhibitions HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [15/Feb/2024 10:56:30] "[36mGET /images/exhibitions/amagara%20niyp%20gishoro.jpg HTTP/1.1[0m" 304 -
-INFO:werkzeug:127.0.0.1 - - [15/Feb/2024 10:56:30] "[36mGET /images/paintings/2df8795188de91bd941352d944718192442f2cc6c64ca880_painting_Sun_Feb_11_152321_2024painting_10.png HTTP/1.1[0m" 304 -
-INFO:werkzeug:127.0.0.1 - - [15/Feb/2024 10:56:30] "[36mGET /images/paintings/2df8795188de91bd941352d944718192442f2cc6c64ca880_painting_Sun_Feb_11_152117_2024painting_2.png HTTP/1.1[0m" 304 -
-INFO:werkzeug:127.0.0.1 - - [15/Feb/2024 10:56:30] "[36mGET /images/paintings/2df8795188de91bd941352d944718192442f2cc6c64ca880_painting_Sun_Feb_11_152158_2024painting_5.png HTTP/1.1[0m" 304 -
-INFO:werkzeug:127.0.0.1 - - [15/Feb/2024 10:56:30] "[36mGET /images/paintings/2df8795188de91bd941352d944718192442f2cc6c64ca880_painting_Sun_Feb_11_152250_2024painting_8.png HTTP/1.1[0m" 304 -
-INFO:werkzeug:127.0.0.1 - - [15/Feb/2024 10:56:30] "[36mGET /images/paintings/2df8795188de91bd941352d944718192442f2cc6c64ca880_painting_Sun_Feb_11_152213_2024painting_6.png HTTP/1.1[0m" 304 -
-INFO:werkzeug:127.0.0.1 - - [15/Feb/2024 10:56:30] "[36mGET /images/paintings/2df8795188de91bd941352d944718192442f2cc6c64ca880_painting_Sun_Feb_11_152338_2024painting_11.png HTTP/1.1[0m" 304 -
-INFO:werkzeug:127.0.0.1 - - [15/Feb/2024 10:56:30] "[36mGET /images/paintings/2df8795188de91bd941352d944718192442f2cc6c64ca880_painting_Sun_Feb_11_152133_2024painting_3.png HTTP/1.1[0m" 304 -
-INFO:werkzeug:127.0.0.1 - - [15/Feb/2024 10:56:30] "[36mGET /images/paintings/2df8795188de91bd941352d944718192442f2cc6c64ca880_painting_Sun_Feb_11_152306_2024painting_9.png HTTP/1.1[0m" 304 -
-INFO:werkzeug:127.0.0.1 - - [15/Feb/2024 10:56:30] "[36mGET /images/paintings/693d395be67f636fd24329c26b4fd2695bb7361edba7dc18_painting_Thu_Feb_15_095827_2024nyirabyo.jpg HTTP/1.1[0m" 304 -
-INFO:werkzeug:127.0.0.1 - - [15/Feb/2024 10:56:35] "OPTIONS /get_exhibitions HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [15/Feb/2024 10:56:35] "GET /get_paintings HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [15/Feb/2024 10:56:35] "GET /get_exhibitions HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [15/Feb/2024 10:56:35] "GET /get_paintings HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [15/Feb/2024 10:56:35] "[36mGET /images/exhibitions/amagara%20niyp%20gishoro.jpg HTTP/1.1[0m" 304 -
-INFO:werkzeug:127.0.0.1 - - [15/Feb/2024 10:56:35] "[36mGET /images/exhibitions/amagara%20niyp%20gishoro.jpg HTTP/1.1[0m" 304 -
-INFO:werkzeug:127.0.0.1 - - [15/Feb/2024 10:56:35] "GET /get_exhibitions HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [15/Feb/2024 10:56:35] "[36mGET /images/paintings/2df8795188de91bd941352d944718192442f2cc6c64ca880_painting_Sun_Feb_11_152321_2024painting_10.png HTTP/1.1[0m" 304 -
-INFO:werkzeug:127.0.0.1 - - [15/Feb/2024 10:56:35] "[36mGET /images/paintings/2df8795188de91bd941352d944718192442f2cc6c64ca880_painting_Sun_Feb_11_152117_2024painting_2.png HTTP/1.1[0m" 304 -
-INFO:werkzeug:127.0.0.1 - - [15/Feb/2024 10:56:35] "[36mGET /images/paintings/2df8795188de91bd941352d944718192442f2cc6c64ca880_painting_Sun_Feb_11_152158_2024painting_5.png HTTP/1.1[0m" 304 -
-INFO:werkzeug:127.0.0.1 - - [15/Feb/2024 10:56:35] "[36mGET /images/paintings/2df8795188de91bd941352d944718192442f2cc6c64ca880_painting_Sun_Feb_11_152250_2024painting_8.png HTTP/1.1[0m" 304 -
-INFO:werkzeug:127.0.0.1 - - [15/Feb/2024 10:56:35] "[36mGET /images/paintings/2df8795188de91bd941352d944718192442f2cc6c64ca880_painting_Sun_Feb_11_152338_2024painting_11.png HTTP/1.1[0m" 304 -
-INFO:werkzeug:127.0.0.1 - - [15/Feb/2024 10:56:35] "[36mGET /images/paintings/2df8795188de91bd941352d944718192442f2cc6c64ca880_painting_Sun_Feb_11_152133_2024painting_3.png HTTP/1.1[0m" 304 -
-INFO:werkzeug:127.0.0.1 - - [15/Feb/2024 10:56:35] "[36mGET /images/paintings/2df8795188de91bd941352d944718192442f2cc6c64ca880_painting_Sun_Feb_11_152213_2024painting_6.png HTTP/1.1[0m" 304 -
-INFO:werkzeug:127.0.0.1 - - [15/Feb/2024 10:56:35] "[36mGET /images/paintings/2df8795188de91bd941352d944718192442f2cc6c64ca880_painting_Sun_Feb_11_152306_2024painting_9.png HTTP/1.1[0m" 304 -
-INFO:werkzeug:127.0.0.1 - - [15/Feb/2024 10:56:35] "[36mGET /images/paintings/693d395be67f636fd24329c26b4fd2695bb7361edba7dc18_painting_Thu_Feb_15_095827_2024nyirabyo.jpg HTTP/1.1[0m" 304 -
-INFO:werkzeug:127.0.0.1 - - [15/Feb/2024 10:56:35] "[36mGET /images/paintings/2df8795188de91bd941352d944718192442f2cc6c64ca880_painting_Sun_Feb_11_152321_2024painting_10.png HTTP/1.1[0m" 304 -
-INFO:werkzeug:127.0.0.1 - - [15/Feb/2024 10:56:35] "[36mGET /images/paintings/2df8795188de91bd941352d944718192442f2cc6c64ca880_painting_Sun_Feb_11_152117_2024painting_2.png HTTP/1.1[0m" 304 -
-INFO:werkzeug:127.0.0.1 - - [15/Feb/2024 10:56:35] "[36mGET /images/paintings/2df8795188de91bd941352d944718192442f2cc6c64ca880_painting_Sun_Feb_11_152158_2024painting_5.png HTTP/1.1[0m" 304 -
-INFO:werkzeug:127.0.0.1 - - [15/Feb/2024 10:56:35] "[36mGET /images/paintings/2df8795188de91bd941352d944718192442f2cc6c64ca880_painting_Sun_Feb_11_152250_2024painting_8.png HTTP/1.1[0m" 304 -
-INFO:werkzeug:127.0.0.1 - - [15/Feb/2024 10:56:35] "[36mGET /images/paintings/2df8795188de91bd941352d944718192442f2cc6c64ca880_painting_Sun_Feb_11_152338_2024painting_11.png HTTP/1.1[0m" 304 -
-INFO:werkzeug:127.0.0.1 - - [15/Feb/2024 10:56:35] "[36mGET /images/paintings/2df8795188de91bd941352d944718192442f2cc6c64ca880_painting_Sun_Feb_11_152133_2024painting_3.png HTTP/1.1[0m" 304 -
-INFO:werkzeug:127.0.0.1 - - [15/Feb/2024 10:56:35] "[36mGET /images/paintings/693d395be67f636fd24329c26b4fd2695bb7361edba7dc18_painting_Thu_Feb_15_095827_2024nyirabyo.jpg HTTP/1.1[0m" 304 -
-INFO:werkzeug:127.0.0.1 - - [15/Feb/2024 10:56:35] "[36mGET /images/paintings/2df8795188de91bd941352d944718192442f2cc6c64ca880_painting_Sun_Feb_11_152213_2024painting_6.png HTTP/1.1[0m" 304 -
-INFO:werkzeug:127.0.0.1 - - [15/Feb/2024 10:56:35] "[36mGET /images/paintings/2df8795188de91bd941352d944718192442f2cc6c64ca880_painting_Sun_Feb_11_152306_2024painting_9.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [16/Feb/2024 11:51:02] "OPTIONS /add_new_painter HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [16/Feb/2024 11:51:02] "POST /add_new_painter HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [16/Feb/2024 11:51:24] "OPTIONS /get_exhibitions HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [16/Feb/2024 11:51:25] "GET /get_paintings HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [16/Feb/2024 11:51:25] "GET /get_exhibitions HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [16/Feb/2024 11:51:25] "GET /get_paintings HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [16/Feb/2024 11:51:25] "GET /get_exhibitions HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [16/Feb/2024 11:51:27] "POST /custom-login HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [16/Feb/2024 11:51:32] "OPTIONS /get_painters HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [16/Feb/2024 11:51:33] "GET /get_painters HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [16/Feb/2024 11:51:33] "[36mGET /images/painters/isae_profilepicture_my_tender.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [16/Feb/2024 11:51:33] "[36mGET /images/painters/erico__profilepicture_IMG-20231118-WA0052.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug: * Detected change in 'C:\\Users\\IMPANO\\Desktop\\painting_ecommerce_website\\backend\\api\\painter.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 177-396-332
+INFO:werkzeug: * Detected change in 'C:\\Users\\IMPANO\\Desktop\\painting_ecommerce_website\\backend\\api\\painter.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 177-396-332
+INFO:werkzeug:127.0.0.1 - - [16/Feb/2024 11:52:41] "OPTIONS /get_painters HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [16/Feb/2024 11:52:42] "GET /get_painters HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [16/Feb/2024 11:53:07] "OPTIONS /add_new_painter HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [16/Feb/2024 11:53:07] "POST /add_new_painter HTTP/1.1" 200 -
+INFO:werkzeug: * Detected change in 'C:\\Users\\IMPANO\\Desktop\\painting_ecommerce_website\\backend\\api\\painter.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 177-396-332
+INFO:werkzeug:127.0.0.1 - - [16/Feb/2024 11:54:53] "OPTIONS /add_new_painter HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [16/Feb/2024 11:54:53] "POST /add_new_painter HTTP/1.1" 200 -
 INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
  * Running on all addresses (0.0.0.0)
  * Running on http://127.0.0.1:5000
- * Running on http://192.168.1.8:5000
+ * Running on http://127.0.0.1:5000
 INFO:werkzeug:[33mPress CTRL+C to quit[0m
 INFO:werkzeug: * Restarting with stat
 WARNING:werkzeug: * Debugger is active!
-INFO:werkzeug: * Debugger PIN: 362-263-189
-INFO:werkzeug:127.0.0.1 - - [15/Feb/2024 10:57:17] "OPTIONS /get_exhibitions HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [15/Feb/2024 10:57:17] "GET /get_paintings HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [15/Feb/2024 10:57:17] "GET /get_exhibitions HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [15/Feb/2024 10:57:17] "[36mGET /images/exhibitions/amagara%20niyp%20gishoro.jpg HTTP/1.1[0m" 304 -
-INFO:werkzeug:127.0.0.1 - - [15/Feb/2024 10:57:17] "[36mGET /images/paintings/2df8795188de91bd941352d944718192442f2cc6c64ca880_painting_Sun_Feb_11_152321_2024painting_10.png HTTP/1.1[0m" 304 -
-INFO:werkzeug:127.0.0.1 - - [15/Feb/2024 10:57:17] "[36mGET /images/paintings/2df8795188de91bd941352d944718192442f2cc6c64ca880_painting_Sun_Feb_11_152117_2024painting_2.png HTTP/1.1[0m" 304 -
-INFO:werkzeug:127.0.0.1 - - [15/Feb/2024 10:57:17] "[36mGET /images/paintings/2df8795188de91bd941352d944718192442f2cc6c64ca880_painting_Sun_Feb_11_152158_2024painting_5.png HTTP/1.1[0m" 304 -
-INFO:werkzeug:127.0.0.1 - - [15/Feb/2024 10:57:17] "[36mGET /images/paintings/2df8795188de91bd941352d944718192442f2cc6c64ca880_painting_Sun_Feb_11_152250_2024painting_8.png HTTP/1.1[0m" 304 -
-INFO:werkzeug:127.0.0.1 - - [15/Feb/2024 10:57:17] "[36mGET /images/paintings/2df8795188de91bd941352d944718192442f2cc6c64ca880_painting_Sun_Feb_11_152338_2024painting_11.png HTTP/1.1[0m" 304 -
-INFO:werkzeug:127.0.0.1 - - [15/Feb/2024 10:57:17] "[36mGET /images/paintings/2df8795188de91bd941352d944718192442f2cc6c64ca880_painting_Sun_Feb_11_152133_2024painting_3.png HTTP/1.1[0m" 304 -
-INFO:werkzeug:127.0.0.1 - - [15/Feb/2024 10:57:17] "[36mGET /images/paintings/2df8795188de91bd941352d944718192442f2cc6c64ca880_painting_Sun_Feb_11_152213_2024painting_6.png HTTP/1.1[0m" 304 -
-INFO:werkzeug:127.0.0.1 - - [15/Feb/2024 10:57:17] "[36mGET /images/paintings/2df8795188de91bd941352d944718192442f2cc6c64ca880_painting_Sun_Feb_11_152306_2024painting_9.png HTTP/1.1[0m" 304 -
-INFO:werkzeug:127.0.0.1 - - [15/Feb/2024 10:57:17] "[36mGET /images/paintings/693d395be67f636fd24329c26b4fd2695bb7361edba7dc18_painting_Thu_Feb_15_095827_2024nyirabyo.jpg HTTP/1.1[0m" 304 -
-INFO:werkzeug:127.0.0.1 - - [15/Feb/2024 10:57:23] "OPTIONS /get_exhibitions HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [15/Feb/2024 10:57:23] "GET /get_paintings HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [15/Feb/2024 10:57:23] "GET /get_exhibitions HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [15/Feb/2024 10:57:23] "GET /get_paintings HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [15/Feb/2024 10:57:23] "[36mGET /images/exhibitions/amagara%20niyp%20gishoro.jpg HTTP/1.1[0m" 304 -
-INFO:werkzeug:127.0.0.1 - - [15/Feb/2024 10:57:23] "[36mGET /images/paintings/2df8795188de91bd941352d944718192442f2cc6c64ca880_painting_Sun_Feb_11_152321_2024painting_10.png HTTP/1.1[0m" 304 -
-INFO:werkzeug:127.0.0.1 - - [15/Feb/2024 10:57:23] "[36mGET /images/paintings/2df8795188de91bd941352d944718192442f2cc6c64ca880_painting_Sun_Feb_11_152117_2024painting_2.png HTTP/1.1[0m" 304 -
-INFO:werkzeug:127.0.0.1 - - [15/Feb/2024 10:57:23] "[36mGET /images/paintings/2df8795188de91bd941352d944718192442f2cc6c64ca880_painting_Sun_Feb_11_152158_2024painting_5.png HTTP/1.1[0m" 304 -
-INFO:werkzeug:127.0.0.1 - - [15/Feb/2024 10:57:23] "[36mGET /images/paintings/2df8795188de91bd941352d944718192442f2cc6c64ca880_painting_Sun_Feb_11_152250_2024painting_8.png HTTP/1.1[0m" 304 -
-INFO:werkzeug:127.0.0.1 - - [15/Feb/2024 10:57:23] "[36mGET /images/paintings/2df8795188de91bd941352d944718192442f2cc6c64ca880_painting_Sun_Feb_11_152338_2024painting_11.png HTTP/1.1[0m" 304 -
-INFO:werkzeug:127.0.0.1 - - [15/Feb/2024 10:57:23] "[36mGET /images/paintings/2df8795188de91bd941352d944718192442f2cc6c64ca880_painting_Sun_Feb_11_152133_2024painting_3.png HTTP/1.1[0m" 304 -
-INFO:werkzeug:127.0.0.1 - - [15/Feb/2024 10:57:23] "[36mGET /images/paintings/2df8795188de91bd941352d944718192442f2cc6c64ca880_painting_Sun_Feb_11_152213_2024painting_6.png HTTP/1.1[0m" 304 -
-INFO:werkzeug:127.0.0.1 - - [15/Feb/2024 10:57:23] "GET /get_exhibitions HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [15/Feb/2024 10:57:23] "[36mGET /images/paintings/2df8795188de91bd941352d944718192442f2cc6c64ca880_painting_Sun_Feb_11_152306_2024painting_9.png HTTP/1.1[0m" 304 -
-INFO:werkzeug:127.0.0.1 - - [15/Feb/2024 10:57:23] "[36mGET /images/paintings/693d395be67f636fd24329c26b4fd2695bb7361edba7dc18_painting_Thu_Feb_15_095827_2024nyirabyo.jpg HTTP/1.1[0m" 304 -
-INFO:werkzeug:127.0.0.1 - - [15/Feb/2024 10:58:46] "OPTIONS /get_exhibitions HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [15/Feb/2024 10:58:46] "GET /get_exhibitions HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [15/Feb/2024 10:58:46] "GET /get_paintings HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [15/Feb/2024 10:58:46] "GET /get_exhibitions HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [15/Feb/2024 10:58:46] "GET /get_paintings HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [15/Feb/2024 10:58:46] "[36mGET /images/exhibitions/amagara%20niyp%20gishoro.jpg HTTP/1.1[0m" 304 -
-INFO:werkzeug:127.0.0.1 - - [15/Feb/2024 10:58:46] "GET /get_exhibitions HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [15/Feb/2024 10:58:47] "GET /get_paintings HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [15/Feb/2024 10:58:47] "GET /get_exhibitions HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [15/Feb/2024 10:58:47] "GET /get_paintings HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [15/Feb/2024 10:58:47] "GET /get_exhibitions HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [15/Feb/2024 10:58:47] "GET /get_paintings HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [15/Feb/2024 10:58:47] "GET /get_paintings HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [15/Feb/2024 10:58:47] "GET /get_exhibitions HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [15/Feb/2024 10:58:47] "[36mGET /images/exhibitions/amagara%20niyp%20gishoro.jpg HTTP/1.1[0m" 304 -
-INFO:werkzeug:127.0.0.1 - - [15/Feb/2024 10:58:47] "[36mGET /images/exhibitions/amagara%20niyp%20gishoro.jpg HTTP/1.1[0m" 304 -
-INFO:werkzeug:127.0.0.1 - - [15/Feb/2024 10:58:47] "[36mGET /images/paintings/2df8795188de91bd941352d944718192442f2cc6c64ca880_painting_Sun_Feb_11_152321_2024painting_10.png HTTP/1.1[0m" 304 -
-INFO:werkzeug:127.0.0.1 - - [15/Feb/2024 10:58:47] "[36mGET /images/paintings/2df8795188de91bd941352d944718192442f2cc6c64ca880_painting_Sun_Feb_11_152250_2024painting_8.png HTTP/1.1[0m" 304 -
-INFO:werkzeug:127.0.0.1 - - [15/Feb/2024 10:58:47] "[36mGET /images/paintings/2df8795188de91bd941352d944718192442f2cc6c64ca880_painting_Sun_Feb_11_152117_2024painting_2.png HTTP/1.1[0m" 304 -
-INFO:werkzeug:127.0.0.1 - - [15/Feb/2024 10:58:47] "[36mGET /images/paintings/2df8795188de91bd941352d944718192442f2cc6c64ca880_painting_Sun_Feb_11_152158_2024painting_5.png HTTP/1.1[0m" 304 -
-INFO:werkzeug:127.0.0.1 - - [15/Feb/2024 10:58:47] "[36mGET /images/paintings/2df8795188de91bd941352d944718192442f2cc6c64ca880_painting_Sun_Feb_11_152133_2024painting_3.png HTTP/1.1[0m" 304 -
-INFO:werkzeug:127.0.0.1 - - [15/Feb/2024 10:58:47] "[36mGET /images/paintings/2df8795188de91bd941352d944718192442f2cc6c64ca880_painting_Sun_Feb_11_152338_2024painting_11.png HTTP/1.1[0m" 304 -
-INFO:werkzeug:127.0.0.1 - - [15/Feb/2024 10:58:47] "[36mGET /images/paintings/2df8795188de91bd941352d944718192442f2cc6c64ca880_painting_Sun_Feb_11_152213_2024painting_6.png HTTP/1.1[0m" 304 -
-INFO:werkzeug:127.0.0.1 - - [15/Feb/2024 10:58:47] "[36mGET /images/paintings/2df8795188de91bd941352d944718192442f2cc6c64ca880_painting_Sun_Feb_11_152306_2024painting_9.png HTTP/1.1[0m" 304 -
-INFO:werkzeug:127.0.0.1 - - [15/Feb/2024 10:58:47] "[36mGET /images/paintings/2df8795188de91bd941352d944718192442f2cc6c64ca880_painting_Sun_Feb_11_152321_2024painting_10.png HTTP/1.1[0m" 304 -
-INFO:werkzeug:127.0.0.1 - - [15/Feb/2024 10:58:47] "[36mGET /images/paintings/2df8795188de91bd941352d944718192442f2cc6c64ca880_painting_Sun_Feb_11_152117_2024painting_2.png HTTP/1.1[0m" 304 -
-INFO:werkzeug:127.0.0.1 - - [15/Feb/2024 10:58:47] "[36mGET /images/paintings/2df8795188de91bd941352d944718192442f2cc6c64ca880_painting_Sun_Feb_11_152158_2024painting_5.png HTTP/1.1[0m" 304 -
-INFO:werkzeug:127.0.0.1 - - [15/Feb/2024 10:58:47] "[36mGET /images/paintings/2df8795188de91bd941352d944718192442f2cc6c64ca880_painting_Sun_Feb_11_152250_2024painting_8.png HTTP/1.1[0m" 304 -
-INFO:werkzeug:127.0.0.1 - - [15/Feb/2024 10:58:47] "[36mGET /images/paintings/2df8795188de91bd941352d944718192442f2cc6c64ca880_painting_Sun_Feb_11_152338_2024painting_11.png HTTP/1.1[0m" 304 -
-INFO:werkzeug:127.0.0.1 - - [15/Feb/2024 10:58:47] "[36mGET /images/paintings/2df8795188de91bd941352d944718192442f2cc6c64ca880_painting_Sun_Feb_11_152133_2024painting_3.png HTTP/1.1[0m" 304 -
-INFO:werkzeug:127.0.0.1 - - [15/Feb/2024 10:58:47] "[36mGET /images/paintings/2df8795188de91bd941352d944718192442f2cc6c64ca880_painting_Sun_Feb_11_152213_2024painting_6.png HTTP/1.1[0m" 304 -
-INFO:werkzeug:127.0.0.1 - - [15/Feb/2024 10:58:47] "[36mGET /images/paintings/2df8795188de91bd941352d944718192442f2cc6c64ca880_painting_Sun_Feb_11_152321_2024painting_10.png HTTP/1.1[0m" 304 -
-INFO:werkzeug:127.0.0.1 - - [15/Feb/2024 10:58:47] "[36mGET /images/paintings/2df8795188de91bd941352d944718192442f2cc6c64ca880_painting_Sun_Feb_11_152117_2024painting_2.png HTTP/1.1[0m" 304 -
-INFO:werkzeug:127.0.0.1 - - [15/Feb/2024 10:58:47] "[36mGET /images/paintings/2df8795188de91bd941352d944718192442f2cc6c64ca880_painting_Sun_Feb_11_152158_2024painting_5.png HTTP/1.1[0m" 304 -
-INFO:werkzeug:127.0.0.1 - - [15/Feb/2024 10:58:47] "[36mGET /images/paintings/2df8795188de91bd941352d944718192442f2cc6c64ca880_painting_Sun_Feb_11_152250_2024painting_8.png HTTP/1.1[0m" 304 -
-INFO:werkzeug:127.0.0.1 - - [15/Feb/2024 10:58:47] "[36mGET /images/paintings/2df8795188de91bd941352d944718192442f2cc6c64ca880_painting_Sun_Feb_11_152338_2024painting_11.png HTTP/1.1[0m" 304 -
-INFO:werkzeug:127.0.0.1 - - [15/Feb/2024 10:58:47] "[36mGET /images/paintings/2df8795188de91bd941352d944718192442f2cc6c64ca880_painting_Sun_Feb_11_152306_2024painting_9.png HTTP/1.1[0m" 304 -
-INFO:werkzeug:127.0.0.1 - - [15/Feb/2024 10:58:47] "[36mGET /images/paintings/693d395be67f636fd24329c26b4fd2695bb7361edba7dc18_painting_Thu_Feb_15_095827_2024nyirabyo.jpg HTTP/1.1[0m" 304 -
-INFO:werkzeug:127.0.0.1 - - [15/Feb/2024 10:58:47] "[36mGET /images/paintings/693d395be67f636fd24329c26b4fd2695bb7361edba7dc18_painting_Thu_Feb_15_095827_2024nyirabyo.jpg HTTP/1.1[0m" 304 -
-INFO:werkzeug:127.0.0.1 - - [15/Feb/2024 10:58:47] "[36mGET /images/paintings/2df8795188de91bd941352d944718192442f2cc6c64ca880_painting_Sun_Feb_11_152133_2024painting_3.png HTTP/1.1[0m" 304 -
-INFO:werkzeug:127.0.0.1 - - [15/Feb/2024 10:58:47] "[36mGET /images/paintings/2df8795188de91bd941352d944718192442f2cc6c64ca880_painting_Sun_Feb_11_152213_2024painting_6.png HTTP/1.1[0m" 304 -
-INFO:werkzeug:127.0.0.1 - - [15/Feb/2024 10:58:47] "[36mGET /images/paintings/2df8795188de91bd941352d944718192442f2cc6c64ca880_painting_Sun_Feb_11_152306_2024painting_9.png HTTP/1.1[0m" 304 -
-INFO:werkzeug:127.0.0.1 - - [15/Feb/2024 10:58:47] "[36mGET /images/paintings/693d395be67f636fd24329c26b4fd2695bb7361edba7dc18_painting_Thu_Feb_15_095827_2024nyirabyo.jpg HTTP/1.1[0m" 304 -
-INFO:werkzeug:127.0.0.1 - - [15/Feb/2024 10:59:01] "OPTIONS /get_exhibitions HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [15/Feb/2024 10:59:01] "GET /get_exhibitions HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [15/Feb/2024 10:59:02] "GET /get_paintings HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [15/Feb/2024 10:59:02] "GET /get_exhibitions HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [15/Feb/2024 10:59:02] "GET /get_paintings HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [15/Feb/2024 10:59:02] "GET /get_exhibitions HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [15/Feb/2024 10:59:02] "GET /get_paintings HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [15/Feb/2024 10:59:04] "GET /get_exhibitions HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [15/Feb/2024 10:59:04] "GET /get_paintings HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [15/Feb/2024 10:59:04] "GET /get_paintings HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [15/Feb/2024 10:59:04] "[36mGET /images/exhibitions/amagara%20niyp%20gishoro.jpg HTTP/1.1[0m" 304 -
-INFO:werkzeug:127.0.0.1 - - [15/Feb/2024 10:59:04] "GET /get_exhibitions HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [15/Feb/2024 10:59:04] "[36mGET /images/paintings/2df8795188de91bd941352d944718192442f2cc6c64ca880_painting_Sun_Feb_11_152321_2024painting_10.png HTTP/1.1[0m" 304 -
-INFO:werkzeug:127.0.0.1 - - [15/Feb/2024 10:59:04] "[36mGET /images/paintings/2df8795188de91bd941352d944718192442f2cc6c64ca880_painting_Sun_Feb_11_152117_2024painting_2.png HTTP/1.1[0m" 304 -
-INFO:werkzeug:127.0.0.1 - - [15/Feb/2024 10:59:04] "[36mGET /images/paintings/2df8795188de91bd941352d944718192442f2cc6c64ca880_painting_Sun_Feb_11_152158_2024painting_5.png HTTP/1.1[0m" 304 -
-INFO:werkzeug:127.0.0.1 - - [15/Feb/2024 10:59:04] "[36mGET /images/paintings/2df8795188de91bd941352d944718192442f2cc6c64ca880_painting_Sun_Feb_11_152250_2024painting_8.png HTTP/1.1[0m" 304 -
-INFO:werkzeug:127.0.0.1 - - [15/Feb/2024 10:59:04] "[36mGET /images/paintings/2df8795188de91bd941352d944718192442f2cc6c64ca880_painting_Sun_Feb_11_152338_2024painting_11.png HTTP/1.1[0m" 304 -
-INFO:werkzeug:127.0.0.1 - - [15/Feb/2024 10:59:04] "[36mGET /images/paintings/2df8795188de91bd941352d944718192442f2cc6c64ca880_painting_Sun_Feb_11_152133_2024painting_3.png HTTP/1.1[0m" 304 -
-INFO:werkzeug:127.0.0.1 - - [15/Feb/2024 10:59:04] "[36mGET /images/paintings/2df8795188de91bd941352d944718192442f2cc6c64ca880_painting_Sun_Feb_11_152306_2024painting_9.png HTTP/1.1[0m" 304 -
-INFO:werkzeug:127.0.0.1 - - [15/Feb/2024 10:59:04] "[36mGET /images/paintings/2df8795188de91bd941352d944718192442f2cc6c64ca880_painting_Sun_Feb_11_152213_2024painting_6.png HTTP/1.1[0m" 304 -
-INFO:werkzeug:127.0.0.1 - - [15/Feb/2024 10:59:04] "[36mGET /images/paintings/693d395be67f636fd24329c26b4fd2695bb7361edba7dc18_painting_Thu_Feb_15_095827_2024nyirabyo.jpg HTTP/1.1[0m" 304 -
-INFO:werkzeug:127.0.0.1 - - [15/Feb/2024 10:59:06] "OPTIONS /get_exhibitions HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [15/Feb/2024 10:59:06] "GET /get_paintings HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [15/Feb/2024 10:59:06] "GET /get_exhibitions HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [15/Feb/2024 10:59:06] "GET /get_paintings HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [15/Feb/2024 10:59:07] "[36mGET /images/exhibitions/amagara%20niyp%20gishoro.jpg HTTP/1.1[0m" 304 -
-INFO:werkzeug:127.0.0.1 - - [15/Feb/2024 10:59:07] "[36mGET /images/paintings/2df8795188de91bd941352d944718192442f2cc6c64ca880_painting_Sun_Feb_11_152321_2024painting_10.png HTTP/1.1[0m" 304 -
-INFO:werkzeug:127.0.0.1 - - [15/Feb/2024 10:59:07] "[36mGET /images/paintings/2df8795188de91bd941352d944718192442f2cc6c64ca880_painting_Sun_Feb_11_152117_2024painting_2.png HTTP/1.1[0m" 304 -
-INFO:werkzeug:127.0.0.1 - - [15/Feb/2024 10:59:07] "[36mGET /images/paintings/2df8795188de91bd941352d944718192442f2cc6c64ca880_painting_Sun_Feb_11_152158_2024painting_5.png HTTP/1.1[0m" 304 -
-INFO:werkzeug:127.0.0.1 - - [15/Feb/2024 10:59:07] "GET /get_exhibitions HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [15/Feb/2024 10:59:07] "[36mGET /images/paintings/2df8795188de91bd941352d944718192442f2cc6c64ca880_painting_Sun_Feb_11_152250_2024painting_8.png HTTP/1.1[0m" 304 -
-INFO:werkzeug:127.0.0.1 - - [15/Feb/2024 10:59:07] "[36mGET /images/paintings/2df8795188de91bd941352d944718192442f2cc6c64ca880_painting_Sun_Feb_11_152338_2024painting_11.png HTTP/1.1[0m" 304 -
-INFO:werkzeug:127.0.0.1 - - [15/Feb/2024 10:59:07] "[36mGET /images/paintings/2df8795188de91bd941352d944718192442f2cc6c64ca880_painting_Sun_Feb_11_152133_2024painting_3.png HTTP/1.1[0m" 304 -
-INFO:werkzeug:127.0.0.1 - - [15/Feb/2024 10:59:07] "[36mGET /images/paintings/2df8795188de91bd941352d944718192442f2cc6c64ca880_painting_Sun_Feb_11_152213_2024painting_6.png HTTP/1.1[0m" 304 -
-INFO:werkzeug:127.0.0.1 - - [15/Feb/2024 10:59:07] "[36mGET /images/paintings/2df8795188de91bd941352d944718192442f2cc6c64ca880_painting_Sun_Feb_11_152306_2024painting_9.png HTTP/1.1[0m" 304 -
-INFO:werkzeug:127.0.0.1 - - [15/Feb/2024 10:59:07] "[36mGET /images/paintings/693d395be67f636fd24329c26b4fd2695bb7361edba7dc18_painting_Thu_Feb_15_095827_2024nyirabyo.jpg HTTP/1.1[0m" 304 -
-INFO:werkzeug:127.0.0.1 - - [15/Feb/2024 10:59:08] "GET /get_exhibitions HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [15/Feb/2024 10:59:08] "GET /get_paintings HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [15/Feb/2024 10:59:08] "GET /get_paintings HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [15/Feb/2024 10:59:08] "[36mGET /images/exhibitions/amagara%20niyp%20gishoro.jpg HTTP/1.1[0m" 304 -
-INFO:werkzeug:127.0.0.1 - - [15/Feb/2024 10:59:08] "GET /get_exhibitions HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [15/Feb/2024 10:59:08] "[36mGET /images/paintings/2df8795188de91bd941352d944718192442f2cc6c64ca880_painting_Sun_Feb_11_152321_2024painting_10.png HTTP/1.1[0m" 304 -
-INFO:werkzeug:127.0.0.1 - - [15/Feb/2024 10:59:08] "[36mGET /images/paintings/2df8795188de91bd941352d944718192442f2cc6c64ca880_painting_Sun_Feb_11_152117_2024painting_2.png HTTP/1.1[0m" 304 -
-INFO:werkzeug:127.0.0.1 - - [15/Feb/2024 10:59:08] "[36mGET /images/paintings/2df8795188de91bd941352d944718192442f2cc6c64ca880_painting_Sun_Feb_11_152158_2024painting_5.png HTTP/1.1[0m" 304 -
-INFO:werkzeug:127.0.0.1 - - [15/Feb/2024 10:59:08] "[36mGET /images/paintings/2df8795188de91bd941352d944718192442f2cc6c64ca880_painting_Sun_Feb_11_152250_2024painting_8.png HTTP/1.1[0m" 304 -
-INFO:werkzeug:127.0.0.1 - - [15/Feb/2024 10:59:08] "[36mGET /images/paintings/2df8795188de91bd941352d944718192442f2cc6c64ca880_painting_Sun_Feb_11_152133_2024painting_3.png HTTP/1.1[0m" 304 -
-INFO:werkzeug:127.0.0.1 - - [15/Feb/2024 10:59:08] "[36mGET /images/paintings/2df8795188de91bd941352d944718192442f2cc6c64ca880_painting_Sun_Feb_11_152213_2024painting_6.png HTTP/1.1[0m" 304 -
-INFO:werkzeug:127.0.0.1 - - [15/Feb/2024 10:59:08] "[36mGET /images/paintings/2df8795188de91bd941352d944718192442f2cc6c64ca880_painting_Sun_Feb_11_152338_2024painting_11.png HTTP/1.1[0m" 304 -
-INFO:werkzeug:127.0.0.1 - - [15/Feb/2024 10:59:08] "[36mGET /images/paintings/2df8795188de91bd941352d944718192442f2cc6c64ca880_painting_Sun_Feb_11_152306_2024painting_9.png HTTP/1.1[0m" 304 -
-INFO:werkzeug:127.0.0.1 - - [15/Feb/2024 10:59:08] "GET /images/paintings/693d395be67f636fd24329c26b4fd2695bb7361edba7dc18_painting_Thu_Feb_15_095827_2024nyirabyo.jpg HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [15/Feb/2024 10:59:09] "GET /get_exhibitions HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [15/Feb/2024 10:59:09] "GET /get_paintings HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [15/Feb/2024 10:59:09] "GET /get_paintings HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [15/Feb/2024 10:59:09] "[36mGET /images/exhibitions/amagara%20niyp%20gishoro.jpg HTTP/1.1[0m" 304 -
-INFO:werkzeug:127.0.0.1 - - [15/Feb/2024 10:59:09] "[36mGET /images/paintings/2df8795188de91bd941352d944718192442f2cc6c64ca880_painting_Sun_Feb_11_152321_2024painting_10.png HTTP/1.1[0m" 304 -
-INFO:werkzeug:127.0.0.1 - - [15/Feb/2024 10:59:09] "[36mGET /images/paintings/2df8795188de91bd941352d944718192442f2cc6c64ca880_painting_Sun_Feb_11_152117_2024painting_2.png HTTP/1.1[0m" 304 -
-INFO:werkzeug:127.0.0.1 - - [15/Feb/2024 10:59:09] "GET /get_exhibitions HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [15/Feb/2024 10:59:09] "[36mGET /images/paintings/2df8795188de91bd941352d944718192442f2cc6c64ca880_painting_Sun_Feb_11_152158_2024painting_5.png HTTP/1.1[0m" 304 -
-INFO:werkzeug:127.0.0.1 - - [15/Feb/2024 10:59:09] "[36mGET /images/paintings/2df8795188de91bd941352d944718192442f2cc6c64ca880_painting_Sun_Feb_11_152250_2024painting_8.png HTTP/1.1[0m" 304 -
-INFO:werkzeug:127.0.0.1 - - [15/Feb/2024 10:59:09] "[36mGET /images/paintings/2df8795188de91bd941352d944718192442f2cc6c64ca880_painting_Sun_Feb_11_152338_2024painting_11.png HTTP/1.1[0m" 304 -
-INFO:werkzeug:127.0.0.1 - - [15/Feb/2024 10:59:09] "[36mGET /images/paintings/2df8795188de91bd941352d944718192442f2cc6c64ca880_painting_Sun_Feb_11_152133_2024painting_3.png HTTP/1.1[0m" 304 -
-INFO:werkzeug:127.0.0.1 - - [15/Feb/2024 10:59:09] "[36mGET /images/paintings/2df8795188de91bd941352d944718192442f2cc6c64ca880_painting_Sun_Feb_11_152213_2024painting_6.png HTTP/1.1[0m" 304 -
-INFO:werkzeug:127.0.0.1 - - [15/Feb/2024 10:59:09] "[36mGET /images/paintings/2df8795188de91bd941352d944718192442f2cc6c64ca880_painting_Sun_Feb_11_152306_2024painting_9.png HTTP/1.1[0m" 304 -
-INFO:werkzeug:127.0.0.1 - - [15/Feb/2024 10:59:09] "[36mGET /images/paintings/693d395be67f636fd24329c26b4fd2695bb7361edba7dc18_painting_Thu_Feb_15_095827_2024nyirabyo.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug: * Debugger PIN: 177-396-332
+INFO:werkzeug:127.0.0.1 - - [16/Feb/2024 11:55:37] "OPTIONS /get_exhibitions HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [16/Feb/2024 11:55:37] "GET /get_paintings HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [16/Feb/2024 11:55:37] "GET /get_exhibitions HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [16/Feb/2024 11:55:37] "GET /get_paintings HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [16/Feb/2024 11:55:37] "GET /get_exhibitions HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [16/Feb/2024 11:55:43] "POST /custom-login HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [16/Feb/2024 11:55:49] "OPTIONS /get_painters HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [16/Feb/2024 11:55:49] "GET /get_painters HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [16/Feb/2024 11:55:50] "[36mGET /images/painters/isae_profilepicture_my_tender.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [16/Feb/2024 11:55:50] "[36mGET /images/painters/erico__profilepicture_IMG-20231118-WA0052.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [16/Feb/2024 11:56:17] "OPTIONS /add_new_painter HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [16/Feb/2024 11:56:17] "POST /add_new_painter HTTP/1.1" 200 -
+INFO:werkzeug: * Detected change in 'C:\\Users\\IMPANO\\Desktop\\painting_ecommerce_website\\backend\\api\\painter.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 177-396-332
+INFO:werkzeug: * Detected change in 'C:\\Users\\IMPANO\\Desktop\\painting_ecommerce_website\\backend\\api\\painter.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 177-396-332
+INFO:werkzeug:127.0.0.1 - - [16/Feb/2024 11:58:02] "OPTIONS /add_new_painter HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [16/Feb/2024 11:58:03] "POST /add_new_painter HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [16/Feb/2024 11:58:34] "OPTIONS /get_painters HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [16/Feb/2024 11:58:35] "GET /get_painters HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [16/Feb/2024 11:58:37] "[33mGET /uploads/profiles/rafiki_profilepicture_painting_4.png HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [16/Feb/2024 11:58:46] "[33mGET /uploads/profiles/rafiki_profilepicture_painting_4.png HTTP/1.1[0m" 404 -
+INFO:werkzeug: * Detected change in 'C:\\Users\\IMPANO\\Desktop\\painting_ecommerce_website\\backend\\filemanagement\\filemanager.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 177-396-332
+INFO:werkzeug: * Detected change in 'C:\\Users\\IMPANO\\Desktop\\painting_ecommerce_website\\backend\\api\\painter.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 177-396-332
+INFO:werkzeug: * Detected change in 'C:\\Users\\IMPANO\\Desktop\\painting_ecommerce_website\\backend\\api\\painter.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 177-396-332
+INFO:werkzeug:127.0.0.1 - - [16/Feb/2024 12:01:55] "OPTIONS /get_exhibitions HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [16/Feb/2024 12:01:55] "GET /get_paintings HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [16/Feb/2024 12:01:55] "GET /get_exhibitions HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [16/Feb/2024 12:01:55] "OPTIONS /get_exhibition_paintings/6f145301-c822-4902-a6e2-c9bc02b5b962 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [16/Feb/2024 12:01:55] "GET /get_paintings HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [16/Feb/2024 12:01:55] "GET /get_exhibitions HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [16/Feb/2024 12:01:55] "GET /get_exhibition_paintings/6f145301-c822-4902-a6e2-c9bc02b5b962 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [16/Feb/2024 12:01:55] "GET /get_exhibition_paintings/6f145301-c822-4902-a6e2-c9bc02b5b962 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [16/Feb/2024 12:01:55] "[36mGET /uploads/exhibition_paintings/Amagara%20niyo%20gishoro/Amagara_niyo_gishoro_mmmmmmmmmm_nyirabyo.jpg?clientId=c7c95a37-edba-4929-8880-b6006760d1b1&exId=6f145301-c822-4902-a6e2-c9bc02b5b962 HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [16/Feb/2024 12:01:55] "GET /get_exhibition_paintings/6f145301-c822-4902-a6e2-c9bc02b5b962 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [16/Feb/2024 12:01:55] "GET /get_exhibition_paintings/6f145301-c822-4902-a6e2-c9bc02b5b962 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [16/Feb/2024 12:01:55] "GET /get_exhibition_paintings/6f145301-c822-4902-a6e2-c9bc02b5b962 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [16/Feb/2024 12:01:55] "GET /get_exhibition_paintings/6f145301-c822-4902-a6e2-c9bc02b5b962 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [16/Feb/2024 12:01:59] "GET /get_exhibitions HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [16/Feb/2024 12:01:59] "GET /get_paintings HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [16/Feb/2024 12:01:59] "GET /get_paintings HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [16/Feb/2024 12:01:59] "GET /get_exhibitions HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [16/Feb/2024 12:02:06] "POST /custom-login HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [16/Feb/2024 12:02:11] "OPTIONS /get_painters HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [16/Feb/2024 12:02:11] "GET /get_painters HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [16/Feb/2024 12:02:11] "[33mGET /images/painters/isae_profilepicture_my_tender.jpg HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [16/Feb/2024 12:02:11] "[33mGET /images/painters/erico__profilepicture_IMG-20231118-WA0052.jpg HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [16/Feb/2024 12:02:14] "GET /uploads/profiles/rafiki_profilepicture_painting_4.png HTTP/1.1" 200 -
+INFO:werkzeug: * Detected change in 'C:\\Users\\IMPANO\\Desktop\\painting_ecommerce_website\\backend\\db\\painter.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 177-396-332
+INFO:werkzeug: * Detected change in 'C:\\Users\\IMPANO\\Desktop\\painting_ecommerce_website\\backend\\db\\painter.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 177-396-332
+INFO:werkzeug: * Detected change in 'C:\\Users\\IMPANO\\Desktop\\painting_ecommerce_website\\backend\\db\\painter.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 177-396-332
+INFO:werkzeug: * Detected change in 'C:\\Users\\IMPANO\\Desktop\\painting_ecommerce_website\\backend\\filemanagement\\filemanager.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 177-396-332
+INFO:werkzeug: * Detected change in 'C:\\Users\\IMPANO\\Desktop\\painting_ecommerce_website\\backend\\api\\painter.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 177-396-332
+INFO:werkzeug: * Detected change in 'C:\\Users\\IMPANO\\Desktop\\painting_ecommerce_website\\backend\\api\\painter.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 177-396-332
+INFO:werkzeug:127.0.0.1 - - [16/Feb/2024 12:08:35] "OPTIONS /delete_painter/8d5a3f31e797e2384818774577bb8cf98c7c95f0ad543bb8 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [16/Feb/2024 12:08:35] "DELETE /delete_painter/8d5a3f31e797e2384818774577bb8cf98c7c95f0ad543bb8 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [16/Feb/2024 12:09:50] "OPTIONS /add_new_painter HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [16/Feb/2024 12:09:51] "POST /add_new_painter HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [16/Feb/2024 12:10:42] "OPTIONS /add_new_painter HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [16/Feb/2024 12:10:43] "POST /add_new_painter HTTP/1.1" 200 -
+INFO:werkzeug: * Detected change in 'C:\\Users\\IMPANO\\Desktop\\painting_ecommerce_website\\backend\\filemanagement\\filemanager.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 177-396-332
+INFO:werkzeug:127.0.0.1 - - [16/Feb/2024 12:14:10] "OPTIONS /get_painters HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [16/Feb/2024 12:14:10] "GET /get_painters HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [16/Feb/2024 12:14:10] "[33mGET /images/painters/isae_profilepicture_my_tender.jpg HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [16/Feb/2024 12:14:10] "[33mGET /images/painters/erico__profilepicture_IMG-20231118-WA0052.jpg HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [16/Feb/2024 12:14:11] "GET /uploads/profiles/Rafiki_profilepicture_painting_6.png HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [16/Feb/2024 12:14:16] "OPTIONS /delete_painter/4f427057e3b3deac0ef8fe74bf3e3dd412b1b4545e8ffaf8 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [16/Feb/2024 12:14:16] "DELETE /delete_painter/4f427057e3b3deac0ef8fe74bf3e3dd412b1b4545e8ffaf8 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [16/Feb/2024 12:16:50] "OPTIONS /get_painters HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [16/Feb/2024 12:16:50] "GET /get_painters HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [16/Feb/2024 12:16:50] "[33mGET /images/painters/isae_profilepicture_my_tender.jpg HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [16/Feb/2024 12:16:50] "[33mGET /images/painters/erico__profilepicture_IMG-20231118-WA0052.jpg HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [16/Feb/2024 12:16:59] "OPTIONS /get_customers HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [16/Feb/2024 12:16:59] "GET /get_customers HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [16/Feb/2024 12:17:46] "OPTIONS /get_exhibitions HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [16/Feb/2024 12:17:46] "GET /get_paintings HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [16/Feb/2024 12:17:46] "GET /get_exhibitions HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [16/Feb/2024 12:17:46] "GET /get_paintings HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [16/Feb/2024 12:17:46] "[36mGET /uploads/exhibitions/amagara_niyp_gishoro.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [16/Feb/2024 12:17:47] "[36mGET /uploads/exhibitions/amagara_niyp_gishoro.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [16/Feb/2024 12:17:47] "GET /get_exhibitions HTTP/1.1" 200 -
+INFO:werkzeug: * Detected change in 'C:\\Users\\IMPANO\\Desktop\\painting_ecommerce_website\\backend\\auth\\user.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 177-396-332
+INFO:werkzeug: * Detected change in 'C:\\Users\\IMPANO\\Desktop\\painting_ecommerce_website\\backend\\auth\\UserAuth.py', reloading
+INFO:werkzeug: * Restarting with stat
 INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
  * Running on all addresses (0.0.0.0)
  * Running on http://127.0.0.1:5000
- * Running on http://192.168.1.8:5000
+ * Running on http://127.0.0.1:5000
 INFO:werkzeug:[33mPress CTRL+C to quit[0m
 INFO:werkzeug: * Restarting with stat
 WARNING:werkzeug: * Debugger is active!
-INFO:werkzeug: * Debugger PIN: 362-263-189
-INFO:werkzeug:127.0.0.1 - - [15/Feb/2024 11:04:06] "OPTIONS /get_exhibitions HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [15/Feb/2024 11:04:06] "GET /get_paintings HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [15/Feb/2024 11:04:06] "GET /get_exhibitions HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [15/Feb/2024 11:04:06] "GET /get_paintings HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [15/Feb/2024 11:04:06] "GET /get_exhibitions HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [15/Feb/2024 11:04:06] "GET /images/paintings/2df8795188de91bd941352d944718192442f2cc6c64ca880_painting_Sun_Feb_11_152250_2024painting_8.png HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [15/Feb/2024 11:04:06] "GET /images/paintings/2df8795188de91bd941352d944718192442f2cc6c64ca880_painting_Sun_Feb_11_152133_2024painting_3.png HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [15/Feb/2024 11:04:06] "GET /images/exhibitions/amagara%20niyp%20gishoro.jpg HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [15/Feb/2024 11:04:06] "GET /images/paintings/2df8795188de91bd941352d944718192442f2cc6c64ca880_painting_Sun_Feb_11_152321_2024painting_10.png HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [15/Feb/2024 11:04:06] "GET /images/paintings/693d395be67f636fd24329c26b4fd2695bb7361edba7dc18_painting_Thu_Feb_15_095827_2024nyirabyo.jpg HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [15/Feb/2024 11:04:06] "GET /images/paintings/2df8795188de91bd941352d944718192442f2cc6c64ca880_painting_Sun_Feb_11_152133_2024painting_3.png HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [15/Feb/2024 11:04:06] "GET /images/paintings/2df8795188de91bd941352d944718192442f2cc6c64ca880_painting_Sun_Feb_11_152213_2024painting_6.png HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [15/Feb/2024 11:04:06] "GET /images/exhibitions/amagara%20niyp%20gishoro.jpg HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [15/Feb/2024 11:04:07] "GET /images/paintings/2df8795188de91bd941352d944718192442f2cc6c64ca880_painting_Sun_Feb_11_152306_2024painting_9.png HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [15/Feb/2024 11:04:07] "GET /images/paintings/2df8795188de91bd941352d944718192442f2cc6c64ca880_painting_Sun_Feb_11_152321_2024painting_10.png HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [15/Feb/2024 11:04:07] "GET /images/paintings/2df8795188de91bd941352d944718192442f2cc6c64ca880_painting_Sun_Feb_11_152158_2024painting_5.png HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [15/Feb/2024 11:04:07] "GET /images/paintings/2df8795188de91bd941352d944718192442f2cc6c64ca880_painting_Sun_Feb_11_152338_2024painting_11.png HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [15/Feb/2024 11:04:07] "GET /images/paintings/2df8795188de91bd941352d944718192442f2cc6c64ca880_painting_Sun_Feb_11_152250_2024painting_8.png HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [15/Feb/2024 11:04:07] "GET /images/paintings/2df8795188de91bd941352d944718192442f2cc6c64ca880_painting_Sun_Feb_11_152117_2024painting_2.png HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [15/Feb/2024 11:04:07] "GET /images/paintings/2df8795188de91bd941352d944718192442f2cc6c64ca880_painting_Sun_Feb_11_152117_2024painting_2.png HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [15/Feb/2024 11:04:07] "GET /images/paintings/2df8795188de91bd941352d944718192442f2cc6c64ca880_painting_Sun_Feb_11_152213_2024painting_6.png HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [15/Feb/2024 11:04:07] "GET /images/paintings/2df8795188de91bd941352d944718192442f2cc6c64ca880_painting_Sun_Feb_11_152158_2024painting_5.png HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [15/Feb/2024 11:04:07] "GET /images/paintings/2df8795188de91bd941352d944718192442f2cc6c64ca880_painting_Sun_Feb_11_152306_2024painting_9.png HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [15/Feb/2024 11:04:07] "GET /images/paintings/2df8795188de91bd941352d944718192442f2cc6c64ca880_painting_Sun_Feb_11_152338_2024painting_11.png HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [15/Feb/2024 11:04:07] "GET /images/paintings/693d395be67f636fd24329c26b4fd2695bb7361edba7dc18_painting_Thu_Feb_15_095827_2024nyirabyo.jpg HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [15/Feb/2024 11:04:11] "GET /get_exhibitions HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [15/Feb/2024 11:04:11] "GET /get_paintings HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [15/Feb/2024 11:04:11] "GET /get_paintings HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [15/Feb/2024 11:04:11] "[36mGET /images/exhibitions/amagara%20niyp%20gishoro.jpg HTTP/1.1[0m" 304 -
-INFO:werkzeug:127.0.0.1 - - [15/Feb/2024 11:04:11] "[36mGET /images/exhibitions/amagara%20niyp%20gishoro.jpg HTTP/1.1[0m" 304 -
-INFO:werkzeug:127.0.0.1 - - [15/Feb/2024 11:04:11] "GET /get_exhibitions HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [15/Feb/2024 11:04:11] "[36mGET /images/paintings/2df8795188de91bd941352d944718192442f2cc6c64ca880_painting_Sun_Feb_11_152321_2024painting_10.png HTTP/1.1[0m" 304 -
-INFO:werkzeug:127.0.0.1 - - [15/Feb/2024 11:04:11] "[36mGET /images/paintings/2df8795188de91bd941352d944718192442f2cc6c64ca880_painting_Sun_Feb_11_152117_2024painting_2.png HTTP/1.1[0m" 304 -
-INFO:werkzeug:127.0.0.1 - - [15/Feb/2024 11:04:11] "[36mGET /images/paintings/2df8795188de91bd941352d944718192442f2cc6c64ca880_painting_Sun_Feb_11_152158_2024painting_5.png HTTP/1.1[0m" 304 -
-INFO:werkzeug:127.0.0.1 - - [15/Feb/2024 11:04:11] "[36mGET /images/paintings/2df8795188de91bd941352d944718192442f2cc6c64ca880_painting_Sun_Feb_11_152250_2024painting_8.png HTTP/1.1[0m" 304 -
-INFO:werkzeug:127.0.0.1 - - [15/Feb/2024 11:04:11] "[36mGET /images/paintings/2df8795188de91bd941352d944718192442f2cc6c64ca880_painting_Sun_Feb_11_152338_2024painting_11.png HTTP/1.1[0m" 304 -
-INFO:werkzeug:127.0.0.1 - - [15/Feb/2024 11:04:11] "[36mGET /images/paintings/2df8795188de91bd941352d944718192442f2cc6c64ca880_painting_Sun_Feb_11_152133_2024painting_3.png HTTP/1.1[0m" 304 -
-INFO:werkzeug:127.0.0.1 - - [15/Feb/2024 11:04:11] "[36mGET /images/paintings/2df8795188de91bd941352d944718192442f2cc6c64ca880_painting_Sun_Feb_11_152213_2024painting_6.png HTTP/1.1[0m" 304 -
-INFO:werkzeug:127.0.0.1 - - [15/Feb/2024 11:04:11] "[36mGET /images/paintings/2df8795188de91bd941352d944718192442f2cc6c64ca880_painting_Sun_Feb_11_152306_2024painting_9.png HTTP/1.1[0m" 304 -
-INFO:werkzeug:127.0.0.1 - - [15/Feb/2024 11:04:11] "GET /images/paintings/693d395be67f636fd24329c26b4fd2695bb7361edba7dc18_painting_Thu_Feb_15_095827_2024nyirabyo.jpg HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [15/Feb/2024 11:04:11] "[36mGET /images/paintings/2df8795188de91bd941352d944718192442f2cc6c64ca880_painting_Sun_Feb_11_152321_2024painting_10.png HTTP/1.1[0m" 304 -
-INFO:werkzeug:127.0.0.1 - - [15/Feb/2024 11:04:11] "[36mGET /images/paintings/2df8795188de91bd941352d944718192442f2cc6c64ca880_painting_Sun_Feb_11_152117_2024painting_2.png HTTP/1.1[0m" 304 -
-INFO:werkzeug:127.0.0.1 - - [15/Feb/2024 11:04:11] "[36mGET /images/paintings/2df8795188de91bd941352d944718192442f2cc6c64ca880_painting_Sun_Feb_11_152158_2024painting_5.png HTTP/1.1[0m" 304 -
-INFO:werkzeug:127.0.0.1 - - [15/Feb/2024 11:04:11] "[36mGET /images/paintings/2df8795188de91bd941352d944718192442f2cc6c64ca880_painting_Sun_Feb_11_152250_2024painting_8.png HTTP/1.1[0m" 304 -
-INFO:werkzeug:127.0.0.1 - - [15/Feb/2024 11:04:11] "[36mGET /images/paintings/2df8795188de91bd941352d944718192442f2cc6c64ca880_painting_Sun_Feb_11_152338_2024painting_11.png HTTP/1.1[0m" 304 -
-INFO:werkzeug:127.0.0.1 - - [15/Feb/2024 11:04:11] "[36mGET /images/paintings/2df8795188de91bd941352d944718192442f2cc6c64ca880_painting_Sun_Feb_11_152133_2024painting_3.png HTTP/1.1[0m" 304 -
-INFO:werkzeug:127.0.0.1 - - [15/Feb/2024 11:04:11] "[36mGET /images/paintings/693d395be67f636fd24329c26b4fd2695bb7361edba7dc18_painting_Thu_Feb_15_095827_2024nyirabyo.jpg HTTP/1.1[0m" 304 -
-INFO:werkzeug:127.0.0.1 - - [15/Feb/2024 11:04:11] "[36mGET /images/paintings/2df8795188de91bd941352d944718192442f2cc6c64ca880_painting_Sun_Feb_11_152213_2024painting_6.png HTTP/1.1[0m" 304 -
-INFO:werkzeug:127.0.0.1 - - [15/Feb/2024 11:04:11] "[36mGET /images/paintings/2df8795188de91bd941352d944718192442f2cc6c64ca880_painting_Sun_Feb_11_152306_2024painting_9.png HTTP/1.1[0m" 304 -
-INFO:werkzeug:127.0.0.1 - - [15/Feb/2024 11:04:15] "OPTIONS /get_exhibitions HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [15/Feb/2024 11:04:15] "GET /get_paintings HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [15/Feb/2024 11:04:15] "GET /get_exhibitions HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [15/Feb/2024 11:04:15] "[36mGET /images/exhibitions/amagara%20niyp%20gishoro.jpg HTTP/1.1[0m" 304 -
-INFO:werkzeug:127.0.0.1 - - [15/Feb/2024 11:04:15] "[36mGET /images/paintings/2df8795188de91bd941352d944718192442f2cc6c64ca880_painting_Sun_Feb_11_152321_2024painting_10.png HTTP/1.1[0m" 304 -
-INFO:werkzeug:127.0.0.1 - - [15/Feb/2024 11:04:15] "[36mGET /images/paintings/2df8795188de91bd941352d944718192442f2cc6c64ca880_painting_Sun_Feb_11_152117_2024painting_2.png HTTP/1.1[0m" 304 -
-INFO:werkzeug:127.0.0.1 - - [15/Feb/2024 11:04:15] "[36mGET /images/paintings/2df8795188de91bd941352d944718192442f2cc6c64ca880_painting_Sun_Feb_11_152158_2024painting_5.png HTTP/1.1[0m" 304 -
-INFO:werkzeug:127.0.0.1 - - [15/Feb/2024 11:04:15] "GET /get_exhibitions HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [15/Feb/2024 11:04:15] "[36mGET /images/paintings/2df8795188de91bd941352d944718192442f2cc6c64ca880_painting_Sun_Feb_11_152250_2024painting_8.png HTTP/1.1[0m" 304 -
-INFO:werkzeug:127.0.0.1 - - [15/Feb/2024 11:04:15] "[36mGET /images/paintings/2df8795188de91bd941352d944718192442f2cc6c64ca880_painting_Sun_Feb_11_152338_2024painting_11.png HTTP/1.1[0m" 304 -
-INFO:werkzeug:127.0.0.1 - - [15/Feb/2024 11:04:15] "[36mGET /images/paintings/2df8795188de91bd941352d944718192442f2cc6c64ca880_painting_Sun_Feb_11_152213_2024painting_6.png HTTP/1.1[0m" 304 -
-INFO:werkzeug:127.0.0.1 - - [15/Feb/2024 11:04:15] "[36mGET /images/paintings/2df8795188de91bd941352d944718192442f2cc6c64ca880_painting_Sun_Feb_11_152133_2024painting_3.png HTTP/1.1[0m" 304 -
-INFO:werkzeug:127.0.0.1 - - [15/Feb/2024 11:04:15] "[36mGET /images/paintings/2df8795188de91bd941352d944718192442f2cc6c64ca880_painting_Sun_Feb_11_152306_2024painting_9.png HTTP/1.1[0m" 304 -
-INFO:werkzeug:127.0.0.1 - - [15/Feb/2024 11:04:15] "[36mGET /images/paintings/693d395be67f636fd24329c26b4fd2695bb7361edba7dc18_painting_Thu_Feb_15_095827_2024nyirabyo.jpg HTTP/1.1[0m" 304 -
-INFO:werkzeug:127.0.0.1 - - [15/Feb/2024 11:04:15] "GET /get_paintings HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [15/Feb/2024 11:04:16] "GET /get_exhibitions HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [15/Feb/2024 11:04:16] "GET /get_paintings HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [15/Feb/2024 11:04:16] "GET /get_paintings HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [15/Feb/2024 11:04:16] "[36mGET /images/exhibitions/amagara%20niyp%20gishoro.jpg HTTP/1.1[0m" 304 -
-INFO:werkzeug:127.0.0.1 - - [15/Feb/2024 11:04:16] "[36mGET /images/paintings/2df8795188de91bd941352d944718192442f2cc6c64ca880_painting_Sun_Feb_11_152321_2024painting_10.png HTTP/1.1[0m" 304 -
-INFO:werkzeug:127.0.0.1 - - [15/Feb/2024 11:04:16] "[36mGET /images/paintings/2df8795188de91bd941352d944718192442f2cc6c64ca880_painting_Sun_Feb_11_152117_2024painting_2.png HTTP/1.1[0m" 304 -
-INFO:werkzeug:127.0.0.1 - - [15/Feb/2024 11:04:16] "GET /get_exhibitions HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [15/Feb/2024 11:04:16] "[36mGET /images/paintings/2df8795188de91bd941352d944718192442f2cc6c64ca880_painting_Sun_Feb_11_152158_2024painting_5.png HTTP/1.1[0m" 304 -
-INFO:werkzeug:127.0.0.1 - - [15/Feb/2024 11:04:16] "[36mGET /images/paintings/2df8795188de91bd941352d944718192442f2cc6c64ca880_painting_Sun_Feb_11_152250_2024painting_8.png HTTP/1.1[0m" 304 -
-INFO:werkzeug:127.0.0.1 - - [15/Feb/2024 11:04:16] "[36mGET /images/paintings/2df8795188de91bd941352d944718192442f2cc6c64ca880_painting_Sun_Feb_11_152338_2024painting_11.png HTTP/1.1[0m" 304 -
-INFO:werkzeug:127.0.0.1 - - [15/Feb/2024 11:04:16] "[36mGET /images/paintings/2df8795188de91bd941352d944718192442f2cc6c64ca880_painting_Sun_Feb_11_152133_2024painting_3.png HTTP/1.1[0m" 304 -
-INFO:werkzeug:127.0.0.1 - - [15/Feb/2024 11:04:16] "[36mGET /images/paintings/2df8795188de91bd941352d944718192442f2cc6c64ca880_painting_Sun_Feb_11_152213_2024painting_6.png HTTP/1.1[0m" 304 -
-INFO:werkzeug:127.0.0.1 - - [15/Feb/2024 11:04:16] "[36mGET /images/paintings/693d395be67f636fd24329c26b4fd2695bb7361edba7dc18_painting_Thu_Feb_15_095827_2024nyirabyo.jpg HTTP/1.1[0m" 304 -
-INFO:werkzeug:127.0.0.1 - - [15/Feb/2024 11:04:16] "[36mGET /images/paintings/2df8795188de91bd941352d944718192442f2cc6c64ca880_painting_Sun_Feb_11_152306_2024painting_9.png HTTP/1.1[0m" 304 -
-INFO:werkzeug:127.0.0.1 - - [15/Feb/2024 11:04:17] "GET /get_exhibitions HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [15/Feb/2024 11:04:17] "GET /get_paintings HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [15/Feb/2024 11:04:17] "GET /get_paintings HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [15/Feb/2024 11:04:17] "[36mGET /images/exhibitions/amagara%20niyp%20gishoro.jpg HTTP/1.1[0m" 304 -
-INFO:werkzeug:127.0.0.1 - - [15/Feb/2024 11:04:17] "[36mGET /images/paintings/2df8795188de91bd941352d944718192442f2cc6c64ca880_painting_Sun_Feb_11_152321_2024painting_10.png HTTP/1.1[0m" 304 -
-INFO:werkzeug:127.0.0.1 - - [15/Feb/2024 11:04:17] "GET /get_exhibitions HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [15/Feb/2024 11:04:17] "[36mGET /images/paintings/2df8795188de91bd941352d944718192442f2cc6c64ca880_painting_Sun_Feb_11_152158_2024painting_5.png HTTP/1.1[0m" 304 -
-INFO:werkzeug:127.0.0.1 - - [15/Feb/2024 11:04:17] "[36mGET /images/paintings/2df8795188de91bd941352d944718192442f2cc6c64ca880_painting_Sun_Feb_11_152117_2024painting_2.png HTTP/1.1[0m" 304 -
-INFO:werkzeug:127.0.0.1 - - [15/Feb/2024 11:04:17] "[36mGET /images/paintings/2df8795188de91bd941352d944718192442f2cc6c64ca880_painting_Sun_Feb_11_152250_2024painting_8.png HTTP/1.1[0m" 304 -
-INFO:werkzeug:127.0.0.1 - - [15/Feb/2024 11:04:17] "[36mGET /images/paintings/2df8795188de91bd941352d944718192442f2cc6c64ca880_painting_Sun_Feb_11_152213_2024painting_6.png HTTP/1.1[0m" 304 -
-INFO:werkzeug:127.0.0.1 - - [15/Feb/2024 11:04:17] "[36mGET /images/paintings/2df8795188de91bd941352d944718192442f2cc6c64ca880_painting_Sun_Feb_11_152133_2024painting_3.png HTTP/1.1[0m" 304 -
-INFO:werkzeug:127.0.0.1 - - [15/Feb/2024 11:04:17] "[36mGET /images/paintings/2df8795188de91bd941352d944718192442f2cc6c64ca880_painting_Sun_Feb_11_152338_2024painting_11.png HTTP/1.1[0m" 304 -
-INFO:werkzeug:127.0.0.1 - - [15/Feb/2024 11:04:17] "[36mGET /images/paintings/2df8795188de91bd941352d944718192442f2cc6c64ca880_painting_Sun_Feb_11_152306_2024painting_9.png HTTP/1.1[0m" 304 -
-INFO:werkzeug:127.0.0.1 - - [15/Feb/2024 11:04:17] "GET /images/paintings/693d395be67f636fd24329c26b4fd2695bb7361edba7dc18_painting_Thu_Feb_15_095827_2024nyirabyo.jpg HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [15/Feb/2024 11:04:18] "GET /get_exhibitions HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [15/Feb/2024 11:04:18] "GET /get_paintings HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [15/Feb/2024 11:04:18] "GET /get_paintings HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [15/Feb/2024 11:04:18] "[36mGET /images/exhibitions/amagara%20niyp%20gishoro.jpg HTTP/1.1[0m" 304 -
-INFO:werkzeug:127.0.0.1 - - [15/Feb/2024 11:04:18] "[36mGET /images/paintings/2df8795188de91bd941352d944718192442f2cc6c64ca880_painting_Sun_Feb_11_152321_2024painting_10.png HTTP/1.1[0m" 304 -
-INFO:werkzeug:127.0.0.1 - - [15/Feb/2024 11:04:18] "GET /get_exhibitions HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [15/Feb/2024 11:04:18] "[36mGET /images/paintings/2df8795188de91bd941352d944718192442f2cc6c64ca880_painting_Sun_Feb_11_152117_2024painting_2.png HTTP/1.1[0m" 304 -
-INFO:werkzeug:127.0.0.1 - - [15/Feb/2024 11:04:18] "[36mGET /images/paintings/2df8795188de91bd941352d944718192442f2cc6c64ca880_painting_Sun_Feb_11_152158_2024painting_5.png HTTP/1.1[0m" 304 -
-INFO:werkzeug:127.0.0.1 - - [15/Feb/2024 11:04:18] "[36mGET /images/paintings/2df8795188de91bd941352d944718192442f2cc6c64ca880_painting_Sun_Feb_11_152250_2024painting_8.png HTTP/1.1[0m" 304 -
-INFO:werkzeug:127.0.0.1 - - [15/Feb/2024 11:04:18] "[36mGET /images/paintings/2df8795188de91bd941352d944718192442f2cc6c64ca880_painting_Sun_Feb_11_152338_2024painting_11.png HTTP/1.1[0m" 304 -
-INFO:werkzeug:127.0.0.1 - - [15/Feb/2024 11:04:18] "[36mGET /images/paintings/2df8795188de91bd941352d944718192442f2cc6c64ca880_painting_Sun_Feb_11_152133_2024painting_3.png HTTP/1.1[0m" 304 -
-INFO:werkzeug:127.0.0.1 - - [15/Feb/2024 11:04:18] "[36mGET /images/paintings/2df8795188de91bd941352d944718192442f2cc6c64ca880_painting_Sun_Feb_11_152213_2024painting_6.png HTTP/1.1[0m" 304 -
-INFO:werkzeug:127.0.0.1 - - [15/Feb/2024 11:04:18] "[36mGET /images/paintings/2df8795188de91bd941352d944718192442f2cc6c64ca880_painting_Sun_Feb_11_152306_2024painting_9.png HTTP/1.1[0m" 304 -
-INFO:werkzeug:127.0.0.1 - - [15/Feb/2024 11:04:18] "[36mGET /images/paintings/693d395be67f636fd24329c26b4fd2695bb7361edba7dc18_painting_Thu_Feb_15_095827_2024nyirabyo.jpg HTTP/1.1[0m" 304 -
-INFO:werkzeug:127.0.0.1 - - [15/Feb/2024 11:04:19] "GET /get_exhibitions HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [15/Feb/2024 11:04:19] "GET /get_paintings HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [15/Feb/2024 11:04:19] "GET /get_paintings HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [15/Feb/2024 11:04:19] "[36mGET /images/exhibitions/amagara%20niyp%20gishoro.jpg HTTP/1.1[0m" 304 -
-INFO:werkzeug:127.0.0.1 - - [15/Feb/2024 11:04:19] "[36mGET /images/paintings/2df8795188de91bd941352d944718192442f2cc6c64ca880_painting_Sun_Feb_11_152321_2024painting_10.png HTTP/1.1[0m" 304 -
-INFO:werkzeug:127.0.0.1 - - [15/Feb/2024 11:04:19] "[36mGET /images/paintings/2df8795188de91bd941352d944718192442f2cc6c64ca880_painting_Sun_Feb_11_152117_2024painting_2.png HTTP/1.1[0m" 304 -
-INFO:werkzeug:127.0.0.1 - - [15/Feb/2024 11:04:19] "GET /get_exhibitions HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [15/Feb/2024 11:04:19] "[36mGET /images/paintings/2df8795188de91bd941352d944718192442f2cc6c64ca880_painting_Sun_Feb_11_152158_2024painting_5.png HTTP/1.1[0m" 304 -
-INFO:werkzeug:127.0.0.1 - - [15/Feb/2024 11:04:19] "[36mGET /images/paintings/2df8795188de91bd941352d944718192442f2cc6c64ca880_painting_Sun_Feb_11_152250_2024painting_8.png HTTP/1.1[0m" 304 -
-INFO:werkzeug:127.0.0.1 - - [15/Feb/2024 11:04:19] "[36mGET /images/paintings/2df8795188de91bd941352d944718192442f2cc6c64ca880_painting_Sun_Feb_11_152213_2024painting_6.png HTTP/1.1[0m" 304 -
-INFO:werkzeug:127.0.0.1 - - [15/Feb/2024 11:04:19] "[36mGET /images/paintings/2df8795188de91bd941352d944718192442f2cc6c64ca880_painting_Sun_Feb_11_152338_2024painting_11.png HTTP/1.1[0m" 304 -
-INFO:werkzeug:127.0.0.1 - - [15/Feb/2024 11:04:19] "[36mGET /images/paintings/2df8795188de91bd941352d944718192442f2cc6c64ca880_painting_Sun_Feb_11_152133_2024painting_3.png HTTP/1.1[0m" 304 -
-INFO:werkzeug:127.0.0.1 - - [15/Feb/2024 11:04:19] "[36mGET /images/paintings/2df8795188de91bd941352d944718192442f2cc6c64ca880_painting_Sun_Feb_11_152306_2024painting_9.png HTTP/1.1[0m" 304 -
-INFO:werkzeug:127.0.0.1 - - [15/Feb/2024 11:04:19] "[36mGET /images/paintings/693d395be67f636fd24329c26b4fd2695bb7361edba7dc18_painting_Thu_Feb_15_095827_2024nyirabyo.jpg HTTP/1.1[0m" 304 -
-INFO:werkzeug:127.0.0.1 - - [15/Feb/2024 11:05:24] "OPTIONS /get_exhibitions HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [15/Feb/2024 11:05:24] "OPTIONS /get_exhibitions HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [15/Feb/2024 11:05:28] "GET /get_exhibitions HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [15/Feb/2024 11:05:28] "GET /get_paintings HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [15/Feb/2024 11:05:28] "GET /get_paintings HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [15/Feb/2024 11:05:28] "[36mGET /images/exhibitions/amagara%20niyp%20gishoro.jpg HTTP/1.1[0m" 304 -
-INFO:werkzeug:127.0.0.1 - - [15/Feb/2024 11:05:28] "[36mGET /images/exhibitions/amagara%20niyp%20gishoro.jpg HTTP/1.1[0m" 304 -
-INFO:werkzeug:127.0.0.1 - - [15/Feb/2024 11:05:28] "GET /get_exhibitions HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [15/Feb/2024 11:05:28] "[36mGET /images/paintings/2df8795188de91bd941352d944718192442f2cc6c64ca880_painting_Sun_Feb_11_152321_2024painting_10.png HTTP/1.1[0m" 304 -
-INFO:werkzeug:127.0.0.1 - - [15/Feb/2024 11:05:28] "[36mGET /images/paintings/2df8795188de91bd941352d944718192442f2cc6c64ca880_painting_Sun_Feb_11_152117_2024painting_2.png HTTP/1.1[0m" 304 -
-INFO:werkzeug:127.0.0.1 - - [15/Feb/2024 11:05:28] "[36mGET /images/paintings/2df8795188de91bd941352d944718192442f2cc6c64ca880_painting_Sun_Feb_11_152158_2024painting_5.png HTTP/1.1[0m" 304 -
-INFO:werkzeug:127.0.0.1 - - [15/Feb/2024 11:05:28] "[36mGET /images/paintings/2df8795188de91bd941352d944718192442f2cc6c64ca880_painting_Sun_Feb_11_152250_2024painting_8.png HTTP/1.1[0m" 304 -
-INFO:werkzeug:127.0.0.1 - - [15/Feb/2024 11:05:28] "[36mGET /images/paintings/2df8795188de91bd941352d944718192442f2cc6c64ca880_painting_Sun_Feb_11_152338_2024painting_11.png HTTP/1.1[0m" 304 -
-INFO:werkzeug:127.0.0.1 - - [15/Feb/2024 11:05:28] "[36mGET /images/paintings/2df8795188de91bd941352d944718192442f2cc6c64ca880_painting_Sun_Feb_11_152133_2024painting_3.png HTTP/1.1[0m" 304 -
-INFO:werkzeug:127.0.0.1 - - [15/Feb/2024 11:05:28] "[36mGET /images/paintings/2df8795188de91bd941352d944718192442f2cc6c64ca880_painting_Sun_Feb_11_152213_2024painting_6.png HTTP/1.1[0m" 304 -
-INFO:werkzeug:127.0.0.1 - - [15/Feb/2024 11:05:28] "[36mGET /images/paintings/2df8795188de91bd941352d944718192442f2cc6c64ca880_painting_Sun_Feb_11_152306_2024painting_9.png HTTP/1.1[0m" 304 -
-INFO:werkzeug:127.0.0.1 - - [15/Feb/2024 11:05:28] "[36mGET /images/paintings/693d395be67f636fd24329c26b4fd2695bb7361edba7dc18_painting_Thu_Feb_15_095827_2024nyirabyo.jpg HTTP/1.1[0m" 304 -
-INFO:werkzeug:127.0.0.1 - - [15/Feb/2024 11:05:28] "[36mGET /images/paintings/2df8795188de91bd941352d944718192442f2cc6c64ca880_painting_Sun_Feb_11_152321_2024painting_10.png HTTP/1.1[0m" 304 -
-INFO:werkzeug:127.0.0.1 - - [15/Feb/2024 11:05:28] "[36mGET /images/paintings/2df8795188de91bd941352d944718192442f2cc6c64ca880_painting_Sun_Feb_11_152117_2024painting_2.png HTTP/1.1[0m" 304 -
-INFO:werkzeug:127.0.0.1 - - [15/Feb/2024 11:05:28] "[36mGET /images/paintings/2df8795188de91bd941352d944718192442f2cc6c64ca880_painting_Sun_Feb_11_152250_2024painting_8.png HTTP/1.1[0m" 304 -
-INFO:werkzeug:127.0.0.1 - - [15/Feb/2024 11:05:28] "[36mGET /images/paintings/2df8795188de91bd941352d944718192442f2cc6c64ca880_painting_Sun_Feb_11_152158_2024painting_5.png HTTP/1.1[0m" 304 -
-INFO:werkzeug:127.0.0.1 - - [15/Feb/2024 11:05:28] "[36mGET /images/paintings/2df8795188de91bd941352d944718192442f2cc6c64ca880_painting_Sun_Feb_11_152338_2024painting_11.png HTTP/1.1[0m" 304 -
-INFO:werkzeug:127.0.0.1 - - [15/Feb/2024 11:05:28] "[36mGET /images/paintings/2df8795188de91bd941352d944718192442f2cc6c64ca880_painting_Sun_Feb_11_152133_2024painting_3.png HTTP/1.1[0m" 304 -
-INFO:werkzeug:127.0.0.1 - - [15/Feb/2024 11:05:28] "[36mGET /images/paintings/693d395be67f636fd24329c26b4fd2695bb7361edba7dc18_painting_Thu_Feb_15_095827_2024nyirabyo.jpg HTTP/1.1[0m" 304 -
-INFO:werkzeug:127.0.0.1 - - [15/Feb/2024 11:05:28] "[36mGET /images/paintings/2df8795188de91bd941352d944718192442f2cc6c64ca880_painting_Sun_Feb_11_152213_2024painting_6.png HTTP/1.1[0m" 304 -
-INFO:werkzeug:127.0.0.1 - - [15/Feb/2024 11:05:28] "[36mGET /images/paintings/2df8795188de91bd941352d944718192442f2cc6c64ca880_painting_Sun_Feb_11_152306_2024painting_9.png HTTP/1.1[0m" 304 -
-INFO:werkzeug:127.0.0.1 - - [15/Feb/2024 11:05:31] "OPTIONS /get_exhibitions HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [15/Feb/2024 11:05:31] "GET /get_paintings HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [15/Feb/2024 11:05:31] "GET /get_exhibitions HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [15/Feb/2024 11:05:31] "GET /get_paintings HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [15/Feb/2024 11:05:31] "[36mGET /images/exhibitions/amagara%20niyp%20gishoro.jpg HTTP/1.1[0m" 304 -
-INFO:werkzeug:127.0.0.1 - - [15/Feb/2024 11:05:31] "[36mGET /images/paintings/2df8795188de91bd941352d944718192442f2cc6c64ca880_painting_Sun_Feb_11_152321_2024painting_10.png HTTP/1.1[0m" 304 -
-INFO:werkzeug:127.0.0.1 - - [15/Feb/2024 11:05:31] "[36mGET /images/paintings/2df8795188de91bd941352d944718192442f2cc6c64ca880_painting_Sun_Feb_11_152158_2024painting_5.png HTTP/1.1[0m" 304 -
-INFO:werkzeug:127.0.0.1 - - [15/Feb/2024 11:05:31] "GET /get_exhibitions HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [15/Feb/2024 11:05:31] "[36mGET /images/paintings/2df8795188de91bd941352d944718192442f2cc6c64ca880_painting_Sun_Feb_11_152338_2024painting_11.png HTTP/1.1[0m" 304 -
-INFO:werkzeug:127.0.0.1 - - [15/Feb/2024 11:05:31] "[36mGET /images/paintings/2df8795188de91bd941352d944718192442f2cc6c64ca880_painting_Sun_Feb_11_152117_2024painting_2.png HTTP/1.1[0m" 304 -
-INFO:werkzeug:127.0.0.1 - - [15/Feb/2024 11:05:31] "[36mGET /images/paintings/2df8795188de91bd941352d944718192442f2cc6c64ca880_painting_Sun_Feb_11_152250_2024painting_8.png HTTP/1.1[0m" 304 -
-INFO:werkzeug:127.0.0.1 - - [15/Feb/2024 11:05:31] "[36mGET /images/paintings/2df8795188de91bd941352d944718192442f2cc6c64ca880_painting_Sun_Feb_11_152133_2024painting_3.png HTTP/1.1[0m" 304 -
-INFO:werkzeug:127.0.0.1 - - [15/Feb/2024 11:05:31] "[36mGET /images/paintings/2df8795188de91bd941352d944718192442f2cc6c64ca880_painting_Sun_Feb_11_152213_2024painting_6.png HTTP/1.1[0m" 304 -
-INFO:werkzeug:127.0.0.1 - - [15/Feb/2024 11:05:31] "[36mGET /images/paintings/2df8795188de91bd941352d944718192442f2cc6c64ca880_painting_Sun_Feb_11_152306_2024painting_9.png HTTP/1.1[0m" 304 -
-INFO:werkzeug:127.0.0.1 - - [15/Feb/2024 11:05:31] "[36mGET /images/paintings/693d395be67f636fd24329c26b4fd2695bb7361edba7dc18_painting_Thu_Feb_15_095827_2024nyirabyo.jpg HTTP/1.1[0m" 304 -
-INFO:werkzeug:127.0.0.1 - - [15/Feb/2024 11:05:32] "GET /get_exhibitions HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [15/Feb/2024 11:05:32] "GET /get_paintings HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [15/Feb/2024 11:05:32] "[36mGET /images/exhibitions/amagara%20niyp%20gishoro.jpg HTTP/1.1[0m" 304 -
-INFO:werkzeug:127.0.0.1 - - [15/Feb/2024 11:05:32] "GET /get_exhibitions HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [15/Feb/2024 11:05:32] "[36mGET /images/paintings/2df8795188de91bd941352d944718192442f2cc6c64ca880_painting_Sun_Feb_11_152321_2024painting_10.png HTTP/1.1[0m" 304 -
-INFO:werkzeug:127.0.0.1 - - [15/Feb/2024 11:05:32] "[36mGET /images/paintings/2df8795188de91bd941352d944718192442f2cc6c64ca880_painting_Sun_Feb_11_152117_2024painting_2.png HTTP/1.1[0m" 304 -
-INFO:werkzeug:127.0.0.1 - - [15/Feb/2024 11:05:32] "[36mGET /images/paintings/2df8795188de91bd941352d944718192442f2cc6c64ca880_painting_Sun_Feb_11_152158_2024painting_5.png HTTP/1.1[0m" 304 -
-INFO:werkzeug:127.0.0.1 - - [15/Feb/2024 11:05:32] "[36mGET /images/paintings/2df8795188de91bd941352d944718192442f2cc6c64ca880_painting_Sun_Feb_11_152250_2024painting_8.png HTTP/1.1[0m" 304 -
-INFO:werkzeug:127.0.0.1 - - [15/Feb/2024 11:05:32] "[36mGET /images/paintings/2df8795188de91bd941352d944718192442f2cc6c64ca880_painting_Sun_Feb_11_152338_2024painting_11.png HTTP/1.1[0m" 304 -
-INFO:werkzeug:127.0.0.1 - - [15/Feb/2024 11:05:32] "[36mGET /images/paintings/2df8795188de91bd941352d944718192442f2cc6c64ca880_painting_Sun_Feb_11_152133_2024painting_3.png HTTP/1.1[0m" 304 -
-INFO:werkzeug:127.0.0.1 - - [15/Feb/2024 11:05:32] "[36mGET /images/paintings/2df8795188de91bd941352d944718192442f2cc6c64ca880_painting_Sun_Feb_11_152213_2024painting_6.png HTTP/1.1[0m" 304 -
-INFO:werkzeug:127.0.0.1 - - [15/Feb/2024 11:05:32] "[36mGET /images/paintings/2df8795188de91bd941352d944718192442f2cc6c64ca880_painting_Sun_Feb_11_152306_2024painting_9.png HTTP/1.1[0m" 304 -
-INFO:werkzeug:127.0.0.1 - - [15/Feb/2024 11:05:32] "[36mGET /images/paintings/693d395be67f636fd24329c26b4fd2695bb7361edba7dc18_painting_Thu_Feb_15_095827_2024nyirabyo.jpg HTTP/1.1[0m" 304 -
-INFO:werkzeug:127.0.0.1 - - [15/Feb/2024 11:05:32] "GET /get_paintings HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [15/Feb/2024 11:05:33] "GET /get_exhibitions HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [15/Feb/2024 11:05:33] "GET /get_paintings HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [15/Feb/2024 11:05:33] "GET /get_paintings HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [15/Feb/2024 11:05:33] "[36mGET /images/exhibitions/amagara%20niyp%20gishoro.jpg HTTP/1.1[0m" 304 -
-INFO:werkzeug:127.0.0.1 - - [15/Feb/2024 11:05:33] "[36mGET /images/paintings/2df8795188de91bd941352d944718192442f2cc6c64ca880_painting_Sun_Feb_11_152321_2024painting_10.png HTTP/1.1[0m" 304 -
-INFO:werkzeug:127.0.0.1 - - [15/Feb/2024 11:05:33] "[36mGET /images/paintings/2df8795188de91bd941352d944718192442f2cc6c64ca880_painting_Sun_Feb_11_152117_2024painting_2.png HTTP/1.1[0m" 304 -
-INFO:werkzeug:127.0.0.1 - - [15/Feb/2024 11:05:33] "GET /get_exhibitions HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [15/Feb/2024 11:05:33] "[36mGET /images/paintings/2df8795188de91bd941352d944718192442f2cc6c64ca880_painting_Sun_Feb_11_152158_2024painting_5.png HTTP/1.1[0m" 304 -
-INFO:werkzeug:127.0.0.1 - - [15/Feb/2024 11:05:33] "[36mGET /images/paintings/2df8795188de91bd941352d944718192442f2cc6c64ca880_painting_Sun_Feb_11_152250_2024painting_8.png HTTP/1.1[0m" 304 -
-INFO:werkzeug:127.0.0.1 - - [15/Feb/2024 11:05:33] "[36mGET /images/paintings/2df8795188de91bd941352d944718192442f2cc6c64ca880_painting_Sun_Feb_11_152338_2024painting_11.png HTTP/1.1[0m" 304 -
-INFO:werkzeug:127.0.0.1 - - [15/Feb/2024 11:05:33] "[36mGET /images/paintings/2df8795188de91bd941352d944718192442f2cc6c64ca880_painting_Sun_Feb_11_152133_2024painting_3.png HTTP/1.1[0m" 304 -
-INFO:werkzeug:127.0.0.1 - - [15/Feb/2024 11:05:33] "[36mGET /images/paintings/2df8795188de91bd941352d944718192442f2cc6c64ca880_painting_Sun_Feb_11_152213_2024painting_6.png HTTP/1.1[0m" 304 -
-INFO:werkzeug:127.0.0.1 - - [15/Feb/2024 11:05:33] "[36mGET /images/paintings/693d395be67f636fd24329c26b4fd2695bb7361edba7dc18_painting_Thu_Feb_15_095827_2024nyirabyo.jpg HTTP/1.1[0m" 304 -
-INFO:werkzeug:127.0.0.1 - - [15/Feb/2024 11:05:33] "[36mGET /images/paintings/2df8795188de91bd941352d944718192442f2cc6c64ca880_painting_Sun_Feb_11_152306_2024painting_9.png HTTP/1.1[0m" 304 -
-INFO:werkzeug:127.0.0.1 - - [15/Feb/2024 11:05:34] "GET /get_paintings HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [15/Feb/2024 11:05:35] "GET /get_paintings HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [15/Feb/2024 11:05:35] "GET /get_exhibitions HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [15/Feb/2024 11:05:35] "[36mGET /images/exhibitions/amagara%20niyp%20gishoro.jpg HTTP/1.1[0m" 304 -
-INFO:werkzeug:127.0.0.1 - - [15/Feb/2024 11:05:35] "[36mGET /images/paintings/2df8795188de91bd941352d944718192442f2cc6c64ca880_painting_Sun_Feb_11_152321_2024painting_10.png HTTP/1.1[0m" 304 -
-INFO:werkzeug:127.0.0.1 - - [15/Feb/2024 11:05:35] "[36mGET /images/paintings/2df8795188de91bd941352d944718192442f2cc6c64ca880_painting_Sun_Feb_11_152117_2024painting_2.png HTTP/1.1[0m" 304 -
-INFO:werkzeug:127.0.0.1 - - [15/Feb/2024 11:05:35] "[36mGET /images/paintings/2df8795188de91bd941352d944718192442f2cc6c64ca880_painting_Sun_Feb_11_152158_2024painting_5.png HTTP/1.1[0m" 304 -
-INFO:werkzeug:127.0.0.1 - - [15/Feb/2024 11:05:35] "[36mGET /images/paintings/2df8795188de91bd941352d944718192442f2cc6c64ca880_painting_Sun_Feb_11_152250_2024painting_8.png HTTP/1.1[0m" 304 -
-INFO:werkzeug:127.0.0.1 - - [15/Feb/2024 11:05:35] "[36mGET /images/paintings/2df8795188de91bd941352d944718192442f2cc6c64ca880_painting_Sun_Feb_11_152338_2024painting_11.png HTTP/1.1[0m" 304 -
-INFO:werkzeug:127.0.0.1 - - [15/Feb/2024 11:05:35] "[36mGET /images/paintings/2df8795188de91bd941352d944718192442f2cc6c64ca880_painting_Sun_Feb_11_152133_2024painting_3.png HTTP/1.1[0m" 304 -
-INFO:werkzeug:127.0.0.1 - - [15/Feb/2024 11:05:35] "[36mGET /images/paintings/2df8795188de91bd941352d944718192442f2cc6c64ca880_painting_Sun_Feb_11_152213_2024painting_6.png HTTP/1.1[0m" 304 -
-INFO:werkzeug:127.0.0.1 - - [15/Feb/2024 11:05:35] "GET /get_exhibitions HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [15/Feb/2024 11:05:35] "[36mGET /images/paintings/2df8795188de91bd941352d944718192442f2cc6c64ca880_painting_Sun_Feb_11_152306_2024painting_9.png HTTP/1.1[0m" 304 -
-INFO:werkzeug:127.0.0.1 - - [15/Feb/2024 11:05:35] "[36mGET /images/paintings/693d395be67f636fd24329c26b4fd2695bb7361edba7dc18_painting_Thu_Feb_15_095827_2024nyirabyo.jpg HTTP/1.1[0m" 304 -
-INFO:werkzeug:127.0.0.1 - - [15/Feb/2024 11:05:36] "GET /get_exhibitions HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [15/Feb/2024 11:05:36] "GET /get_paintings HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [15/Feb/2024 11:05:36] "GET /get_paintings HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [15/Feb/2024 11:05:36] "GET /get_exhibitions HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [15/Feb/2024 11:05:36] "[36mGET /images/exhibitions/amagara%20niyp%20gishoro.jpg HTTP/1.1[0m" 304 -
-INFO:werkzeug:127.0.0.1 - - [15/Feb/2024 11:05:36] "[36mGET /images/paintings/2df8795188de91bd941352d944718192442f2cc6c64ca880_painting_Sun_Feb_11_152321_2024painting_10.png HTTP/1.1[0m" 304 -
-INFO:werkzeug:127.0.0.1 - - [15/Feb/2024 11:05:36] "[36mGET /images/paintings/2df8795188de91bd941352d944718192442f2cc6c64ca880_painting_Sun_Feb_11_152158_2024painting_5.png HTTP/1.1[0m" 304 -
-INFO:werkzeug:127.0.0.1 - - [15/Feb/2024 11:05:36] "[36mGET /images/paintings/2df8795188de91bd941352d944718192442f2cc6c64ca880_painting_Sun_Feb_11_152117_2024painting_2.png HTTP/1.1[0m" 304 -
-INFO:werkzeug:127.0.0.1 - - [15/Feb/2024 11:05:36] "[36mGET /images/paintings/2df8795188de91bd941352d944718192442f2cc6c64ca880_painting_Sun_Feb_11_152250_2024painting_8.png HTTP/1.1[0m" 304 -
-INFO:werkzeug:127.0.0.1 - - [15/Feb/2024 11:05:36] "[36mGET /images/paintings/2df8795188de91bd941352d944718192442f2cc6c64ca880_painting_Sun_Feb_11_152338_2024painting_11.png HTTP/1.1[0m" 304 -
-INFO:werkzeug:127.0.0.1 - - [15/Feb/2024 11:05:36] "[36mGET /images/paintings/2df8795188de91bd941352d944718192442f2cc6c64ca880_painting_Sun_Feb_11_152133_2024painting_3.png HTTP/1.1[0m" 304 -
-INFO:werkzeug:127.0.0.1 - - [15/Feb/2024 11:05:36] "[36mGET /images/paintings/2df8795188de91bd941352d944718192442f2cc6c64ca880_painting_Sun_Feb_11_152213_2024painting_6.png HTTP/1.1[0m" 304 -
-INFO:werkzeug:127.0.0.1 - - [15/Feb/2024 11:05:36] "[36mGET /images/paintings/2df8795188de91bd941352d944718192442f2cc6c64ca880_painting_Sun_Feb_11_152306_2024painting_9.png HTTP/1.1[0m" 304 -
-INFO:werkzeug:127.0.0.1 - - [15/Feb/2024 11:05:36] "[36mGET /images/paintings/693d395be67f636fd24329c26b4fd2695bb7361edba7dc18_painting_Thu_Feb_15_095827_2024nyirabyo.jpg HTTP/1.1[0m" 304 -
-INFO:werkzeug:127.0.0.1 - - [15/Feb/2024 11:05:37] "OPTIONS /get_exhibitions HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [15/Feb/2024 11:05:37] "GET /get_paintings HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [15/Feb/2024 11:05:37] "GET /get_exhibitions HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [15/Feb/2024 11:05:37] "GET /get_paintings HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [15/Feb/2024 11:05:37] "GET /get_exhibitions HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [15/Feb/2024 11:05:37] "[36mGET /images/exhibitions/amagara%20niyp%20gishoro.jpg HTTP/1.1[0m" 304 -
-INFO:werkzeug:127.0.0.1 - - [15/Feb/2024 11:05:37] "[36mGET /images/paintings/2df8795188de91bd941352d944718192442f2cc6c64ca880_painting_Sun_Feb_11_152321_2024painting_10.png HTTP/1.1[0m" 304 -
-INFO:werkzeug:127.0.0.1 - - [15/Feb/2024 11:05:37] "[36mGET /images/paintings/2df8795188de91bd941352d944718192442f2cc6c64ca880_painting_Sun_Feb_11_152117_2024painting_2.png HTTP/1.1[0m" 304 -
-INFO:werkzeug:127.0.0.1 - - [15/Feb/2024 11:05:37] "[36mGET /images/paintings/2df8795188de91bd941352d944718192442f2cc6c64ca880_painting_Sun_Feb_11_152158_2024painting_5.png HTTP/1.1[0m" 304 -
-INFO:werkzeug:127.0.0.1 - - [15/Feb/2024 11:05:37] "[36mGET /images/paintings/2df8795188de91bd941352d944718192442f2cc6c64ca880_painting_Sun_Feb_11_152250_2024painting_8.png HTTP/1.1[0m" 304 -
-INFO:werkzeug:127.0.0.1 - - [15/Feb/2024 11:05:37] "[36mGET /images/paintings/2df8795188de91bd941352d944718192442f2cc6c64ca880_painting_Sun_Feb_11_152338_2024painting_11.png HTTP/1.1[0m" 304 -
-INFO:werkzeug:127.0.0.1 - - [15/Feb/2024 11:05:37] "[36mGET /images/paintings/2df8795188de91bd941352d944718192442f2cc6c64ca880_painting_Sun_Feb_11_152133_2024painting_3.png HTTP/1.1[0m" 304 -
-INFO:werkzeug:127.0.0.1 - - [15/Feb/2024 11:05:37] "[36mGET /images/paintings/2df8795188de91bd941352d944718192442f2cc6c64ca880_painting_Sun_Feb_11_152306_2024painting_9.png HTTP/1.1[0m" 304 -
-INFO:werkzeug:127.0.0.1 - - [15/Feb/2024 11:05:37] "[36mGET /images/paintings/2df8795188de91bd941352d944718192442f2cc6c64ca880_painting_Sun_Feb_11_152213_2024painting_6.png HTTP/1.1[0m" 304 -
-INFO:werkzeug:127.0.0.1 - - [15/Feb/2024 11:05:37] "[36mGET /images/paintings/693d395be67f636fd24329c26b4fd2695bb7361edba7dc18_painting_Thu_Feb_15_095827_2024nyirabyo.jpg HTTP/1.1[0m" 304 -
-INFO:werkzeug:127.0.0.1 - - [15/Feb/2024 11:06:02] "OPTIONS /get_exhibitions HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [15/Feb/2024 11:06:02] "GET /get_exhibitions HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [15/Feb/2024 11:06:02] "GET /get_paintings HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [15/Feb/2024 11:06:03] "GET /get_exhibitions HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [15/Feb/2024 11:06:03] "GET /get_paintings HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [15/Feb/2024 11:06:04] "[36mGET /images/exhibitions/amagara%20niyp%20gishoro.jpg HTTP/1.1[0m" 304 -
-INFO:werkzeug:127.0.0.1 - - [15/Feb/2024 11:06:04] "[36mGET /images/paintings/2df8795188de91bd941352d944718192442f2cc6c64ca880_painting_Sun_Feb_11_152321_2024painting_10.png HTTP/1.1[0m" 304 -
-INFO:werkzeug:127.0.0.1 - - [15/Feb/2024 11:06:04] "[36mGET /images/paintings/2df8795188de91bd941352d944718192442f2cc6c64ca880_painting_Sun_Feb_11_152117_2024painting_2.png HTTP/1.1[0m" 304 -
-INFO:werkzeug:127.0.0.1 - - [15/Feb/2024 11:06:05] "[36mGET /images/paintings/2df8795188de91bd941352d944718192442f2cc6c64ca880_painting_Sun_Feb_11_152158_2024painting_5.png HTTP/1.1[0m" 304 -
-INFO:werkzeug:127.0.0.1 - - [15/Feb/2024 11:06:05] "[36mGET /images/paintings/2df8795188de91bd941352d944718192442f2cc6c64ca880_painting_Sun_Feb_11_152250_2024painting_8.png HTTP/1.1[0m" 304 -
-INFO:werkzeug:127.0.0.1 - - [15/Feb/2024 11:06:05] "[36mGET /images/paintings/2df8795188de91bd941352d944718192442f2cc6c64ca880_painting_Sun_Feb_11_152338_2024painting_11.png HTTP/1.1[0m" 304 -
-INFO:werkzeug:127.0.0.1 - - [15/Feb/2024 11:06:05] "[36mGET /images/paintings/2df8795188de91bd941352d944718192442f2cc6c64ca880_painting_Sun_Feb_11_152133_2024painting_3.png HTTP/1.1[0m" 304 -
-INFO:werkzeug:127.0.0.1 - - [15/Feb/2024 11:06:05] "[36mGET /images/paintings/2df8795188de91bd941352d944718192442f2cc6c64ca880_painting_Sun_Feb_11_152213_2024painting_6.png HTTP/1.1[0m" 304 -
-INFO:werkzeug:127.0.0.1 - - [15/Feb/2024 11:06:05] "[36mGET /images/paintings/2df8795188de91bd941352d944718192442f2cc6c64ca880_painting_Sun_Feb_11_152306_2024painting_9.png HTTP/1.1[0m" 304 -
-INFO:werkzeug:127.0.0.1 - - [15/Feb/2024 11:06:05] "[36mGET /images/paintings/693d395be67f636fd24329c26b4fd2695bb7361edba7dc18_painting_Thu_Feb_15_095827_2024nyirabyo.jpg HTTP/1.1[0m" 304 -
-INFO:werkzeug:127.0.0.1 - - [15/Feb/2024 11:06:05] "GET /get_exhibitions HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [15/Feb/2024 11:06:05] "GET /get_paintings HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [15/Feb/2024 11:06:05] "GET /get_paintings HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [15/Feb/2024 11:06:05] "GET /get_exhibitions HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [15/Feb/2024 11:06:05] "[36mGET /images/exhibitions/amagara%20niyp%20gishoro.jpg HTTP/1.1[0m" 304 -
-INFO:werkzeug:127.0.0.1 - - [15/Feb/2024 11:06:05] "[36mGET /images/paintings/2df8795188de91bd941352d944718192442f2cc6c64ca880_painting_Sun_Feb_11_152321_2024painting_10.png HTTP/1.1[0m" 304 -
-INFO:werkzeug:127.0.0.1 - - [15/Feb/2024 11:06:05] "[36mGET /images/paintings/2df8795188de91bd941352d944718192442f2cc6c64ca880_painting_Sun_Feb_11_152117_2024painting_2.png HTTP/1.1[0m" 304 -
-INFO:werkzeug:127.0.0.1 - - [15/Feb/2024 11:06:05] "[36mGET /images/paintings/2df8795188de91bd941352d944718192442f2cc6c64ca880_painting_Sun_Feb_11_152158_2024painting_5.png HTTP/1.1[0m" 304 -
-INFO:werkzeug:127.0.0.1 - - [15/Feb/2024 11:06:05] "[36mGET /images/paintings/2df8795188de91bd941352d944718192442f2cc6c64ca880_painting_Sun_Feb_11_152250_2024painting_8.png HTTP/1.1[0m" 304 -
-INFO:werkzeug:127.0.0.1 - - [15/Feb/2024 11:06:05] "[36mGET /images/paintings/2df8795188de91bd941352d944718192442f2cc6c64ca880_painting_Sun_Feb_11_152338_2024painting_11.png HTTP/1.1[0m" 304 -
-INFO:werkzeug:127.0.0.1 - - [15/Feb/2024 11:06:05] "[36mGET /images/paintings/2df8795188de91bd941352d944718192442f2cc6c64ca880_painting_Sun_Feb_11_152133_2024painting_3.png HTTP/1.1[0m" 304 -
-INFO:werkzeug:127.0.0.1 - - [15/Feb/2024 11:06:05] "[36mGET /images/paintings/2df8795188de91bd941352d944718192442f2cc6c64ca880_painting_Sun_Feb_11_152213_2024painting_6.png HTTP/1.1[0m" 304 -
-INFO:werkzeug:127.0.0.1 - - [15/Feb/2024 11:06:05] "[36mGET /images/paintings/2df8795188de91bd941352d944718192442f2cc6c64ca880_painting_Sun_Feb_11_152306_2024painting_9.png HTTP/1.1[0m" 304 -
-INFO:werkzeug:127.0.0.1 - - [15/Feb/2024 11:06:05] "[36mGET /images/paintings/693d395be67f636fd24329c26b4fd2695bb7361edba7dc18_painting_Thu_Feb_15_095827_2024nyirabyo.jpg HTTP/1.1[0m" 304 -
-INFO:werkzeug:127.0.0.1 - - [15/Feb/2024 11:06:27] "OPTIONS /get_exhibitions HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [15/Feb/2024 11:06:27] "GET /get_paintings HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [15/Feb/2024 11:06:27] "GET /get_paintings HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [15/Feb/2024 11:06:27] "GET /get_exhibitions HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [15/Feb/2024 11:06:27] "[36mGET /images/exhibitions/amagara%20niyp%20gishoro.jpg HTTP/1.1[0m" 304 -
-INFO:werkzeug:127.0.0.1 - - [15/Feb/2024 11:06:27] "[36mGET /images/paintings/2df8795188de91bd941352d944718192442f2cc6c64ca880_painting_Sun_Feb_11_152321_2024painting_10.png HTTP/1.1[0m" 304 -
-INFO:werkzeug:127.0.0.1 - - [15/Feb/2024 11:06:27] "[36mGET /images/paintings/2df8795188de91bd941352d944718192442f2cc6c64ca880_painting_Sun_Feb_11_152117_2024painting_2.png HTTP/1.1[0m" 304 -
-INFO:werkzeug:127.0.0.1 - - [15/Feb/2024 11:06:27] "GET /get_exhibitions HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [15/Feb/2024 11:06:27] "[36mGET /images/paintings/2df8795188de91bd941352d944718192442f2cc6c64ca880_painting_Sun_Feb_11_152158_2024painting_5.png HTTP/1.1[0m" 304 -
-INFO:werkzeug:127.0.0.1 - - [15/Feb/2024 11:06:27] "[36mGET /images/paintings/2df8795188de91bd941352d944718192442f2cc6c64ca880_painting_Sun_Feb_11_152250_2024painting_8.png HTTP/1.1[0m" 304 -
-INFO:werkzeug:127.0.0.1 - - [15/Feb/2024 11:06:27] "[36mGET /images/paintings/2df8795188de91bd941352d944718192442f2cc6c64ca880_painting_Sun_Feb_11_152338_2024painting_11.png HTTP/1.1[0m" 304 -
-INFO:werkzeug:127.0.0.1 - - [15/Feb/2024 11:06:27] "[36mGET /images/paintings/2df8795188de91bd941352d944718192442f2cc6c64ca880_painting_Sun_Feb_11_152133_2024painting_3.png HTTP/1.1[0m" 304 -
-INFO:werkzeug:127.0.0.1 - - [15/Feb/2024 11:06:27] "[36mGET /images/paintings/2df8795188de91bd941352d944718192442f2cc6c64ca880_painting_Sun_Feb_11_152213_2024painting_6.png HTTP/1.1[0m" 304 -
-INFO:werkzeug:127.0.0.1 - - [15/Feb/2024 11:06:27] "[36mGET /images/paintings/2df8795188de91bd941352d944718192442f2cc6c64ca880_painting_Sun_Feb_11_152306_2024painting_9.png HTTP/1.1[0m" 304 -
-INFO:werkzeug:127.0.0.1 - - [15/Feb/2024 11:06:27] "[36mGET /images/paintings/693d395be67f636fd24329c26b4fd2695bb7361edba7dc18_painting_Thu_Feb_15_095827_2024nyirabyo.jpg HTTP/1.1[0m" 304 -
-INFO:werkzeug:127.0.0.1 - - [15/Feb/2024 11:06:27] "GET /get_exhibitions HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [15/Feb/2024 11:06:27] "GET /get_paintings HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [15/Feb/2024 11:06:27] "GET /get_paintings HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [15/Feb/2024 11:06:27] "[36mGET /images/exhibitions/amagara%20niyp%20gishoro.jpg HTTP/1.1[0m" 304 -
-INFO:werkzeug:127.0.0.1 - - [15/Feb/2024 11:06:27] "GET /get_exhibitions HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [15/Feb/2024 11:06:27] "[36mGET /images/paintings/2df8795188de91bd941352d944718192442f2cc6c64ca880_painting_Sun_Feb_11_152321_2024painting_10.png HTTP/1.1[0m" 304 -
-INFO:werkzeug:127.0.0.1 - - [15/Feb/2024 11:06:27] "[36mGET /images/paintings/2df8795188de91bd941352d944718192442f2cc6c64ca880_painting_Sun_Feb_11_152117_2024painting_2.png HTTP/1.1[0m" 304 -
-INFO:werkzeug:127.0.0.1 - - [15/Feb/2024 11:06:27] "[36mGET /images/paintings/2df8795188de91bd941352d944718192442f2cc6c64ca880_painting_Sun_Feb_11_152158_2024painting_5.png HTTP/1.1[0m" 304 -
-INFO:werkzeug:127.0.0.1 - - [15/Feb/2024 11:06:27] "[36mGET /images/paintings/2df8795188de91bd941352d944718192442f2cc6c64ca880_painting_Sun_Feb_11_152338_2024painting_11.png HTTP/1.1[0m" 304 -
-INFO:werkzeug:127.0.0.1 - - [15/Feb/2024 11:06:27] "[36mGET /images/paintings/2df8795188de91bd941352d944718192442f2cc6c64ca880_painting_Sun_Feb_11_152250_2024painting_8.png HTTP/1.1[0m" 304 -
-INFO:werkzeug:127.0.0.1 - - [15/Feb/2024 11:06:27] "[36mGET /images/paintings/2df8795188de91bd941352d944718192442f2cc6c64ca880_painting_Sun_Feb_11_152133_2024painting_3.png HTTP/1.1[0m" 304 -
-INFO:werkzeug:127.0.0.1 - - [15/Feb/2024 11:06:27] "[36mGET /images/paintings/2df8795188de91bd941352d944718192442f2cc6c64ca880_painting_Sun_Feb_11_152213_2024painting_6.png HTTP/1.1[0m" 304 -
-INFO:werkzeug:127.0.0.1 - - [15/Feb/2024 11:06:27] "[36mGET /images/paintings/2df8795188de91bd941352d944718192442f2cc6c64ca880_painting_Sun_Feb_11_152306_2024painting_9.png HTTP/1.1[0m" 304 -
-INFO:werkzeug:127.0.0.1 - - [15/Feb/2024 11:06:27] "[36mGET /images/paintings/693d395be67f636fd24329c26b4fd2695bb7361edba7dc18_painting_Thu_Feb_15_095827_2024nyirabyo.jpg HTTP/1.1[0m" 304 -
-INFO:werkzeug:127.0.0.1 - - [15/Feb/2024 11:06:30] "GET /get_exhibitions HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [15/Feb/2024 11:06:30] "GET /get_paintings HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [15/Feb/2024 11:06:30] "GET /get_paintings HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [15/Feb/2024 11:06:30] "[36mGET /images/exhibitions/amagara%20niyp%20gishoro.jpg HTTP/1.1[0m" 304 -
-INFO:werkzeug:127.0.0.1 - - [15/Feb/2024 11:06:30] "[36mGET /images/paintings/2df8795188de91bd941352d944718192442f2cc6c64ca880_painting_Sun_Feb_11_152321_2024painting_10.png HTTP/1.1[0m" 304 -
-INFO:werkzeug:127.0.0.1 - - [15/Feb/2024 11:06:30] "[36mGET /images/paintings/2df8795188de91bd941352d944718192442f2cc6c64ca880_painting_Sun_Feb_11_152117_2024painting_2.png HTTP/1.1[0m" 304 -
-INFO:werkzeug:127.0.0.1 - - [15/Feb/2024 11:06:30] "GET /get_exhibitions HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [15/Feb/2024 11:06:30] "[36mGET /images/paintings/2df8795188de91bd941352d944718192442f2cc6c64ca880_painting_Sun_Feb_11_152158_2024painting_5.png HTTP/1.1[0m" 304 -
-INFO:werkzeug:127.0.0.1 - - [15/Feb/2024 11:06:30] "[36mGET /images/paintings/2df8795188de91bd941352d944718192442f2cc6c64ca880_painting_Sun_Feb_11_152250_2024painting_8.png HTTP/1.1[0m" 304 -
-INFO:werkzeug:127.0.0.1 - - [15/Feb/2024 11:06:30] "[36mGET /images/paintings/2df8795188de91bd941352d944718192442f2cc6c64ca880_painting_Sun_Feb_11_152338_2024painting_11.png HTTP/1.1[0m" 304 -
-INFO:werkzeug:127.0.0.1 - - [15/Feb/2024 11:06:30] "[36mGET /images/paintings/2df8795188de91bd941352d944718192442f2cc6c64ca880_painting_Sun_Feb_11_152133_2024painting_3.png HTTP/1.1[0m" 304 -
-INFO:werkzeug:127.0.0.1 - - [15/Feb/2024 11:06:30] "[36mGET /images/paintings/2df8795188de91bd941352d944718192442f2cc6c64ca880_painting_Sun_Feb_11_152213_2024painting_6.png HTTP/1.1[0m" 304 -
-INFO:werkzeug:127.0.0.1 - - [15/Feb/2024 11:06:30] "[36mGET /images/paintings/2df8795188de91bd941352d944718192442f2cc6c64ca880_painting_Sun_Feb_11_152306_2024painting_9.png HTTP/1.1[0m" 304 -
-INFO:werkzeug:127.0.0.1 - - [15/Feb/2024 11:06:30] "GET /images/paintings/693d395be67f636fd24329c26b4fd2695bb7361edba7dc18_painting_Thu_Feb_15_095827_2024nyirabyo.jpg HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [15/Feb/2024 11:06:31] "GET /get_exhibitions HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [15/Feb/2024 11:06:31] "GET /get_paintings HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [15/Feb/2024 11:06:31] "GET /get_paintings HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [15/Feb/2024 11:06:31] "[36mGET /images/exhibitions/amagara%20niyp%20gishoro.jpg HTTP/1.1[0m" 304 -
-INFO:werkzeug:127.0.0.1 - - [15/Feb/2024 11:06:31] "GET /get_exhibitions HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [15/Feb/2024 11:06:31] "[36mGET /images/paintings/2df8795188de91bd941352d944718192442f2cc6c64ca880_painting_Sun_Feb_11_152321_2024painting_10.png HTTP/1.1[0m" 304 -
-INFO:werkzeug:127.0.0.1 - - [15/Feb/2024 11:06:31] "[36mGET /images/paintings/2df8795188de91bd941352d944718192442f2cc6c64ca880_painting_Sun_Feb_11_152117_2024painting_2.png HTTP/1.1[0m" 304 -
-INFO:werkzeug:127.0.0.1 - - [15/Feb/2024 11:06:31] "[36mGET /images/paintings/2df8795188de91bd941352d944718192442f2cc6c64ca880_painting_Sun_Feb_11_152158_2024painting_5.png HTTP/1.1[0m" 304 -
-INFO:werkzeug:127.0.0.1 - - [15/Feb/2024 11:06:31] "[36mGET /images/paintings/2df8795188de91bd941352d944718192442f2cc6c64ca880_painting_Sun_Feb_11_152250_2024painting_8.png HTTP/1.1[0m" 304 -
-INFO:werkzeug:127.0.0.1 - - [15/Feb/2024 11:06:31] "[36mGET /images/paintings/2df8795188de91bd941352d944718192442f2cc6c64ca880_painting_Sun_Feb_11_152338_2024painting_11.png HTTP/1.1[0m" 304 -
-INFO:werkzeug:127.0.0.1 - - [15/Feb/2024 11:06:31] "[36mGET /images/paintings/2df8795188de91bd941352d944718192442f2cc6c64ca880_painting_Sun_Feb_11_152133_2024painting_3.png HTTP/1.1[0m" 304 -
-INFO:werkzeug:127.0.0.1 - - [15/Feb/2024 11:06:31] "[36mGET /images/paintings/2df8795188de91bd941352d944718192442f2cc6c64ca880_painting_Sun_Feb_11_152213_2024painting_6.png HTTP/1.1[0m" 304 -
-INFO:werkzeug:127.0.0.1 - - [15/Feb/2024 11:06:31] "[36mGET /images/paintings/2df8795188de91bd941352d944718192442f2cc6c64ca880_painting_Sun_Feb_11_152306_2024painting_9.png HTTP/1.1[0m" 304 -
-INFO:werkzeug:127.0.0.1 - - [15/Feb/2024 11:06:31] "[36mGET /images/paintings/693d395be67f636fd24329c26b4fd2695bb7361edba7dc18_painting_Thu_Feb_15_095827_2024nyirabyo.jpg HTTP/1.1[0m" 304 -
-INFO:werkzeug:127.0.0.1 - - [15/Feb/2024 11:06:32] "OPTIONS /get_exhibitions HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [15/Feb/2024 11:06:32] "GET /get_paintings HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [15/Feb/2024 11:06:32] "GET /get_paintings HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [15/Feb/2024 11:06:32] "GET /get_exhibitions HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [15/Feb/2024 11:06:32] "[36mGET /images/exhibitions/amagara%20niyp%20gishoro.jpg HTTP/1.1[0m" 304 -
-INFO:werkzeug:127.0.0.1 - - [15/Feb/2024 11:06:32] "[36mGET /images/paintings/2df8795188de91bd941352d944718192442f2cc6c64ca880_painting_Sun_Feb_11_152321_2024painting_10.png HTTP/1.1[0m" 304 -
-INFO:werkzeug:127.0.0.1 - - [15/Feb/2024 11:06:32] "[36mGET /images/paintings/2df8795188de91bd941352d944718192442f2cc6c64ca880_painting_Sun_Feb_11_152117_2024painting_2.png HTTP/1.1[0m" 304 -
-INFO:werkzeug:127.0.0.1 - - [15/Feb/2024 11:06:32] "[36mGET /images/paintings/2df8795188de91bd941352d944718192442f2cc6c64ca880_painting_Sun_Feb_11_152158_2024painting_5.png HTTP/1.1[0m" 304 -
-INFO:werkzeug:127.0.0.1 - - [15/Feb/2024 11:06:32] "GET /get_exhibitions HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [15/Feb/2024 11:06:32] "[36mGET /images/paintings/2df8795188de91bd941352d944718192442f2cc6c64ca880_painting_Sun_Feb_11_152250_2024painting_8.png HTTP/1.1[0m" 304 -
-INFO:werkzeug:127.0.0.1 - - [15/Feb/2024 11:06:32] "[36mGET /images/paintings/2df8795188de91bd941352d944718192442f2cc6c64ca880_painting_Sun_Feb_11_152338_2024painting_11.png HTTP/1.1[0m" 304 -
-INFO:werkzeug:127.0.0.1 - - [15/Feb/2024 11:06:32] "[36mGET /images/paintings/2df8795188de91bd941352d944718192442f2cc6c64ca880_painting_Sun_Feb_11_152133_2024painting_3.png HTTP/1.1[0m" 304 -
-INFO:werkzeug:127.0.0.1 - - [15/Feb/2024 11:06:32] "[36mGET /images/paintings/2df8795188de91bd941352d944718192442f2cc6c64ca880_painting_Sun_Feb_11_152213_2024painting_6.png HTTP/1.1[0m" 304 -
-INFO:werkzeug:127.0.0.1 - - [15/Feb/2024 11:06:32] "[36mGET /images/paintings/2df8795188de91bd941352d944718192442f2cc6c64ca880_painting_Sun_Feb_11_152306_2024painting_9.png HTTP/1.1[0m" 304 -
-INFO:werkzeug:127.0.0.1 - - [15/Feb/2024 11:06:32] "GET /images/paintings/693d395be67f636fd24329c26b4fd2695bb7361edba7dc18_painting_Thu_Feb_15_095827_2024nyirabyo.jpg HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [15/Feb/2024 11:06:33] "GET /get_exhibitions HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [15/Feb/2024 11:06:33] "GET /get_paintings HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [15/Feb/2024 11:06:33] "GET /get_paintings HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [15/Feb/2024 11:06:33] "[36mGET /images/exhibitions/amagara%20niyp%20gishoro.jpg HTTP/1.1[0m" 304 -
-INFO:werkzeug:127.0.0.1 - - [15/Feb/2024 11:06:33] "[36mGET /images/paintings/2df8795188de91bd941352d944718192442f2cc6c64ca880_painting_Sun_Feb_11_152321_2024painting_10.png HTTP/1.1[0m" 304 -
-INFO:werkzeug:127.0.0.1 - - [15/Feb/2024 11:06:33] "[36mGET /images/paintings/2df8795188de91bd941352d944718192442f2cc6c64ca880_painting_Sun_Feb_11_152117_2024painting_2.png HTTP/1.1[0m" 304 -
-INFO:werkzeug:127.0.0.1 - - [15/Feb/2024 11:06:33] "GET /get_exhibitions HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [15/Feb/2024 11:06:33] "[36mGET /images/paintings/2df8795188de91bd941352d944718192442f2cc6c64ca880_painting_Sun_Feb_11_152158_2024painting_5.png HTTP/1.1[0m" 304 -
-INFO:werkzeug:127.0.0.1 - - [15/Feb/2024 11:06:33] "[36mGET /images/paintings/2df8795188de91bd941352d944718192442f2cc6c64ca880_painting_Sun_Feb_11_152250_2024painting_8.png HTTP/1.1[0m" 304 -
-INFO:werkzeug:127.0.0.1 - - [15/Feb/2024 11:06:33] "[36mGET /images/paintings/2df8795188de91bd941352d944718192442f2cc6c64ca880_painting_Sun_Feb_11_152338_2024painting_11.png HTTP/1.1[0m" 304 -
-INFO:werkzeug:127.0.0.1 - - [15/Feb/2024 11:06:33] "[36mGET /images/paintings/2df8795188de91bd941352d944718192442f2cc6c64ca880_painting_Sun_Feb_11_152133_2024painting_3.png HTTP/1.1[0m" 304 -
-INFO:werkzeug:127.0.0.1 - - [15/Feb/2024 11:06:33] "[36mGET /images/paintings/2df8795188de91bd941352d944718192442f2cc6c64ca880_painting_Sun_Feb_11_152213_2024painting_6.png HTTP/1.1[0m" 304 -
-INFO:werkzeug:127.0.0.1 - - [15/Feb/2024 11:06:33] "[36mGET /images/paintings/2df8795188de91bd941352d944718192442f2cc6c64ca880_painting_Sun_Feb_11_152306_2024painting_9.png HTTP/1.1[0m" 304 -
-INFO:werkzeug:127.0.0.1 - - [15/Feb/2024 11:06:33] "[36mGET /images/paintings/693d395be67f636fd24329c26b4fd2695bb7361edba7dc18_painting_Thu_Feb_15_095827_2024nyirabyo.jpg HTTP/1.1[0m" 304 -
-INFO:werkzeug:127.0.0.1 - - [15/Feb/2024 11:06:34] "GET /get_exhibitions HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [15/Feb/2024 11:06:34] "GET /get_paintings HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [15/Feb/2024 11:06:34] "GET /get_paintings HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [15/Feb/2024 11:06:34] "[36mGET /images/exhibitions/amagara%20niyp%20gishoro.jpg HTTP/1.1[0m" 304 -
-INFO:werkzeug:127.0.0.1 - - [15/Feb/2024 11:06:34] "GET /get_exhibitions HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [15/Feb/2024 11:06:34] "[36mGET /images/paintings/2df8795188de91bd941352d944718192442f2cc6c64ca880_painting_Sun_Feb_11_152321_2024painting_10.png HTTP/1.1[0m" 304 -
-INFO:werkzeug:127.0.0.1 - - [15/Feb/2024 11:06:34] "[36mGET /images/paintings/2df8795188de91bd941352d944718192442f2cc6c64ca880_painting_Sun_Feb_11_152117_2024painting_2.png HTTP/1.1[0m" 304 -
-INFO:werkzeug:127.0.0.1 - - [15/Feb/2024 11:06:34] "[36mGET /images/paintings/2df8795188de91bd941352d944718192442f2cc6c64ca880_painting_Sun_Feb_11_152158_2024painting_5.png HTTP/1.1[0m" 304 -
-INFO:werkzeug:127.0.0.1 - - [15/Feb/2024 11:06:34] "[36mGET /images/paintings/2df8795188de91bd941352d944718192442f2cc6c64ca880_painting_Sun_Feb_11_152250_2024painting_8.png HTTP/1.1[0m" 304 -
-INFO:werkzeug:127.0.0.1 - - [15/Feb/2024 11:06:34] "[36mGET /images/paintings/2df8795188de91bd941352d944718192442f2cc6c64ca880_painting_Sun_Feb_11_152338_2024painting_11.png HTTP/1.1[0m" 304 -
-INFO:werkzeug:127.0.0.1 - - [15/Feb/2024 11:06:34] "[36mGET /images/paintings/2df8795188de91bd941352d944718192442f2cc6c64ca880_painting_Sun_Feb_11_152133_2024painting_3.png HTTP/1.1[0m" 304 -
-INFO:werkzeug:127.0.0.1 - - [15/Feb/2024 11:06:34] "[36mGET /images/paintings/2df8795188de91bd941352d944718192442f2cc6c64ca880_painting_Sun_Feb_11_152213_2024painting_6.png HTTP/1.1[0m" 304 -
-INFO:werkzeug:127.0.0.1 - - [15/Feb/2024 11:06:34] "[36mGET /images/paintings/2df8795188de91bd941352d944718192442f2cc6c64ca880_painting_Sun_Feb_11_152306_2024painting_9.png HTTP/1.1[0m" 304 -
-INFO:werkzeug:127.0.0.1 - - [15/Feb/2024 11:06:34] "[36mGET /images/paintings/693d395be67f636fd24329c26b4fd2695bb7361edba7dc18_painting_Thu_Feb_15_095827_2024nyirabyo.jpg HTTP/1.1[0m" 304 -
-INFO:werkzeug:127.0.0.1 - - [15/Feb/2024 11:06:36] "GET /get_exhibitions HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [15/Feb/2024 11:06:36] "GET /get_paintings HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [15/Feb/2024 11:06:36] "GET /get_paintings HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [15/Feb/2024 11:06:36] "GET /get_exhibitions HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [15/Feb/2024 11:06:36] "[36mGET /images/exhibitions/amagara%20niyp%20gishoro.jpg HTTP/1.1[0m" 304 -
-INFO:werkzeug:127.0.0.1 - - [15/Feb/2024 11:06:36] "[36mGET /images/paintings/2df8795188de91bd941352d944718192442f2cc6c64ca880_painting_Sun_Feb_11_152321_2024painting_10.png HTTP/1.1[0m" 304 -
-INFO:werkzeug:127.0.0.1 - - [15/Feb/2024 11:06:36] "[36mGET /images/paintings/2df8795188de91bd941352d944718192442f2cc6c64ca880_painting_Sun_Feb_11_152117_2024painting_2.png HTTP/1.1[0m" 304 -
-INFO:werkzeug:127.0.0.1 - - [15/Feb/2024 11:06:36] "[36mGET /images/paintings/2df8795188de91bd941352d944718192442f2cc6c64ca880_painting_Sun_Feb_11_152158_2024painting_5.png HTTP/1.1[0m" 304 -
-INFO:werkzeug:127.0.0.1 - - [15/Feb/2024 11:06:36] "[36mGET /images/paintings/2df8795188de91bd941352d944718192442f2cc6c64ca880_painting_Sun_Feb_11_152250_2024painting_8.png HTTP/1.1[0m" 304 -
-INFO:werkzeug:127.0.0.1 - - [15/Feb/2024 11:06:36] "[36mGET /images/paintings/2df8795188de91bd941352d944718192442f2cc6c64ca880_painting_Sun_Feb_11_152338_2024painting_11.png HTTP/1.1[0m" 304 -
-INFO:werkzeug:127.0.0.1 - - [15/Feb/2024 11:06:36] "[36mGET /images/paintings/2df8795188de91bd941352d944718192442f2cc6c64ca880_painting_Sun_Feb_11_152133_2024painting_3.png HTTP/1.1[0m" 304 -
-INFO:werkzeug:127.0.0.1 - - [15/Feb/2024 11:06:36] "[36mGET /images/paintings/2df8795188de91bd941352d944718192442f2cc6c64ca880_painting_Sun_Feb_11_152213_2024painting_6.png HTTP/1.1[0m" 304 -
-INFO:werkzeug:127.0.0.1 - - [15/Feb/2024 11:06:36] "[36mGET /images/paintings/2df8795188de91bd941352d944718192442f2cc6c64ca880_painting_Sun_Feb_11_152306_2024painting_9.png HTTP/1.1[0m" 304 -
-INFO:werkzeug:127.0.0.1 - - [15/Feb/2024 11:06:36] "[36mGET /images/paintings/693d395be67f636fd24329c26b4fd2695bb7361edba7dc18_painting_Thu_Feb_15_095827_2024nyirabyo.jpg HTTP/1.1[0m" 304 -
-INFO:werkzeug:127.0.0.1 - - [15/Feb/2024 11:06:38] "OPTIONS /get_exhibitions HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [15/Feb/2024 11:06:38] "GET /get_paintings HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [15/Feb/2024 11:06:38] "GET /get_exhibitions HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [15/Feb/2024 11:06:38] "GET /get_paintings HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [15/Feb/2024 11:06:38] "GET /get_exhibitions HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [15/Feb/2024 11:06:39] "[36mGET /images/exhibitions/amagara%20niyp%20gishoro.jpg HTTP/1.1[0m" 304 -
-INFO:werkzeug:127.0.0.1 - - [15/Feb/2024 11:06:39] "[36mGET /images/paintings/2df8795188de91bd941352d944718192442f2cc6c64ca880_painting_Sun_Feb_11_152321_2024painting_10.png HTTP/1.1[0m" 304 -
-INFO:werkzeug:127.0.0.1 - - [15/Feb/2024 11:06:39] "[36mGET /images/paintings/2df8795188de91bd941352d944718192442f2cc6c64ca880_painting_Sun_Feb_11_152117_2024painting_2.png HTTP/1.1[0m" 304 -
-INFO:werkzeug:127.0.0.1 - - [15/Feb/2024 11:06:39] "[36mGET /images/paintings/2df8795188de91bd941352d944718192442f2cc6c64ca880_painting_Sun_Feb_11_152158_2024painting_5.png HTTP/1.1[0m" 304 -
-INFO:werkzeug:127.0.0.1 - - [15/Feb/2024 11:06:39] "[36mGET /images/paintings/2df8795188de91bd941352d944718192442f2cc6c64ca880_painting_Sun_Feb_11_152250_2024painting_8.png HTTP/1.1[0m" 304 -
-INFO:werkzeug:127.0.0.1 - - [15/Feb/2024 11:06:39] "[36mGET /images/paintings/2df8795188de91bd941352d944718192442f2cc6c64ca880_painting_Sun_Feb_11_152338_2024painting_11.png HTTP/1.1[0m" 304 -
-INFO:werkzeug:127.0.0.1 - - [15/Feb/2024 11:06:39] "[36mGET /images/paintings/2df8795188de91bd941352d944718192442f2cc6c64ca880_painting_Sun_Feb_11_152133_2024painting_3.png HTTP/1.1[0m" 304 -
-INFO:werkzeug:127.0.0.1 - - [15/Feb/2024 11:06:39] "[36mGET /images/paintings/2df8795188de91bd941352d944718192442f2cc6c64ca880_painting_Sun_Feb_11_152213_2024painting_6.png HTTP/1.1[0m" 304 -
-INFO:werkzeug:127.0.0.1 - - [15/Feb/2024 11:06:39] "[36mGET /images/paintings/2df8795188de91bd941352d944718192442f2cc6c64ca880_painting_Sun_Feb_11_152306_2024painting_9.png HTTP/1.1[0m" 304 -
-INFO:werkzeug:127.0.0.1 - - [15/Feb/2024 11:06:39] "GET /images/paintings/693d395be67f636fd24329c26b4fd2695bb7361edba7dc18_painting_Thu_Feb_15_095827_2024nyirabyo.jpg HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [15/Feb/2024 11:07:45] "POST /custom-login HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [15/Feb/2024 11:07:58] "OPTIONS /get_customers HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [15/Feb/2024 11:07:58] "GET /get_customers HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [15/Feb/2024 11:08:46] "OPTIONS /custom-admin-logout HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [15/Feb/2024 11:08:47] "GET /custom-admin-logout HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [15/Feb/2024 11:12:17] "POST /custom-login HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [15/Feb/2024 11:12:26] "OPTIONS /delete_painting/840faacf-80ca-4aca-9a5d-d964de35b0e1 HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [15/Feb/2024 11:12:26] "DELETE /delete_painting/840faacf-80ca-4aca-9a5d-d964de35b0e1 HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [15/Feb/2024 11:13:10] "OPTIONS /get_exhibitions HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [15/Feb/2024 11:13:10] "GET /get_paintings HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [15/Feb/2024 11:13:10] "GET /get_paintings HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [15/Feb/2024 11:13:10] "GET /get_exhibitions HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [15/Feb/2024 11:13:10] "GET /get_exhibitions HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [15/Feb/2024 11:13:17] "OPTIONS /get_exhibitions HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [15/Feb/2024 11:13:17] "GET /get_paintings HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [15/Feb/2024 11:13:17] "GET /get_exhibitions HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [15/Feb/2024 11:13:17] "[36mGET /images/exhibitions/amagara%20niyp%20gishoro.jpg HTTP/1.1[0m" 304 -
-INFO:werkzeug:127.0.0.1 - - [15/Feb/2024 11:13:17] "GET /get_exhibitions HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [15/Feb/2024 11:13:17] "GET /get_paintings HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [15/Feb/2024 11:13:18] "[36mGET /images/paintings/693d395be67f636fd24329c26b4fd2695bb7361edba7dc18_painting_Thu_Feb_15_095827_2024nyirabyo.jpg HTTP/1.1[0m" 304 -
-INFO:werkzeug:127.0.0.1 - - [15/Feb/2024 11:13:18] "[36mGET /images/paintings/2df8795188de91bd941352d944718192442f2cc6c64ca880_painting_Sun_Feb_11_152117_2024painting_2.png HTTP/1.1[0m" 304 -
-INFO:werkzeug:127.0.0.1 - - [15/Feb/2024 11:13:18] "[36mGET /images/paintings/2df8795188de91bd941352d944718192442f2cc6c64ca880_painting_Sun_Feb_11_152158_2024painting_5.png HTTP/1.1[0m" 304 -
-INFO:werkzeug:127.0.0.1 - - [15/Feb/2024 11:13:18] "[36mGET /images/paintings/2df8795188de91bd941352d944718192442f2cc6c64ca880_painting_Sun_Feb_11_152250_2024painting_8.png HTTP/1.1[0m" 304 -
-INFO:werkzeug:127.0.0.1 - - [15/Feb/2024 11:13:18] "[36mGET /images/paintings/2df8795188de91bd941352d944718192442f2cc6c64ca880_painting_Sun_Feb_11_152338_2024painting_11.png HTTP/1.1[0m" 304 -
-INFO:werkzeug:127.0.0.1 - - [15/Feb/2024 11:13:18] "[36mGET /images/paintings/2df8795188de91bd941352d944718192442f2cc6c64ca880_painting_Sun_Feb_11_152133_2024painting_3.png HTTP/1.1[0m" 304 -
-INFO:werkzeug:127.0.0.1 - - [15/Feb/2024 11:13:18] "[36mGET /images/paintings/2df8795188de91bd941352d944718192442f2cc6c64ca880_painting_Sun_Feb_11_152213_2024painting_6.png HTTP/1.1[0m" 304 -
-INFO:werkzeug:127.0.0.1 - - [15/Feb/2024 11:13:18] "[36mGET /images/paintings/2df8795188de91bd941352d944718192442f2cc6c64ca880_painting_Sun_Feb_11_152306_2024painting_9.png HTTP/1.1[0m" 304 -
-INFO:werkzeug:127.0.0.1 - - [15/Feb/2024 11:13:33] "OPTIONS /custom-admin-logout HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [15/Feb/2024 11:13:34] "GET /custom-admin-logout HTTP/1.1" 200 -
+INFO:werkzeug: * Debugger PIN: 177-396-332
+INFO:werkzeug:127.0.0.1 - - [16/Feb/2024 12:27:52] "POST /custom-login HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [16/Feb/2024 12:27:57] "OPTIONS /custom-admin-logout HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [16/Feb/2024 12:27:57] "GET /custom-admin-logout HTTP/1.1" 200 -
+INFO:werkzeug: * Detected change in 'C:\\Users\\IMPANO\\Desktop\\painting_ecommerce_website\\backend\\payment\\__init__.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 177-396-332
+INFO:werkzeug: * Detected change in 'C:\\Users\\IMPANO\\Desktop\\painting_ecommerce_website\\backend\\app.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 177-396-332
+INFO:werkzeug: * Detected change in 'C:\\Users\\IMPANO\\Desktop\\painting_ecommerce_website\\backend\\payment\\payment.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 177-396-332
+INFO:werkzeug: * Detected change in 'C:\\Users\\IMPANO\\Desktop\\painting_ecommerce_website\\backend\\app.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 177-396-332
+INFO:werkzeug: * Detected change in 'C:\\Users\\IMPANO\\Desktop\\painting_ecommerce_website\\backend\\payment\\paypal.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 177-396-332
+INFO:werkzeug: * Detected change in 'C:\\Users\\IMPANO\\Desktop\\painting_ecommerce_website\\backend\\db\\dashboard.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 177-396-332
+INFO:werkzeug: * Detected change in 'C:\\Users\\IMPANO\\Desktop\\painting_ecommerce_website\\backend\\db\\dashboard.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 177-396-332
+INFO:werkzeug: * Detected change in 'C:\\Users\\IMPANO\\Desktop\\painting_ecommerce_website\\backend\\db\\dashboard.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 177-396-332
+INFO:werkzeug: * Detected change in 'C:\\Users\\IMPANO\\Desktop\\painting_ecommerce_website\\backend\\db\\dashboard.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 177-396-332
+INFO:werkzeug: * Detected change in 'C:\\Users\\IMPANO\\Desktop\\painting_ecommerce_website\\backend\\send_email\\customer.py', reloading
+INFO:werkzeug: * Restarting with stat
 INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
  * Running on all addresses (0.0.0.0)
  * Running on http://127.0.0.1:5000
- * Running on http://192.168.1.13:5000
+ * Running on http://127.0.0.1:5000
 INFO:werkzeug:[33mPress CTRL+C to quit[0m
 INFO:werkzeug: * Restarting with stat
 WARNING:werkzeug: * Debugger is active!
-INFO:werkzeug: * Debugger PIN: 362-263-189
-INFO:werkzeug:127.0.0.1 - - [15/Feb/2024 12:19:43] "OPTIONS /get_exhibitions HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [15/Feb/2024 12:19:43] "GET /get_exhibitions HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [15/Feb/2024 12:19:43] "GET /get_paintings HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [15/Feb/2024 12:19:43] "GET /get_paintings HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [15/Feb/2024 12:19:43] "GET /get_exhibitions HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [15/Feb/2024 12:19:43] "[36mGET /images/exhibitions/amagara%20niyp%20gishoro.jpg HTTP/1.1[0m" 304 -
-INFO:werkzeug:127.0.0.1 - - [15/Feb/2024 12:19:43] "[36mGET /images/paintings/2df8795188de91bd941352d944718192442f2cc6c64ca880_painting_Sun_Feb_11_152133_2024painting_3.png HTTP/1.1[0m" 304 -
-INFO:werkzeug:127.0.0.1 - - [15/Feb/2024 12:19:43] "[36mGET /images/exhibitions/amagara%20niyp%20gishoro.jpg HTTP/1.1[0m" 304 -
-INFO:werkzeug:127.0.0.1 - - [15/Feb/2024 12:19:43] "[36mGET /images/paintings/2df8795188de91bd941352d944718192442f2cc6c64ca880_painting_Sun_Feb_11_152158_2024painting_5.png HTTP/1.1[0m" 304 -
-INFO:werkzeug:127.0.0.1 - - [15/Feb/2024 12:19:43] "[36mGET /images/paintings/2df8795188de91bd941352d944718192442f2cc6c64ca880_painting_Sun_Feb_11_152213_2024painting_6.png HTTP/1.1[0m" 304 -
-INFO:werkzeug:127.0.0.1 - - [15/Feb/2024 12:19:43] "[36mGET /images/paintings/2df8795188de91bd941352d944718192442f2cc6c64ca880_painting_Sun_Feb_11_152117_2024painting_2.png HTTP/1.1[0m" 304 -
-INFO:werkzeug:127.0.0.1 - - [15/Feb/2024 12:19:43] "[36mGET /images/paintings/2df8795188de91bd941352d944718192442f2cc6c64ca880_painting_Sun_Feb_11_152306_2024painting_9.png HTTP/1.1[0m" 304 -
-INFO:werkzeug:127.0.0.1 - - [15/Feb/2024 12:19:43] "[36mGET /images/paintings/2df8795188de91bd941352d944718192442f2cc6c64ca880_painting_Sun_Feb_11_152250_2024painting_8.png HTTP/1.1[0m" 304 -
-INFO:werkzeug:127.0.0.1 - - [15/Feb/2024 12:19:43] "[36mGET /images/paintings/693d395be67f636fd24329c26b4fd2695bb7361edba7dc18_painting_Thu_Feb_15_095827_2024nyirabyo.jpg HTTP/1.1[0m" 304 -
-INFO:werkzeug:127.0.0.1 - - [15/Feb/2024 12:19:43] "[36mGET /images/paintings/2df8795188de91bd941352d944718192442f2cc6c64ca880_painting_Sun_Feb_11_152338_2024painting_11.png HTTP/1.1[0m" 304 -
-INFO:werkzeug:127.0.0.1 - - [15/Feb/2024 12:20:02] "OPTIONS /get_exhibitions HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [15/Feb/2024 12:20:02] "OPTIONS /get_exhibitions HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [15/Feb/2024 12:21:17] "OPTIONS /get_exhibitions HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [15/Feb/2024 12:21:17] "OPTIONS /get_exhibitions HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [15/Feb/2024 12:44:43] "OPTIONS /get_exhibitions HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [15/Feb/2024 12:44:43] "OPTIONS /get_exhibitions HTTP/1.1" 200 -
-INFO:werkzeug: * Detected change in 'C:\\Users\\IMPANO\\Desktop\\painting_ecommerce_website\\backend\\db\\__init__.py', reloading
+INFO:werkzeug: * Debugger PIN: 177-396-332
+INFO:werkzeug:127.0.0.1 - - [16/Feb/2024 13:14:29] "POST /custom-login HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [16/Feb/2024 13:14:35] "[36mGET /uploads/exhibitions/amagara_niyp_gishoro.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
 INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 177-396-332
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 177-396-332

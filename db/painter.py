@@ -1,19 +1,16 @@
-import psycopg2
-import contextlib
-from psycopg2 import sql
-from flask import current_app
 from . import get_db
+import contextlib
+import psycopg2
+from psycopg2 import sql
 
 
 def add_new_painter(painter):
- 
+
     with get_db() as connection:
         with contextlib.closing(connection.cursor()) as cursor:
             cursor.execute("SET search_path TO public")
             cursor.execute("BEGIN")
-            stmt = (
-                "INSERT INTO painters (id,username,email,phone, picture, password) "
-            )
+            stmt = "INSERT INTO painters (id,username,email,phone, picture, password) "
             stmt += "VALUES ({0}, {1}, {2},{3},{4},{5})"
             query = sql.SQL(stmt).format(
                 sql.Literal(painter.get("id")),
@@ -25,7 +22,6 @@ def add_new_painter(painter):
             )
             cursor.execute(query)
             cursor.execute("COMMIT")
-     
 
 
 def get_painter(id):
@@ -77,7 +73,10 @@ def delete_painter(id):
             cursor.execute("SET search_path TO public")
             cursor.execute("BEGIN")
             stmt = "DELETE FROM painters "
-            stmt += "WHERE id ={0}"
+            stmt += "WHERE id ={0} "
+            stmt += "RETURNING id, username,email,phone, picture, password,role"
             query = sql.SQL(stmt).format(sql.Literal(id))
             cursor.execute(query)
+            deleted_painter = cursor.fetchall()
             cursor.execute("COMMIT")
+            return deleted_painter

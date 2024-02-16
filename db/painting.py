@@ -1,8 +1,8 @@
-import contextlib
-from psycopg2 import sql
 from . import get_db
-import time
 from auth.UserAuth import custom_login_required
+from psycopg2 import sql
+import contextlib
+import time
 
 
 def add_new_painting(painting):
@@ -59,10 +59,13 @@ def delete_painting(id, owner):
             cursor.execute("SET search_path TO public")
             stmt = " BEGIN ;"
             stmt += "DELETE FROM paintings "
-            stmt += "WHERE g_id={0}; "
-            stmt += "COMMIT "
+            stmt += "WHERE g_id={0} "
+            stmt += "RETURNING g_id,g_name, g_category, g_owner, g_created, g_image;"
             query = sql.SQL(stmt).format(sql.Literal(id), sql.Literal(owner))
             cursor.execute(query)
+            deleted_painting = cursor.fetchall()
+            cursor.execute("COMMIT")
+            return deleted_painting
 
 
 def like(painting_id):

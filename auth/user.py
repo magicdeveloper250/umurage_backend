@@ -1,6 +1,5 @@
-from flask_login import UserMixin
-
 from db import painter as database
+from flask_login import UserMixin
 
 
 class User(UserMixin):
