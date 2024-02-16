@@ -232,3 +232,312 @@ INFO:werkzeug:[33mPress CTRL+C to quit[0m
 INFO:werkzeug: * Restarting with stat
 WARNING:werkzeug: * Debugger is active!
 INFO:werkzeug: * Debugger PIN: 177-396-332
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 177-396-332
+INFO:werkzeug:127.0.0.1 - - [16/Feb/2024 14:06:52] "OPTIONS /get_exhibitions HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [16/Feb/2024 14:06:52] "GET /get_exhibitions HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [16/Feb/2024 14:06:52] "GET /get_paintings HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [16/Feb/2024 14:06:52] "GET /get_exhibitions HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [16/Feb/2024 14:06:52] "GET /get_paintings HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [16/Feb/2024 14:06:55] "GET /get_exhibitions HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [16/Feb/2024 14:06:55] "GET /get_paintings HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [16/Feb/2024 14:06:55] "GET /get_paintings HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [16/Feb/2024 14:06:55] "OPTIONS /get_exhibition_paintings/6f145301-c822-4902-a6e2-c9bc02b5b962 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [16/Feb/2024 14:06:55] "GET /get_exhibition_paintings/6f145301-c822-4902-a6e2-c9bc02b5b962 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [16/Feb/2024 14:06:55] "GET /get_exhibitions HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [16/Feb/2024 14:06:55] "[35m[1mGET /uploads/exhibition_paintings/Amagara%20niyo%20gishoro/Amagara_niyo_gishoro_mmmmmmmmmm_nyirabyo.jpg?clientId=c7c95a37-edba-4929-8880-b6006760d1b1&exId=6f145301-c822-4902-a6e2-c9bc02b5b962 HTTP/1.1[0m" 500 -
+INFO:werkzeug:127.0.0.1 - - [16/Feb/2024 14:06:55] "GET /get_exhibition_paintings/6f145301-c822-4902-a6e2-c9bc02b5b962 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [16/Feb/2024 14:06:55] "GET /get_exhibition_paintings/6f145301-c822-4902-a6e2-c9bc02b5b962 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [16/Feb/2024 14:06:55] "[35m[1mGET /uploads/exhibition_paintings/Amagara%20niyo%20gishoro/Amagara_niyo_gishoro_mmmmmmmmmm_nyirabyo.jpg?clientId=c7c95a37-edba-4929-8880-b6006760d1b1&exId=6f145301-c822-4902-a6e2-c9bc02b5b962 HTTP/1.1[0m" 500 -
+INFO:werkzeug:127.0.0.1 - - [16/Feb/2024 14:06:55] "GET /get_exhibition_paintings/6f145301-c822-4902-a6e2-c9bc02b5b962 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [16/Feb/2024 14:06:55] "GET /get_exhibition_paintings/6f145301-c822-4902-a6e2-c9bc02b5b962 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [16/Feb/2024 14:06:55] "GET /get_exhibition_paintings/6f145301-c822-4902-a6e2-c9bc02b5b962 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [16/Feb/2024 14:06:55] "[35m[1mGET /uploads/exhibition_paintings/Amagara%20niyo%20gishoro/Amagara_niyo_gishoro_mmmmmmmmmm_nyirabyo.jpg?clientId=c7c95a37-edba-4929-8880-b6006760d1b1&exId=6f145301-c822-4902-a6e2-c9bc02b5b962 HTTP/1.1[0m" 500 -
+INFO:werkzeug:127.0.0.1 - - [16/Feb/2024 14:06:55] "[35m[1mGET /uploads/exhibition_paintings/Amagara%20niyo%20gishoro/Amagara_niyo_gishoro_mmmmmmmmmm_nyirabyo.jpg?clientId=c7c95a37-edba-4929-8880-b6006760d1b1&exId=6f145301-c822-4902-a6e2-c9bc02b5b962 HTTP/1.1[0m" 500 -
+INFO:werkzeug:127.0.0.1 - - [16/Feb/2024 14:06:59] "OPTIONS /get_exhibitions HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [16/Feb/2024 14:06:59] "GET /get_paintings HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [16/Feb/2024 14:06:59] "GET /get_exhibitions HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [16/Feb/2024 14:06:59] "GET /get_paintings HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [16/Feb/2024 14:06:59] "[35m[1mGET /uploads/exhibitions/amagara_niyp_gishoro.jpg HTTP/1.1[0m" 500 -
+INFO:werkzeug:127.0.0.1 - - [16/Feb/2024 14:06:59] "[35m[1mGET /uploads/exhibitions/amagara_niyp_gishoro.jpg HTTP/1.1[0m" 500 -
+INFO:werkzeug:127.0.0.1 - - [16/Feb/2024 14:06:59] "GET /get_exhibitions HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [16/Feb/2024 14:06:59] "[35m[1mGET /uploads/exhibitions/amagara_niyp_gishoro.jpg HTTP/1.1[0m" 500 -
+INFO:werkzeug:127.0.0.1 - - [16/Feb/2024 14:07:17] "POST /custom-login HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [16/Feb/2024 14:07:17] "OPTIONS /get_user_paintings/693d395be67f636fd24329c26b4fd2695bb7361edba7dc18 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [16/Feb/2024 14:07:17] "GET /get_user_paintings/693d395be67f636fd24329c26b4fd2695bb7361edba7dc18 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [16/Feb/2024 14:07:18] "GET /get_user_paintings/693d395be67f636fd24329c26b4fd2695bb7361edba7dc18 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [16/Feb/2024 14:07:18] "GET /get_user_paintings/693d395be67f636fd24329c26b4fd2695bb7361edba7dc18 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [16/Feb/2024 14:07:19] "GET /get_user_paintings/693d395be67f636fd24329c26b4fd2695bb7361edba7dc18 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [16/Feb/2024 14:07:51] "OPTIONS /add_new_painting HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [16/Feb/2024 14:07:51] "PUT /add_new_painting HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [16/Feb/2024 14:08:18] "OPTIONS /get_user_paintings/693d395be67f636fd24329c26b4fd2695bb7361edba7dc18 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [16/Feb/2024 14:08:19] "GET /get_user_paintings/693d395be67f636fd24329c26b4fd2695bb7361edba7dc18 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [16/Feb/2024 14:08:19] "GET /uploads/paintings/693d395be67f636fd24329c26b4fd2695bb7361edba7dc18_painting_Fri_Feb_16_140751_2024my_tender.jpg HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [16/Feb/2024 14:08:28] "OPTIONS /get_exhibitions HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [16/Feb/2024 14:08:28] "GET /get_paintings HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [16/Feb/2024 14:08:28] "GET /get_exhibitions HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [16/Feb/2024 14:08:28] "GET /get_paintings HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [16/Feb/2024 14:08:28] "[35m[1mGET /uploads/exhibitions/amagara_niyp_gishoro.jpg HTTP/1.1[0m" 500 -
+INFO:werkzeug:127.0.0.1 - - [16/Feb/2024 14:08:28] "[35m[1mGET /uploads/exhibitions/amagara_niyp_gishoro.jpg HTTP/1.1[0m" 500 -
+INFO:werkzeug:127.0.0.1 - - [16/Feb/2024 14:08:28] "[36mGET /uploads/paintings/693d395be67f636fd24329c26b4fd2695bb7361edba7dc18_painting_Fri_Feb_16_140751_2024my_tender.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [16/Feb/2024 14:08:28] "GET /get_exhibitions HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [16/Feb/2024 14:08:28] "[36mGET /uploads/paintings/693d395be67f636fd24329c26b4fd2695bb7361edba7dc18_painting_Fri_Feb_16_140751_2024my_tender.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [16/Feb/2024 14:08:28] "[35m[1mGET /uploads/exhibitions/amagara_niyp_gishoro.jpg HTTP/1.1[0m" 500 -
+INFO:werkzeug:127.0.0.1 - - [16/Feb/2024 14:08:55] "POST /custom-login HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [16/Feb/2024 14:09:02] "[35m[1mGET /uploads/exhibitions/amagara_niyp_gishoro.jpg HTTP/1.1[0m" 500 -
+INFO:werkzeug:127.0.0.1 - - [16/Feb/2024 14:09:10] "OPTIONS /delete_exhibition/6f145301-c822-4902-a6e2-c9bc02b5b962/Amagara%20niyo%20gishoro HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [16/Feb/2024 14:09:14] "DELETE /delete_exhibition/6f145301-c822-4902-a6e2-c9bc02b5b962/Amagara%20niyo%20gishoro HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [16/Feb/2024 14:09:37] "OPTIONS /get_exhibitions HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [16/Feb/2024 14:09:37] "GET /get_paintings HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [16/Feb/2024 14:09:37] "GET /get_exhibitions HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [16/Feb/2024 14:09:37] "GET /get_paintings HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [16/Feb/2024 14:09:37] "GET /get_exhibitions HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [16/Feb/2024 14:09:46] "POST /custom-login HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [16/Feb/2024 14:10:36] "OPTIONS /add_new_exhibition HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [16/Feb/2024 14:10:36] "PUT /add_new_exhibition HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [16/Feb/2024 14:10:51] "OPTIONS /get_exhibitions HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [16/Feb/2024 14:10:51] "GET /get_paintings HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [16/Feb/2024 14:10:51] "GET /get_exhibitions HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [16/Feb/2024 14:10:51] "GET /get_paintings HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [16/Feb/2024 14:10:51] "GET /uploads/exhibitions/amagara_niyp_gishoro.jpg HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [16/Feb/2024 14:10:51] "GET /uploads/exhibitions/amagara_niyp_gishoro.jpg HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [16/Feb/2024 14:10:51] "[36mGET /uploads/paintings/693d395be67f636fd24329c26b4fd2695bb7361edba7dc18_painting_Fri_Feb_16_140751_2024my_tender.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [16/Feb/2024 14:10:51] "[36mGET /uploads/paintings/693d395be67f636fd24329c26b4fd2695bb7361edba7dc18_painting_Fri_Feb_16_140751_2024my_tender.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [16/Feb/2024 14:10:51] "GET /get_exhibitions HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [16/Feb/2024 14:22:55] "[36mGET /uploads/paintings/693d395be67f636fd24329c26b4fd2695bb7361edba7dc18_painting_Fri_Feb_16_140751_2024my_tender.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [16/Feb/2024 14:22:55] "[36mGET /uploads/paintings/693d395be67f636fd24329c26b4fd2695bb7361edba7dc18_painting_Fri_Feb_16_140751_2024my_tender.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [16/Feb/2024 14:22:57] "OPTIONS /get_exhibitions HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [16/Feb/2024 14:22:57] "GET /get_paintings HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [16/Feb/2024 14:22:57] "GET /get_paintings HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [16/Feb/2024 14:22:57] "GET /get_exhibitions HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [16/Feb/2024 14:22:57] "[36mGET /uploads/exhibitions/amagara_niyp_gishoro.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [16/Feb/2024 14:22:57] "GET /get_exhibitions HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [16/Feb/2024 14:22:57] "[36mGET /uploads/paintings/693d395be67f636fd24329c26b4fd2695bb7361edba7dc18_painting_Fri_Feb_16_140751_2024my_tender.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [16/Feb/2024 14:32:13] "OPTIONS /get_exhibitions HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [16/Feb/2024 14:32:13] "GET /get_paintings HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [16/Feb/2024 14:32:13] "GET /get_exhibitions HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [16/Feb/2024 14:32:14] "GET /get_paintings HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [16/Feb/2024 14:32:14] "[36mGET /uploads/exhibitions/amagara_niyp_gishoro.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [16/Feb/2024 14:32:14] "[36mGET /uploads/paintings/693d395be67f636fd24329c26b4fd2695bb7361edba7dc18_painting_Fri_Feb_16_140751_2024my_tender.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [16/Feb/2024 14:32:14] "GET /get_exhibitions HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [16/Feb/2024 14:32:18] "GET /get_exhibitions HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [16/Feb/2024 14:32:18] "GET /get_paintings HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [16/Feb/2024 14:32:18] "GET /get_paintings HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [16/Feb/2024 14:32:18] "[36mGET /uploads/exhibitions/amagara_niyp_gishoro.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [16/Feb/2024 14:32:18] "GET /get_exhibitions HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [16/Feb/2024 14:32:18] "[36mGET /uploads/paintings/693d395be67f636fd24329c26b4fd2695bb7361edba7dc18_painting_Fri_Feb_16_140751_2024my_tender.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [16/Feb/2024 14:32:20] "OPTIONS /get_exhibitions HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [16/Feb/2024 14:32:20] "GET /get_paintings HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [16/Feb/2024 14:32:20] "GET /get_exhibitions HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [16/Feb/2024 14:32:20] "GET /get_paintings HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [16/Feb/2024 14:32:20] "[36mGET /uploads/exhibitions/amagara_niyp_gishoro.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [16/Feb/2024 14:32:20] "[36mGET /uploads/paintings/693d395be67f636fd24329c26b4fd2695bb7361edba7dc18_painting_Fri_Feb_16_140751_2024my_tender.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [16/Feb/2024 14:32:20] "GET /get_exhibitions HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [16/Feb/2024 14:32:22] "GET /get_exhibitions HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [16/Feb/2024 14:32:22] "GET /get_paintings HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [16/Feb/2024 14:32:22] "GET /get_paintings HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [16/Feb/2024 14:32:22] "GET /get_exhibitions HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [16/Feb/2024 14:32:22] "[36mGET /uploads/exhibitions/amagara_niyp_gishoro.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [16/Feb/2024 14:32:22] "[36mGET /uploads/paintings/693d395be67f636fd24329c26b4fd2695bb7361edba7dc18_painting_Fri_Feb_16_140751_2024my_tender.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [16/Feb/2024 14:32:23] "GET /get_exhibitions HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [16/Feb/2024 14:32:23] "GET /get_paintings HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [16/Feb/2024 14:32:23] "GET /get_paintings HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [16/Feb/2024 14:32:23] "[36mGET /uploads/exhibitions/amagara_niyp_gishoro.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [16/Feb/2024 14:32:23] "GET /get_exhibitions HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [16/Feb/2024 14:32:23] "[36mGET /uploads/paintings/693d395be67f636fd24329c26b4fd2695bb7361edba7dc18_painting_Fri_Feb_16_140751_2024my_tender.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [16/Feb/2024 14:32:56] "OPTIONS /get_exhibitions HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [16/Feb/2024 14:32:56] "GET /get_paintings HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [16/Feb/2024 14:32:56] "GET /get_exhibitions HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [16/Feb/2024 14:32:56] "GET /get_paintings HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [16/Feb/2024 14:32:56] "[36mGET /uploads/exhibitions/amagara_niyp_gishoro.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [16/Feb/2024 14:32:56] "GET /get_exhibitions HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [16/Feb/2024 14:32:56] "[36mGET /uploads/paintings/693d395be67f636fd24329c26b4fd2695bb7361edba7dc18_painting_Fri_Feb_16_140751_2024my_tender.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [16/Feb/2024 14:33:53] "OPTIONS /get_exhibitions HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [16/Feb/2024 14:33:53] "GET /get_paintings HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [16/Feb/2024 14:33:53] "GET /get_exhibitions HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [16/Feb/2024 14:33:53] "GET /get_paintings HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [16/Feb/2024 14:33:53] "[36mGET /uploads/exhibitions/amagara_niyp_gishoro.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [16/Feb/2024 14:33:53] "[36mGET /uploads/paintings/693d395be67f636fd24329c26b4fd2695bb7361edba7dc18_painting_Fri_Feb_16_140751_2024my_tender.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [16/Feb/2024 14:33:53] "GET /get_exhibitions HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [16/Feb/2024 14:35:10] "OPTIONS /get_exhibitions HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [16/Feb/2024 14:35:10] "GET /get_paintings HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [16/Feb/2024 14:35:10] "GET /get_exhibitions HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [16/Feb/2024 14:35:10] "GET /get_paintings HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [16/Feb/2024 14:35:10] "[36mGET /uploads/exhibitions/amagara_niyp_gishoro.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [16/Feb/2024 14:35:10] "[36mGET /uploads/paintings/693d395be67f636fd24329c26b4fd2695bb7361edba7dc18_painting_Fri_Feb_16_140751_2024my_tender.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [16/Feb/2024 14:35:10] "GET /get_exhibitions HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [16/Feb/2024 14:38:08] "OPTIONS /get_exhibitions HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [16/Feb/2024 14:38:08] "GET /get_paintings HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [16/Feb/2024 14:38:08] "GET /get_exhibitions HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [16/Feb/2024 14:38:08] "GET /get_paintings HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [16/Feb/2024 14:38:08] "[36mGET /uploads/exhibitions/amagara_niyp_gishoro.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [16/Feb/2024 14:38:08] "[36mGET /uploads/paintings/693d395be67f636fd24329c26b4fd2695bb7361edba7dc18_painting_Fri_Feb_16_140751_2024my_tender.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [16/Feb/2024 14:38:08] "GET /get_exhibitions HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [16/Feb/2024 14:38:19] "OPTIONS /get_exhibitions HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [16/Feb/2024 14:38:19] "GET /get_paintings HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [16/Feb/2024 14:38:19] "GET /get_exhibitions HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [16/Feb/2024 14:38:19] "GET /get_paintings HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [16/Feb/2024 14:38:19] "[36mGET /uploads/exhibitions/amagara_niyp_gishoro.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [16/Feb/2024 14:38:19] "[36mGET /uploads/paintings/693d395be67f636fd24329c26b4fd2695bb7361edba7dc18_painting_Fri_Feb_16_140751_2024my_tender.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [16/Feb/2024 14:38:19] "GET /get_exhibitions HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [16/Feb/2024 14:43:08] "OPTIONS /get_exhibitions HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [16/Feb/2024 14:43:08] "GET /get_paintings HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [16/Feb/2024 14:43:08] "GET /get_exhibitions HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [16/Feb/2024 14:43:08] "GET /get_paintings HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [16/Feb/2024 14:43:08] "[36mGET /uploads/exhibitions/amagara_niyp_gishoro.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [16/Feb/2024 14:43:08] "[36mGET /uploads/paintings/693d395be67f636fd24329c26b4fd2695bb7361edba7dc18_painting_Fri_Feb_16_140751_2024my_tender.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [16/Feb/2024 14:43:08] "GET /get_exhibitions HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [16/Feb/2024 14:47:20] "OPTIONS /get_exhibitions HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [16/Feb/2024 14:47:20] "GET /get_paintings HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [16/Feb/2024 14:47:20] "GET /get_exhibitions HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [16/Feb/2024 14:47:20] "GET /get_paintings HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [16/Feb/2024 14:47:20] "[36mGET /uploads/exhibitions/amagara_niyp_gishoro.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [16/Feb/2024 14:47:20] "GET /get_exhibitions HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [16/Feb/2024 14:47:20] "[36mGET /uploads/paintings/693d395be67f636fd24329c26b4fd2695bb7361edba7dc18_painting_Fri_Feb_16_140751_2024my_tender.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [16/Feb/2024 14:50:22] "OPTIONS /get_exhibitions HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [16/Feb/2024 14:50:22] "GET /get_paintings HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [16/Feb/2024 14:50:22] "GET /get_exhibitions HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [16/Feb/2024 14:50:22] "GET /get_paintings HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [16/Feb/2024 14:50:22] "[36mGET /uploads/exhibitions/amagara_niyp_gishoro.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [16/Feb/2024 14:50:22] "[36mGET /uploads/paintings/693d395be67f636fd24329c26b4fd2695bb7361edba7dc18_painting_Fri_Feb_16_140751_2024my_tender.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [16/Feb/2024 14:50:22] "GET /get_exhibitions HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [16/Feb/2024 15:09:36] "OPTIONS /get_exhibitions HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [16/Feb/2024 15:09:36] "GET /get_paintings HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [16/Feb/2024 15:09:36] "GET /get_exhibitions HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [16/Feb/2024 15:09:36] "[36mGET /uploads/exhibitions/amagara_niyp_gishoro.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [16/Feb/2024 15:09:36] "[36mGET /uploads/paintings/693d395be67f636fd24329c26b4fd2695bb7361edba7dc18_painting_Fri_Feb_16_140751_2024my_tender.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [16/Feb/2024 15:09:36] "GET /get_exhibitions HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [16/Feb/2024 15:09:36] "GET /get_paintings HTTP/1.1" 200 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 177-396-332
+INFO:werkzeug:127.0.0.1 - - [16/Feb/2024 15:16:27] "OPTIONS /get_exhibitions HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [16/Feb/2024 15:16:27] "GET /get_paintings HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [16/Feb/2024 15:16:27] "GET /get_paintings HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [16/Feb/2024 15:16:27] "GET /get_exhibitions HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [16/Feb/2024 15:16:27] "GET /get_exhibitions HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [16/Feb/2024 15:16:27] "[36mGET /uploads/exhibitions/amagara_niyp_gishoro.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [16/Feb/2024 15:16:27] "[36mGET /uploads/exhibitions/amagara_niyp_gishoro.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [16/Feb/2024 15:16:27] "[36mGET /uploads/paintings/693d395be67f636fd24329c26b4fd2695bb7361edba7dc18_painting_Fri_Feb_16_140751_2024my_tender.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [16/Feb/2024 15:26:48] "OPTIONS /get_exhibitions HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [16/Feb/2024 15:26:48] "GET /get_paintings HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [16/Feb/2024 15:26:48] "GET /get_exhibitions HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [16/Feb/2024 15:26:48] "GET /get_paintings HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [16/Feb/2024 15:26:48] "GET /get_exhibitions HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [16/Feb/2024 15:26:50] "[36mGET /uploads/exhibitions/amagara_niyp_gishoro.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [16/Feb/2024 15:26:50] "[36mGET /uploads/exhibitions/amagara_niyp_gishoro.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [16/Feb/2024 15:26:50] "[36mGET /uploads/paintings/693d395be67f636fd24329c26b4fd2695bb7361edba7dc18_painting_Fri_Feb_16_140751_2024my_tender.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [16/Feb/2024 15:26:50] "[36mGET /uploads/paintings/693d395be67f636fd24329c26b4fd2695bb7361edba7dc18_painting_Fri_Feb_16_140751_2024my_tender.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [16/Feb/2024 15:27:07] "POST /custom-login HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [16/Feb/2024 15:28:09] "OPTIONS /custom-admin-logout HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [16/Feb/2024 15:28:09] "GET /custom-admin-logout HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [16/Feb/2024 15:28:50] "OPTIONS /get_exhibitions HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [16/Feb/2024 15:28:50] "OPTIONS /get_exhibitions HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [16/Feb/2024 15:29:15] "POST /custom-login HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [16/Feb/2024 15:29:15] "OPTIONS /get_user_paintings/693d395be67f636fd24329c26b4fd2695bb7361edba7dc18 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [16/Feb/2024 15:29:16] "GET /get_user_paintings/693d395be67f636fd24329c26b4fd2695bb7361edba7dc18 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [16/Feb/2024 15:29:16] "GET /get_user_paintings/693d395be67f636fd24329c26b4fd2695bb7361edba7dc18 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [16/Feb/2024 15:29:16] "GET /get_user_paintings/693d395be67f636fd24329c26b4fd2695bb7361edba7dc18 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [16/Feb/2024 15:29:17] "GET /get_user_paintings/693d395be67f636fd24329c26b4fd2695bb7361edba7dc18 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [16/Feb/2024 15:29:35] "OPTIONS /get_user_paintings/693d395be67f636fd24329c26b4fd2695bb7361edba7dc18 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [16/Feb/2024 15:29:35] "GET /get_user_paintings/693d395be67f636fd24329c26b4fd2695bb7361edba7dc18 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [16/Feb/2024 15:29:38] "GET /get_user_paintings/693d395be67f636fd24329c26b4fd2695bb7361edba7dc18 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [16/Feb/2024 15:29:39] "GET /get_user_paintings/693d395be67f636fd24329c26b4fd2695bb7361edba7dc18 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [16/Feb/2024 15:29:40] "GET /get_user_paintings/693d395be67f636fd24329c26b4fd2695bb7361edba7dc18 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [16/Feb/2024 15:29:41] "OPTIONS /get_user_paintings/693d395be67f636fd24329c26b4fd2695bb7361edba7dc18 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [16/Feb/2024 15:29:41] "GET /get_user_paintings/693d395be67f636fd24329c26b4fd2695bb7361edba7dc18 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [16/Feb/2024 15:29:42] "GET /get_user_paintings/693d395be67f636fd24329c26b4fd2695bb7361edba7dc18 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [16/Feb/2024 15:29:49] "OPTIONS /get_user_paintings/693d395be67f636fd24329c26b4fd2695bb7361edba7dc18 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [16/Feb/2024 15:29:49] "GET /get_user_paintings/693d395be67f636fd24329c26b4fd2695bb7361edba7dc18 HTTP/1.1" 200 -
+INFO:werkzeug: * Detected change in 'C:\\Users\\IMPANO\\Desktop\\painting_ecommerce_website\\backend\\run.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 177-396-332
+INFO:werkzeug: * Detected change in 'C:\\Users\\IMPANO\\Desktop\\painting_ecommerce_website\\backend\\run.py', reloading
+INFO:werkzeug: * Restarting with stat
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 177-396-332
+INFO:werkzeug: * Detected change in 'C:\\Users\\IMPANO\\Desktop\\painting_ecommerce_website\\backend\\run.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 177-396-332
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 177-396-332
+INFO:werkzeug: * Detected change in 'C:\\Users\\IMPANO\\Desktop\\painting_ecommerce_website\\backend\\run.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 177-396-332
+INFO:werkzeug: * Detected change in 'C:\\Users\\IMPANO\\Desktop\\painting_ecommerce_website\\backend\\run.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 177-396-332
+INFO:werkzeug:127.0.0.1 - - [16/Feb/2024 15:37:49] "OPTIONS /get_user_paintings/693d395be67f636fd24329c26b4fd2695bb7361edba7dc18 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [16/Feb/2024 15:37:49] "GET /get_user_paintings/693d395be67f636fd24329c26b4fd2695bb7361edba7dc18 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [16/Feb/2024 15:37:56] "OPTIONS /custom-logout HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [16/Feb/2024 15:37:56] "GET /custom-logout HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [16/Feb/2024 15:40:02] "POST /custom-login HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [16/Feb/2024 15:40:02] "OPTIONS /get_user_paintings/693d395be67f636fd24329c26b4fd2695bb7361edba7dc18 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [16/Feb/2024 15:40:02] "GET /get_user_paintings/693d395be67f636fd24329c26b4fd2695bb7361edba7dc18 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [16/Feb/2024 15:40:03] "GET /get_user_paintings/693d395be67f636fd24329c26b4fd2695bb7361edba7dc18 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [16/Feb/2024 15:40:03] "GET /get_user_paintings/693d395be67f636fd24329c26b4fd2695bb7361edba7dc18 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [16/Feb/2024 15:40:03] "GET /get_user_paintings/693d395be67f636fd24329c26b4fd2695bb7361edba7dc18 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [16/Feb/2024 15:40:59] "OPTIONS /custom-logout HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [16/Feb/2024 15:40:59] "GET /custom-logout HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [16/Feb/2024 15:41:20] "POST /custom-login HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [16/Feb/2024 15:41:31] "OPTIONS /delete_painting/2287059e-71b1-4d96-a8c8-0bbd5b41bfff HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [16/Feb/2024 15:41:31] "DELETE /delete_painting/2287059e-71b1-4d96-a8c8-0bbd5b41bfff HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [16/Feb/2024 15:41:49] "OPTIONS /delete_exhibition/eeafc918-f851-45ee-b874-b1c0fc5b8b29/Amagara%20niyo%20gishoro HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [16/Feb/2024 15:41:49] "DELETE /delete_exhibition/eeafc918-f851-45ee-b874-b1c0fc5b8b29/Amagara%20niyo%20gishoro HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [16/Feb/2024 15:41:53] "OPTIONS /get_exhibitions HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [16/Feb/2024 15:41:53] "GET /get_paintings HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [16/Feb/2024 15:41:53] "GET /get_exhibitions HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [16/Feb/2024 15:41:53] "GET /get_paintings HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [16/Feb/2024 15:41:53] "GET /get_exhibitions HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [16/Feb/2024 15:43:30] "OPTIONS /get_exhibitions HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [16/Feb/2024 15:43:30] "GET /get_paintings HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [16/Feb/2024 15:43:30] "GET /get_exhibitions HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [16/Feb/2024 15:43:30] "GET /get_paintings HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [16/Feb/2024 15:43:30] "GET /get_exhibitions HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [16/Feb/2024 15:44:05] "POST /custom-login HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [16/Feb/2024 15:44:09] "POST /custom-login HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [16/Feb/2024 15:44:14] "POST /custom-login HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [16/Feb/2024 15:44:14] "POST /custom-login HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [16/Feb/2024 15:44:15] "POST /custom-login HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [16/Feb/2024 15:44:15] "POST /custom-login HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [16/Feb/2024 15:44:15] "POST /custom-login HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [16/Feb/2024 15:44:15] "POST /custom-login HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [16/Feb/2024 15:44:16] "POST /custom-login HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [16/Feb/2024 15:44:16] "POST /custom-login HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [16/Feb/2024 15:44:16] "POST /custom-login HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [16/Feb/2024 15:44:16] "POST /custom-login HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [16/Feb/2024 15:44:19] "POST /custom-login HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [16/Feb/2024 15:44:25] "POST /custom-login HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [16/Feb/2024 15:44:30] "OPTIONS /get_customers HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [16/Feb/2024 15:44:30] "GET /get_customers HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [16/Feb/2024 15:44:35] "OPTIONS /get_painters HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [16/Feb/2024 15:44:35] "GET /get_painters HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [16/Feb/2024 15:44:35] "[33mGET /images/painters/isae_profilepicture_my_tender.jpg HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [16/Feb/2024 15:44:35] "[33mGET /images/painters/erico__profilepicture_IMG-20231118-WA0052.jpg HTTP/1.1[0m" 404 -

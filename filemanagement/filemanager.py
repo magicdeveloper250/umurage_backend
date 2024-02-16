@@ -13,8 +13,10 @@ import shutil
 
 
 def init_directories():
-    os.chdir(UPLOAD_DIR)
+    os.chdir(CWD)
     try:
+        os.mkdir("uploads")
+        os.chdir(os.path.join(CWD, "uploads"))
         os.mkdir("exhibitions")
         os.mkdir("exhibition_painting")
         os.mkdir("paintings")
