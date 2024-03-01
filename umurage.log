@@ -2405,3 +2405,37 @@ LINE 1: ...ry,g_created, g_image, phone, likesFROM paintings g, painter...
 2024-03-01 12:47:56,422 - INFO - 127.0.0.1 - - [01/Mar/2024 12:47:56] "OPTIONS /get_user_paintings HTTP/1.1" 200 -
 2024-03-01 12:47:56,722 - INFO - 127.0.0.1 - - [01/Mar/2024 12:47:56] "POST /get_user_paintings HTTP/1.1" 200 -
 2024-03-01 12:47:56,739 - INFO - 127.0.0.1 - - [01/Mar/2024 12:47:56] "POST /get_user_paintings HTTP/1.1" 200 -
+2024-03-01 13:26:11,166 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.1.28:5000
+2024-03-01 13:26:11,166 - INFO - [33mPress CTRL+C to quit[0m
+2024-03-01 13:26:11,169 - INFO -  * Restarting with stat
+2024-03-01 13:26:11,666 - WARNING -  * Debugger is active!
+2024-03-01 13:26:11,669 - INFO -  * Debugger PIN: 831-437-395
+2024-03-01 13:26:34,594 - INFO - 127.0.0.1 - - [01/Mar/2024 13:26:34] "OPTIONS /get_exhibitions HTTP/1.1" 200 -
+2024-03-01 13:26:34,669 - INFO - 127.0.0.1 - - [01/Mar/2024 13:26:34] "GET /get_exhibitions HTTP/1.1" 200 -
+2024-03-01 13:26:34,673 - INFO - 127.0.0.1 - - [01/Mar/2024 13:26:34] "GET /get_paintings HTTP/1.1" 200 -
+2024-03-01 13:26:34,673 - INFO - 127.0.0.1 - - [01/Mar/2024 13:26:34] "GET /get_paintings HTTP/1.1" 200 -
+2024-03-01 13:26:34,719 - INFO - 127.0.0.1 - - [01/Mar/2024 13:26:34] "GET /get_exhibitions HTTP/1.1" 200 -
+2024-03-01 13:26:43,817 - WARNING - login attempt failed with this error module 'jwt' has no attribute 'encode'
+2024-03-01 13:26:43,821 - INFO - 127.0.0.1 - - [01/Mar/2024 13:26:43] "POST /custom-login HTTP/1.1" 200 -
+2024-03-01 13:30:15,120 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.1.28:5000
+2024-03-01 13:30:15,120 - INFO - [33mPress CTRL+C to quit[0m
+2024-03-01 13:30:15,121 - INFO -  * Restarting with stat
+2024-03-01 13:30:15,585 - WARNING -  * Debugger is active!
+2024-03-01 13:30:15,585 - INFO -  * Debugger PIN: 831-437-395
+2024-03-01 13:30:21,542 - WARNING - login attempt failed with this error module 'jwt' has no attribute 'encode'
+2024-03-01 13:30:21,542 - INFO - 127.0.0.1 - - [01/Mar/2024 13:30:21] "POST /custom-login HTTP/1.1" 200 -
+2024-03-01 13:30:57,267 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.1.28:5000
+2024-03-01 13:30:57,267 - INFO - [33mPress CTRL+C to quit[0m
+2024-03-01 13:30:57,267 - INFO -  * Restarting with stat
+2024-03-01 13:30:57,719 - WARNING -  * Debugger is active!
+2024-03-01 13:30:57,719 - INFO -  * Debugger PIN: 831-437-395
+2024-03-01 13:31:06,279 - INFO - 127.0.0.1 - - [01/Mar/2024 13:31:06] "POST /custom-login HTTP/1.1" 200 -
