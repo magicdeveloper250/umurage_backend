@@ -2387,3 +2387,21 @@ LINE 1: ...ry,g_created, g_image, phone, likesFROM paintings g, painter...
 2024-03-01 07:22:06,204 - INFO - 127.0.0.1 - - [01/Mar/2024 07:22:06] "GET /blog/get_blogs HTTP/1.1" 200 -
 2024-03-01 07:22:10,538 - INFO - 127.0.0.1 - - [01/Mar/2024 07:22:10] "OPTIONS /get_user_paintings HTTP/1.1" 200 -
 2024-03-01 07:22:10,633 - INFO - 127.0.0.1 - - [01/Mar/2024 07:22:10] "POST /get_user_paintings HTTP/1.1" 200 -
+2024-03-01 12:47:21,718 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.1.28:5000
+2024-03-01 12:47:21,718 - INFO - [33mPress CTRL+C to quit[0m
+2024-03-01 12:47:21,719 - INFO -  * Restarting with stat
+2024-03-01 12:47:22,263 - WARNING -  * Debugger is active!
+2024-03-01 12:47:22,263 - INFO -  * Debugger PIN: 130-925-840
+2024-03-01 12:47:41,352 - INFO - 127.0.0.1 - - [01/Mar/2024 12:47:41] "OPTIONS /get_exhibitions HTTP/1.1" 200 -
+2024-03-01 12:47:41,497 - INFO - 127.0.0.1 - - [01/Mar/2024 12:47:41] "GET /get_exhibitions HTTP/1.1" 200 -
+2024-03-01 12:47:41,509 - INFO - 127.0.0.1 - - [01/Mar/2024 12:47:41] "GET /get_paintings HTTP/1.1" 200 -
+2024-03-01 12:47:41,511 - INFO - 127.0.0.1 - - [01/Mar/2024 12:47:41] "GET /get_paintings HTTP/1.1" 200 -
+2024-03-01 12:47:41,594 - INFO - 127.0.0.1 - - [01/Mar/2024 12:47:41] "GET /get_exhibitions HTTP/1.1" 200 -
+2024-03-01 12:47:53,586 - INFO - 127.0.0.1 - - [01/Mar/2024 12:47:53] "POST /custom-login HTTP/1.1" 200 -
+2024-03-01 12:47:56,366 - INFO - 127.0.0.1 - - [01/Mar/2024 12:47:56] "OPTIONS /get_user_paintings HTTP/1.1" 200 -
+2024-03-01 12:47:56,422 - INFO - 127.0.0.1 - - [01/Mar/2024 12:47:56] "OPTIONS /get_user_paintings HTTP/1.1" 200 -
+2024-03-01 12:47:56,722 - INFO - 127.0.0.1 - - [01/Mar/2024 12:47:56] "POST /get_user_paintings HTTP/1.1" 200 -
+2024-03-01 12:47:56,739 - INFO - 127.0.0.1 - - [01/Mar/2024 12:47:56] "POST /get_user_paintings HTTP/1.1" 200 -
