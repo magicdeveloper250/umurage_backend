@@ -50,7 +50,7 @@ def add_new_painting():
         )
     except Exception as error:
         current_app.logger.error(str(error))
-        return abort(jsonify({"success": False}))
+        return abort(jsonify({"success": False, "erro": str(error)}))
 
 
 @painting.route("/get_paintings", methods=["GET", "POST"])
