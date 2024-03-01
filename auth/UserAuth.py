@@ -161,7 +161,7 @@ def custom_login():
             current_app.logger.warning(
                 f"login attempt failed with this error {str(error)}"
             )
-            return jsonify({"message": False})
+            return jsonify({"message": False, "error": str(error)})
 
     else:
         current_app.logger.warning(f"login attempt failed with this error")
