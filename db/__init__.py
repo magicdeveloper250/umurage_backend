@@ -1,15 +1,15 @@
 import psycopg2
 import psycopg2.extensions
 from psycopg2 import pool
-from queue import Queue
 from queue import Empty
+from queue import Queue
 
 # Database configuration
 INTERNAL_DB_CONNECTION = "postgres://postgres:manzisql123.@localhost/galleryWebsite"
 EXTERNAL_DB_CONNECTION = "postgres://umuragearthubadmin:icsba7282JdItIQapnLb8z5nNUEsEYmF@dpg-cml9er7109ks73a827t0-a/umuragearthubdb_wds7"
 AEXTERNAL = "postgres://umurageartadmin:4symJNXli123f1PTiC8ZJ3Mtv1cPa7oQ@dpg-cn5q330cmk4c73994nqg-a.oregon-postgres.render.com/umuragearthub_l0vs"
 INTERNAL2 = "postgres://umuragearthubadmin:icsba7282JdItIQapnLb8z5nNUEsEYmF@dpg-cml9er7109ks73a827t0-a.oregon-postgres.render.com/umuragearthubdb_wds7"
-DB_URL = AEXTERNAL
+DB_URL = INTERNAL_DB_CONNECTION
 MAX_CONNECTIONS = 1000
 
 pool = pool.ThreadedConnectionPool(minconn=1, maxconn=MAX_CONNECTIONS, dsn=DB_URL)

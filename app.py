@@ -5,7 +5,9 @@ from api.blog import blog
 from api.exhibition import exhibition
 from api.exhibition_paintings import exhibition_paintings
 from auth.UserAuth import auth
+from auth.verify import verify
 from payment.paypal import payment
+from api.mtn import mtn
 from flask_cors import CORS
 from auth.UserAuth import auth, loginmanager
 from api.customer import customer
@@ -24,7 +26,14 @@ app.register_blueprint(exhibition_paintings)
 app.register_blueprint(auth)
 app.register_blueprint(payment)
 app.register_blueprint(customer)
-logging.basicConfig(filename="./logging.log", filemode="a")
+app.register_blueprint(verify)
+app.register_blueprint(mtn)
+
+log_level = logging.DEBUG
+log_file = "umurage.log"
+log_mode = "a"
+log_format = "%(asctime)s - %(levelname)s - %(message)s"
+logging.basicConfig(level=log_level, filename=log_file, format=log_format)
 
 
 CORS(

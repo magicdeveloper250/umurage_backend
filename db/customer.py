@@ -20,7 +20,22 @@ def add_customer(customer):
             )
 
             cursor.execute(query)
-            return cursor.fetchall()
+            added_customer = cursor.fetchall()
+
+            stmt = "INSERT INTO our_customers (c_id,c_first_name, c_last_name, c_email, c_phone, registered_for,status ) "
+            stmt += "VALUES ({0},{1},{2},{3},{4},{5}, {6} ) "
+            query = sql.SQL(stmt).format(
+                sql.Literal(added_customer[0][0]),
+                sql.Literal(added_customer[0][1]),
+                sql.Literal(added_customer[0][2]),
+                sql.Literal(added_customer[0][3]),
+                sql.Literal(added_customer[0][4]),
+                sql.Literal(added_customer[0][5]),
+                sql.Literal(added_customer[0][6]),
+            )
+
+            cursor.execute(query)
+            return added_customer
 
 
 def get_customers(id=None):
@@ -75,14 +90,11 @@ def check_payment(id, e_id):
     with get_db() as connection:
         with contextlib.closing(connection.cursor()) as cursor:
             cursor.execute("SET search_path TO public")
-            stmt = "SELECT status "
+            stmt = "SELECT status, c_id "
             stmt += "FROM customers "
             stmt += "WHERE c_id={0} "
             stmt += "and registered_for={1}"
             query = sql.SQL(stmt).format(sql.Literal(id), sql.Literal(e_id))
             cursor.execute(query)
             response = cursor.fetchone()
-            print(response)
-            if response[0] == "active":
-                return True
-            return False
+            return response

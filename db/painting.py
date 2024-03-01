@@ -2,7 +2,6 @@ from . import get_db
 from auth.UserAuth import custom_login_required
 from psycopg2 import sql
 import contextlib
-import time
 
 
 def add_new_painting(painting):
@@ -17,7 +16,7 @@ def add_new_painting(painting):
                 sql.Literal(painting.get("name")),
                 sql.Literal(painting.get("category")),
                 sql.Literal(painting.get("owner")),
-                sql.Literal(time.asctime()),
+                sql.Literal(painting.get("created")),
                 sql.Literal(painting.get("image")),
             )
             cursor.execute(query)
@@ -30,7 +29,7 @@ def get_paintings():
     with get_db() as connection:
         with contextlib.closing(connection.cursor()) as cursor:
             cursor.execute("SET search_path TO public")
-            stmt = "SELECT g_id, g_name, username, g_category,g_created, g_image, phone, likes  "
+            stmt = "SELECT g_id, g_name, username, g_category,g_created, g_image, phone, likes "
             stmt += "FROM paintings g, painters p "
             stmt += "WHERE g.g_owner=p.id "
             cursor.execute(stmt)
@@ -39,7 +38,6 @@ def get_paintings():
 
 
 def get_painting_by_id(userId):
-    custom_login_required()
     with get_db() as connection:
         with contextlib.closing(connection.cursor()) as cursor:
             cursor.execute("SET search_path TO public")
@@ -53,7 +51,6 @@ def get_painting_by_id(userId):
 
 
 def delete_painting(id, owner):
-    custom_login_required()
     with get_db() as connection:
         with contextlib.closing(connection.cursor()) as cursor:
             cursor.execute("SET search_path TO public")

@@ -1,10 +1,11 @@
 from app import app
-from filemanagement.filemanager import init_directories
+
+# from filemanagement.filemanager import init_directories
 
 
 def init_app():
     global app
-    init_directories()
+    # init_directories()
     return app
 
 

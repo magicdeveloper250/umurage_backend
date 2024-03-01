@@ -1,6 +1,7 @@
 from . import PAYPAL_CLIENT_ID, PAYPAL_CLIENT_SECRET, BASE_URL
 from flask import Blueprint
 from flask import request, jsonify
+from flask import current_app
 from helperfunctions import convertToObject
 import base64
 import db.payment as database
@@ -96,7 +97,7 @@ def confirm_payment():
         customer_database.update_customer_status(order.get("c_id"), "active")
         return jsonify({"success": True})
     except Exception as error:
-        print(error)
+        current_app.logger.error(str(error))
         return jsonify({"success": False})
 
 
@@ -117,11 +118,11 @@ def delete_payment(id):
             {"success": True, "data": convertToObject(headers, database.get_payments)}
         )
     except Exception as error:
-        print(error)
+        current_app.logger.error(str(error))
         return jsonify({"success": False})
 
 
 @payment.route("/mtnmomocallback", methods=["POST", "GET", "PUT"])
 def momo():
-    print(request)
+    current_app.logger.error(str(""))
     return "hi"

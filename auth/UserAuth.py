@@ -2,32 +2,30 @@ from . import (
     GOOGLE_CLIENT_ID,
     GOOGLE_CLIENT_SECRET,
     GOOGLE_DISCOVERY_URL,
-    SESSION_DB_URL,
     SESSION_KEY,
-    AFTER_LOGIN_URL,
     GOOGLE_REDIRECT_URL,
+    GOOGLE_SUCCESS_LOGIN_REDIRECT,
+    GOOGLE_FAILED_LOGIN_REDIRECT,
+    SESSION_TIME,
 )
 from auth.user import User
 from db.auth import get_user
-from flask import (
-    abort,
-    request,
-    redirect,
-    Blueprint,
-    jsonify,
-)
+from db.painter import get_painter_by_email
+from flask import abort, request, redirect, Blueprint, jsonify, render_template
+from flask import current_app
 from flask_login import (
     LoginManager,
-    current_user,
     login_required,
-    login_user,
     logout_user,
 )
+from functools import wraps
+
 from oauthlib.oauth2 import WebApplicationClient
 import bcrypt
-import contextlib
 import cryptocode
-import json, os, sqlite3, requests
+import datetime
+import json, requests
+import jwt
 
 
 auth = Blueprint(name="UserAuth", import_name="auth")
@@ -46,7 +44,6 @@ def get_google_provider_cfg():
 
 @auth.route("/login", methods=["GET"])
 def login():
-    AFTER_LOGIN_URL = request.args.get("next")
     google_provider_cfg = get_google_provider_cfg()
     authorization_endpoint = google_provider_cfg["authorization_endpoint"]
     # preparing request uri
@@ -58,7 +55,7 @@ def login():
     return redirect(request_uri)
 
 
-@auth.route("/login/callback")
+@auth.route("/callback")
 def callback():
     code = request.args.get("code")
     google_provider_cfg = get_google_provider_cfg()
@@ -91,12 +88,24 @@ def callback():
         username = user_info_response.json()["given_name"]
     else:
         return "User email not verified or not available on google", 400
-
-    user = User(uniqueid, username, email, picture)
-    if not User.get(uniqueid):
-        User.create(uniqueid, username, email, picture)
-    login_user(user)
-    return redirect(AFTER_LOGIN_URL + "/{0}".format(user.get_id(), SESSION_KEY))
+    user = get_painter_by_email(email)
+    token = jwt.encode(
+        {
+            "user": username,
+            "role": None,
+            "id": cryptocode.encrypt(uniqueid, SESSION_KEY),
+            "exp": datetime.datetime.utcnow()
+            + datetime.timedelta(minutes=SESSION_TIME),
+            "picture": picture,
+            "email": email,
+        },
+        SESSION_KEY,
+    )
+    if not user:
+        return render_template("error.html", failed_url=GOOGLE_FAILED_LOGIN_REDIRECT)
+    return render_template(
+        "redirect.html", login_url=GOOGLE_SUCCESS_LOGIN_REDIRECT.format(token)
+    )
 
 
 @auth.route("/logout", methods=["GET"])
@@ -120,7 +129,6 @@ def custom_login():
     error = None
     authorization_key = None
     if username and password:
-        # getting user from database
         user = User.getByUsername(username)
         try:
             if not user:
@@ -128,197 +136,173 @@ def custom_login():
             if bcrypt.checkpw(password.encode(), user.password.encode()) == False:
                 return jsonify({"message": False})
             else:
-                authorization_key = os.urandom(24).hex()
-                # adding user to the sessiondb
-                with sqlite3.connect(SESSION_DB_URL) as connection:
-                    with contextlib.closing(connection.cursor()) as cursor:
-                        stmt = "SELECT * FROM session WHERE username=?"
-                        cursor.execute(stmt, [user.name])
-                        session_user = cursor.fetchone()
-                        if session_user:
-                            stmt = "DELETE FROM session WHERE username=?"
-                            cursor.execute(stmt, [user.name])
-                        stmt = "INSERT INTO session (session_id, username, auth_key, role) "
-                        stmt += "VALUES (?,?,?,?)"
-                        cursor.execute(
-                            stmt, [user.id, user.name, authorization_key, user.role]
-                        )
+                authorization_key = jwt.encode(
+                    {
+                        "user": user.username,
+                        "role": user.role,
+                        "picture": user.picture,
+                        "email": user.email,
+                        "fullname": user.fullname,
+                        "id": cryptocode.encrypt(user.id, SESSION_KEY),
+                        "exp": datetime.datetime.utcnow()
+                        + datetime.timedelta(minutes=SESSION_TIME),
+                    },
+                    SESSION_KEY,
+                )
 
                 return jsonify(
                     {
                         "message": True,
-                        "session": cryptocode.encrypt(authorization_key, SESSION_KEY),
-                        "id": user.id,
-                        "fullname": user.email,
-                        "phone": user.phone,
-                        "role": user.role,
-                        "username": user.name,
+                        "token": authorization_key,
                     }
                 )
 
         except Exception as error:
+            current_app.logger.warning(
+                f"login attempt failed with this error {str(error)}"
+            )
             return jsonify({"message": False})
 
     else:
+        current_app.logger.warning(f"login attempt failed with this error")
         return jsonify({"message": False})
 
 
-@auth.route("/custom-logout", methods=["GET"])
-def custom_logout():
-    custom_login_required()
-    key = request.headers.get("Authorization").split(" ")[1]
-    with sqlite3.connect(SESSION_DB_URL) as connection:
-        with contextlib.closing(connection.cursor()) as cursor:
-            stmt = "delete from session where auth_key=?"
-            cursor.execute(stmt, [cryptocode.decrypt(key, SESSION_KEY)])
-    return jsonify(success=True)
-
-
-@auth.route("/custom-admin-logout", methods=["GET"])
-def custom_admin_logout():
-    admin_required()
-    key = request.headers.get("Authorization").split(" ")[1]
-    with sqlite3.connect(SESSION_DB_URL) as connection:
-        with contextlib.closing(connection.cursor()) as cursor:
-            stmt = "SELECT * FROM session  "
-            stmt += "WHERE auth_key=?"
-            cursor.execute(stmt, [cryptocode.decrypt(key, SESSION_KEY)])
-            ukey = cursor.fetchone()
-            if ukey[3] != "admin":
+def admin_required(f):
+    @wraps(f)
+    def decorated(*args, **kwargs):
+        try:
+            key_from_request = request.headers.get("Authorization").split(" ")[1]
+            payload = jwt.decode(key_from_request, SESSION_KEY, algorithms=["HS256"])
+            if dict(payload).get("role") != "admin":
+                current_app.logger.warning(f"Action denied due to no admin privilege")
                 return abort(jsonify({"message": False, "unauthorized": True}))
-            else:
-                stmt = "DELETE FROM  session "
-                stmt += "WHERE role=? AND auth_key=?"
-                cursor.execute(stmt, ["admin", cryptocode.decrypt(key, SESSION_KEY)])
-    return jsonify(success=True)
+        except Exception as error:
+            current_app.logger.warning(
+                f"Action denied due to no admin privilege with this error {error}"
+            )
+            return abort(jsonify({"message": False, "unauthorized": True}))
+        return f(*args, **kwargs)
 
-
-@auth.route("/api/authorize/<userId>", methods=["POST", "GET"])
-def authorize_user(userId):
-    admin_required()
-    authorized = get_user(userId)
-
-    return jsonify({"message": True if authorized != None else False})
+    return decorated
 
 
 # CUSTOM LOGIN SYSTEM HELPER FUNCTIONS
 
 
-def admin_required(vary=False):
-    try:
-        key_from_request = request.headers.get("Authorization").split(" ")[1]
-        if not key_from_request:
-            return abort(jsonify({"message": False, "unauthorized": True}))
-        else:
-            with sqlite3.connect(SESSION_DB_URL) as connection:
-                with contextlib.closing(connection.cursor()) as cursor:
-                    stmt = "SELECT * FROM session  "
-                    stmt += "WHERE auth_key=?"
-                    cursor.execute(
-                        stmt, [cryptocode.decrypt(key_from_request, SESSION_KEY)]
-                    )
-                    key = cursor.fetchone()
-                    if key[3] != "admin":
-                        if vary:
-                            return False
-                        else:
-                            abort(jsonify({"message": False, "unauthorized": True}))
-
-                    else:
-                        return True
-    except Exception as error:
-
-        return abort(jsonify({"message": False, "unauthorized": True}))
-
-
-def custom_login_required(vary=False):
-    try:
-        key_from_request = request.headers.get("Authorization").split(" ")[1]
-        if not key_from_request:
-            return abort(jsonify({"message": False}))
-        key_from_request = key_from_request.strip()
-        key = None
-        # getting session auth key
-
-        with sqlite3.connect(SESSION_DB_URL) as connection:
-            with contextlib.closing(connection.cursor()) as cursor:
-                stmt = "SELECT auth_key FROM session  "
-                stmt += "WHERE auth_key=?"
-                cursor.execute(
-                    stmt, [cryptocode.decrypt(key_from_request, SESSION_KEY)]
-                )
-                key = cursor.fetchone()
-        if not key[0]:
-            if vary:
-                return False
-            else:
-                abort(jsonify({"message": False, "unauthorized": True}))
-        else:
-            return True
-    except Exception:
-        return abort(
-            jsonify(
-                {"message": False, "unauthorized": True},
+def custom_login_required(f):
+    @wraps(f)
+    def decorated(*args, **kwargs):
+        try:
+            key_from_request = request.headers.get("Authorization").split(" ")[1]
+            jwt.decode(key_from_request, SESSION_KEY, algorithms=["HS256"])
+        except Exception as error:
+            current_app.logger.warning(
+                f"Unauthorized user tried to access protected asset with this error {str(error)}"
             )
-        )
-
-
-def payment_required():
-    from db.customer import check_payment
-
-    try:
-        id = request.headers.get("clientId")
-        exId = request.headers.get("exId")
-        paid = check_payment(id, exId)
-        if paid:
-            pass
-        else:
             return abort(
                 jsonify(
                     {"message": False, "unauthorized": True},
                 )
             )
+        return f(*args, **kwargs)
 
-    except Exception as error:
-        return abort(
-            jsonify(
-                {"message": False, "unauthorized": True},
+    return decorated
+
+
+@auth.route("/api/authorize/<userId>", methods=["POST", "GET"])
+@admin_required
+def authorize_user(userId):
+    authorized = get_user(cryptocode.decrypt(userId, SESSION_KEY))
+
+    return jsonify({"message": True if authorized != None else False})
+
+
+def payment_required(f):
+    @wraps(f)
+    def decorated(*args, **kwargs):
+        from db.customer import check_payment
+
+        try:
+            id = request.headers.get("clientId")
+            exId = request.headers.get("exId")
+            paid = check_payment(id, exId)
+            if paid[0]:
+                pass
+            else:
+                current_app.logger.warning(
+                    f"Unauthorized user tried to access protected asset which require payment"
+                )
+                return abort(
+                    jsonify(
+                        {"message": False, "unauthorized": True},
+                    )
+                )
+
+        except Exception as error:
+            current_app.logger.warning(
+                f"Unauthorized user tried to access protected asset which require payment with thiss error {error}"
             )
-        )
+            return abort(
+                jsonify(
+                    {"message": False, "unauthorized": True},
+                )
+            )
+        return f(*args, **kwargs)
+
+    return decorated
 
 
 def user_or_admin_required():
-    user = custom_login_required(vary=True)
-    admin = admin_required(vary=True)
-
+    admin, user = (False, False)
+    key_from_request = request.headers.get("Authorization").split(" ")[1]
+    payload = jwt.decode(key_from_request, SESSION_KEY, algorithms=["HS256"])
+    if dict(payload).get("role") == "admin":
+        admin = True
+    elif dict(payload).get("role") == None:
+        user = True
     if not (user or admin):
+        current_app.logger.warning(
+            f"Unauthorized user tried to access protected asset which requires registered user or admin"
+        )
         return abort(jsonify({"message": False, "unauthorized": True}))
-
     return (user, admin)
 
 
-def image_protected():
-    from db.customer import check_payment
+def image_protected(f):
+    @wraps(f)
+    def decorated(*args, **kwargs):
+        from db.customer import check_payment
 
-    try:
-        id = request.args.get("clientId")
-        exId = request.args.get("exId")
-        paid = check_payment(id, exId)
-        if paid:
-            pass
-        else:
+        try:
+            id = request.args.get("clientId")
+
+            exId = request.args.get("exId")
+            paid = check_payment(id, exId)
+            if paid:
+                pass
+            else:
+                current_app.logger.warning(
+                    f"Unauthorized user tried to access protected image which requires payment"
+                )
+                return abort(
+                    jsonify(
+                        {"message": False, "unauthorized": True},
+                    )
+                )
+
+        except Exception as error:
+            current_app.logger.warning(
+                f"Unauthorized user tried to access protected asset with this error {error}"
+            )
             return abort(
                 jsonify(
                     {"message": False, "unauthorized": True},
                 )
             )
+        return f(*args, **kwargs)
 
-    except Exception as error:
-        return abort(
-            jsonify(
-                {"message": False, "unauthorized": True},
-            )
-        )
+    return decorated
 
 
 """END CUSTOM LOGIN SYSTEM"""

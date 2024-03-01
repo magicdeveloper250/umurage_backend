@@ -1,4 +1,3 @@
-import psycopg2
 import contextlib
 from psycopg2 import sql
 from . import get_db
@@ -8,7 +7,7 @@ def add_new_exhibition(exhibition):
     with get_db() as connection:
         with contextlib.closing(connection.cursor()) as cursor:
             cursor.execute("SET search_path TO public")
-            cursor.execute("BEGIN")
+
             stmt = "INSERT INTO exhibitions (e_name, e_start_date, e_end_date, e_host, e_entrace_fees, e_banner) "
             stmt += "VALUES ({0},{1},{2},{3},{4},{5}) "
             stmt += "RETURNING e_id,e_name, e_start_date, e_end_date, e_host, e_entrace_fees, e_banner"
@@ -23,33 +22,41 @@ def add_new_exhibition(exhibition):
 
             cursor.execute(query)
             new_exhibition = cursor.fetchall()
-            cursor.execute("COMMIT")
+            stmt = "INSERT INTO our_exhibitions (e_id,e_name, e_start_date, e_end_date, e_host, e_entrace_fees, e_banner) "
+            stmt += "VALUES ({0},{1},{2},{3},{4},{5},{6}) "
+            query = sql.SQL(stmt).format(
+                sql.Literal(new_exhibition[0][0]),
+                sql.Literal(new_exhibition[0][1]),
+                sql.Literal(new_exhibition[0][2]),
+                sql.Literal(new_exhibition[0][3]),
+                sql.Literal(new_exhibition[0][4]),
+                sql.Literal(new_exhibition[0][5]),
+                sql.Literal(new_exhibition[0][6]),
+            )
+            cursor.execute(query)
             return new_exhibition
 
 
 def update_exhibition(exhibition, id):
-    try:
-        with get_db() as connection:
-            with contextlib.closing(connection.cursor()) as cursor:
-                cursor.execute("SET search_path TO public")
-                cursor.execute("BEGIN")
-                stmt = "UPDATE exhibitions SET e_name={0}, e_start_date={1}, e_end_date={2}, e_host={3}, e_entrace_fees={4}, e_banner={5} "
-                stmt += "WHERE e_id={6}"
-                query = sql.SQL(stmt).format(
-                    sql.Literal(exhibition["name"]),
-                    sql.Literal(exhibition["start_date"]),
-                    sql.Literal(exhibition["end_date"]),
-                    sql.Literal(exhibition["host"]),
-                    sql.Literal(exhibition["entrace_fees"]),
-                    sql.Literal(exhibition["banner"]),
-                    sql.Literal(id),
-                )
 
-                cursor.execute(query)
-                cursor.execute("COMMIT")
+    with get_db() as connection:
+        with contextlib.closing(connection.cursor()) as cursor:
+            cursor.execute("SET search_path TO public")
+            cursor.execute("BEGIN")
+            stmt = "UPDATE exhibitions SET e_name={0}, e_start_date={1}, e_end_date={2}, e_host={3}, e_entrace_fees={4}, e_banner={5} "
+            stmt += "WHERE e_id={6}"
+            query = sql.SQL(stmt).format(
+                sql.Literal(exhibition["name"]),
+                sql.Literal(exhibition["start_date"]),
+                sql.Literal(exhibition["end_date"]),
+                sql.Literal(exhibition["host"]),
+                sql.Literal(exhibition["entrace_fees"]),
+                sql.Literal(exhibition["banner"]),
+                sql.Literal(id),
+            )
 
-    except psycopg2.DatabaseError as error:
-        print(error)
+            cursor.execute(query)
+            cursor.execute("COMMIT")
 
 
 def delete_exhibition(id):
@@ -68,28 +75,24 @@ def delete_exhibition(id):
 
 
 def get_exhibition(id):
-    try:
-        with get_db() as connection:
-            with contextlib.closing(connection.cursor()) as cursor:
-                cursor.execute("SET search_path TO public")
-                stmt = "SELECT e_id, e_name, e_start_date, e_end_date, e_host, e_entrace_fees, e_banner FROM exhibitions WHERE e_id={0}"
-                query = sql.SQL(stmt).format(sql.Literal(id))
-                cursor.execute(query)
-                record = cursor.fetchall()
-                return record
-    except psycopg2.DatabaseError as error:
-        print(error)
+
+    with get_db() as connection:
+        with contextlib.closing(connection.cursor()) as cursor:
+            cursor.execute("SET search_path TO public")
+            stmt = "SELECT e_id, e_name, e_start_date, e_end_date, e_host, e_entrace_fees, e_banner FROM exhibitions WHERE e_id={0}"
+            query = sql.SQL(stmt).format(sql.Literal(id))
+            cursor.execute(query)
+            record = cursor.fetchall()
+            return record
 
 
 def get_exhibitions():
-    try:
-        with get_db() as connection:
-            with contextlib.closing(connection.cursor()) as cursor:
-                cursor.execute("SET search_path TO public")
-                stmt = "SELECT e_id, e_name, e_start_date, e_end_date, e_host, e_entrace_fees, e_banner  "
-                stmt += "FROM exhibitions "
-                cursor.execute(stmt)
-                paintings = cursor.fetchall()
-                return paintings
-    except psycopg2.DatabaseError as error:
-        print(error)
+
+    with get_db() as connection:
+        with contextlib.closing(connection.cursor()) as cursor:
+            cursor.execute("SET search_path TO public")
+            stmt = "SELECT e_id, e_name, e_start_date, e_end_date, e_host, e_entrace_fees, e_banner  "
+            stmt += "FROM exhibitions "
+            cursor.execute(stmt)
+            paintings = cursor.fetchall()
+            return paintings

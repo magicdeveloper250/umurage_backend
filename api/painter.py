@@ -1,73 +1,98 @@
-from auth.UserAuth import admin_required
+from auth.UserAuth import admin_required, custom_login_required
 from filemanagement import filemanager
 from flask import Blueprint, request, jsonify, send_file
+from flask import current_app
 from helperfunctions import convertToObject
 from psycopg2 import IntegrityError
-from werkzeug.utils import secure_filename
 import bcrypt
 import db.painter as database
 import os
+import emails.email_verification as email
+import threading
+import jwt
+import cryptocode
+from auth import SESSION_KEY
 
 painter = Blueprint(name="painter", import_name="painter")
-HEADERS = ["id", "username", "fullname", "phone", "image"]
+HEADERS = ["id", "username", "phone", "image", "fullname", "role", "email", "verified"]
 
 
 @painter.route("/add_new_painter", methods=["POST"])
+@admin_required
 def add_new_painter():
-    # admin_required()
     try:
         new_painter = {}
         id = os.urandom(24).hex()
         new_painter["id"] = id
-        new_painter["email"] = request.form.get("fullname")
+        new_painter["email"] = request.form.get("email")
         new_painter["username"] = request.form.get("username")
         hashedpw = bcrypt.hashpw(
             request.form.get("password").encode(), bcrypt.gensalt()
         )
+        new_painter["fullname"] = request.form.get("fullname")
         new_painter["password"] = str(hashedpw).removeprefix("b'").removesuffix("'")
         new_painter["phonenumber"] = request.form.get("phonenumber")
         profilepicture = request.files.get("profilepicture")
-        filename = (
-            request.form.get("username") + "_profilepicture_" + profilepicture.filename
+        image_url = filemanager.add_user_profile_file(profilepicture, new_painter["id"])
+        new_painter["profilepicture"] = image_url
+        added_painter = convertToObject(HEADERS, database.add_new_painter(new_painter))
+        base_url = request.base_url.removesuffix("/add_new_painter")
+        email_thread = threading.Thread(
+            target=email.send_html_email,
+            args=[new_painter["email"], added_painter[0], base_url],
         )
+        email_thread.start()
 
-        new_painter["profilepicture"] = (
-            request.base_url.replace("/add_new_painter", "")
-            + f"/uploads/profiles/"
-            + secure_filename(filename)
-        )
-        database.add_new_painter(new_painter)
-        filemanager.add_user_profile_file(profilepicture, filename)
         return jsonify({"success": True})
     except IntegrityError as error:
-        print(error)
+        current_app.logger.error(str(error))
         return jsonify({"userExist": True})
     except Exception as error:
-        print(error)
+        current_app.logger.error(str(error))
         return jsonify({"success": False})
 
 
 @painter.route("/get_painters", methods=["GET"])
+@admin_required
 def list_painters():
     global HEADERS
-    admin_required()
     try:
         painters = database.get_painters()
         return jsonify(convertToObject(HEADERS, painters))
     except Exception as error:
-        print(error)
+        current_app.logger.error(str(error))
+        return jsonify([])
+
+
+@painter.route("/change_password", methods=["POST"])
+@custom_login_required
+def change_password():
+    try:
+        user = jwt.decode(
+            request.headers.get("Authorization").split(" ")[1],
+            SESSION_KEY,
+            algorithms=["HS256"],
+        )
+        user_id = cryptocode.decrypt(dict(user).get("id"), SESSION_KEY)
+        new_password = request.form.get("newPassword")
+        hashedpw = bcrypt.hashpw(new_password.encode(), bcrypt.gensalt())
+        new_password = str(hashedpw).removeprefix("b'").removesuffix("'")
+        database.change_password(user_id, new_password)
+        return jsonify({"message": "password changed"})
+    except Exception as error:
+        current_app.logger.error(str(error))
+        return jsonify({"error": str(error)})
 
 
 @painter.route("/delete_painter/<id>", methods=["DELETE"])
+@admin_required
 def delete_painter(id):
-    admin_required()
     try:
         deleted_painter = database.delete_painter(id)
         painters = database.get_painters()
-        filemanager.delete_user_profile_file(deleted_painter[0][4])
         return jsonify({"success": True, "data": convertToObject(HEADERS, painters)})
     except Exception as error:
-        print(error)
+        current_app.logger.error(str(error))
         return jsonify({"success": False})
 
 

@@ -4,6 +4,7 @@ import contextlib
 
 
 def add_exhibition_paintings(painting_information):
+    print(painting_information["owner"])
     with get_db() as connection:
         with contextlib.closing(connection.cursor()) as cursor:
             cursor.execute("SET search_path TO public")
