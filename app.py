@@ -40,6 +40,7 @@ CORS(
     app,
     origins=[
         "https://umuragearthubf.onrender.com",
+        "https://umurage-frontend.onrender.com",
         "http://localhost:5173",
         "https://umuragearts.com",
     ],
