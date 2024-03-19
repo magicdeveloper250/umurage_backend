@@ -1,42 +1,31 @@
+from models.painterbase import PainterBase
+from psycopg2 import sql
 from . import get_db
 import contextlib
 import psycopg2
-from psycopg2 import sql
 
 
-def add_new_painter(painter):
-
+def add_new_painter(painter: PainterBase):
     with get_db() as connection:
         with contextlib.closing(connection.cursor()) as cursor:
             cursor.execute("SET search_path TO public")
-            stmt = "INSERT INTO painters (id,username,phone, picture, fullname, password, email) "
-            stmt += "VALUES ({0}, {1}, {2},{3},{4},{5}, {6});"
-            stmt += "INSERT INTO our_painters (id,username,phone, picture, fullname, password, email) "
-            stmt += "VALUES ({7}, {8}, {9},{10},{11},{12}, {13}) "
-            stmt += "RETURNING id,username,phone, picture, fullname,role, email;"
+            stmt = "INSERT INTO painters (username,phone, picture, fullname, password, email) "
+            stmt += "VALUES ({0}, {1}, {2},{3},{4},{5}) "
+            stmt += "RETURNING id, username, phone, picture, fullname,email,role, verified, password;"
             query = sql.SQL(stmt).format(
-                sql.Literal(painter.get("id")),
-                sql.Literal(painter.get("username")),
-                sql.Literal(painter.get("phone")),
-                sql.Literal(painter.get("profilepicture")),
-                sql.Literal(painter.get("fullname")),
-                sql.Literal(painter.get("password")),
-                sql.Literal(painter.get("email")),
-                sql.Literal(painter.get("id")),
-                sql.Literal(painter.get("username")),
-                sql.Literal(painter.get("phone")),
-                sql.Literal(painter.get("profilepicture")),
-                sql.Literal(painter.get("fullname")),
-                sql.Literal(painter.get("password")),
-                sql.Literal(painter.get("email")),
+                sql.Literal(painter.get_username()),
+                sql.Literal(painter.get_phone()),
+                sql.Literal(painter.get_picture()),
+                sql.Literal(painter.get_fullname()),
+                sql.Literal(painter.get_password()),
+                sql.Literal(painter.get_email()),
             )
             cursor.execute(query)
-            added_painter = cursor.fetchall()
-            return added_painter
+            added = PainterBase.dict(PainterBase(*cursor.fetchone()))
+            return added
 
 
 def get_painter(id):
-
     with get_db() as connection:
         with contextlib.closing(connection.cursor()) as cursor:
             cursor.execute("SET search_path TO public")
@@ -60,29 +49,26 @@ def verify_email(id, email):
             stmt += "COMMIT;"
             query = sql.SQL(stmt).format(sql.Literal(id), sql.Literal(email))
             cursor.execute(query)
+            return True
 
 
 def change_password(user_id, new_password):
-
     with get_db() as connection:
         with contextlib.closing(connection.cursor()) as cursor:
             cursor.execute("SET search_path TO public")
-
             cursor.execute("BEGIN")
             stmt = "UPDATE painters "
             stmt += "SET password={0} "
             stmt += "WHERE id={1}; "
-
             query = sql.SQL(stmt).format(
                 sql.Literal(new_password), sql.Literal(user_id)
             )
-
             cursor.execute(query)
             cursor.execute("COMMIT")
+            return True
 
 
 def get_painter_by_email(email):
-
     with get_db() as connection:
         with contextlib.closing(connection.cursor()) as cursor:
             cursor.execute("SET search_path TO public")
@@ -114,12 +100,14 @@ def get_painters():
             with contextlib.closing(connection.cursor()) as cursor:
                 cursor.execute("SET search_path TO public")
                 stmt = (
-                    "SELECT id,username,phone, picture, fullname,role, email, verified "
+                    "SELECT id,username,phone, picture, fullname,email, role, verified "
                 )
                 stmt += "FROM painters"
                 cursor.execute(stmt)
-                painters = cursor.fetchall()
-                return painters
+                painters = map(
+                    lambda p: PainterBase.dict(PainterBase(*p)), cursor.fetchall()
+                )
+                return list(painters)
     except psycopg2.DatabaseError as error:
         return error
 

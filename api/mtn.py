@@ -1,10 +1,9 @@
-from flask import Blueprint
-from flask import request, jsonify
-from flask import current_app
-from helperfunctions import convertToObject
+from requests.exceptions import ConnectionError, ConnectTimeout
 from payment.mtn import make_mtn_payment
-import db.payment as database
+from flask import request, jsonify
 import db.customer as customer_db
+import db.payment as database
+from flask import Blueprint
 
 mtn = Blueprint(name="mtn", import_name="mtn")
 
@@ -33,5 +32,14 @@ def pay_with_mtn():
                 "message": "Transaction done successfully",
             }
         )
+    except (
+        ConnectionRefusedError,
+        ConnectionError,
+        ConnectionAbortedError,
+        ConnectionResetError,
+        ConnectTimeout,
+    ):
+        return jsonify({"success": False, "error": "server connection error"})
+
     except Exception as error:
-        return jsonify({"success": True, "error": str(error)})
+        return jsonify({"success": False, "error": str(error)})

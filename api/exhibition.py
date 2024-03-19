@@ -1,53 +1,75 @@
-from auth.UserAuth import admin_required
-from filemanagement import filemanager
+from psycopg2 import IntegrityError, DatabaseError, OperationalError
 from flask import Blueprint, request, jsonify, send_file
+from auth.UserAuth import admin_required
+from models.exhibition import Exhibition
+from filemanagement import filemanager
+from urllib3.exceptions import (
+    HTTPError,
+    HTTPWarning,
+    RequestError,
+    ResponseError,
+    NewConnectionError,
+)
 from flask import current_app
-from helperfunctions import convertToObject
-from psycopg2 import IntegrityError
-from werkzeug.utils import secure_filename
-import db.exhibition as database
-
 
 exhibition = Blueprint(name="exhibition", import_name="exhibition")
-HEADERS = ["id", "name", "startdate", "enddate", "host", "fees", "image"]
 
 
 @exhibition.route("/add_new_exhibition", methods=["PUT"])
 @admin_required
 def add_exhibition():
-    global HEADERS
+    """ROUTE FOR ADDING NEW EXHIBITION"""
     try:
-        exhibition = {}
-        exhibition["name"] = request.form.get("name")
-        exhibition["start_date"] = request.form.get("start_date")
-        exhibition["end_date"] = request.form.get("end_date")
-        exhibition["host"] = request.form.get("host")
-        exhibition["entrace_fees"] = request.form.get("entrace_fees")
         exhibition_banner_file = request.files.get("banner")
 
         image_url = filemanager.save_exhibition_banner_file(
-            exhibition_banner_file, exhibition["host"]
+            exhibition_banner_file, request.form.get("host")
         )
-        exhibition["banner"] = image_url
-        new_item = database.add_new_exhibition(exhibition)
-        return jsonify({"success": True, "data": convertToObject(HEADERS, new_item)})
+        exhibition = Exhibition(
+            None,
+            request.form.get("name"),
+            request.form.get("start_date"),
+            request.form.get("end_date"),
+            request.form.get("host"),
+            request.form.get("entrace_fees"),
+            image_url,
+        )
+        new_item = exhibition.add_exhibition()
+        return jsonify({"success": True, "data": new_item})
     except IntegrityError as error:
         current_app.logger.error(str(error))
-        return jsonify({"exhibitionExist": True})
+        return jsonify({"success": False, "messag": "Exhibition already exists"})
     except FileExistsError as error:
         current_app.logger.error(str(error))
-        return jsonify({"exhibitionExist": True})
+        return jsonify({"success": False, "message": "Exhibition already exists"})
+    except (DatabaseError, OperationalError):
+        return jsonify(
+            {"success": False, "message": "Data submitted has an error, try again"}
+        )
+    except (
+        ConnectionAbortedError,
+        ConnectionRefusedError,
+        ConnectionResetError,
+        NewConnectionError,
+        ConnectionError,
+        ResponseError,
+        RequestError,
+        HTTPWarning,
+        HTTPError,
+    ):
+        return jsonify({"success": False, "message": "Connection error"})
+
     except Exception as error:
         current_app.logger.error(str(error))
-        return jsonify({"success": False})
+        print(str(error))
+        return jsonify({"success": False, "message": "uncaught error, try again"})
 
 
 @exhibition.route("/get_exhibition/<id>", methods=["GET"])
 def get_exhibition(id):
-    global HEADERS
+    """ROUTE FOR GETTING EXHIBITIONS BY ID"""
     try:
-        exhibition = database.get_exhibition(id)
-        return jsonify(convertToObject(HEADERS, exhibition)[0])
+        return jsonify(Exhibition.get_exhibition(id))
     except Exception as error:
         current_app.logger.error(str(error))
         return jsonify([])
@@ -55,61 +77,52 @@ def get_exhibition(id):
 
 @exhibition.route("/get_exhibitions", methods=["GET"])
 def get_exhibitions():
-    global HEADERS
+    """ROUTE FOR GETTING ALL EXHIBITIONS"""
     try:
-        exhibitions = database.get_exhibitions()
-        return jsonify(convertToObject(HEADERS, exhibitions))
+        return jsonify(Exhibition.get_exhibitions())
     except Exception as error:
         current_app.logger.error(str(error))
         return jsonify([])
 
 
-@exhibition.route("/uploads/exhibitions/<filename>")
-def send_exhibition_image(filename):
-    try:
-        file = filemanager.get_exhibition_banner_path(filename)
-        return send_file(file)
-    except Exception as error:
-        current_app.logger.error(str(error))
-        return jsonify("File not loaded")
-
-
 @exhibition.route("/delete_exhibition/<id>/<name>", methods=["DELETE"])
 @admin_required
 def delete_exhibition(id, name):
-    global HEADERS
+    """ROUTE FOR DELETING EXHIBITION"""
     try:
-        deleted_exhibition = database.delete_exhibition(id)
-        # filemanager.delete_exhibition_painting_dir(name)
-        # filemanager.delete_exhibition_banner_file(deleted_exhibition[0][6])
-        return jsonify(
-            {"success": True, "data": convertToObject(HEADERS, deleted_exhibition)}
-        )
+        return jsonify({"success": True, "data": Exhibition.delete_exhibition(id)})
+    except (DatabaseError, OperationalError) as error:
+        return jsonify({"success": False, "message": str(error)})
+    except (
+        ConnectionAbortedError,
+        ConnectionRefusedError,
+        ConnectionResetError,
+        ConnectionError,
+    ):
+        return jsonify({"success": False, "message": "Connection error"})
     except Exception as error:
         current_app.logger.error(str(error))
-        return jsonify({"success": False})
+        return jsonify({"success": False, "message": "uncaught error"})
 
 
 @exhibition.route("/update_exhibition/<id>/<name>", methods=["PUT"])
 @admin_required
 def update_exhibition(id, name):
     try:
-        exhibition = {}
-        exhibition["name"] = request.form.get("name")
-        exhibition["start_date"] = request.form.get("start_date")
-        exhibition["end_date"] = request.form.get("end_date")
-        exhibition["host"] = request.form.get("host")
-        exhibition["entrace_fees"] = request.form.get("entrace_fees")
         exhibition_banner_file = request.files.get("banner")
-        banner_fname = (
-            request.base_url.replace(f"/update_exhibition/{id}/{name}/", "")
-            + "/uploads/exhibitions/"
-            + exhibition_banner_file.filename
+
+        image_url = filemanager.save_exhibition_banner_file(
+            exhibition_banner_file, request.form.get("host")
         )
-        exhibition["banner"] = banner_fname
-        database.update_exhibition(exhibition, id)
-        filemanager.save_exhibition_banner_file(exhibition_banner_file)
-        filemanager.rename_exhibition_folder_name(name, exhibition["name"])
+        exhibition = Exhibition(
+            request.form.get("name"),
+            request.form.get("start_date"),
+            request.form.get("end_date"),
+            request.form.get("host"),
+            request.form.get("entrace_fees"),
+            image_url,
+        )
+        exhibition.add_exhibition()
         return jsonify({"success": True})
     except FileExistsError as error:
         current_app.logger.error(str(error))

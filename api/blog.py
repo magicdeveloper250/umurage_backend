@@ -1,8 +1,8 @@
-from auth.UserAuth import admin_required
-from helperfunctions import convertToObject
-import db.blog as database
+from psycopg2.errors import DatabaseError, OperationalError
 from flask import Blueprint, request, jsonify
-
+from auth.UserAuth import admin_required
+from flask import current_app
+from models.blog import Blog
 
 blog = Blueprint(name="blog", import_name="blog")
 HEADERS = ["id", "title", "content", "created", "author"]
@@ -11,28 +11,71 @@ HEADERS = ["id", "title", "content", "created", "author"]
 @blog.route("/blog/add_new_blog", methods=["POST"])
 @admin_required
 def post_blog():
-    global HEADERS
-    blog = dict(request.form)
-    added_post = database.add_blog(blog)
-    return jsonify({"success": True, "data": convertToObject(HEADERS, added_post)})
+    """ROUTE FOR ADDING NEW BLOG"""
+    blog = Blog(
+        None,
+        request.form.get("title"),
+        request.form.get("content"),
+        request.form.get("created"),
+        request.form.get("author"),
+    )
+    added_post = blog.add_blog()
+    return jsonify({"success": True, "data": added_post})
 
 
 @blog.route("/blog/get_blogs", methods=["GET"])
 def get_blogs():
-    global HEADERS
-    blogs = database.get_blogs()
-    return jsonify(convertToObject(HEADERS, blogs))
+    """ROUTE FOR GETTING ALL BLOGS"""
+    blogs = Blog.get_blogs()
+    return jsonify({"success": True, "data": blogs})
 
 
 @blog.route("/blog/get_blogs/<id>")
 def get_blog_by_id(id):
-    blogs = database.get_blogs(id)
-    return jsonify(convertToObject(HEADERS, blogs))
+    """ROUTE FOR GETTING BLOG BY ID"""
+    try:
+        blogs = Blog.get_blogs(id=id)
+        return jsonify({"success": True, "data": blogs})
+    except (DatabaseError, OperationalError):
+        return jsonify(
+            {
+                "success": False,
+                "message": "information submitted to the server has error. Please check your info",
+            }
+        )
+    except (
+        ConnectionRefusedError,
+        ConnectionAbortedError,
+        ConnectionResetError,
+        ConnectionError,
+    ):
+        return jsonify({"success": False, "message": "Connection error"})
+    except Exception as error:
+        current_app.logger.error(str(error))
+        return jsonify({"success": False, "message": "uncaught error"})
 
 
 @blog.route("/blog/delete_blog/<id>", methods=["DELETE"])
 @admin_required
 def delete_blog(id):
-    global HEADERS
-    deleted_blog = database.delete_blog(id)
-    return jsonify({"success": True, "data": convertToObject(HEADERS, deleted_blog)})
+    """ROUTE FOR DELETING BLOG"""
+    try:
+        deleted_blog = Blog.delete_blog(id)
+        return jsonify({"success": True, "data": [deleted_blog]})
+    except (DatabaseError, OperationalError) as database_error:
+        return jsonify(
+            {
+                "success": False,
+                "message": str(database_error),
+            }
+        )
+    except (
+        ConnectionAbortedError,
+        ConnectionRefusedError,
+        ConnectionResetError,
+        ConnectionError,
+    ):
+        return jsonify({"success": False, "message": "Connection error"})
+    except Exception as error:
+        current_app.logger.error(str(error))
+        return jsonify({"success": False, "message": "uncaught error"})

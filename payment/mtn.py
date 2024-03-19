@@ -7,9 +7,9 @@ from . import (
     MTN_PAYER_MESSAGE,
     MTN_PAYEE_MESSAGE,
 )
+import requests
 import json
 import uuid
-import requests
 import os
 
 

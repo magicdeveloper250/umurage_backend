@@ -1,4 +1,8 @@
-from flask import Flask, make_response, jsonify, request
+from dotenv import load_dotenv, find_dotenv
+
+load_dotenv(find_dotenv())
+
+from flask import Flask
 from api.painter import painter
 from api.painting import painting
 from api.blog import blog
@@ -9,15 +13,14 @@ from auth.verify import verify
 from payment.paypal import payment
 from api.mtn import mtn
 from flask_cors import CORS
-from auth.UserAuth import auth, loginmanager
+from auth.UserAuth import auth
 from api.customer import customer
 import logging
+import os
 
-
-SECRET_KEY = "4bbb5d19-4dee-40d8-a2d8-1b75da3e9d01"
 
 app = Flask(__name__)
-app.secret_key = SECRET_KEY
+app.secret_key = os.environ.get("SECRET_KEY")
 app.register_blueprint(painter)
 app.register_blueprint(painting)
 app.register_blueprint(blog)
@@ -34,15 +37,7 @@ log_file = "umurage.log"
 log_mode = "a"
 log_format = "%(asctime)s - %(levelname)s - %(message)s"
 logging.basicConfig(level=log_level, filename=log_file, format=log_format)
-
-
 CORS(
     app,
-    origins=[
-        "https://umuragearthubf.onrender.com",
-        "https://umurage-frontend.onrender.com",
-        "http://localhost:5173",
-        "https://umuragearts.com",
-    ],
+    origins=[os.environ.get("FRONT_END_SERVER")],
 )
-loginmanager.init_app(app)

@@ -1,27 +1,25 @@
-from . import get_db
-from auth.UserAuth import custom_login_required
+from models.paintingBase import PaintingBase
 from psycopg2 import sql
+from . import get_db
 import contextlib
 
 
-def add_new_painting(painting):
+def add_new_painting(painting: PaintingBase):
     with get_db() as connection:
         with contextlib.closing(connection.cursor()) as cursor:
             cursor.execute("SET search_path TO public")
-            cursor.execute("BEGIN")
             stmt = "INSERT INTO paintings (g_name, g_category, g_owner, g_created, g_image) "
             stmt += "VALUES ({0},{1},{2},{3},{4})"
-            stmt += " RETURNING g_id,g_name, g_category, g_owner, g_created, g_image;"
+            stmt += " RETURNING g_id,g_image, likes"
             query = sql.SQL(stmt).format(
-                sql.Literal(painting.get("name")),
-                sql.Literal(painting.get("category")),
-                sql.Literal(painting.get("owner")),
-                sql.Literal(painting.get("created")),
-                sql.Literal(painting.get("image")),
+                sql.Literal(painting.get_name()),
+                sql.Literal(painting.get_category()),
+                sql.Literal(painting.get_owner()),
+                sql.Literal(painting.get_created()),
+                sql.Literal(painting.get_image()),
             )
             cursor.execute(query)
             added_painting = cursor.fetchall()
-            cursor.execute("COMMIT")
             return added_painting
 
 
@@ -50,19 +48,17 @@ def get_painting_by_id(userId):
             return paintings
 
 
-def delete_painting(id, owner):
+def delete_painting(painting_id):
     with get_db() as connection:
         with contextlib.closing(connection.cursor()) as cursor:
             cursor.execute("SET search_path TO public")
-            stmt = " BEGIN ;"
+            stmt = "BEGIN;"
             stmt += "DELETE FROM paintings "
             stmt += "WHERE g_id={0} "
-            stmt += "RETURNING g_id,g_name, g_category, g_owner, g_created, g_image;"
-            query = sql.SQL(stmt).format(sql.Literal(id), sql.Literal(owner))
+            stmt + "COMMIT;"
+            query = sql.SQL(stmt).format(sql.Literal(painting_id))
             cursor.execute(query)
-            deleted_painting = cursor.fetchall()
-            cursor.execute("COMMIT")
-            return deleted_painting
+            return True
 
 
 def like(painting_id):

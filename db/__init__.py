@@ -3,13 +3,14 @@ import psycopg2.extensions
 from psycopg2 import pool
 from queue import Empty
 from queue import Queue
+import os
 
 # Database configuration
-INTERNAL_DB_CONNECTION = "postgres://postgres:manzisql123.@localhost/galleryWebsite"
-EXTERNAL_DB_CONNECTION = "postgres://umurage_user:IdMxKQCu6tgJcVyWIWGOahItkJuEcJS7@dpg-cngqaala73kc73c5edu0-a/umurage"
-AEXTERNAL = "postgres://umurageartadmin:4symJNXli123f1PTiC8ZJ3Mtv1cPa7oQ@dpg-cn5q330cmk4c73994nqg-a.oregon-postgres.render.com/umuragearthub_l0vs"
-INTERNAL2 = "postgres://umuragearthubadmin:icsba7282JdItIQapnLb8z5nNUEsEYmF@dpg-cml9er7109ks73a827t0-a.oregon-postgres.render.com/umuragearthubdb_wds7"
-DB_URL = EXTERNAL_DB_CONNECTION
+INTERNAL_DB_CONNECTION = os.environ.get("INTERNAL_DB_CONNECTION")
+EXTERNAL_DB_CONNECTION = os.environ.get("EXTERNAL_DB_CONNECTION")
+AEXTERNAL = os.environ.get("AEXTERNAL")
+INTERNAL2 = os.environ.get("INTERNAL2")
+DB_URL = INTERNAL_DB_CONNECTION
 MAX_CONNECTIONS = 1000
 
 pool = pool.ThreadedConnectionPool(minconn=1, maxconn=MAX_CONNECTIONS, dsn=DB_URL)
@@ -30,12 +31,3 @@ def get_db():
         conn = psycopg2.connect(DB_URL)
         putconn(conn)
         return db_pool.get(block=False)
-
-    # return pool.getconn()
-
-
-# def close_connection(exception):
-#     """Closes the database connection at the end of the request."""
-#     db = g.pop("db", None)
-#     if db is not None:
-#         pool.putconn(db)

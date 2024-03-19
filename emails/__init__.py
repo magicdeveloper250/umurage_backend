@@ -1,5 +1,7 @@
-CLIENT_EMAIL = "impanomanzienock@gmail.com"
-CLIENT_PASSWORD = "exkkdcooiullroyh "
+import os
+
+CLIENT_EMAIL = os.environ.get("CLIENT_EMAIL")
+CLIENT_PASSWORD = os.environ.get("CLIENT_PASSWORD")
 
 CUSTOMER_EMAIL_TEMPLATE = (
     message

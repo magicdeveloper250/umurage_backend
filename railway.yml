@@ -1,6 +1,0 @@
-services:
-  - image: railway/python:3.11
-    command: "python run.py"
-
-    volumes:
-      - /railway/persistent/uploads:/app/uploads

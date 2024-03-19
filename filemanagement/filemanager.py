@@ -28,53 +28,38 @@ config = cloudinary.config(secure=True)
 
 
 ############################ CLOUDINARY FILE MANAGEMENT BLOCK
-
-
-def save_exhibition_banner_file(image_file, image_owner):
-
-    PUBLIC_ID = (
-        image_owner
-        + str(uuid.uuid4())
-        + str(datetime.datetime.utcnow()).replace(" ", "_").lower()
-    )
-    upload_thread = threading.Thread(
-        target=cloudinary.uploader.upload(
-            image_file,
-            public_id=PUBLIC_ID,
+def process_audio_file(file, public_id):
+    with open(file, "rb") as f:
+        res = cloudinary.uploader.upload_large(
+            f,
+            public_id=public_id,
             unique_filename=True,
-            overwrite=True,
+            resource_type="video",
         )
-    )
-    image_url = cloudinary.CloudinaryImage(PUBLIC_ID).build_url()
-    upload_thread.start()
-    return image_url
+        return res["secure_url"]
 
 
 def add_painting_file(file_owner, image, audio):
     IMAGE_PUBLIC_ID = (
         file_owner
         + str(uuid.uuid4())
-        + str(datetime.datetime.utcnow()).replace(" ", "_").lower()
+        + str(datetime.datetime.now(datetime.UTC)).replace(" ", "_").lower()
     )
     AUDIO_PUBLIC_ID = (
         file_owner
         + str(uuid.uuid4())
-        + str(datetime.datetime.utcnow()).replace(" ", "_").lower()
+        + str(datetime.datetime.now(datetime.UTC)).replace(" ", "_").lower()
     )
     image_thread = threading.Thread(
+        daemon=True,
         target=lambda: cloudinary.uploader.upload(
             image,
             public_id=IMAGE_PUBLIC_ID,
             unique_filename=True,
-        )
+        ),
     )
     audio_thread = threading.Thread(
-        target=lambda: cloudinary.uploader.upload(
-            audio,
-            public_id=AUDIO_PUBLIC_ID,
-            unique_filename=True,
-            resource_type="video",
-        )
+        target=lambda: process_audio_file(audio, AUDIO_PUBLIC_ID), daemon=True
     )
     audio_url = cloudinary.CloudinaryImage(AUDIO_PUBLIC_ID).build_url()
 
@@ -97,7 +82,7 @@ def add_user_painting_file(image_file, image_owner):
     PUBLIC_ID = (
         image_owner
         + str(uuid.uuid4())
-        + str(datetime.datetime.utcnow()).replace(" ", "_").lower()
+        + str(datetime.datetime.now(datetime.UTC)).replace(" ", "_").lower()
     )
     upload_thread = threading.Thread(
         target=lambda: cloudinary.uploader.upload(
@@ -109,6 +94,26 @@ def add_user_painting_file(image_file, image_owner):
     )
     image_url = cloudinary.CloudinaryImage(PUBLIC_ID).build_url()
     upload_thread.start()
+    return image_url
+
+
+def save_exhibition_banner_file(image_file, image_owner):
+
+    PUBLIC_ID = (
+        image_owner
+        + str(uuid.uuid4())
+        + str(datetime.datetime.utcnow()).replace(" ", "_").lower()
+    )
+    upload_thread = threading.Thread(
+        target=lambda: cloudinary.uploader.upload(
+            image_file,
+            public_id=PUBLIC_ID,
+            unique_filename=True,
+            overwrite=True,
+        )
+    )
+    image_url = cloudinary.CloudinaryImage(PUBLIC_ID).build_url()
+    # upload_thread.start()
     return image_url
 
 

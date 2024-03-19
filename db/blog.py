@@ -1,9 +1,10 @@
+from models.blogBase import BlogBase
+from psycopg2 import sql
 from . import get_db
 import contextlib
-from psycopg2 import sql
 
 
-def add_blog(blog: dict):
+def add_blog(blog: BlogBase):
     with get_db() as connection:
         with contextlib.closing(connection.cursor()) as cursor:
             cursor.execute("SET search_path TO public")
@@ -11,35 +12,35 @@ def add_blog(blog: dict):
             stmt += "VALUES ({0},{1},{2},{3} ) "
             stmt += "RETURNING b_id, b_title, b_content, b_created, b_author"
             query = sql.SQL(stmt).format(
-                sql.Literal(blog.get("title")),
-                sql.Literal(blog.get("content")),
-                sql.Literal(blog.get("created")),
-                sql.Literal(blog.get("author")),
+                sql.Literal(blog.get_title()),
+                sql.Literal(blog.get_content()),
+                sql.Literal(blog.get_created()),
+                sql.Literal(blog.get_author()),
             )
-
             cursor.execute(query)
-            return cursor.fetchall()
+            blogs = map(lambda b: BlogBase.dict(BlogBase(*b)), cursor.fetchall())
+            return list(blogs)
 
 
 def get_blogs(id=None):
     with get_db() as connection:
         with contextlib.closing(connection.cursor()) as cursor:
             cursor.execute("SET search_path TO public")
-            record = []
+            record = None
             if id:
                 stmt = "SELECT b_id, b_title, b_content, b_created, b_author "
                 stmt += "FROM blogs "
                 stmt += "WHERE b_id ={0}"
                 query = sql.SQL(stmt).format(sql.Literal(id))
                 cursor.execute(query)
-                record = cursor.fetchall()
+                record = map(lambda b: BlogBase.dict(BlogBase(*b)), cursor.fetchall())
             else:
                 stmt = "SELECT * "
                 stmt += "FROM blogs "
                 query = sql.SQL(stmt)
                 cursor.execute(query)
-                record = cursor.fetchall()
-            return record
+                record = map(lambda b: BlogBase.dict(BlogBase(*b)), cursor.fetchall())
+            return list(record)
 
 
 def delete_blog(id):
@@ -49,9 +50,8 @@ def delete_blog(id):
             stmt = "BEGIN;"
             stmt += "DELETE FROM blogs "
             stmt += "WHERE b_id={0} "
-            stmt += "RETURNING b_id, b_title, b_content, b_created, b_author"
+            stmt += "RETURNING b_id, b_title, b_content, b_created, b_author;"
+            stmt += "COMMIT"
             query = sql.SQL(stmt).format(sql.Literal(id))
             cursor.execute(query)
-            deleted_blog = cursor.fetchall()
-            cursor.execute("COMMIT")
-            return deleted_blog
+            return True

@@ -1,102 +1,159 @@
+from emails.email_verification_worker import EmailVerificationWorker
+from psycopg2 import IntegrityError, DatabaseError, OperationalError
 from auth.UserAuth import admin_required, custom_login_required
+from flask import Blueprint, request, jsonify
 from filemanagement import filemanager
-from flask import Blueprint, request, jsonify, send_file
+from models.painter import Painter
 from flask import current_app
-from helperfunctions import convertToObject
-from psycopg2 import IntegrityError
-import bcrypt
-import db.painter as database
-import os
-import emails.email_verification as email
-import threading
-import jwt
 import cryptocode
-from auth import SESSION_KEY
+import bcrypt
+import jwt
+import os
 
 painter = Blueprint(name="painter", import_name="painter")
-HEADERS = ["id", "username", "phone", "image", "fullname", "role", "email", "verified"]
 
 
 @painter.route("/add_new_painter", methods=["POST"])
 @admin_required
 def add_new_painter():
+    """ROUTE FOR ADDING NEW PAINTER ACCOUNT"""
     try:
-        new_painter = {}
-        id = os.urandom(24).hex()
-        new_painter["id"] = id
-        new_painter["email"] = request.form.get("email")
-        new_painter["username"] = request.form.get("username")
+        # hashing password from frontend to be saved in database
         hashedpw = bcrypt.hashpw(
             request.form.get("password").encode(), bcrypt.gensalt()
         )
-        new_painter["fullname"] = request.form.get("fullname")
-        new_painter["password"] = str(hashedpw).removeprefix("b'").removesuffix("'")
-        new_painter["phonenumber"] = request.form.get("phonenumber")
         profilepicture = request.files.get("profilepicture")
-        image_url = filemanager.add_user_profile_file(profilepicture, new_painter["id"])
-        new_painter["profilepicture"] = image_url
-        added_painter = convertToObject(HEADERS, database.add_new_painter(new_painter))
-        base_url = request.base_url.removesuffix("/add_new_painter")
-        email_thread = threading.Thread(
-            target=email.send_html_email,
-            args=[new_painter["email"], added_painter[0], base_url],
+        # saving user profile image to claudinary
+        image_url = filemanager.add_user_profile_file(
+            profilepicture, os.urandom(24).hex()
         )
-        email_thread.start()
-
+        # instantiate new painter object with information from frontend
+        new_painter = Painter(
+            None,
+            request.form.get("username"),
+            request.form.get("phonenumber"),
+            image_url,
+            request.form.get("fullname"),
+            request.form.get("email"),
+            None,
+            0,
+            password=str(hashedpw).removeprefix("b'").removesuffix("'"),
+        )
+        added_painter = (
+            new_painter.add_painter()
+        )  # adding new painter and return bool value
+        base_url = request.base_url.removesuffix("/add_new_painter")
+        # instantiate new email thread
+        email_worker = EmailVerificationWorker(
+            kwargs={
+                "email": new_painter.get_email(),
+                "painter_info": added_painter,
+                "base_url": base_url,
+            }
+        )
+        email_worker.start()  # start email send thread as deamon
         return jsonify({"success": True})
     except IntegrityError as error:
         current_app.logger.error(str(error))
-        return jsonify({"userExist": True})
+        return jsonify({"success": False, "message": "User already exist"})
+    except (DatabaseError, OperationalError) as error:
+        current_app.logger.error(str(error))
+        return jsonify(
+            {"success": False, "message": "Data submitted has an error, try again"}
+        )
+    except (
+        ConnectionAbortedError,
+        ConnectionRefusedError,
+        ConnectionResetError,
+        ConnectionError,
+    ):
+        return jsonify({"success": False, "message": "Connection error"})
+
     except Exception as error:
         current_app.logger.error(str(error))
-        return jsonify({"success": False})
+        return jsonify({"success": False, "message": "uncaught error"})
 
 
 @painter.route("/get_painters", methods=["GET"])
 @admin_required
 def list_painters():
-    global HEADERS
+    """ROUTE FOR GETTING LIST OF PAINTERS"""
     try:
-        painters = database.get_painters()
-        return jsonify(convertToObject(HEADERS, painters))
+        painters = Painter.get_painters()
+        return jsonify({"success": True, "data": painters})
+    except (
+        ConnectionAbortedError,
+        ConnectionRefusedError,
+        ConnectionResetError,
+        ConnectionError,
+    ):
+        return jsonify({"success": False, "message": "Connection error"})
+
     except Exception as error:
         current_app.logger.error(str(error))
-        return jsonify([])
+        return jsonify({"success": False, "message": "uncaught error"})
 
 
 @painter.route("/change_password", methods=["POST"])
 @custom_login_required
 def change_password():
+    """ROUTE FOR CHANGING PASSWORD"""
     try:
+        # use jwt library for decoding and validating token from email
         user = jwt.decode(
             request.headers.get("Authorization").split(" ")[1],
-            SESSION_KEY,
+            os.environ.get("SESSION_KEY"),
             algorithms=["HS256"],
         )
-        user_id = cryptocode.decrypt(dict(user).get("id"), SESSION_KEY)
+        # decrypting user id sent in an email
+        user_id = cryptocode.decrypt(
+            dict(user).get("id"), os.environ.get("SESSION_KEY")
+        )
         new_password = request.form.get("newPassword")
+        # hash new password
         hashedpw = bcrypt.hashpw(new_password.encode(), bcrypt.gensalt())
+        # sanitize new password
         new_password = str(hashedpw).removeprefix("b'").removesuffix("'")
-        database.change_password(user_id, new_password)
-        return jsonify({"message": "password changed"})
+        Painter.change_password(user_id, new_password)
+        return jsonify({"success": True, "message": "password changed"})
+    except IntegrityError as error:
+        current_app.logger.error(str(error))
+        return jsonify({"success": False, "message": "Invalid password"})
+    except (DatabaseError, OperationalError):
+        return jsonify(
+            {"success": False, "message": "Data submitted has an error, try again"}
+        )
+    except (
+        ConnectionAbortedError,
+        ConnectionRefusedError,
+        ConnectionResetError,
+        ConnectionError,
+    ):
+        return jsonify({"success": False, "message": "Connection error"})
     except Exception as error:
         current_app.logger.error(str(error))
-        return jsonify({"error": str(error)})
+        return jsonify({"success": False, "message": "uncaught error"})
 
 
 @painter.route("/delete_painter/<id>", methods=["DELETE"])
 @admin_required
 def delete_painter(id):
+    """ROUTE FOR DELETING PAINTER ACCOUNT"""
     try:
-        deleted_painter = database.delete_painter(id)
-        painters = database.get_painters()
-        return jsonify({"success": True, "data": convertToObject(HEADERS, painters)})
+        Painter.delete_painter(id)
+        painters = Painter.get_painters()
+        return jsonify({"success": True, "data": painters})
+    except (DatabaseError, OperationalError):
+        return jsonify(
+            {"success": False, "message": "Data submitted has an error, try again"}
+        )
+    except (
+        ConnectionAbortedError,
+        ConnectionRefusedError,
+        ConnectionResetError,
+        ConnectionError,
+    ):
+        return jsonify({"success": False, "message": "Connection error"})
     except Exception as error:
         current_app.logger.error(str(error))
-        return jsonify({"success": False})
-
-
-@painter.route("/uploads/profiles/<filename>")
-def send_painter_profile(filename):
-    path = filemanager.get_user_profile_file_path(filename)
-    return send_file(path)
+        return jsonify({"success": False, "message": "uncaught error"})

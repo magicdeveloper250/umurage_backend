@@ -1,13 +1,13 @@
 from . import PAYPAL_CLIENT_ID, PAYPAL_CLIENT_SECRET, BASE_URL
-from flask import Blueprint
+from helperfunctions import convertToObject
+import db.customer as customer_database
 from flask import request, jsonify
 from flask import current_app
-from helperfunctions import convertToObject
-import base64
 import db.payment as database
-import db.customer as customer_database
-import logging
+from flask import Blueprint
 import requests
+import logging
+import base64
 
 payment = Blueprint(name="payment", import_name="payment")
 
@@ -25,9 +25,7 @@ def generate_access_token():
             headers={"Authorization": "Basic {0}".format(encoded_credentials)},
             data="grant_type=client_credentials",
         )
-
         logging.info("Access token created successfully")
-
         return response.json()["access_token"]
 
 
@@ -49,10 +47,6 @@ def create_paypal_order():
         ],
     }
 
-    headers = {
-        "Content-Type": "application/json",
-        "Authorization": f"Bearer {access_token}",
-    }
     # make order request
     response = requests.post(
         url,
@@ -77,9 +71,7 @@ def capture_order(order_id):
             "Authorization": "Bearer {0}".format(access_token),
         },
     )
-
     logging.info("Transaction completed successfully.")
-
     return jsonify(response.json())
 
 
