@@ -9,6 +9,7 @@ class CustomerBase:
         registered_for,
         exName,
         status="pending",
+        datetime=None,
     ) -> None:
         self._id = id if id else None
         self._first_name = c_first_name
@@ -18,6 +19,7 @@ class CustomerBase:
         self._registered_for = registered_for
         self._status = status
         self._exname = exName
+        self._datetime = datetime
 
     def get_id(self) -> str:
         return self._id
@@ -46,6 +48,9 @@ class CustomerBase:
     def get_fullname(self) -> str:
         return self.get_first_name() + " " + self.get_last_name()
 
+    def get_datetime(self) -> str:
+        return self._datetime
+
     @staticmethod
     def dict(object) -> dict:
         return {
@@ -57,4 +62,5 @@ class CustomerBase:
             "exId": object.get_register_for(),
             "exName": object.get_ex_name(),
             "status": object.get_status(),
+            "datetime": object.get_datetime(),
         }

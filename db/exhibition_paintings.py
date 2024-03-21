@@ -37,3 +37,31 @@ def get_exhibition_painting(exhibition_id):
                 cursor.fetchall(),
             )
             return list(paintings)
+
+
+def get_all_exhibition_painting():
+    with get_db() as connection:
+        with contextlib.closing(connection.cursor()) as cursor:
+            cursor.execute("SET search_path TO public")
+            stmt = "SELECT * "
+            stmt += "FROM exhibition_painting "
+            query = sql.SQL(stmt)
+            cursor.execute(query)
+            paintings = map(
+                lambda ep: ExhibitionPaintingBase.dict(ExhibitionPaintingBase(*ep)),
+                cursor.fetchall(),
+            )
+            return list(paintings)
+
+
+def delete_xhibition_painting(id):
+    with get_db() as connection:
+        with contextlib.closing(connection.cursor()) as cursor:
+            cursor.execute("SET search_path TO public")
+            stmt = "BEGIN;"
+            stmt += "DELETE FROM exhibition_painting "
+            stmt += "WHERE e_p_id={0};"
+            stmt += "COMMIT;"
+            query = sql.SQL(stmt).format(sql.Literal(id))
+            cursor.execute(query)
+            return True

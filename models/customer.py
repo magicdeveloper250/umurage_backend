@@ -13,6 +13,7 @@ class Customer(CustomerBase):
         registered_for,
         exName=None,
         status="pending",
+        datetime=None,
     ) -> None:
         super(Customer, self).__init__(
             id,
@@ -23,6 +24,7 @@ class Customer(CustomerBase):
             registered_for,
             exName,
             status,
+            datetime,
         )
 
     def add_cutomer(self) -> dict:
@@ -33,8 +35,8 @@ class Customer(CustomerBase):
         return database.get_customers(id)
 
     @staticmethod
-    def update_customer_status(customer_id, new_status) -> bool:
-        return database.update_customer_status(customer_id, new_status)
+    def update_customer_status(customer_id, new_status, e_name) -> bool:
+        return database.update_customer_status(customer_id, new_status, e_name)
 
     @staticmethod
     def delete_customer(id) -> bool:

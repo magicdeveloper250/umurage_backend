@@ -25,6 +25,7 @@ def add_customer():
             data.get("phonenumber"),
             data.get("exhibition"),
             None,
+            datetime=data.get("datetime"),
         )
         added_customer = customer.add_cutomer()
         email_worker = CustomerEmailWorker(
@@ -40,7 +41,8 @@ def add_customer():
                 "data": [added_customer],
             },
         )
-    except (DatabaseError, OperationalError):
+    except (DatabaseError, OperationalError) as error:
+        current_app.logger.error(str(error))
         return jsonify(
             {
                 "success": False,
@@ -65,7 +67,8 @@ def get_customers():
     """ROUTE FOR GETTING CUSTOMERS"""
     try:
         return jsonify({"success": True, "data": Customer.get_customers(id=None)})
-    except (DatabaseError, OperationalError):
+    except (DatabaseError, OperationalError) as error:
+        current_app.logger.error(str(error))
         return jsonify(
             {
                 "success": False,
@@ -87,15 +90,17 @@ def get_customers():
 @customer.route("/update_customer_status", methods=["POST"])
 @admin_required
 def update_customer_status():
-    customer_id, current_status = request.form.get("customer_id"), request.form.get(
-        "current_status"
+    customer_id, current_status, e_name = (
+        request.form.get("customer_id"),
+        request.form.get("current_status"),
+        request.form.get("e_name"),
     )
     try:
         new_status = "active" if current_status == "pending" else "pending"
-        Customer.update_customer_status(customer_id, new_status)
-        customers = Customer.get_customers()
-        return jsonify({"success": True, "data": customers})
-    except (DatabaseError, OperationalError):
+        customer = Customer.update_customer_status(customer_id, new_status, e_name)
+        return jsonify({"success": True, "data": customer})
+    except (DatabaseError, OperationalError) as error:
+        current_app.logger.error(str(error))
         return jsonify(
             {
                 "success": False,
@@ -133,7 +138,8 @@ def get_customer(customer_id):
     try:
         customer = Customer.get_customers(id=customer_id)
         return jsonify({"success": True, "data": customer})
-    except (DatabaseError, OperationalError):
+    except (DatabaseError, OperationalError) as error:
+        current_app.logger.error(str(error))
         return jsonify(
             {
                 "success": False,
@@ -145,7 +151,8 @@ def get_customer(customer_id):
         ConnectionRefusedError,
         ConnectionResetError,
         ConnectionError,
-    ):
+    ) as error:
+        current_app.logger.error(str(error))
         return jsonify({"success": False, "message": "Connection error"})
     except Exception as error:
         current_app.logger.error(str(error))
@@ -170,7 +177,8 @@ def check_payment():
             )
     except InvalidTextRepresentation:
         return jsonify({"ssuccess": False, "message": "Invalid key"})
-    except (DatabaseError, OperationalError):
+    except (DatabaseError, OperationalError) as error:
+        current_app.logger.error(str(error))
         return jsonify(
             {
                 "success": False,
@@ -182,7 +190,8 @@ def check_payment():
         ConnectionRefusedError,
         ConnectionResetError,
         ConnectionError,
-    ):
+    ) as error:
+        current_app.logger.error(str(error))
         return jsonify({"success": False, "message": "Connection error"})
     except Exception as error:
         current_app.logger.error(str(error))

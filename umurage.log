@@ -1,79 +1,1118 @@
-2024-03-19 12:40:26,252 - INFO -  * Detected change in 'C:\\Users\\IMPANO\\Desktop\\painting_ecommerce_website\\backend\\auth\\UserAuth.py', reloading
-2024-03-19 12:40:26,342 - INFO -  * Restarting with stat
-2024-03-19 12:47:01,310 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+2024-03-20 10:53:53,824 - INFO - 127.0.0.1 - - [20/Mar/2024 10:53:53] "OPTIONS /get_exhibitions HTTP/1.1" 200 -
+2024-03-20 10:53:53,839 - INFO - 127.0.0.1 - - [20/Mar/2024 10:53:53] "GET /get_paintings HTTP/1.1" 200 -
+2024-03-20 10:53:53,860 - INFO - 127.0.0.1 - - [20/Mar/2024 10:53:53] "GET /get_paintings HTTP/1.1" 200 -
+2024-03-20 10:53:53,885 - ERROR - column "status" does not exist
+LINE 1: ..._fees, e_banner, e_status  FROM exhibitions WHERE status='ac...
+                                                             ^
+HINT:  Perhaps you meant to reference the column "exhibitions.e_status".
+
+2024-03-20 10:53:53,886 - INFO - 127.0.0.1 - - [20/Mar/2024 10:53:53] "GET /get_exhibitions HTTP/1.1" 200 -
+2024-03-20 10:53:53,947 - ERROR - column "status" does not exist
+LINE 1: ..._fees, e_banner, e_status  FROM exhibitions WHERE status='ac...
+                                                             ^
+HINT:  Perhaps you meant to reference the column "exhibitions.e_status".
+
+2024-03-20 10:53:53,947 - INFO - 127.0.0.1 - - [20/Mar/2024 10:53:53] "GET /get_exhibitions HTTP/1.1" 200 -
+2024-03-20 10:54:38,693 - INFO -  * Detected change in 'C:\\Users\\IMPANO\\Desktop\\painting_ecommerce_website\\backend\\db\\exhibition.py', reloading
+2024-03-20 10:54:38,769 - INFO -  * Restarting with stat
+2024-03-20 10:54:39,408 - WARNING -  * Debugger is active!
+2024-03-20 10:54:39,408 - INFO -  * Debugger PIN: 394-564-655
+2024-03-20 10:54:46,018 - INFO - 127.0.0.1 - - [20/Mar/2024 10:54:46] "OPTIONS /get_exhibitions HTTP/1.1" 200 -
+2024-03-20 10:54:46,038 - INFO - 127.0.0.1 - - [20/Mar/2024 10:54:46] "GET /get_paintings HTTP/1.1" 200 -
+2024-03-20 10:54:46,050 - INFO - 127.0.0.1 - - [20/Mar/2024 10:54:46] "GET /get_paintings HTTP/1.1" 200 -
+2024-03-20 10:54:46,079 - INFO - 127.0.0.1 - - [20/Mar/2024 10:54:46] "GET /get_exhibitions HTTP/1.1" 200 -
+2024-03-20 10:54:46,131 - INFO - 127.0.0.1 - - [20/Mar/2024 10:54:46] "GET /get_exhibitions HTTP/1.1" 200 -
+2024-03-20 10:55:10,421 - INFO - 127.0.0.1 - - [20/Mar/2024 10:55:10] "OPTIONS /change_exhibition_status HTTP/1.1" 200 -
+2024-03-20 10:55:10,484 - INFO - 127.0.0.1 - - [20/Mar/2024 10:55:10] "PUT /change_exhibition_status HTTP/1.1" 200 -
+2024-03-20 10:55:21,705 - INFO - 127.0.0.1 - - [20/Mar/2024 10:55:21] "OPTIONS /get_exhibitions HTTP/1.1" 200 -
+2024-03-20 10:55:21,757 - INFO - 127.0.0.1 - - [20/Mar/2024 10:55:21] "GET /get_paintings HTTP/1.1" 200 -
+2024-03-20 10:55:21,784 - INFO - 127.0.0.1 - - [20/Mar/2024 10:55:21] "GET /get_paintings HTTP/1.1" 200 -
+2024-03-20 10:55:21,790 - INFO - 127.0.0.1 - - [20/Mar/2024 10:55:21] "GET /get_exhibitions HTTP/1.1" 200 -
+2024-03-20 10:55:21,831 - INFO - 127.0.0.1 - - [20/Mar/2024 10:55:21] "GET /get_exhibitions HTTP/1.1" 200 -
+2024-03-20 10:55:38,293 - INFO - 127.0.0.1 - - [20/Mar/2024 10:55:38] "OPTIONS /get_exhibitions HTTP/1.1" 200 -
+2024-03-20 10:55:38,333 - INFO - 127.0.0.1 - - [20/Mar/2024 10:55:38] "GET /get_paintings HTTP/1.1" 200 -
+2024-03-20 10:55:38,347 - INFO - 127.0.0.1 - - [20/Mar/2024 10:55:38] "GET /get_exhibitions HTTP/1.1" 200 -
+2024-03-20 10:55:38,348 - INFO - 127.0.0.1 - - [20/Mar/2024 10:55:38] "GET /get_paintings HTTP/1.1" 200 -
+2024-03-20 10:55:38,398 - INFO - 127.0.0.1 - - [20/Mar/2024 10:55:38] "GET /get_exhibitions HTTP/1.1" 200 -
+2024-03-20 10:55:52,262 - INFO - 127.0.0.1 - - [20/Mar/2024 10:55:52] "OPTIONS /get_painters HTTP/1.1" 200 -
+2024-03-20 10:55:52,309 - INFO - 127.0.0.1 - - [20/Mar/2024 10:55:52] "GET /get_exhibitions HTTP/1.1" 200 -
+2024-03-20 10:55:52,325 - INFO - 127.0.0.1 - - [20/Mar/2024 10:55:52] "GET /get_exhibitions HTTP/1.1" 200 -
+2024-03-20 10:55:52,330 - INFO - 127.0.0.1 - - [20/Mar/2024 10:55:52] "GET /get_painters HTTP/1.1" 200 -
+2024-03-20 10:55:52,357 - INFO - 127.0.0.1 - - [20/Mar/2024 10:55:52] "GET /get_painters HTTP/1.1" 200 -
+2024-03-20 10:56:57,336 - INFO - 127.0.0.1 - - [20/Mar/2024 10:56:57] "OPTIONS /get_exhibitions HTTP/1.1" 200 -
+2024-03-20 10:56:57,367 - INFO - 127.0.0.1 - - [20/Mar/2024 10:56:57] "GET /get_paintings HTTP/1.1" 200 -
+2024-03-20 10:56:57,384 - INFO - 127.0.0.1 - - [20/Mar/2024 10:56:57] "GET /get_paintings HTTP/1.1" 200 -
+2024-03-20 10:56:57,427 - INFO - 127.0.0.1 - - [20/Mar/2024 10:56:57] "GET /get_exhibitions HTTP/1.1" 200 -
+2024-03-20 10:56:57,488 - INFO - 127.0.0.1 - - [20/Mar/2024 10:56:57] "GET /get_exhibitions HTTP/1.1" 200 -
+2024-03-20 10:57:13,094 - INFO - 127.0.0.1 - - [20/Mar/2024 10:57:13] "OPTIONS /get_all_exhibitions HTTP/1.1" 200 -
+2024-03-20 10:57:13,157 - INFO - 127.0.0.1 - - [20/Mar/2024 10:57:13] "GET /get_all_exhibitions HTTP/1.1" 200 -
+2024-03-20 10:57:18,065 - WARNING - Action denied due to no admin privilege with this error 'NoneType' object has no attribute 'split'
+2024-03-20 10:57:18,065 - INFO - 127.0.0.1 - - [20/Mar/2024 10:57:18] "GET /get_all_exhibitions HTTP/1.1" 200 -
+2024-03-20 10:57:18,081 - INFO - 127.0.0.1 - - [20/Mar/2024 10:57:18] "OPTIONS /get_painters HTTP/1.1" 200 -
+2024-03-20 10:57:18,081 - WARNING - Action denied due to no admin privilege with this error 'NoneType' object has no attribute 'split'
+2024-03-20 10:57:18,081 - INFO - 127.0.0.1 - - [20/Mar/2024 10:57:18] "GET /get_all_exhibitions HTTP/1.1" 200 -
+2024-03-20 10:57:18,128 - INFO - 127.0.0.1 - - [20/Mar/2024 10:57:18] "GET /get_painters HTTP/1.1" 200 -
+2024-03-20 10:57:18,191 - INFO - 127.0.0.1 - - [20/Mar/2024 10:57:18] "GET /get_painters HTTP/1.1" 200 -
+2024-03-20 10:58:57,932 - INFO - 127.0.0.1 - - [20/Mar/2024 10:58:57] "OPTIONS /get_exhibitions HTTP/1.1" 200 -
+2024-03-20 10:58:57,964 - INFO - 127.0.0.1 - - [20/Mar/2024 10:58:57] "GET /get_paintings HTTP/1.1" 200 -
+2024-03-20 10:58:57,995 - INFO - 127.0.0.1 - - [20/Mar/2024 10:58:57] "GET /get_paintings HTTP/1.1" 200 -
+2024-03-20 10:58:57,995 - INFO - 127.0.0.1 - - [20/Mar/2024 10:58:57] "GET /get_exhibitions HTTP/1.1" 200 -
+2024-03-20 10:58:58,053 - INFO - 127.0.0.1 - - [20/Mar/2024 10:58:58] "GET /get_exhibitions HTTP/1.1" 200 -
+2024-03-20 11:02:44,851 - INFO - 127.0.0.1 - - [20/Mar/2024 11:02:44] "OPTIONS /get_painters HTTP/1.1" 200 -
+2024-03-20 11:02:44,851 - INFO - 127.0.0.1 - - [20/Mar/2024 11:02:44] "OPTIONS /get_all_exhibitions HTTP/1.1" 200 -
+2024-03-20 11:02:44,914 - INFO - 127.0.0.1 - - [20/Mar/2024 11:02:44] "GET /get_painters HTTP/1.1" 200 -
+2024-03-20 11:02:44,921 - INFO - 127.0.0.1 - - [20/Mar/2024 11:02:44] "GET /get_all_exhibitions HTTP/1.1" 200 -
+2024-03-20 11:02:44,993 - INFO - 127.0.0.1 - - [20/Mar/2024 11:02:44] "GET /get_painters HTTP/1.1" 200 -
+2024-03-20 11:02:45,009 - INFO - 127.0.0.1 - - [20/Mar/2024 11:02:45] "GET /get_all_exhibitions HTTP/1.1" 200 -
+2024-03-20 11:04:05,640 - INFO - 127.0.0.1 - - [20/Mar/2024 11:04:05] "OPTIONS /get_exhibitions HTTP/1.1" 200 -
+2024-03-20 11:04:05,692 - INFO - 127.0.0.1 - - [20/Mar/2024 11:04:05] "GET /get_paintings HTTP/1.1" 200 -
+2024-03-20 11:04:05,698 - INFO - 127.0.0.1 - - [20/Mar/2024 11:04:05] "GET /get_exhibitions HTTP/1.1" 200 -
+2024-03-20 11:04:06,375 - INFO - 127.0.0.1 - - [20/Mar/2024 11:04:06] "GET /get_exhibitions HTTP/1.1" 200 -
+2024-03-20 11:04:06,379 - INFO - 127.0.0.1 - - [20/Mar/2024 11:04:06] "GET /get_paintings HTTP/1.1" 200 -
+2024-03-20 11:04:06,475 - INFO - 127.0.0.1 - - [20/Mar/2024 11:04:06] "GET /get_paintings HTTP/1.1" 200 -
+2024-03-20 11:04:06,562 - INFO - 127.0.0.1 - - [20/Mar/2024 11:04:06] "GET /get_exhibitions HTTP/1.1" 200 -
+2024-03-20 11:04:11,286 - INFO - 127.0.0.1 - - [20/Mar/2024 11:04:11] "OPTIONS /get_painters HTTP/1.1" 200 -
+2024-03-20 11:04:11,286 - INFO - 127.0.0.1 - - [20/Mar/2024 11:04:11] "OPTIONS /get_all_exhibitions HTTP/1.1" 200 -
+2024-03-20 11:04:11,349 - INFO - 127.0.0.1 - - [20/Mar/2024 11:04:11] "GET /get_painters HTTP/1.1" 200 -
+2024-03-20 11:04:11,356 - INFO - 127.0.0.1 - - [20/Mar/2024 11:04:11] "GET /get_all_exhibitions HTTP/1.1" 200 -
+2024-03-20 11:04:11,396 - INFO - 127.0.0.1 - - [20/Mar/2024 11:04:11] "GET /get_painters HTTP/1.1" 200 -
+2024-03-20 11:04:11,414 - INFO - 127.0.0.1 - - [20/Mar/2024 11:04:11] "GET /get_all_exhibitions HTTP/1.1" 200 -
+2024-03-20 11:04:23,966 - WARNING - Action denied due to no admin privilege with this error 'NoneType' object has no attribute 'split'
+2024-03-20 11:04:23,966 - INFO - 127.0.0.1 - - [20/Mar/2024 11:04:23] "GET /get_painters HTTP/1.1" 200 -
+2024-03-20 11:04:24,012 - INFO - 127.0.0.1 - - [20/Mar/2024 11:04:24] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2024-03-20 11:05:08,344 - INFO - 127.0.0.1 - - [20/Mar/2024 11:05:08] "OPTIONS /get_painters HTTP/1.1" 200 -
+2024-03-20 11:05:08,344 - INFO - 127.0.0.1 - - [20/Mar/2024 11:05:08] "OPTIONS /get_all_exhibitions HTTP/1.1" 200 -
+2024-03-20 11:05:08,444 - INFO - 127.0.0.1 - - [20/Mar/2024 11:05:08] "GET /get_all_exhibitions HTTP/1.1" 200 -
+2024-03-20 11:05:08,444 - INFO - 127.0.0.1 - - [20/Mar/2024 11:05:08] "GET /get_painters HTTP/1.1" 200 -
+2024-03-20 11:05:42,343 - INFO - 127.0.0.1 - - [20/Mar/2024 11:05:42] "OPTIONS /get_painters HTTP/1.1" 200 -
+2024-03-20 11:05:42,343 - INFO - 127.0.0.1 - - [20/Mar/2024 11:05:42] "OPTIONS /get_all_exhibitions HTTP/1.1" 200 -
+2024-03-20 11:05:42,408 - INFO - 127.0.0.1 - - [20/Mar/2024 11:05:42] "GET /get_painters HTTP/1.1" 200 -
+2024-03-20 11:05:42,408 - INFO - 127.0.0.1 - - [20/Mar/2024 11:05:42] "GET /get_all_exhibitions HTTP/1.1" 200 -
+2024-03-20 11:06:13,957 - INFO - 127.0.0.1 - - [20/Mar/2024 11:06:13] "OPTIONS /get_painters HTTP/1.1" 200 -
+2024-03-20 11:06:13,957 - INFO - 127.0.0.1 - - [20/Mar/2024 11:06:13] "OPTIONS /get_all_exhibitions HTTP/1.1" 200 -
+2024-03-20 11:06:14,022 - INFO - 127.0.0.1 - - [20/Mar/2024 11:06:14] "GET /get_painters HTTP/1.1" 200 -
+2024-03-20 11:06:14,027 - INFO - 127.0.0.1 - - [20/Mar/2024 11:06:14] "GET /get_all_exhibitions HTTP/1.1" 200 -
+2024-03-20 11:06:50,640 - INFO - 127.0.0.1 - - [20/Mar/2024 11:06:50] "OPTIONS /add_exhibition_painting HTTP/1.1" 200 -
+2024-03-20 11:06:50,720 - INFO - 127.0.0.1 - - [20/Mar/2024 11:06:50] "POST /add_exhibition_painting HTTP/1.1" 200 -
+2024-03-20 11:06:50,747 - DEBUG - Starting new HTTPS connection (1): api.cloudinary.com:443
+2024-03-20 11:06:53,122 - DEBUG - Incremented Retry for (url='/v1_1/dqlv0vkoe/image/upload'): Retry(total=2, connect=None, read=None, redirect=None, status=None)
+2024-03-20 11:06:53,122 - WARNING - Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x000001C6E18C7C10>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it')': /v1_1/dqlv0vkoe/image/upload
+2024-03-20 11:06:53,122 - DEBUG - Starting new HTTPS connection (2): api.cloudinary.com:443
+2024-03-20 11:06:55,292 - DEBUG - Incremented Retry for (url='/v1_1/dqlv0vkoe/image/upload'): Retry(total=1, connect=None, read=None, redirect=None, status=None)
+2024-03-20 11:06:55,293 - WARNING - Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x000001C6E18DB8D0>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it')': /v1_1/dqlv0vkoe/image/upload
+2024-03-20 11:06:55,293 - DEBUG - Starting new HTTPS connection (3): api.cloudinary.com:443
+2024-03-20 11:06:57,827 - DEBUG - Incremented Retry for (url='/v1_1/dqlv0vkoe/image/upload'): Retry(total=0, connect=None, read=None, redirect=None, status=None)
+2024-03-20 11:06:57,827 - WARNING - Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x000001C6E18D9E50>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it')': /v1_1/dqlv0vkoe/image/upload
+2024-03-20 11:06:57,827 - DEBUG - Starting new HTTPS connection (4): api.cloudinary.com:443
+2024-03-20 11:07:01,578 - INFO - 127.0.0.1 - - [20/Mar/2024 11:07:01] "OPTIONS /get_all_exhibition_paintings HTTP/1.1" 200 -
+2024-03-20 11:07:01,641 - INFO - 127.0.0.1 - - [20/Mar/2024 11:07:01] "GET /get_all_exhibition_paintings HTTP/1.1" 200 -
+2024-03-20 11:07:56,213 - INFO - 127.0.0.1 - - [20/Mar/2024 11:07:56] "OPTIONS /add_new_exhibition HTTP/1.1" 200 -
+2024-03-20 11:07:56,276 - INFO - 127.0.0.1 - - [20/Mar/2024 11:07:56] "PUT /add_new_exhibition HTTP/1.1" 200 -
+2024-03-20 11:08:04,861 - INFO - 127.0.0.1 - - [20/Mar/2024 11:08:04] "OPTIONS /get_exhibitions HTTP/1.1" 200 -
+2024-03-20 11:08:04,906 - INFO - 127.0.0.1 - - [20/Mar/2024 11:08:04] "GET /get_paintings HTTP/1.1" 200 -
+2024-03-20 11:08:04,917 - INFO - 127.0.0.1 - - [20/Mar/2024 11:08:04] "GET /get_paintings HTTP/1.1" 200 -
+2024-03-20 11:08:04,922 - INFO - 127.0.0.1 - - [20/Mar/2024 11:08:04] "GET /get_exhibitions HTTP/1.1" 200 -
+2024-03-20 11:08:04,970 - INFO - 127.0.0.1 - - [20/Mar/2024 11:08:04] "GET /get_exhibitions HTTP/1.1" 200 -
+2024-03-20 11:08:19,876 - INFO - 127.0.0.1 - - [20/Mar/2024 11:08:19] "OPTIONS /get_all_exhibitions HTTP/1.1" 200 -
+2024-03-20 11:08:19,941 - INFO - 127.0.0.1 - - [20/Mar/2024 11:08:19] "GET /get_all_exhibitions HTTP/1.1" 200 -
+2024-03-20 11:08:27,525 - INFO - 127.0.0.1 - - [20/Mar/2024 11:08:27] "OPTIONS /change_exhibition_status HTTP/1.1" 200 -
+2024-03-20 11:08:27,588 - INFO - 127.0.0.1 - - [20/Mar/2024 11:08:27] "PUT /change_exhibition_status HTTP/1.1" 200 -
+2024-03-20 11:08:37,474 - INFO - 127.0.0.1 - - [20/Mar/2024 11:08:37] "OPTIONS /get_exhibitions HTTP/1.1" 200 -
+2024-03-20 11:08:37,533 - INFO - 127.0.0.1 - - [20/Mar/2024 11:08:37] "GET /get_paintings HTTP/1.1" 200 -
+2024-03-20 11:08:37,537 - INFO - 127.0.0.1 - - [20/Mar/2024 11:08:37] "GET /get_exhibitions HTTP/1.1" 200 -
+2024-03-20 11:08:37,537 - INFO - 127.0.0.1 - - [20/Mar/2024 11:08:37] "GET /get_paintings HTTP/1.1" 200 -
+2024-03-20 11:08:37,599 - INFO - 127.0.0.1 - - [20/Mar/2024 11:08:37] "GET /get_exhibitions HTTP/1.1" 200 -
+2024-03-20 11:09:07,518 - INFO - 127.0.0.1 - - [20/Mar/2024 11:09:07] "OPTIONS /change_exhibition_status HTTP/1.1" 200 -
+2024-03-20 11:09:07,598 - INFO - 127.0.0.1 - - [20/Mar/2024 11:09:07] "PUT /change_exhibition_status HTTP/1.1" 200 -
+2024-03-20 11:09:21,288 - INFO - 127.0.0.1 - - [20/Mar/2024 11:09:21] "OPTIONS /get_exhibitions HTTP/1.1" 200 -
+2024-03-20 11:09:21,335 - INFO - 127.0.0.1 - - [20/Mar/2024 11:09:21] "GET /get_paintings HTTP/1.1" 200 -
+2024-03-20 11:09:21,340 - INFO - 127.0.0.1 - - [20/Mar/2024 11:09:21] "GET /get_exhibitions HTTP/1.1" 200 -
+2024-03-20 11:09:21,391 - INFO - 127.0.0.1 - - [20/Mar/2024 11:09:21] "GET /get_exhibitions HTTP/1.1" 200 -
+2024-03-20 11:09:21,426 - INFO - 127.0.0.1 - - [20/Mar/2024 11:09:21] "GET /get_paintings HTTP/1.1" 200 -
+2024-03-20 11:09:51,947 - INFO - 127.0.0.1 - - [20/Mar/2024 11:09:51] "OPTIONS /get_painters HTTP/1.1" 200 -
+2024-03-20 11:09:51,947 - INFO - 127.0.0.1 - - [20/Mar/2024 11:09:51] "OPTIONS /get_all_exhibitions HTTP/1.1" 200 -
+2024-03-20 11:09:52,010 - INFO - 127.0.0.1 - - [20/Mar/2024 11:09:52] "GET /get_painters HTTP/1.1" 200 -
+2024-03-20 11:09:52,014 - INFO - 127.0.0.1 - - [20/Mar/2024 11:09:52] "GET /get_all_exhibitions HTTP/1.1" 200 -
+2024-03-20 11:09:52,057 - INFO - 127.0.0.1 - - [20/Mar/2024 11:09:52] "GET /get_painters HTTP/1.1" 200 -
+2024-03-20 11:09:52,074 - INFO - 127.0.0.1 - - [20/Mar/2024 11:09:52] "GET /get_all_exhibitions HTTP/1.1" 200 -
+2024-03-20 11:10:41,158 - INFO - 127.0.0.1 - - [20/Mar/2024 11:10:41] "OPTIONS /add_exhibition_painting HTTP/1.1" 200 -
+2024-03-20 11:10:41,178 - DEBUG - Starting new HTTPS connection (5): api.cloudinary.com:443
+2024-03-20 11:10:41,231 - INFO - 127.0.0.1 - - [20/Mar/2024 11:10:41] "POST /add_exhibition_painting HTTP/1.1" 200 -
+2024-03-20 11:10:44,278 - DEBUG - Incremented Retry for (url='/v1_1/dqlv0vkoe/image/upload'): Retry(total=2, connect=None, read=None, redirect=None, status=None)
+2024-03-20 11:10:44,278 - WARNING - Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x000001C6E18EA210>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it')': /v1_1/dqlv0vkoe/image/upload
+2024-03-20 11:10:44,278 - DEBUG - Starting new HTTPS connection (6): api.cloudinary.com:443
+2024-03-20 11:10:46,461 - DEBUG - Incremented Retry for (url='/v1_1/dqlv0vkoe/image/upload'): Retry(total=1, connect=None, read=None, redirect=None, status=None)
+2024-03-20 11:10:46,461 - WARNING - Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x000001C6E187F4D0>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it')': /v1_1/dqlv0vkoe/image/upload
+2024-03-20 11:10:46,461 - DEBUG - Starting new HTTPS connection (7): api.cloudinary.com:443
+2024-03-20 11:10:52,509 - DEBUG - Incremented Retry for (url='/v1_1/dqlv0vkoe/image/upload'): Retry(total=0, connect=None, read=None, redirect=None, status=None)
+2024-03-20 11:10:52,509 - WARNING - Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x000001C6E18E52D0>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it')': /v1_1/dqlv0vkoe/image/upload
+2024-03-20 11:10:52,509 - DEBUG - Starting new HTTPS connection (8): api.cloudinary.com:443
+2024-03-20 11:10:52,933 - INFO - 127.0.0.1 - - [20/Mar/2024 11:10:52] "OPTIONS /get_all_exhibition_paintings HTTP/1.1" 200 -
+2024-03-20 11:10:52,996 - INFO - 127.0.0.1 - - [20/Mar/2024 11:10:52] "GET /get_all_exhibition_paintings HTTP/1.1" 200 -
+2024-03-20 11:11:12,783 - INFO - 127.0.0.1 - - [20/Mar/2024 11:11:12] "OPTIONS /get_all_exhibitions HTTP/1.1" 200 -
+2024-03-20 11:11:12,830 - INFO - 127.0.0.1 - - [20/Mar/2024 11:11:12] "GET /get_all_exhibitions HTTP/1.1" 200 -
+2024-03-20 11:11:22,743 - INFO - 127.0.0.1 - - [20/Mar/2024 11:11:22] "OPTIONS /delete_exhibition/62ecd963-034c-414c-bb3d-a4c764fbc178/umugisha HTTP/1.1" 200 -
+2024-03-20 11:11:22,806 - INFO - 127.0.0.1 - - [20/Mar/2024 11:11:22] "DELETE /delete_exhibition/62ecd963-034c-414c-bb3d-a4c764fbc178/umugisha HTTP/1.1" 200 -
+2024-03-20 11:11:32,316 - INFO - 127.0.0.1 - - [20/Mar/2024 11:11:32] "OPTIONS /get_all_exhibition_paintings HTTP/1.1" 200 -
+2024-03-20 11:11:32,488 - INFO - 127.0.0.1 - - [20/Mar/2024 11:11:32] "GET /get_all_exhibition_paintings HTTP/1.1" 200 -
+2024-03-20 11:12:02,601 - INFO - 127.0.0.1 - - [20/Mar/2024 11:12:02] "OPTIONS /get_all_exhibitions HTTP/1.1" 200 -
+2024-03-20 11:12:02,664 - INFO - 127.0.0.1 - - [20/Mar/2024 11:12:02] "GET /get_all_exhibitions HTTP/1.1" 200 -
+2024-03-20 11:12:07,376 - INFO - 127.0.0.1 - - [20/Mar/2024 11:12:07] "OPTIONS /change_exhibition_status HTTP/1.1" 200 -
+2024-03-20 11:12:07,455 - INFO - 127.0.0.1 - - [20/Mar/2024 11:12:07] "PUT /change_exhibition_status HTTP/1.1" 200 -
+2024-03-20 11:15:06,617 - INFO - 127.0.0.1 - - [20/Mar/2024 11:15:06] "OPTIONS /get_exhibitions HTTP/1.1" 200 -
+2024-03-20 11:15:06,686 - INFO - 127.0.0.1 - - [20/Mar/2024 11:15:06] "GET /get_paintings HTTP/1.1" 200 -
+2024-03-20 11:15:06,689 - INFO - 127.0.0.1 - - [20/Mar/2024 11:15:06] "GET /get_paintings HTTP/1.1" 200 -
+2024-03-20 11:15:06,698 - INFO - 127.0.0.1 - - [20/Mar/2024 11:15:06] "GET /get_exhibitions HTTP/1.1" 200 -
+2024-03-20 11:15:06,752 - INFO - 127.0.0.1 - - [20/Mar/2024 11:15:06] "GET /get_exhibitions HTTP/1.1" 200 -
+2024-03-20 11:18:34,847 - INFO - 127.0.0.1 - - [20/Mar/2024 11:18:34] "OPTIONS /change_exhibition_status HTTP/1.1" 200 -
+2024-03-20 11:18:34,904 - INFO - 127.0.0.1 - - [20/Mar/2024 11:18:34] "PUT /change_exhibition_status HTTP/1.1" 200 -
+2024-03-20 11:18:46,158 - INFO - 127.0.0.1 - - [20/Mar/2024 11:18:46] "OPTIONS /get_exhibitions HTTP/1.1" 200 -
+2024-03-20 11:18:46,205 - INFO - 127.0.0.1 - - [20/Mar/2024 11:18:46] "GET /get_paintings HTTP/1.1" 200 -
+2024-03-20 11:18:46,221 - INFO - 127.0.0.1 - - [20/Mar/2024 11:18:46] "GET /get_paintings HTTP/1.1" 200 -
+2024-03-20 11:18:46,222 - INFO - 127.0.0.1 - - [20/Mar/2024 11:18:46] "GET /get_exhibitions HTTP/1.1" 200 -
+2024-03-20 11:18:46,268 - INFO - 127.0.0.1 - - [20/Mar/2024 11:18:46] "GET /get_exhibitions HTTP/1.1" 200 -
+2024-03-20 11:21:14,127 - INFO - 127.0.0.1 - - [20/Mar/2024 11:21:14] "OPTIONS /change_exhibition_status HTTP/1.1" 200 -
+2024-03-20 11:21:14,198 - INFO - 127.0.0.1 - - [20/Mar/2024 11:21:14] "PUT /change_exhibition_status HTTP/1.1" 200 -
+2024-03-20 11:21:20,921 - INFO - 127.0.0.1 - - [20/Mar/2024 11:21:20] "OPTIONS /get_exhibitions HTTP/1.1" 200 -
+2024-03-20 11:21:20,960 - INFO - 127.0.0.1 - - [20/Mar/2024 11:21:20] "GET /get_paintings HTTP/1.1" 200 -
+2024-03-20 11:21:20,976 - INFO - 127.0.0.1 - - [20/Mar/2024 11:21:20] "GET /get_paintings HTTP/1.1" 200 -
+2024-03-20 11:21:20,982 - INFO - 127.0.0.1 - - [20/Mar/2024 11:21:20] "GET /get_exhibitions HTTP/1.1" 200 -
+2024-03-20 11:21:21,026 - INFO - 127.0.0.1 - - [20/Mar/2024 11:21:21] "GET /get_exhibitions HTTP/1.1" 200 -
+2024-03-20 11:22:06,564 - INFO - 127.0.0.1 - - [20/Mar/2024 11:22:06] "OPTIONS /get_exhibitions HTTP/1.1" 200 -
+2024-03-20 11:22:06,622 - INFO - 127.0.0.1 - - [20/Mar/2024 11:22:06] "GET /get_paintings HTTP/1.1" 200 -
+2024-03-20 11:22:06,626 - INFO - 127.0.0.1 - - [20/Mar/2024 11:22:06] "GET /get_paintings HTTP/1.1" 200 -
+2024-03-20 11:22:06,639 - INFO - 127.0.0.1 - - [20/Mar/2024 11:22:06] "GET /get_exhibitions HTTP/1.1" 200 -
+2024-03-20 11:22:06,690 - INFO - 127.0.0.1 - - [20/Mar/2024 11:22:06] "GET /get_exhibitions HTTP/1.1" 200 -
+2024-03-20 11:29:54,319 - INFO -  * Detected change in 'C:\\Users\\IMPANO\\Desktop\\painting_ecommerce_website\\backend\\api\\exhibition.py', reloading
+2024-03-20 11:29:54,382 - INFO -  * Restarting with stat
+2024-03-20 11:40:31,889 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
  * Running on all addresses (0.0.0.0)
  * Running on http://127.0.0.1:5000
- * Running on http://192.168.51.129:5000
-2024-03-19 12:47:01,310 - INFO - [33mPress CTRL+C to quit[0m
-2024-03-19 12:47:01,311 - INFO -  * Restarting with stat
-2024-03-19 12:47:01,994 - WARNING -  * Debugger is active!
-2024-03-19 12:47:01,996 - INFO -  * Debugger PIN: 412-602-415
-2024-03-19 12:47:05,793 - INFO - 127.0.0.1 - - [19/Mar/2024 12:47:05] "POST /custom-login HTTP/1.1" 200 -
-2024-03-19 12:47:05,842 - INFO - 127.0.0.1 - - [19/Mar/2024 12:47:05] "OPTIONS /get_user_paintings HTTP/1.1" 200 -
-2024-03-19 12:47:05,846 - INFO - 127.0.0.1 - - [19/Mar/2024 12:47:05] "OPTIONS /get_user_paintings HTTP/1.1" 200 -
-2024-03-19 12:47:05,962 - INFO - 127.0.0.1 - - [19/Mar/2024 12:47:05] "POST /get_user_paintings HTTP/1.1" 200 -
-2024-03-19 12:47:05,963 - INFO - 127.0.0.1 - - [19/Mar/2024 12:47:05] "POST /get_user_paintings HTTP/1.1" 200 -
-2024-03-19 12:56:50,313 - INFO - 127.0.0.1 - - [19/Mar/2024 12:56:50] "POST /custom-login HTTP/1.1" 200 -
-2024-03-19 12:56:56,039 - INFO - 127.0.0.1 - - [19/Mar/2024 12:56:56] "OPTIONS /get_customers HTTP/1.1" 200 -
-2024-03-19 12:56:56,109 - INFO - 127.0.0.1 - - [19/Mar/2024 12:56:56] "GET /get_customers HTTP/1.1" 200 -
-2024-03-19 12:57:36,972 - INFO - 127.0.0.1 - - [19/Mar/2024 12:57:36] "OPTIONS /get_exhibitions HTTP/1.1" 200 -
-2024-03-19 12:57:37,063 - INFO - 127.0.0.1 - - [19/Mar/2024 12:57:37] "GET /get_paintings HTTP/1.1" 200 -
-2024-03-19 12:57:37,091 - INFO - 127.0.0.1 - - [19/Mar/2024 12:57:37] "GET /get_paintings HTTP/1.1" 200 -
-2024-03-19 12:57:37,112 - INFO - 127.0.0.1 - - [19/Mar/2024 12:57:37] "GET /get_exhibitions HTTP/1.1" 200 -
-2024-03-19 12:57:37,183 - INFO - 127.0.0.1 - - [19/Mar/2024 12:57:37] "GET /get_exhibitions HTTP/1.1" 200 -
-2024-03-19 12:57:45,859 - INFO - 127.0.0.1 - - [19/Mar/2024 12:57:45] "OPTIONS /get_exhibitions HTTP/1.1" 200 -
-2024-03-19 12:57:45,971 - INFO - 127.0.0.1 - - [19/Mar/2024 12:57:45] "GET /get_paintings HTTP/1.1" 200 -
-2024-03-19 12:57:45,973 - INFO - 127.0.0.1 - - [19/Mar/2024 12:57:45] "GET /get_paintings HTTP/1.1" 200 -
-2024-03-19 12:57:45,985 - INFO - 127.0.0.1 - - [19/Mar/2024 12:57:45] "GET /get_exhibitions HTTP/1.1" 200 -
-2024-03-19 12:57:46,049 - INFO - 127.0.0.1 - - [19/Mar/2024 12:57:46] "GET /get_exhibitions HTTP/1.1" 200 -
-2024-03-19 12:57:49,343 - INFO - 127.0.0.1 - - [19/Mar/2024 12:57:49] "POST /check_payment HTTP/1.1" 200 -
-2024-03-19 12:58:13,003 - INFO - 127.0.0.1 - - [19/Mar/2024 12:58:13] "OPTIONS /get_exhibitions HTTP/1.1" 200 -
-2024-03-19 12:58:13,117 - INFO - 127.0.0.1 - - [19/Mar/2024 12:58:13] "GET /get_paintings HTTP/1.1" 200 -
-2024-03-19 12:58:13,158 - INFO - 127.0.0.1 - - [19/Mar/2024 12:58:13] "GET /get_exhibitions HTTP/1.1" 200 -
-2024-03-19 12:58:13,163 - INFO - 127.0.0.1 - - [19/Mar/2024 12:58:13] "GET /get_paintings HTTP/1.1" 200 -
-2024-03-19 12:58:13,209 - INFO - 127.0.0.1 - - [19/Mar/2024 12:58:13] "GET /get_exhibitions HTTP/1.1" 200 -
-2024-03-19 12:58:13,223 - INFO - 127.0.0.1 - - [19/Mar/2024 12:58:13] "OPTIONS /get_exhibition_paintings/b6fb20aa-227e-4040-a824-aa3413d1c6f9 HTTP/1.1" 200 -
-2024-03-19 12:58:13,417 - INFO - 127.0.0.1 - - [19/Mar/2024 12:58:13] "GET /get_exhibition_paintings/b6fb20aa-227e-4040-a824-aa3413d1c6f9 HTTP/1.1" 200 -
-2024-03-19 12:58:13,514 - INFO - 127.0.0.1 - - [19/Mar/2024 12:58:13] "GET /get_exhibition_paintings/b6fb20aa-227e-4040-a824-aa3413d1c6f9 HTTP/1.1" 200 -
-2024-03-19 12:58:13,618 - INFO - 127.0.0.1 - - [19/Mar/2024 12:58:13] "GET /get_exhibition_paintings/b6fb20aa-227e-4040-a824-aa3413d1c6f9 HTTP/1.1" 200 -
-2024-03-19 12:58:13,833 - INFO - 127.0.0.1 - - [19/Mar/2024 12:58:13] "GET /get_exhibition_paintings/b6fb20aa-227e-4040-a824-aa3413d1c6f9 HTTP/1.1" 200 -
-2024-03-19 12:58:13,974 - INFO - 127.0.0.1 - - [19/Mar/2024 12:58:13] "GET /get_exhibition_paintings/b6fb20aa-227e-4040-a824-aa3413d1c6f9 HTTP/1.1" 200 -
-2024-03-19 12:58:14,088 - INFO - 127.0.0.1 - - [19/Mar/2024 12:58:14] "GET /get_exhibition_paintings/b6fb20aa-227e-4040-a824-aa3413d1c6f9 HTTP/1.1" 200 -
-2024-03-19 12:58:29,995 - INFO - 127.0.0.1 - - [19/Mar/2024 12:58:29] "OPTIONS /get_exhibitions HTTP/1.1" 200 -
-2024-03-19 12:58:30,099 - INFO - 127.0.0.1 - - [19/Mar/2024 12:58:30] "GET /get_paintings HTTP/1.1" 200 -
-2024-03-19 12:58:30,101 - INFO - 127.0.0.1 - - [19/Mar/2024 12:58:30] "GET /get_paintings HTTP/1.1" 200 -
-2024-03-19 12:58:30,109 - INFO - 127.0.0.1 - - [19/Mar/2024 12:58:30] "GET /get_exhibitions HTTP/1.1" 200 -
-2024-03-19 12:58:30,162 - INFO - 127.0.0.1 - - [19/Mar/2024 12:58:30] "OPTIONS /get_exhibition_paintings/b6fb20aa-227e-4040-a824-aa3413d1c6f9 HTTP/1.1" 200 -
-2024-03-19 12:58:30,166 - INFO - 127.0.0.1 - - [19/Mar/2024 12:58:30] "GET /get_exhibitions HTTP/1.1" 200 -
-2024-03-19 12:58:30,274 - INFO - 127.0.0.1 - - [19/Mar/2024 12:58:30] "GET /get_exhibition_paintings/b6fb20aa-227e-4040-a824-aa3413d1c6f9 HTTP/1.1" 200 -
-2024-03-19 12:58:30,488 - INFO - 127.0.0.1 - - [19/Mar/2024 12:58:30] "GET /get_exhibition_paintings/b6fb20aa-227e-4040-a824-aa3413d1c6f9 HTTP/1.1" 200 -
-2024-03-19 12:58:30,607 - INFO - 127.0.0.1 - - [19/Mar/2024 12:58:30] "GET /get_exhibition_paintings/b6fb20aa-227e-4040-a824-aa3413d1c6f9 HTTP/1.1" 200 -
-2024-03-19 12:58:30,730 - INFO - 127.0.0.1 - - [19/Mar/2024 12:58:30] "GET /get_exhibition_paintings/b6fb20aa-227e-4040-a824-aa3413d1c6f9 HTTP/1.1" 200 -
-2024-03-19 12:59:57,331 - INFO - 127.0.0.1 - - [19/Mar/2024 12:59:57] "OPTIONS /get_exhibitions HTTP/1.1" 200 -
-2024-03-19 12:59:57,433 - INFO - 127.0.0.1 - - [19/Mar/2024 12:59:57] "GET /get_paintings HTTP/1.1" 200 -
-2024-03-19 12:59:57,434 - INFO - 127.0.0.1 - - [19/Mar/2024 12:59:57] "GET /get_paintings HTTP/1.1" 200 -
-2024-03-19 12:59:57,446 - INFO - 127.0.0.1 - - [19/Mar/2024 12:59:57] "GET /get_exhibitions HTTP/1.1" 200 -
-2024-03-19 12:59:57,504 - INFO - 127.0.0.1 - - [19/Mar/2024 12:59:57] "OPTIONS /get_exhibition_paintings/b6fb20aa-227e-4040-a824-aa3413d1c6f9 HTTP/1.1" 200 -
-2024-03-19 12:59:57,514 - INFO - 127.0.0.1 - - [19/Mar/2024 12:59:57] "GET /get_exhibitions HTTP/1.1" 200 -
-2024-03-19 12:59:57,722 - INFO - 127.0.0.1 - - [19/Mar/2024 12:59:57] "GET /get_exhibition_paintings/b6fb20aa-227e-4040-a824-aa3413d1c6f9 HTTP/1.1" 200 -
-2024-03-19 12:59:57,829 - INFO - 127.0.0.1 - - [19/Mar/2024 12:59:57] "GET /get_exhibition_paintings/b6fb20aa-227e-4040-a824-aa3413d1c6f9 HTTP/1.1" 200 -
-2024-03-19 12:59:57,971 - INFO - 127.0.0.1 - - [19/Mar/2024 12:59:57] "GET /get_exhibition_paintings/b6fb20aa-227e-4040-a824-aa3413d1c6f9 HTTP/1.1" 200 -
-2024-03-19 12:59:58,107 - INFO - 127.0.0.1 - - [19/Mar/2024 12:59:58] "GET /get_exhibition_paintings/b6fb20aa-227e-4040-a824-aa3413d1c6f9 HTTP/1.1" 200 -
-2024-03-19 13:00:39,633 - INFO - 127.0.0.1 - - [19/Mar/2024 13:00:39] "OPTIONS /get_exhibitions HTTP/1.1" 200 -
-2024-03-19 13:00:39,704 - INFO - 127.0.0.1 - - [19/Mar/2024 13:00:39] "GET /get_paintings HTTP/1.1" 200 -
-2024-03-19 13:00:39,740 - INFO - 127.0.0.1 - - [19/Mar/2024 13:00:39] "GET /get_paintings HTTP/1.1" 200 -
-2024-03-19 13:00:39,747 - INFO - 127.0.0.1 - - [19/Mar/2024 13:00:39] "GET /get_exhibitions HTTP/1.1" 200 -
-2024-03-19 13:00:39,789 - INFO - 127.0.0.1 - - [19/Mar/2024 13:00:39] "OPTIONS /get_exhibition_paintings/b6fb20aa-227e-4040-a824-aa3413d1c6f9 HTTP/1.1" 200 -
-2024-03-19 13:00:39,817 - INFO - 127.0.0.1 - - [19/Mar/2024 13:00:39] "GET /get_exhibitions HTTP/1.1" 200 -
-2024-03-19 13:00:39,902 - INFO - 127.0.0.1 - - [19/Mar/2024 13:00:39] "GET /get_exhibition_paintings/b6fb20aa-227e-4040-a824-aa3413d1c6f9 HTTP/1.1" 200 -
-2024-03-19 13:00:40,003 - INFO - 127.0.0.1 - - [19/Mar/2024 13:00:40] "GET /get_exhibition_paintings/b6fb20aa-227e-4040-a824-aa3413d1c6f9 HTTP/1.1" 200 -
-2024-03-19 13:00:40,235 - INFO - 127.0.0.1 - - [19/Mar/2024 13:00:40] "GET /get_exhibition_paintings/b6fb20aa-227e-4040-a824-aa3413d1c6f9 HTTP/1.1" 200 -
-2024-03-19 13:00:40,378 - INFO - 127.0.0.1 - - [19/Mar/2024 13:00:40] "GET /get_exhibition_paintings/b6fb20aa-227e-4040-a824-aa3413d1c6f9 HTTP/1.1" 200 -
-2024-03-19 13:01:27,957 - INFO -  * Detected change in 'C:\\Users\\IMPANO\\Desktop\\painting_ecommerce_website\\backend\\auth\\UserAuth.py', reloading
-2024-03-19 13:01:28,099 - INFO -  * Restarting with stat
-2024-03-19 13:01:28,996 - WARNING -  * Debugger is active!
-2024-03-19 13:01:28,998 - INFO -  * Debugger PIN: 412-602-415
-2024-03-19 13:01:40,393 - INFO -  * Detected change in 'C:\\Users\\IMPANO\\Desktop\\painting_ecommerce_website\\backend\\auth\\UserAuth.py', reloading
-2024-03-19 13:01:40,468 - INFO -  * Restarting with stat
-2024-03-19 13:01:41,182 - WARNING -  * Debugger is active!
-2024-03-19 13:01:41,183 - INFO -  * Debugger PIN: 412-602-415
+ * Running on http://192.168.51.38:5000
+2024-03-20 11:40:31,889 - INFO - [33mPress CTRL+C to quit[0m
+2024-03-20 11:40:31,890 - INFO -  * Restarting with stat
+2024-03-20 11:40:32,385 - WARNING -  * Debugger is active!
+2024-03-20 11:40:32,386 - INFO -  * Debugger PIN: 394-564-655
+2024-03-20 11:40:40,860 - INFO - 127.0.0.1 - - [20/Mar/2024 11:40:40] "OPTIONS /get_exhibitions HTTP/1.1" 200 -
+2024-03-20 11:40:40,917 - INFO - 127.0.0.1 - - [20/Mar/2024 11:40:40] "GET /get_paintings HTTP/1.1" 200 -
+2024-03-20 11:40:40,922 - INFO - 127.0.0.1 - - [20/Mar/2024 11:40:40] "GET /get_paintings HTTP/1.1" 200 -
+2024-03-20 11:40:41,081 - INFO - 127.0.0.1 - - [20/Mar/2024 11:40:41] "GET /get_exhibitions HTTP/1.1" 200 -
+2024-03-20 11:40:41,207 - INFO - 127.0.0.1 - - [20/Mar/2024 11:40:41] "GET /get_exhibitions HTTP/1.1" 200 -
+2024-03-20 11:41:08,121 - INFO - 127.0.0.1 - - [20/Mar/2024 11:41:08] "GET /get_paintings HTTP/1.1" 200 -
+2024-03-20 11:41:08,121 - INFO - 127.0.0.1 - - [20/Mar/2024 11:41:08] "GET /get_paintings HTTP/1.1" 200 -
+2024-03-20 11:41:08,155 - INFO - 127.0.0.1 - - [20/Mar/2024 11:41:08] "OPTIONS /get_exhibitions HTTP/1.1" 200 -
+2024-03-20 11:41:08,205 - INFO - 127.0.0.1 - - [20/Mar/2024 11:41:08] "GET /get_exhibitions HTTP/1.1" 200 -
+2024-03-20 11:41:08,255 - INFO - 127.0.0.1 - - [20/Mar/2024 11:41:08] "GET /get_exhibitions HTTP/1.1" 200 -
+2024-03-20 11:41:08,288 - INFO - 127.0.0.1 - - [20/Mar/2024 11:41:08] "OPTIONS /get_pending_exhibitions HTTP/1.1" 200 -
+2024-03-20 11:41:08,371 - ERROR - syntax error at or near "exhibitions"
+LINE 1: ...ECT e_name, e_start_date, e_end_date e_bannerFROM exhibition...
+                                                             ^
+
+2024-03-20 11:41:08,371 - INFO - 127.0.0.1 - - [20/Mar/2024 11:41:08] "GET /get_pending_exhibitions HTTP/1.1" 200 -
+2024-03-20 11:41:08,421 - ERROR - syntax error at or near "exhibitions"
+LINE 1: ...ECT e_name, e_start_date, e_end_date e_bannerFROM exhibition...
+                                                             ^
+
+2024-03-20 11:41:08,421 - INFO - 127.0.0.1 - - [20/Mar/2024 11:41:08] "GET /get_pending_exhibitions HTTP/1.1" 200 -
+2024-03-20 11:41:08,471 - ERROR - syntax error at or near "exhibitions"
+LINE 1: ...ECT e_name, e_start_date, e_end_date e_bannerFROM exhibition...
+                                                             ^
+
+2024-03-20 11:41:08,471 - INFO - 127.0.0.1 - - [20/Mar/2024 11:41:08] "GET /get_pending_exhibitions HTTP/1.1" 200 -
+2024-03-20 11:41:08,504 - ERROR - syntax error at or near "exhibitions"
+LINE 1: ...ECT e_name, e_start_date, e_end_date e_bannerFROM exhibition...
+                                                             ^
+
+2024-03-20 11:41:08,504 - INFO - 127.0.0.1 - - [20/Mar/2024 11:41:08] "GET /get_pending_exhibitions HTTP/1.1" 200 -
+2024-03-20 11:41:50,984 - INFO -  * Detected change in 'C:\\Users\\IMPANO\\Desktop\\painting_ecommerce_website\\backend\\db\\exhibition.py', reloading
+2024-03-20 11:41:51,031 - INFO -  * Restarting with stat
+2024-03-20 11:41:51,686 - WARNING -  * Debugger is active!
+2024-03-20 11:41:51,702 - INFO -  * Debugger PIN: 394-564-655
+2024-03-20 11:41:58,611 - INFO - 127.0.0.1 - - [20/Mar/2024 11:41:58] "OPTIONS /get_exhibitions HTTP/1.1" 200 -
+2024-03-20 11:41:58,644 - INFO - 127.0.0.1 - - [20/Mar/2024 11:41:58] "GET /get_paintings HTTP/1.1" 200 -
+2024-03-20 11:41:58,658 - INFO - 127.0.0.1 - - [20/Mar/2024 11:41:58] "GET /get_paintings HTTP/1.1" 200 -
+2024-03-20 11:41:58,658 - INFO - 127.0.0.1 - - [20/Mar/2024 11:41:58] "GET /get_exhibitions HTTP/1.1" 200 -
+2024-03-20 11:41:58,737 - INFO - 127.0.0.1 - - [20/Mar/2024 11:41:58] "GET /get_exhibitions HTTP/1.1" 200 -
+2024-03-20 11:41:58,879 - INFO - 127.0.0.1 - - [20/Mar/2024 11:41:58] "OPTIONS /get_pending_exhibitions HTTP/1.1" 200 -
+2024-03-20 11:41:58,943 - INFO - 127.0.0.1 - - [20/Mar/2024 11:41:58] "GET /get_pending_exhibitions HTTP/1.1" 200 -
+2024-03-20 11:41:59,023 - INFO - 127.0.0.1 - - [20/Mar/2024 11:41:59] "GET /get_pending_exhibitions HTTP/1.1" 200 -
+2024-03-20 11:41:59,071 - INFO - 127.0.0.1 - - [20/Mar/2024 11:41:59] "GET /get_pending_exhibitions HTTP/1.1" 200 -
+2024-03-20 11:41:59,071 - INFO - 127.0.0.1 - - [20/Mar/2024 11:41:59] "GET /get_pending_exhibitions HTTP/1.1" 200 -
+2024-03-20 11:44:24,945 - INFO - 127.0.0.1 - - [20/Mar/2024 11:44:24] "OPTIONS /get_pending_exhibitions HTTP/1.1" 200 -
+2024-03-20 11:44:24,995 - INFO - 127.0.0.1 - - [20/Mar/2024 11:44:24] "GET /get_pending_exhibitions HTTP/1.1" 200 -
+2024-03-20 11:45:56,275 - INFO - 127.0.0.1 - - [20/Mar/2024 11:45:56] "OPTIONS /get_pending_exhibitions HTTP/1.1" 200 -
+2024-03-20 11:45:56,374 - INFO - 127.0.0.1 - - [20/Mar/2024 11:45:56] "GET /get_pending_exhibitions HTTP/1.1" 200 -
+2024-03-20 11:47:54,934 - INFO - 127.0.0.1 - - [20/Mar/2024 11:47:54] "OPTIONS /get_pending_exhibitions HTTP/1.1" 200 -
+2024-03-20 11:47:54,987 - INFO - 127.0.0.1 - - [20/Mar/2024 11:47:54] "GET /get_pending_exhibitions HTTP/1.1" 200 -
+2024-03-20 11:48:14,161 - INFO - 127.0.0.1 - - [20/Mar/2024 11:48:14] "OPTIONS /get_pending_exhibitions HTTP/1.1" 200 -
+2024-03-20 11:48:14,217 - INFO - 127.0.0.1 - - [20/Mar/2024 11:48:14] "GET /get_pending_exhibitions HTTP/1.1" 200 -
+2024-03-20 11:49:41,224 - INFO - 127.0.0.1 - - [20/Mar/2024 11:49:41] "OPTIONS /get_exhibitions HTTP/1.1" 200 -
+2024-03-20 11:49:41,271 - INFO - 127.0.0.1 - - [20/Mar/2024 11:49:41] "GET /get_paintings HTTP/1.1" 200 -
+2024-03-20 11:49:41,271 - INFO - 127.0.0.1 - - [20/Mar/2024 11:49:41] "GET /get_exhibitions HTTP/1.1" 200 -
+2024-03-20 11:49:41,303 - INFO - 127.0.0.1 - - [20/Mar/2024 11:49:41] "GET /get_paintings HTTP/1.1" 200 -
+2024-03-20 11:49:41,366 - INFO - 127.0.0.1 - - [20/Mar/2024 11:49:41] "GET /get_exhibitions HTTP/1.1" 200 -
+2024-03-20 11:49:41,413 - INFO - 127.0.0.1 - - [20/Mar/2024 11:49:41] "OPTIONS /get_pending_exhibitions HTTP/1.1" 200 -
+2024-03-20 11:49:41,538 - INFO - 127.0.0.1 - - [20/Mar/2024 11:49:41] "GET /get_pending_exhibitions HTTP/1.1" 200 -
+2024-03-20 11:49:41,601 - INFO - 127.0.0.1 - - [20/Mar/2024 11:49:41] "GET /get_pending_exhibitions HTTP/1.1" 200 -
+2024-03-20 11:49:41,649 - INFO - 127.0.0.1 - - [20/Mar/2024 11:49:41] "GET /get_pending_exhibitions HTTP/1.1" 200 -
+2024-03-20 11:49:41,664 - INFO - 127.0.0.1 - - [20/Mar/2024 11:49:41] "GET /get_pending_exhibitions HTTP/1.1" 200 -
+2024-03-20 11:49:41,711 - INFO - 127.0.0.1 - - [20/Mar/2024 11:49:41] "GET /get_pending_exhibitions HTTP/1.1" 200 -
+2024-03-20 11:49:41,837 - INFO - 127.0.0.1 - - [20/Mar/2024 11:49:41] "GET /get_pending_exhibitions HTTP/1.1" 200 -
+2024-03-20 11:50:05,528 - INFO -  * Detected change in 'C:\\Users\\IMPANO\\Desktop\\painting_ecommerce_website\\backend\\db\\exhibition.py', reloading
+2024-03-20 11:50:05,593 - INFO -  * Restarting with stat
+2024-03-20 11:50:06,209 - WARNING -  * Debugger is active!
+2024-03-20 11:50:06,212 - INFO -  * Debugger PIN: 394-564-655
+2024-03-20 11:50:16,971 - INFO - 127.0.0.1 - - [20/Mar/2024 11:50:16] "OPTIONS /get_exhibitions HTTP/1.1" 200 -
+2024-03-20 11:50:16,989 - INFO - 127.0.0.1 - - [20/Mar/2024 11:50:16] "GET /get_paintings HTTP/1.1" 200 -
+2024-03-20 11:50:17,007 - INFO - 127.0.0.1 - - [20/Mar/2024 11:50:17] "GET /get_paintings HTTP/1.1" 200 -
+2024-03-20 11:50:17,035 - INFO - 127.0.0.1 - - [20/Mar/2024 11:50:17] "GET /get_exhibitions HTTP/1.1" 200 -
+2024-03-20 11:50:17,088 - INFO - 127.0.0.1 - - [20/Mar/2024 11:50:17] "GET /get_exhibitions HTTP/1.1" 200 -
+2024-03-20 11:50:17,131 - INFO - 127.0.0.1 - - [20/Mar/2024 11:50:17] "OPTIONS /get_pending_exhibitions HTTP/1.1" 200 -
+2024-03-20 11:50:17,195 - INFO - 127.0.0.1 - - [20/Mar/2024 11:50:17] "GET /get_pending_exhibitions HTTP/1.1" 200 -
+2024-03-20 11:50:17,258 - INFO - 127.0.0.1 - - [20/Mar/2024 11:50:17] "GET /get_pending_exhibitions HTTP/1.1" 200 -
+2024-03-20 11:50:17,258 - INFO - 127.0.0.1 - - [20/Mar/2024 11:50:17] "GET /get_pending_exhibitions HTTP/1.1" 200 -
+2024-03-20 11:50:17,339 - INFO - 127.0.0.1 - - [20/Mar/2024 11:50:17] "GET /get_pending_exhibitions HTTP/1.1" 200 -
+2024-03-20 11:50:54,193 - INFO - 127.0.0.1 - - [20/Mar/2024 11:50:54] "OPTIONS /get_pending_exhibitions HTTP/1.1" 200 -
+2024-03-20 11:50:54,242 - INFO - 127.0.0.1 - - [20/Mar/2024 11:50:54] "GET /get_pending_exhibitions HTTP/1.1" 200 -
+2024-03-20 11:52:09,113 - INFO - 127.0.0.1 - - [20/Mar/2024 11:52:09] "OPTIONS /get_pending_exhibitions HTTP/1.1" 200 -
+2024-03-20 11:52:09,181 - INFO - 127.0.0.1 - - [20/Mar/2024 11:52:09] "GET /get_pending_exhibitions HTTP/1.1" 200 -
+2024-03-20 11:52:19,488 - INFO - 127.0.0.1 - - [20/Mar/2024 11:52:19] "OPTIONS /get_pending_exhibitions HTTP/1.1" 200 -
+2024-03-20 11:52:19,539 - INFO - 127.0.0.1 - - [20/Mar/2024 11:52:19] "GET /get_pending_exhibitions HTTP/1.1" 200 -
+2024-03-20 11:54:28,089 - INFO - 127.0.0.1 - - [20/Mar/2024 11:54:28] "OPTIONS /get_pending_exhibitions HTTP/1.1" 200 -
+2024-03-20 11:54:28,268 - INFO - 127.0.0.1 - - [20/Mar/2024 11:54:28] "GET /get_pending_exhibitions HTTP/1.1" 200 -
+2024-03-20 11:55:54,261 - INFO - 127.0.0.1 - - [20/Mar/2024 11:55:54] "OPTIONS /get_pending_exhibitions HTTP/1.1" 200 -
+2024-03-20 11:55:54,314 - INFO - 127.0.0.1 - - [20/Mar/2024 11:55:54] "GET /get_pending_exhibitions HTTP/1.1" 200 -
+2024-03-20 11:56:05,153 - INFO - 127.0.0.1 - - [20/Mar/2024 11:56:05] "OPTIONS /get_exhibitions HTTP/1.1" 200 -
+2024-03-20 11:56:05,209 - INFO - 127.0.0.1 - - [20/Mar/2024 11:56:05] "GET /get_paintings HTTP/1.1" 200 -
+2024-03-20 11:56:05,214 - INFO - 127.0.0.1 - - [20/Mar/2024 11:56:05] "GET /get_exhibitions HTTP/1.1" 200 -
+2024-03-20 11:56:05,258 - INFO - 127.0.0.1 - - [20/Mar/2024 11:56:05] "GET /get_exhibitions HTTP/1.1" 200 -
+2024-03-20 11:56:05,287 - INFO - 127.0.0.1 - - [20/Mar/2024 11:56:05] "OPTIONS /get_pending_exhibitions HTTP/1.1" 200 -
+2024-03-20 11:56:05,319 - INFO - 127.0.0.1 - - [20/Mar/2024 11:56:05] "GET /get_paintings HTTP/1.1" 200 -
+2024-03-20 11:56:05,338 - INFO - 127.0.0.1 - - [20/Mar/2024 11:56:05] "GET /get_pending_exhibitions HTTP/1.1" 200 -
+2024-03-20 11:56:05,388 - INFO - 127.0.0.1 - - [20/Mar/2024 11:56:05] "GET /get_pending_exhibitions HTTP/1.1" 200 -
+2024-03-20 11:56:05,452 - INFO - 127.0.0.1 - - [20/Mar/2024 11:56:05] "GET /get_pending_exhibitions HTTP/1.1" 200 -
+2024-03-20 11:56:05,515 - INFO - 127.0.0.1 - - [20/Mar/2024 11:56:05] "GET /get_pending_exhibitions HTTP/1.1" 200 -
+2024-03-20 11:56:05,574 - INFO - 127.0.0.1 - - [20/Mar/2024 11:56:05] "GET /get_pending_exhibitions HTTP/1.1" 200 -
+2024-03-20 11:56:05,631 - INFO - 127.0.0.1 - - [20/Mar/2024 11:56:05] "GET /get_pending_exhibitions HTTP/1.1" 200 -
+2024-03-20 11:56:27,843 - INFO - 127.0.0.1 - - [20/Mar/2024 11:56:27] "OPTIONS /get_pending_exhibitions HTTP/1.1" 200 -
+2024-03-20 11:56:28,001 - INFO - 127.0.0.1 - - [20/Mar/2024 11:56:28] "GET /get_pending_exhibitions HTTP/1.1" 200 -
+2024-03-20 11:57:13,639 - INFO - 127.0.0.1 - - [20/Mar/2024 11:57:13] "OPTIONS /get_pending_exhibitions HTTP/1.1" 200 -
+2024-03-20 11:57:13,702 - INFO - 127.0.0.1 - - [20/Mar/2024 11:57:13] "GET /get_pending_exhibitions HTTP/1.1" 200 -
+2024-03-20 11:57:52,000 - INFO - 127.0.0.1 - - [20/Mar/2024 11:57:52] "OPTIONS /get_exhibitions HTTP/1.1" 200 -
+2024-03-20 11:57:52,000 - INFO - 127.0.0.1 - - [20/Mar/2024 11:57:52] "OPTIONS /get_exhibitions HTTP/1.1" 200 -
+2024-03-20 11:57:52,178 - INFO - 127.0.0.1 - - [20/Mar/2024 11:57:52] "OPTIONS /get_pending_exhibitions HTTP/1.1" 200 -
+2024-03-20 11:57:52,178 - INFO - 127.0.0.1 - - [20/Mar/2024 11:57:52] "OPTIONS /get_pending_exhibitions HTTP/1.1" 200 -
+2024-03-20 11:58:30,787 - INFO - 127.0.0.1 - - [20/Mar/2024 11:58:30] "OPTIONS /get_pending_exhibitions HTTP/1.1" 200 -
+2024-03-20 11:58:30,870 - INFO - 127.0.0.1 - - [20/Mar/2024 11:58:30] "GET /get_pending_exhibitions HTTP/1.1" 200 -
+2024-03-20 11:58:38,652 - INFO - 127.0.0.1 - - [20/Mar/2024 11:58:38] "OPTIONS /get_pending_exhibitions HTTP/1.1" 200 -
+2024-03-20 11:58:38,704 - INFO - 127.0.0.1 - - [20/Mar/2024 11:58:38] "GET /get_pending_exhibitions HTTP/1.1" 200 -
+2024-03-20 11:59:20,885 - INFO - 127.0.0.1 - - [20/Mar/2024 11:59:20] "OPTIONS /get_pending_exhibitions HTTP/1.1" 200 -
+2024-03-20 11:59:21,067 - INFO - 127.0.0.1 - - [20/Mar/2024 11:59:21] "GET /get_pending_exhibitions HTTP/1.1" 200 -
+2024-03-20 11:59:56,316 - INFO - 127.0.0.1 - - [20/Mar/2024 11:59:56] "OPTIONS /get_pending_exhibitions HTTP/1.1" 200 -
+2024-03-20 11:59:56,383 - INFO - 127.0.0.1 - - [20/Mar/2024 11:59:56] "GET /get_pending_exhibitions HTTP/1.1" 200 -
+2024-03-20 12:00:06,304 - INFO - 127.0.0.1 - - [20/Mar/2024 12:00:06] "OPTIONS /get_pending_exhibitions HTTP/1.1" 200 -
+2024-03-20 12:00:06,352 - INFO - 127.0.0.1 - - [20/Mar/2024 12:00:06] "GET /get_pending_exhibitions HTTP/1.1" 200 -
+2024-03-20 12:00:45,420 - INFO - 127.0.0.1 - - [20/Mar/2024 12:00:45] "OPTIONS /get_pending_exhibitions HTTP/1.1" 200 -
+2024-03-20 12:00:45,585 - INFO - 127.0.0.1 - - [20/Mar/2024 12:00:45] "GET /get_pending_exhibitions HTTP/1.1" 200 -
+2024-03-20 12:00:58,114 - INFO - 127.0.0.1 - - [20/Mar/2024 12:00:58] "OPTIONS /get_pending_exhibitions HTTP/1.1" 200 -
+2024-03-20 12:00:58,147 - INFO - 127.0.0.1 - - [20/Mar/2024 12:00:58] "GET /get_pending_exhibitions HTTP/1.1" 200 -
+2024-03-20 12:02:02,973 - INFO - 127.0.0.1 - - [20/Mar/2024 12:02:02] "OPTIONS /get_pending_exhibitions HTTP/1.1" 200 -
+2024-03-20 12:02:03,012 - INFO - 127.0.0.1 - - [20/Mar/2024 12:02:03] "GET /get_pending_exhibitions HTTP/1.1" 200 -
+2024-03-20 12:03:26,124 - INFO - 127.0.0.1 - - [20/Mar/2024 12:03:26] "OPTIONS /get_pending_exhibitions HTTP/1.1" 200 -
+2024-03-20 12:03:26,158 - INFO - 127.0.0.1 - - [20/Mar/2024 12:03:26] "GET /get_pending_exhibitions HTTP/1.1" 200 -
+2024-03-20 12:04:45,533 - INFO - 127.0.0.1 - - [20/Mar/2024 12:04:45] "OPTIONS /get_pending_exhibitions HTTP/1.1" 200 -
+2024-03-20 12:04:45,595 - INFO - 127.0.0.1 - - [20/Mar/2024 12:04:45] "GET /get_pending_exhibitions HTTP/1.1" 200 -
+2024-03-20 12:04:57,889 - INFO - 127.0.0.1 - - [20/Mar/2024 12:04:57] "OPTIONS /get_pending_exhibitions HTTP/1.1" 200 -
+2024-03-20 12:04:57,935 - INFO - 127.0.0.1 - - [20/Mar/2024 12:04:57] "GET /get_pending_exhibitions HTTP/1.1" 200 -
+2024-03-20 12:05:09,122 - INFO - 127.0.0.1 - - [20/Mar/2024 12:05:09] "OPTIONS /get_exhibitions HTTP/1.1" 200 -
+2024-03-20 12:05:09,181 - INFO - 127.0.0.1 - - [20/Mar/2024 12:05:09] "GET /get_exhibitions HTTP/1.1" 200 -
+2024-03-20 12:05:09,191 - INFO - 127.0.0.1 - - [20/Mar/2024 12:05:09] "GET /get_paintings HTTP/1.1" 200 -
+2024-03-20 12:05:09,228 - INFO - 127.0.0.1 - - [20/Mar/2024 12:05:09] "OPTIONS /get_pending_exhibitions HTTP/1.1" 200 -
+2024-03-20 12:05:09,235 - INFO - 127.0.0.1 - - [20/Mar/2024 12:05:09] "GET /get_exhibitions HTTP/1.1" 200 -
+2024-03-20 12:05:09,270 - INFO - 127.0.0.1 - - [20/Mar/2024 12:05:09] "GET /get_paintings HTTP/1.1" 200 -
+2024-03-20 12:05:09,281 - INFO - 127.0.0.1 - - [20/Mar/2024 12:05:09] "GET /get_pending_exhibitions HTTP/1.1" 200 -
+2024-03-20 12:05:09,330 - INFO - 127.0.0.1 - - [20/Mar/2024 12:05:09] "GET /get_pending_exhibitions HTTP/1.1" 200 -
+2024-03-20 12:05:09,380 - INFO - 127.0.0.1 - - [20/Mar/2024 12:05:09] "GET /get_pending_exhibitions HTTP/1.1" 200 -
+2024-03-20 12:05:09,429 - INFO - 127.0.0.1 - - [20/Mar/2024 12:05:09] "GET /get_pending_exhibitions HTTP/1.1" 200 -
+2024-03-20 12:05:09,539 - INFO - 127.0.0.1 - - [20/Mar/2024 12:05:09] "GET /get_pending_exhibitions HTTP/1.1" 200 -
+2024-03-20 12:05:09,606 - INFO - 127.0.0.1 - - [20/Mar/2024 12:05:09] "GET /get_pending_exhibitions HTTP/1.1" 200 -
+2024-03-20 12:05:42,491 - INFO - 127.0.0.1 - - [20/Mar/2024 12:05:42] "OPTIONS /get_exhibitions HTTP/1.1" 200 -
+2024-03-20 12:05:42,528 - INFO - 127.0.0.1 - - [20/Mar/2024 12:05:42] "GET /get_paintings HTTP/1.1" 200 -
+2024-03-20 12:05:42,539 - INFO - 127.0.0.1 - - [20/Mar/2024 12:05:42] "GET /get_paintings HTTP/1.1" 200 -
+2024-03-20 12:05:42,546 - INFO - 127.0.0.1 - - [20/Mar/2024 12:05:42] "GET /get_exhibitions HTTP/1.1" 200 -
+2024-03-20 12:05:42,615 - INFO - 127.0.0.1 - - [20/Mar/2024 12:05:42] "GET /get_exhibitions HTTP/1.1" 200 -
+2024-03-20 12:05:42,668 - INFO - 127.0.0.1 - - [20/Mar/2024 12:05:42] "OPTIONS /get_pending_exhibitions HTTP/1.1" 200 -
+2024-03-20 12:05:42,721 - INFO - 127.0.0.1 - - [20/Mar/2024 12:05:42] "GET /get_pending_exhibitions HTTP/1.1" 200 -
+2024-03-20 12:05:42,777 - INFO - 127.0.0.1 - - [20/Mar/2024 12:05:42] "GET /get_pending_exhibitions HTTP/1.1" 200 -
+2024-03-20 12:05:42,778 - INFO - 127.0.0.1 - - [20/Mar/2024 12:05:42] "GET /get_pending_exhibitions HTTP/1.1" 200 -
+2024-03-20 12:05:42,824 - INFO - 127.0.0.1 - - [20/Mar/2024 12:05:42] "GET /get_pending_exhibitions HTTP/1.1" 200 -
+2024-03-20 12:06:57,279 - INFO - 127.0.0.1 - - [20/Mar/2024 12:06:57] "OPTIONS /get_pending_exhibitions HTTP/1.1" 200 -
+2024-03-20 12:06:57,348 - INFO - 127.0.0.1 - - [20/Mar/2024 12:06:57] "GET /get_pending_exhibitions HTTP/1.1" 200 -
+2024-03-20 12:07:11,072 - INFO - 127.0.0.1 - - [20/Mar/2024 12:07:11] "OPTIONS /get_exhibitions HTTP/1.1" 200 -
+2024-03-20 12:07:11,088 - INFO - 127.0.0.1 - - [20/Mar/2024 12:07:11] "GET /get_paintings HTTP/1.1" 200 -
+2024-03-20 12:07:11,103 - INFO - 127.0.0.1 - - [20/Mar/2024 12:07:11] "GET /get_paintings HTTP/1.1" 200 -
+2024-03-20 12:07:11,119 - INFO - 127.0.0.1 - - [20/Mar/2024 12:07:11] "GET /get_exhibitions HTTP/1.1" 200 -
+2024-03-20 12:07:11,182 - INFO - 127.0.0.1 - - [20/Mar/2024 12:07:11] "GET /get_exhibitions HTTP/1.1" 200 -
+2024-03-20 12:07:11,276 - INFO - 127.0.0.1 - - [20/Mar/2024 12:07:11] "OPTIONS /get_pending_exhibitions HTTP/1.1" 200 -
+2024-03-20 12:07:11,323 - INFO - 127.0.0.1 - - [20/Mar/2024 12:07:11] "GET /get_pending_exhibitions HTTP/1.1" 200 -
+2024-03-20 12:07:11,386 - INFO - 127.0.0.1 - - [20/Mar/2024 12:07:11] "GET /get_pending_exhibitions HTTP/1.1" 200 -
+2024-03-20 12:07:11,449 - INFO - 127.0.0.1 - - [20/Mar/2024 12:07:11] "GET /get_pending_exhibitions HTTP/1.1" 200 -
+2024-03-20 12:07:11,638 - INFO - 127.0.0.1 - - [20/Mar/2024 12:07:11] "GET /get_pending_exhibitions HTTP/1.1" 200 -
+2024-03-20 12:07:49,844 - INFO - 127.0.0.1 - - [20/Mar/2024 12:07:49] "OPTIONS /get_pending_exhibitions HTTP/1.1" 200 -
+2024-03-20 12:07:49,910 - INFO - 127.0.0.1 - - [20/Mar/2024 12:07:49] "GET /get_pending_exhibitions HTTP/1.1" 200 -
+2024-03-20 12:08:39,969 - INFO - 127.0.0.1 - - [20/Mar/2024 12:08:39] "OPTIONS /get_exhibitions HTTP/1.1" 200 -
+2024-03-20 12:08:40,032 - INFO - 127.0.0.1 - - [20/Mar/2024 12:08:40] "GET /get_paintings HTTP/1.1" 200 -
+2024-03-20 12:08:40,036 - INFO - 127.0.0.1 - - [20/Mar/2024 12:08:40] "GET /get_paintings HTTP/1.1" 200 -
+2024-03-20 12:08:40,043 - INFO - 127.0.0.1 - - [20/Mar/2024 12:08:40] "GET /get_exhibitions HTTP/1.1" 200 -
+2024-03-20 12:08:40,085 - INFO - 127.0.0.1 - - [20/Mar/2024 12:08:40] "GET /get_exhibitions HTTP/1.1" 200 -
+2024-03-20 12:08:48,201 - INFO - 127.0.0.1 - - [20/Mar/2024 12:08:48] "OPTIONS /get_all_exhibitions HTTP/1.1" 200 -
+2024-03-20 12:08:48,249 - INFO - 127.0.0.1 - - [20/Mar/2024 12:08:48] "GET /get_all_exhibitions HTTP/1.1" 200 -
+2024-03-20 12:08:53,617 - INFO - 127.0.0.1 - - [20/Mar/2024 12:08:53] "OPTIONS /change_exhibition_status HTTP/1.1" 200 -
+2024-03-20 12:08:53,680 - INFO - 127.0.0.1 - - [20/Mar/2024 12:08:53] "PUT /change_exhibition_status HTTP/1.1" 200 -
+2024-03-20 12:09:01,942 - INFO - 127.0.0.1 - - [20/Mar/2024 12:09:01] "OPTIONS /get_exhibitions HTTP/1.1" 200 -
+2024-03-20 12:09:01,996 - INFO - 127.0.0.1 - - [20/Mar/2024 12:09:01] "GET /get_paintings HTTP/1.1" 200 -
+2024-03-20 12:09:02,004 - INFO - 127.0.0.1 - - [20/Mar/2024 12:09:02] "GET /get_exhibitions HTTP/1.1" 200 -
+2024-03-20 12:09:02,008 - INFO - 127.0.0.1 - - [20/Mar/2024 12:09:02] "GET /get_paintings HTTP/1.1" 200 -
+2024-03-20 12:09:02,060 - INFO - 127.0.0.1 - - [20/Mar/2024 12:09:02] "GET /get_exhibitions HTTP/1.1" 200 -
+2024-03-20 12:09:02,064 - INFO - 127.0.0.1 - - [20/Mar/2024 12:09:02] "OPTIONS /get_pending_exhibitions HTTP/1.1" 200 -
+2024-03-20 12:09:02,115 - INFO - 127.0.0.1 - - [20/Mar/2024 12:09:02] "GET /get_pending_exhibitions HTTP/1.1" 200 -
+2024-03-20 12:09:02,161 - INFO - 127.0.0.1 - - [20/Mar/2024 12:09:02] "GET /get_pending_exhibitions HTTP/1.1" 200 -
+2024-03-20 12:09:02,207 - INFO - 127.0.0.1 - - [20/Mar/2024 12:09:02] "GET /get_pending_exhibitions HTTP/1.1" 200 -
+2024-03-20 12:09:02,268 - INFO - 127.0.0.1 - - [20/Mar/2024 12:09:02] "GET /get_pending_exhibitions HTTP/1.1" 200 -
+2024-03-20 12:09:02,347 - INFO - 127.0.0.1 - - [20/Mar/2024 12:09:02] "GET /get_pending_exhibitions HTTP/1.1" 200 -
+2024-03-20 12:09:02,410 - INFO - 127.0.0.1 - - [20/Mar/2024 12:09:02] "GET /get_pending_exhibitions HTTP/1.1" 200 -
+2024-03-20 12:09:35,302 - INFO - 127.0.0.1 - - [20/Mar/2024 12:09:35] "OPTIONS /get_exhibitions HTTP/1.1" 200 -
+2024-03-20 12:09:35,319 - INFO - 127.0.0.1 - - [20/Mar/2024 12:09:35] "GET /get_paintings HTTP/1.1" 200 -
+2024-03-20 12:09:35,347 - INFO - 127.0.0.1 - - [20/Mar/2024 12:09:35] "GET /get_paintings HTTP/1.1" 200 -
+2024-03-20 12:09:35,361 - INFO - 127.0.0.1 - - [20/Mar/2024 12:09:35] "GET /get_exhibitions HTTP/1.1" 200 -
+2024-03-20 12:09:35,405 - INFO - 127.0.0.1 - - [20/Mar/2024 12:09:35] "GET /get_exhibitions HTTP/1.1" 200 -
+2024-03-20 12:09:35,484 - INFO - 127.0.0.1 - - [20/Mar/2024 12:09:35] "OPTIONS /get_pending_exhibitions HTTP/1.1" 200 -
+2024-03-20 12:09:35,546 - INFO - 127.0.0.1 - - [20/Mar/2024 12:09:35] "GET /get_pending_exhibitions HTTP/1.1" 200 -
+2024-03-20 12:09:35,625 - INFO - 127.0.0.1 - - [20/Mar/2024 12:09:35] "GET /get_pending_exhibitions HTTP/1.1" 200 -
+2024-03-20 12:09:35,719 - INFO - 127.0.0.1 - - [20/Mar/2024 12:09:35] "GET /get_pending_exhibitions HTTP/1.1" 200 -
+2024-03-20 12:09:35,766 - INFO - 127.0.0.1 - - [20/Mar/2024 12:09:35] "GET /get_pending_exhibitions HTTP/1.1" 200 -
+2024-03-20 12:10:21,136 - INFO - 127.0.0.1 - - [20/Mar/2024 12:10:21] "OPTIONS /get_pending_exhibitions HTTP/1.1" 200 -
+2024-03-20 12:10:21,245 - INFO - 127.0.0.1 - - [20/Mar/2024 12:10:21] "GET /get_pending_exhibitions HTTP/1.1" 200 -
+2024-03-20 12:10:29,914 - INFO - 127.0.0.1 - - [20/Mar/2024 12:10:29] "OPTIONS /get_exhibitions HTTP/1.1" 200 -
+2024-03-20 12:10:29,945 - INFO - 127.0.0.1 - - [20/Mar/2024 12:10:29] "GET /get_paintings HTTP/1.1" 200 -
+2024-03-20 12:10:29,968 - INFO - 127.0.0.1 - - [20/Mar/2024 12:10:29] "GET /get_paintings HTTP/1.1" 200 -
+2024-03-20 12:10:29,999 - INFO - 127.0.0.1 - - [20/Mar/2024 12:10:29] "GET /get_exhibitions HTTP/1.1" 200 -
+2024-03-20 12:10:30,050 - INFO - 127.0.0.1 - - [20/Mar/2024 12:10:30] "GET /get_exhibitions HTTP/1.1" 200 -
+2024-03-20 12:10:30,108 - INFO - 127.0.0.1 - - [20/Mar/2024 12:10:30] "OPTIONS /get_pending_exhibitions HTTP/1.1" 200 -
+2024-03-20 12:10:30,169 - INFO - 127.0.0.1 - - [20/Mar/2024 12:10:30] "GET /get_pending_exhibitions HTTP/1.1" 200 -
+2024-03-20 12:10:30,230 - INFO - 127.0.0.1 - - [20/Mar/2024 12:10:30] "GET /get_pending_exhibitions HTTP/1.1" 200 -
+2024-03-20 12:10:30,309 - INFO - 127.0.0.1 - - [20/Mar/2024 12:10:30] "GET /get_pending_exhibitions HTTP/1.1" 200 -
+2024-03-20 12:10:30,357 - INFO - 127.0.0.1 - - [20/Mar/2024 12:10:30] "GET /get_pending_exhibitions HTTP/1.1" 200 -
+2024-03-20 12:10:57,534 - INFO - 127.0.0.1 - - [20/Mar/2024 12:10:57] "OPTIONS /get_pending_exhibitions HTTP/1.1" 200 -
+2024-03-20 12:10:57,590 - INFO - 127.0.0.1 - - [20/Mar/2024 12:10:57] "GET /get_pending_exhibitions HTTP/1.1" 200 -
+2024-03-20 12:11:07,372 - INFO - 127.0.0.1 - - [20/Mar/2024 12:11:07] "OPTIONS /get_exhibitions HTTP/1.1" 200 -
+2024-03-20 12:11:07,418 - INFO - 127.0.0.1 - - [20/Mar/2024 12:11:07] "GET /get_paintings HTTP/1.1" 200 -
+2024-03-20 12:11:07,434 - INFO - 127.0.0.1 - - [20/Mar/2024 12:11:07] "GET /get_paintings HTTP/1.1" 200 -
+2024-03-20 12:11:07,450 - INFO - 127.0.0.1 - - [20/Mar/2024 12:11:07] "GET /get_exhibitions HTTP/1.1" 200 -
+2024-03-20 12:11:07,513 - INFO - 127.0.0.1 - - [20/Mar/2024 12:11:07] "GET /get_exhibitions HTTP/1.1" 200 -
+2024-03-20 12:11:07,576 - INFO - 127.0.0.1 - - [20/Mar/2024 12:11:07] "OPTIONS /get_pending_exhibitions HTTP/1.1" 200 -
+2024-03-20 12:11:07,638 - INFO - 127.0.0.1 - - [20/Mar/2024 12:11:07] "GET /get_pending_exhibitions HTTP/1.1" 200 -
+2024-03-20 12:11:07,685 - INFO - 127.0.0.1 - - [20/Mar/2024 12:11:07] "GET /get_pending_exhibitions HTTP/1.1" 200 -
+2024-03-20 12:11:07,748 - INFO - 127.0.0.1 - - [20/Mar/2024 12:11:07] "GET /get_pending_exhibitions HTTP/1.1" 200 -
+2024-03-20 12:11:07,827 - INFO - 127.0.0.1 - - [20/Mar/2024 12:11:07] "GET /get_pending_exhibitions HTTP/1.1" 200 -
+2024-03-20 12:11:43,041 - INFO - 127.0.0.1 - - [20/Mar/2024 12:11:43] "OPTIONS /get_pending_exhibitions HTTP/1.1" 200 -
+2024-03-20 12:11:43,083 - INFO - 127.0.0.1 - - [20/Mar/2024 12:11:43] "GET /get_pending_exhibitions HTTP/1.1" 200 -
+2024-03-20 12:13:24,477 - INFO - 127.0.0.1 - - [20/Mar/2024 12:13:24] "OPTIONS /get_pending_exhibitions HTTP/1.1" 200 -
+2024-03-20 12:13:24,541 - INFO - 127.0.0.1 - - [20/Mar/2024 12:13:24] "GET /get_pending_exhibitions HTTP/1.1" 200 -
+2024-03-20 12:13:24,771 - INFO - 127.0.0.1 - - [20/Mar/2024 12:13:24] "GET /get_pending_exhibitions HTTP/1.1" 200 -
+2024-03-20 12:13:28,572 - INFO - 127.0.0.1 - - [20/Mar/2024 12:13:28] "GET /get_pending_exhibitions HTTP/1.1" 200 -
+2024-03-20 12:13:28,621 - INFO - 127.0.0.1 - - [20/Mar/2024 12:13:28] "GET /get_pending_exhibitions HTTP/1.1" 200 -
+2024-03-20 12:14:15,058 - INFO - 127.0.0.1 - - [20/Mar/2024 12:14:15] "OPTIONS /get_pending_exhibitions HTTP/1.1" 200 -
+2024-03-20 12:14:15,119 - INFO - 127.0.0.1 - - [20/Mar/2024 12:14:15] "GET /get_pending_exhibitions HTTP/1.1" 200 -
+2024-03-20 12:14:15,153 - INFO - 127.0.0.1 - - [20/Mar/2024 12:14:15] "GET /get_pending_exhibitions HTTP/1.1" 200 -
+2024-03-20 12:16:44,275 - INFO - 127.0.0.1 - - [20/Mar/2024 12:16:44] "OPTIONS /get_pending_exhibitions HTTP/1.1" 200 -
+2024-03-20 12:16:44,305 - INFO - 127.0.0.1 - - [20/Mar/2024 12:16:44] "GET /get_pending_exhibitions HTTP/1.1" 200 -
+2024-03-20 12:16:59,901 - INFO - 127.0.0.1 - - [20/Mar/2024 12:16:59] "OPTIONS /get_pending_exhibitions HTTP/1.1" 200 -
+2024-03-20 12:16:59,950 - INFO - 127.0.0.1 - - [20/Mar/2024 12:16:59] "GET /get_pending_exhibitions HTTP/1.1" 200 -
+2024-03-20 12:17:08,517 - INFO - 127.0.0.1 - - [20/Mar/2024 12:17:08] "OPTIONS /get_exhibitions HTTP/1.1" 200 -
+2024-03-20 12:17:08,548 - INFO - 127.0.0.1 - - [20/Mar/2024 12:17:08] "GET /get_paintings HTTP/1.1" 200 -
+2024-03-20 12:17:08,563 - INFO - 127.0.0.1 - - [20/Mar/2024 12:17:08] "GET /get_paintings HTTP/1.1" 200 -
+2024-03-20 12:17:08,563 - INFO - 127.0.0.1 - - [20/Mar/2024 12:17:08] "GET /get_exhibitions HTTP/1.1" 200 -
+2024-03-20 12:17:08,648 - INFO - 127.0.0.1 - - [20/Mar/2024 12:17:08] "GET /get_exhibitions HTTP/1.1" 200 -
+2024-03-20 12:17:08,757 - INFO - 127.0.0.1 - - [20/Mar/2024 12:17:08] "OPTIONS /get_pending_exhibitions HTTP/1.1" 200 -
+2024-03-20 12:17:08,798 - INFO - 127.0.0.1 - - [20/Mar/2024 12:17:08] "GET /get_pending_exhibitions HTTP/1.1" 200 -
+2024-03-20 12:17:08,849 - INFO - 127.0.0.1 - - [20/Mar/2024 12:17:08] "GET /get_pending_exhibitions HTTP/1.1" 200 -
+2024-03-20 12:17:08,940 - INFO - 127.0.0.1 - - [20/Mar/2024 12:17:08] "GET /get_pending_exhibitions HTTP/1.1" 200 -
+2024-03-20 12:17:08,987 - INFO - 127.0.0.1 - - [20/Mar/2024 12:17:08] "GET /get_pending_exhibitions HTTP/1.1" 200 -
+2024-03-20 12:17:29,705 - INFO - 127.0.0.1 - - [20/Mar/2024 12:17:29] "OPTIONS /get_pending_exhibitions HTTP/1.1" 200 -
+2024-03-20 12:17:29,740 - INFO - 127.0.0.1 - - [20/Mar/2024 12:17:29] "GET /get_pending_exhibitions HTTP/1.1" 200 -
+2024-03-20 12:17:29,816 - INFO - 127.0.0.1 - - [20/Mar/2024 12:17:29] "GET /get_pending_exhibitions HTTP/1.1" 200 -
+2024-03-20 12:19:03,170 - INFO - 127.0.0.1 - - [20/Mar/2024 12:19:03] "OPTIONS /get_pending_exhibitions HTTP/1.1" 200 -
+2024-03-20 12:19:03,217 - INFO - 127.0.0.1 - - [20/Mar/2024 12:19:03] "GET /get_pending_exhibitions HTTP/1.1" 200 -
+2024-03-20 12:19:31,009 - INFO - 127.0.0.1 - - [20/Mar/2024 12:19:31] "OPTIONS /get_pending_exhibitions HTTP/1.1" 200 -
+2024-03-20 12:19:31,056 - INFO - 127.0.0.1 - - [20/Mar/2024 12:19:31] "GET /get_pending_exhibitions HTTP/1.1" 200 -
+2024-03-20 12:21:58,199 - INFO - 127.0.0.1 - - [20/Mar/2024 12:21:58] "OPTIONS /get_exhibitions HTTP/1.1" 200 -
+2024-03-20 12:21:58,279 - INFO - 127.0.0.1 - - [20/Mar/2024 12:21:58] "GET /get_paintings HTTP/1.1" 200 -
+2024-03-20 12:21:58,305 - INFO - 127.0.0.1 - - [20/Mar/2024 12:21:58] "GET /get_exhibitions HTTP/1.1" 200 -
+2024-03-20 12:21:58,324 - INFO - 127.0.0.1 - - [20/Mar/2024 12:21:58] "GET /get_paintings HTTP/1.1" 200 -
+2024-03-20 12:21:58,388 - INFO - 127.0.0.1 - - [20/Mar/2024 12:21:58] "GET /get_exhibitions HTTP/1.1" 200 -
+2024-03-20 12:22:03,721 - INFO - 127.0.0.1 - - [20/Mar/2024 12:22:03] "OPTIONS /get_exhibitions HTTP/1.1" 200 -
+2024-03-20 12:22:03,830 - INFO - 127.0.0.1 - - [20/Mar/2024 12:22:03] "GET /get_paintings HTTP/1.1" 200 -
+2024-03-20 12:22:03,838 - INFO - 127.0.0.1 - - [20/Mar/2024 12:22:03] "GET /get_paintings HTTP/1.1" 200 -
+2024-03-20 12:22:03,849 - INFO - 127.0.0.1 - - [20/Mar/2024 12:22:03] "GET /get_exhibitions HTTP/1.1" 200 -
+2024-03-20 12:22:03,925 - INFO - 127.0.0.1 - - [20/Mar/2024 12:22:03] "GET /get_exhibitions HTTP/1.1" 200 -
+2024-03-20 12:22:03,935 - INFO - 127.0.0.1 - - [20/Mar/2024 12:22:03] "OPTIONS /get_pending_exhibitions HTTP/1.1" 200 -
+2024-03-20 12:22:04,010 - INFO - 127.0.0.1 - - [20/Mar/2024 12:22:04] "GET /get_pending_exhibitions HTTP/1.1" 200 -
+2024-03-20 12:22:04,088 - INFO - 127.0.0.1 - - [20/Mar/2024 12:22:04] "GET /get_pending_exhibitions HTTP/1.1" 200 -
+2024-03-20 12:22:04,089 - INFO - 127.0.0.1 - - [20/Mar/2024 12:22:04] "GET /get_pending_exhibitions HTTP/1.1" 200 -
+2024-03-20 12:22:04,155 - INFO - 127.0.0.1 - - [20/Mar/2024 12:22:04] "GET /get_pending_exhibitions HTTP/1.1" 200 -
+2024-03-20 12:22:17,155 - INFO - 127.0.0.1 - - [20/Mar/2024 12:22:17] "OPTIONS /change_exhibition_status HTTP/1.1" 200 -
+2024-03-20 12:22:17,333 - INFO - 127.0.0.1 - - [20/Mar/2024 12:22:17] "PUT /change_exhibition_status HTTP/1.1" 200 -
+2024-03-20 12:22:33,213 - INFO - 127.0.0.1 - - [20/Mar/2024 12:22:33] "OPTIONS /get_exhibitions HTTP/1.1" 200 -
+2024-03-20 12:22:33,273 - INFO - 127.0.0.1 - - [20/Mar/2024 12:22:33] "GET /get_paintings HTTP/1.1" 200 -
+2024-03-20 12:22:33,311 - INFO - 127.0.0.1 - - [20/Mar/2024 12:22:33] "GET /get_exhibitions HTTP/1.1" 200 -
+2024-03-20 12:22:33,311 - INFO - 127.0.0.1 - - [20/Mar/2024 12:22:33] "GET /get_paintings HTTP/1.1" 200 -
+2024-03-20 12:22:33,384 - INFO - 127.0.0.1 - - [20/Mar/2024 12:22:33] "GET /get_exhibitions HTTP/1.1" 200 -
+2024-03-20 12:22:33,447 - INFO - 127.0.0.1 - - [20/Mar/2024 12:22:33] "OPTIONS /get_pending_exhibitions HTTP/1.1" 200 -
+2024-03-20 12:22:33,526 - INFO - 127.0.0.1 - - [20/Mar/2024 12:22:33] "GET /get_pending_exhibitions HTTP/1.1" 200 -
+2024-03-20 12:22:33,605 - INFO - 127.0.0.1 - - [20/Mar/2024 12:22:33] "GET /get_pending_exhibitions HTTP/1.1" 200 -
+2024-03-20 12:22:33,683 - INFO - 127.0.0.1 - - [20/Mar/2024 12:22:33] "GET /get_pending_exhibitions HTTP/1.1" 200 -
+2024-03-20 12:22:33,762 - INFO - 127.0.0.1 - - [20/Mar/2024 12:22:33] "GET /get_pending_exhibitions HTTP/1.1" 200 -
+2024-03-20 12:22:33,826 - INFO - 127.0.0.1 - - [20/Mar/2024 12:22:33] "GET /get_pending_exhibitions HTTP/1.1" 200 -
+2024-03-20 12:22:33,905 - INFO - 127.0.0.1 - - [20/Mar/2024 12:22:33] "GET /get_pending_exhibitions HTTP/1.1" 200 -
+2024-03-20 12:24:33,303 - INFO - 127.0.0.1 - - [20/Mar/2024 12:24:33] "OPTIONS /change_exhibition_status HTTP/1.1" 200 -
+2024-03-20 12:24:33,401 - INFO - 127.0.0.1 - - [20/Mar/2024 12:24:33] "PUT /change_exhibition_status HTTP/1.1" 200 -
+2024-03-20 12:24:37,561 - INFO - 127.0.0.1 - - [20/Mar/2024 12:24:37] "OPTIONS /get_exhibitions HTTP/1.1" 200 -
+2024-03-20 12:24:37,633 - INFO - 127.0.0.1 - - [20/Mar/2024 12:24:37] "GET /get_paintings HTTP/1.1" 200 -
+2024-03-20 12:24:37,644 - INFO - 127.0.0.1 - - [20/Mar/2024 12:24:37] "GET /get_exhibitions HTTP/1.1" 200 -
+2024-03-20 12:24:37,650 - INFO - 127.0.0.1 - - [20/Mar/2024 12:24:37] "GET /get_paintings HTTP/1.1" 200 -
+2024-03-20 12:24:37,748 - INFO - 127.0.0.1 - - [20/Mar/2024 12:24:37] "OPTIONS /get_pending_exhibitions HTTP/1.1" 200 -
+2024-03-20 12:24:37,754 - INFO - 127.0.0.1 - - [20/Mar/2024 12:24:37] "GET /get_exhibitions HTTP/1.1" 200 -
+2024-03-20 12:24:37,830 - INFO - 127.0.0.1 - - [20/Mar/2024 12:24:37] "GET /get_pending_exhibitions HTTP/1.1" 200 -
+2024-03-20 12:24:37,898 - INFO - 127.0.0.1 - - [20/Mar/2024 12:24:37] "GET /get_pending_exhibitions HTTP/1.1" 200 -
+2024-03-20 12:24:37,962 - INFO - 127.0.0.1 - - [20/Mar/2024 12:24:37] "GET /get_pending_exhibitions HTTP/1.1" 200 -
+2024-03-20 12:24:38,043 - INFO - 127.0.0.1 - - [20/Mar/2024 12:24:38] "GET /get_pending_exhibitions HTTP/1.1" 200 -
+2024-03-20 12:25:01,553 - INFO - 127.0.0.1 - - [20/Mar/2024 12:25:01] "OPTIONS /change_exhibition_status HTTP/1.1" 200 -
+2024-03-20 12:25:01,646 - INFO - 127.0.0.1 - - [20/Mar/2024 12:25:01] "PUT /change_exhibition_status HTTP/1.1" 200 -
+2024-03-20 12:25:05,210 - INFO - 127.0.0.1 - - [20/Mar/2024 12:25:05] "OPTIONS /get_exhibitions HTTP/1.1" 200 -
+2024-03-20 12:25:05,293 - INFO - 127.0.0.1 - - [20/Mar/2024 12:25:05] "GET /get_paintings HTTP/1.1" 200 -
+2024-03-20 12:25:05,297 - INFO - 127.0.0.1 - - [20/Mar/2024 12:25:05] "GET /get_paintings HTTP/1.1" 200 -
+2024-03-20 12:25:05,420 - INFO - 127.0.0.1 - - [20/Mar/2024 12:25:05] "GET /get_exhibitions HTTP/1.1" 200 -
+2024-03-20 12:25:05,501 - INFO - 127.0.0.1 - - [20/Mar/2024 12:25:05] "GET /get_exhibitions HTTP/1.1" 200 -
+2024-03-20 12:25:05,525 - INFO - 127.0.0.1 - - [20/Mar/2024 12:25:05] "OPTIONS /get_pending_exhibitions HTTP/1.1" 200 -
+2024-03-20 12:25:05,593 - INFO - 127.0.0.1 - - [20/Mar/2024 12:25:05] "GET /get_pending_exhibitions HTTP/1.1" 200 -
+2024-03-20 12:25:05,657 - INFO - 127.0.0.1 - - [20/Mar/2024 12:25:05] "GET /get_pending_exhibitions HTTP/1.1" 200 -
+2024-03-20 12:25:05,735 - INFO - 127.0.0.1 - - [20/Mar/2024 12:25:05] "GET /get_pending_exhibitions HTTP/1.1" 200 -
+2024-03-20 12:25:05,823 - INFO - 127.0.0.1 - - [20/Mar/2024 12:25:05] "GET /get_pending_exhibitions HTTP/1.1" 200 -
+2024-03-20 12:28:07,328 - INFO - 127.0.0.1 - - [20/Mar/2024 12:28:07] "OPTIONS /change_exhibition_status HTTP/1.1" 200 -
+2024-03-20 12:28:07,423 - INFO - 127.0.0.1 - - [20/Mar/2024 12:28:07] "PUT /change_exhibition_status HTTP/1.1" 200 -
+2024-03-20 12:28:12,320 - INFO - 127.0.0.1 - - [20/Mar/2024 12:28:12] "OPTIONS /get_exhibitions HTTP/1.1" 200 -
+2024-03-20 12:28:12,392 - INFO - 127.0.0.1 - - [20/Mar/2024 12:28:12] "GET /get_paintings HTTP/1.1" 200 -
+2024-03-20 12:28:12,407 - INFO - 127.0.0.1 - - [20/Mar/2024 12:28:12] "GET /get_paintings HTTP/1.1" 200 -
+2024-03-20 12:28:12,409 - INFO - 127.0.0.1 - - [20/Mar/2024 12:28:12] "GET /get_exhibitions HTTP/1.1" 200 -
+2024-03-20 12:28:12,468 - INFO - 127.0.0.1 - - [20/Mar/2024 12:28:12] "OPTIONS /get_pending_exhibitions HTTP/1.1" 200 -
+2024-03-20 12:28:12,480 - INFO - 127.0.0.1 - - [20/Mar/2024 12:28:12] "GET /get_exhibitions HTTP/1.1" 200 -
+2024-03-20 12:28:12,653 - INFO - 127.0.0.1 - - [20/Mar/2024 12:28:12] "GET /get_pending_exhibitions HTTP/1.1" 200 -
+2024-03-20 12:28:12,733 - INFO - 127.0.0.1 - - [20/Mar/2024 12:28:12] "GET /get_pending_exhibitions HTTP/1.1" 200 -
+2024-03-20 12:28:12,811 - INFO - 127.0.0.1 - - [20/Mar/2024 12:28:12] "GET /get_pending_exhibitions HTTP/1.1" 200 -
+2024-03-20 12:28:12,876 - INFO - 127.0.0.1 - - [20/Mar/2024 12:28:12] "GET /get_pending_exhibitions HTTP/1.1" 200 -
+2024-03-20 12:28:19,279 - INFO - 127.0.0.1 - - [20/Mar/2024 12:28:19] "OPTIONS /change_exhibition_status HTTP/1.1" 200 -
+2024-03-20 12:28:19,358 - INFO - 127.0.0.1 - - [20/Mar/2024 12:28:19] "PUT /change_exhibition_status HTTP/1.1" 200 -
+2024-03-20 12:28:34,547 - INFO - 127.0.0.1 - - [20/Mar/2024 12:28:34] "OPTIONS /get_exhibitions HTTP/1.1" 200 -
+2024-03-20 12:28:34,610 - INFO - 127.0.0.1 - - [20/Mar/2024 12:28:34] "GET /get_paintings HTTP/1.1" 200 -
+2024-03-20 12:28:34,663 - INFO - 127.0.0.1 - - [20/Mar/2024 12:28:34] "GET /get_exhibitions HTTP/1.1" 200 -
+2024-03-20 12:28:34,686 - INFO - 127.0.0.1 - - [20/Mar/2024 12:28:34] "GET /get_paintings HTTP/1.1" 200 -
+2024-03-20 12:28:34,744 - INFO - 127.0.0.1 - - [20/Mar/2024 12:28:34] "GET /get_exhibitions HTTP/1.1" 200 -
+2024-03-20 12:28:34,744 - INFO - 127.0.0.1 - - [20/Mar/2024 12:28:34] "OPTIONS /get_pending_exhibitions HTTP/1.1" 200 -
+2024-03-20 12:28:34,806 - INFO - 127.0.0.1 - - [20/Mar/2024 12:28:34] "GET /get_pending_exhibitions HTTP/1.1" 200 -
+2024-03-20 12:28:34,885 - INFO - 127.0.0.1 - - [20/Mar/2024 12:28:34] "GET /get_pending_exhibitions HTTP/1.1" 200 -
+2024-03-20 12:28:34,963 - INFO - 127.0.0.1 - - [20/Mar/2024 12:28:34] "GET /get_pending_exhibitions HTTP/1.1" 200 -
+2024-03-20 12:28:35,154 - INFO - 127.0.0.1 - - [20/Mar/2024 12:28:35] "GET /get_pending_exhibitions HTTP/1.1" 200 -
+2024-03-20 12:28:35,217 - INFO - 127.0.0.1 - - [20/Mar/2024 12:28:35] "GET /get_pending_exhibitions HTTP/1.1" 200 -
+2024-03-20 12:28:35,281 - INFO - 127.0.0.1 - - [20/Mar/2024 12:28:35] "GET /get_pending_exhibitions HTTP/1.1" 200 -
+2024-03-20 12:30:17,192 - INFO - 127.0.0.1 - - [20/Mar/2024 12:30:17] "OPTIONS /change_exhibition_status HTTP/1.1" 200 -
+2024-03-20 12:30:17,263 - INFO - 127.0.0.1 - - [20/Mar/2024 12:30:17] "PUT /change_exhibition_status HTTP/1.1" 200 -
+2024-03-20 12:30:20,429 - INFO - 127.0.0.1 - - [20/Mar/2024 12:30:20] "OPTIONS /get_exhibitions HTTP/1.1" 200 -
+2024-03-20 12:30:20,513 - INFO - 127.0.0.1 - - [20/Mar/2024 12:30:20] "GET /get_paintings HTTP/1.1" 200 -
+2024-03-20 12:30:20,514 - INFO - 127.0.0.1 - - [20/Mar/2024 12:30:20] "GET /get_exhibitions HTTP/1.1" 200 -
+2024-03-20 12:30:20,517 - INFO - 127.0.0.1 - - [20/Mar/2024 12:30:20] "GET /get_paintings HTTP/1.1" 200 -
+2024-03-20 12:30:20,580 - INFO - 127.0.0.1 - - [20/Mar/2024 12:30:20] "GET /get_exhibitions HTTP/1.1" 200 -
+2024-03-20 12:30:20,623 - INFO - 127.0.0.1 - - [20/Mar/2024 12:30:20] "OPTIONS /get_pending_exhibitions HTTP/1.1" 200 -
+2024-03-20 12:30:20,683 - INFO - 127.0.0.1 - - [20/Mar/2024 12:30:20] "GET /get_pending_exhibitions HTTP/1.1" 200 -
+2024-03-20 12:30:20,743 - INFO - 127.0.0.1 - - [20/Mar/2024 12:30:20] "GET /get_pending_exhibitions HTTP/1.1" 200 -
+2024-03-20 12:30:20,811 - INFO - 127.0.0.1 - - [20/Mar/2024 12:30:20] "GET /get_pending_exhibitions HTTP/1.1" 200 -
+2024-03-20 12:30:20,885 - INFO - 127.0.0.1 - - [20/Mar/2024 12:30:20] "GET /get_pending_exhibitions HTTP/1.1" 200 -
+2024-03-20 12:30:20,968 - INFO - 127.0.0.1 - - [20/Mar/2024 12:30:20] "GET /get_pending_exhibitions HTTP/1.1" 200 -
+2024-03-20 12:30:21,036 - INFO - 127.0.0.1 - - [20/Mar/2024 12:30:21] "GET /get_pending_exhibitions HTTP/1.1" 200 -
+2024-03-20 12:32:33,061 - INFO - 127.0.0.1 - - [20/Mar/2024 12:32:33] "OPTIONS /change_exhibition_status HTTP/1.1" 200 -
+2024-03-20 12:32:33,121 - INFO - 127.0.0.1 - - [20/Mar/2024 12:32:33] "PUT /change_exhibition_status HTTP/1.1" 200 -
+2024-03-20 12:32:47,700 - INFO - 127.0.0.1 - - [20/Mar/2024 12:32:47] "OPTIONS /get_exhibitions HTTP/1.1" 200 -
+2024-03-20 12:32:47,802 - INFO - 127.0.0.1 - - [20/Mar/2024 12:32:47] "GET /get_exhibitions HTTP/1.1" 200 -
+2024-03-20 12:32:47,828 - INFO - 127.0.0.1 - - [20/Mar/2024 12:32:47] "GET /get_paintings HTTP/1.1" 200 -
+2024-03-20 12:32:47,829 - INFO - 127.0.0.1 - - [20/Mar/2024 12:32:47] "GET /get_paintings HTTP/1.1" 200 -
+2024-03-20 12:32:47,864 - INFO - 127.0.0.1 - - [20/Mar/2024 12:32:47] "GET /get_exhibitions HTTP/1.1" 200 -
+2024-03-20 12:32:47,880 - INFO - 127.0.0.1 - - [20/Mar/2024 12:32:47] "OPTIONS /get_pending_exhibitions HTTP/1.1" 200 -
+2024-03-20 12:32:47,950 - INFO - 127.0.0.1 - - [20/Mar/2024 12:32:47] "GET /get_pending_exhibitions HTTP/1.1" 200 -
+2024-03-20 12:32:48,006 - INFO - 127.0.0.1 - - [20/Mar/2024 12:32:48] "GET /get_pending_exhibitions HTTP/1.1" 200 -
+2024-03-20 12:32:48,117 - INFO - 127.0.0.1 - - [20/Mar/2024 12:32:48] "GET /get_pending_exhibitions HTTP/1.1" 200 -
+2024-03-20 12:32:48,180 - INFO - 127.0.0.1 - - [20/Mar/2024 12:32:48] "GET /get_pending_exhibitions HTTP/1.1" 200 -
+2024-03-20 12:32:48,259 - INFO - 127.0.0.1 - - [20/Mar/2024 12:32:48] "GET /get_pending_exhibitions HTTP/1.1" 200 -
+2024-03-20 12:32:48,322 - INFO - 127.0.0.1 - - [20/Mar/2024 12:32:48] "GET /get_pending_exhibitions HTTP/1.1" 200 -
+2024-03-20 12:33:18,052 - INFO - 127.0.0.1 - - [20/Mar/2024 12:33:18] "OPTIONS /change_exhibition_status HTTP/1.1" 200 -
+2024-03-20 12:33:18,122 - INFO - 127.0.0.1 - - [20/Mar/2024 12:33:18] "PUT /change_exhibition_status HTTP/1.1" 200 -
+2024-03-20 12:33:33,968 - INFO - 127.0.0.1 - - [20/Mar/2024 12:33:33] "OPTIONS /get_exhibitions HTTP/1.1" 200 -
+2024-03-20 12:33:34,057 - INFO - 127.0.0.1 - - [20/Mar/2024 12:33:34] "GET /get_paintings HTTP/1.1" 200 -
+2024-03-20 12:33:34,070 - INFO - 127.0.0.1 - - [20/Mar/2024 12:33:34] "GET /get_paintings HTTP/1.1" 200 -
+2024-03-20 12:33:34,088 - INFO - 127.0.0.1 - - [20/Mar/2024 12:33:34] "GET /get_exhibitions HTTP/1.1" 200 -
+2024-03-20 12:33:34,152 - INFO - 127.0.0.1 - - [20/Mar/2024 12:33:34] "GET /get_exhibitions HTTP/1.1" 200 -
+2024-03-20 12:33:34,159 - INFO - 127.0.0.1 - - [20/Mar/2024 12:33:34] "OPTIONS /get_pending_exhibitions HTTP/1.1" 200 -
+2024-03-20 12:33:34,215 - INFO - 127.0.0.1 - - [20/Mar/2024 12:33:34] "GET /get_pending_exhibitions HTTP/1.1" 200 -
+2024-03-20 12:33:34,281 - INFO - 127.0.0.1 - - [20/Mar/2024 12:33:34] "GET /get_pending_exhibitions HTTP/1.1" 200 -
+2024-03-20 12:33:34,342 - INFO - 127.0.0.1 - - [20/Mar/2024 12:33:34] "GET /get_pending_exhibitions HTTP/1.1" 200 -
+2024-03-20 12:33:34,388 - INFO - 127.0.0.1 - - [20/Mar/2024 12:33:34] "GET /get_pending_exhibitions HTTP/1.1" 200 -
+2024-03-20 12:34:00,559 - INFO - 127.0.0.1 - - [20/Mar/2024 12:34:00] "POST /custom-login HTTP/1.1" 200 -
+2024-03-20 12:34:08,789 - INFO - 127.0.0.1 - - [20/Mar/2024 12:34:08] "POST /custom-login HTTP/1.1" 200 -
+2024-03-20 12:34:09,279 - INFO - 127.0.0.1 - - [20/Mar/2024 12:34:09] "OPTIONS /get_user_paintings HTTP/1.1" 200 -
+2024-03-20 12:34:09,288 - INFO - 127.0.0.1 - - [20/Mar/2024 12:34:09] "OPTIONS /get_user_paintings HTTP/1.1" 200 -
+2024-03-20 12:34:09,477 - INFO - 127.0.0.1 - - [20/Mar/2024 12:34:09] "POST /get_user_paintings HTTP/1.1" 200 -
+2024-03-20 12:34:09,482 - INFO - 127.0.0.1 - - [20/Mar/2024 12:34:09] "POST /get_user_paintings HTTP/1.1" 200 -
+2024-03-20 12:34:16,088 - INFO - 127.0.0.1 - - [20/Mar/2024 12:34:16] "OPTIONS /get_user_paintings HTTP/1.1" 200 -
+2024-03-20 12:34:16,254 - INFO - 127.0.0.1 - - [20/Mar/2024 12:34:16] "POST /get_user_paintings HTTP/1.1" 200 -
+2024-03-20 12:34:20,508 - INFO - 127.0.0.1 - - [20/Mar/2024 12:34:20] "POST /get_user_paintings HTTP/1.1" 200 -
+2024-03-20 12:35:00,786 - INFO - 127.0.0.1 - - [20/Mar/2024 12:35:00] "OPTIONS /add_new_painting HTTP/1.1" 200 -
+2024-03-20 12:35:00,959 - INFO - 127.0.0.1 - - [20/Mar/2024 12:35:00] "PUT /add_new_painting HTTP/1.1" 200 -
+2024-03-20 12:35:00,969 - DEBUG - Starting new HTTPS connection (1): api.cloudinary.com:443
+2024-03-20 12:35:00,969 - DEBUG - Incremented Retry for (url='/v1_1/dqlv0vkoe/image/upload'): Retry(total=2, connect=None, read=None, redirect=None, status=None)
+2024-03-20 12:35:00,969 - WARNING - Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x000001CE72626090>: Failed to resolve 'api.cloudinary.com' ([Errno 11001] getaddrinfo failed)")': /v1_1/dqlv0vkoe/image/upload
+2024-03-20 12:35:00,969 - DEBUG - Starting new HTTPS connection (2): api.cloudinary.com:443
+2024-03-20 12:35:00,976 - DEBUG - Incremented Retry for (url='/v1_1/dqlv0vkoe/image/upload'): Retry(total=1, connect=None, read=None, redirect=None, status=None)
+2024-03-20 12:35:00,976 - WARNING - Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x000001CE6ECCA810>: Failed to resolve 'api.cloudinary.com' ([Errno 11001] getaddrinfo failed)")': /v1_1/dqlv0vkoe/image/upload
+2024-03-20 12:35:00,976 - DEBUG - Starting new HTTPS connection (3): api.cloudinary.com:443
+2024-03-20 12:35:00,976 - DEBUG - Incremented Retry for (url='/v1_1/dqlv0vkoe/image/upload'): Retry(total=0, connect=None, read=None, redirect=None, status=None)
+2024-03-20 12:35:00,976 - WARNING - Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x000001CE7264FA10>: Failed to resolve 'api.cloudinary.com' ([Errno 11001] getaddrinfo failed)")': /v1_1/dqlv0vkoe/image/upload
+2024-03-20 12:35:00,976 - DEBUG - Starting new HTTPS connection (4): api.cloudinary.com:443
+2024-03-20 12:35:11,005 - INFO - 127.0.0.1 - - [20/Mar/2024 12:35:11] "OPTIONS /get_user_paintings HTTP/1.1" 200 -
+2024-03-20 12:35:11,183 - INFO - 127.0.0.1 - - [20/Mar/2024 12:35:11] "POST /get_user_paintings HTTP/1.1" 200 -
+2024-03-20 12:35:14,441 - INFO - 127.0.0.1 - - [20/Mar/2024 12:35:14] "POST /get_user_paintings HTTP/1.1" 200 -
+2024-03-20 12:35:40,526 - INFO - 127.0.0.1 - - [20/Mar/2024 12:35:40] "OPTIONS /delete_painting/27a97186-1d60-4582-8819-c8f7040d7100 HTTP/1.1" 200 -
+2024-03-20 12:35:40,779 - INFO - 127.0.0.1 - - [20/Mar/2024 12:35:40] "DELETE /delete_painting/27a97186-1d60-4582-8819-c8f7040d7100 HTTP/1.1" 200 -
+2024-03-20 12:35:44,343 - INFO - 127.0.0.1 - - [20/Mar/2024 12:35:44] "OPTIONS /get_user_paintings HTTP/1.1" 200 -
+2024-03-20 12:35:44,608 - INFO - 127.0.0.1 - - [20/Mar/2024 12:35:44] "POST /get_user_paintings HTTP/1.1" 200 -
+2024-03-20 12:35:46,183 - INFO - 127.0.0.1 - - [20/Mar/2024 12:35:46] "POST /get_user_paintings HTTP/1.1" 200 -
+2024-03-20 12:35:47,460 - INFO - 127.0.0.1 - - [20/Mar/2024 12:35:47] "POST /get_user_paintings HTTP/1.1" 200 -
+2024-03-20 12:35:48,456 - INFO - 127.0.0.1 - - [20/Mar/2024 12:35:48] "POST /get_user_paintings HTTP/1.1" 200 -
+2024-03-20 12:35:49,496 - INFO - 127.0.0.1 - - [20/Mar/2024 12:35:49] "OPTIONS /get_user_paintings HTTP/1.1" 200 -
+2024-03-20 12:35:49,670 - INFO - 127.0.0.1 - - [20/Mar/2024 12:35:49] "POST /get_user_paintings HTTP/1.1" 200 -
+2024-03-20 12:35:50,649 - INFO - 127.0.0.1 - - [20/Mar/2024 12:35:50] "POST /get_user_paintings HTTP/1.1" 200 -
+2024-03-20 12:35:51,630 - INFO - 127.0.0.1 - - [20/Mar/2024 12:35:51] "POST /get_user_paintings HTTP/1.1" 200 -
+2024-03-20 12:35:52,609 - INFO - 127.0.0.1 - - [20/Mar/2024 12:35:52] "POST /get_user_paintings HTTP/1.1" 200 -
+2024-03-20 12:35:53,666 - INFO - 127.0.0.1 - - [20/Mar/2024 12:35:53] "POST /get_user_paintings HTTP/1.1" 200 -
+2024-03-20 12:36:02,134 - INFO - 127.0.0.1 - - [20/Mar/2024 12:36:02] "OPTIONS /get_user_paintings HTTP/1.1" 200 -
+2024-03-20 12:36:02,292 - INFO - 127.0.0.1 - - [20/Mar/2024 12:36:02] "POST /get_user_paintings HTTP/1.1" 200 -
+2024-03-20 12:36:11,827 - INFO - 127.0.0.1 - - [20/Mar/2024 12:36:11] "GET /blog/get_blogs HTTP/1.1" 200 -
+2024-03-20 12:36:46,500 - INFO - 127.0.0.1 - - [20/Mar/2024 12:36:46] "OPTIONS /get_user_paintings HTTP/1.1" 200 -
+2024-03-20 12:36:46,673 - INFO - 127.0.0.1 - - [20/Mar/2024 12:36:46] "POST /get_user_paintings HTTP/1.1" 200 -
+2024-03-20 12:38:51,210 - INFO - 127.0.0.1 - - [20/Mar/2024 12:38:51] "OPTIONS /get_user_paintings HTTP/1.1" 200 -
+2024-03-20 12:38:51,383 - INFO - 127.0.0.1 - - [20/Mar/2024 12:38:51] "POST /get_user_paintings HTTP/1.1" 200 -
+2024-03-20 16:57:46,643 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.7.102:5000
+2024-03-20 16:57:46,644 - INFO - [33mPress CTRL+C to quit[0m
+2024-03-20 16:57:46,646 - INFO -  * Restarting with stat
+2024-03-20 16:57:48,706 - WARNING -  * Debugger is active!
+2024-03-20 16:57:48,722 - INFO -  * Debugger PIN: 135-112-711
+2024-03-20 16:58:03,617 - INFO - 127.0.0.1 - - [20/Mar/2024 16:58:03] "OPTIONS /get_exhibitions HTTP/1.1" 200 -
+2024-03-20 16:58:03,877 - INFO - 127.0.0.1 - - [20/Mar/2024 16:58:03] "GET /get_paintings HTTP/1.1" 200 -
+2024-03-20 16:58:03,918 - INFO - 127.0.0.1 - - [20/Mar/2024 16:58:03] "GET /get_exhibitions HTTP/1.1" 200 -
+2024-03-20 16:58:03,941 - INFO - 127.0.0.1 - - [20/Mar/2024 16:58:03] "GET /get_paintings HTTP/1.1" 200 -
+2024-03-20 16:58:04,228 - INFO - 127.0.0.1 - - [20/Mar/2024 16:58:04] "GET /get_exhibitions HTTP/1.1" 200 -
+2024-03-20 16:58:04,370 - INFO - 127.0.0.1 - - [20/Mar/2024 16:58:04] "OPTIONS /get_pending_exhibitions HTTP/1.1" 200 -
+2024-03-20 16:58:04,394 - WARNING - Action denied due to no admin privilege
+2024-03-20 16:58:04,395 - WARNING - Action denied due to no admin privilege with this error ??? Unknown Error: None
+2024-03-20 16:58:04,396 - INFO - 127.0.0.1 - - [20/Mar/2024 16:58:04] "GET /get_pending_exhibitions HTTP/1.1" 200 -
+2024-03-20 16:58:04,428 - WARNING - Action denied due to no admin privilege
+2024-03-20 16:58:04,428 - WARNING - Action denied due to no admin privilege with this error ??? Unknown Error: None
+2024-03-20 16:58:04,431 - INFO - 127.0.0.1 - - [20/Mar/2024 16:58:04] "GET /get_pending_exhibitions HTTP/1.1" 200 -
+2024-03-20 16:58:04,520 - WARNING - Action denied due to no admin privilege
+2024-03-20 16:58:04,520 - WARNING - Action denied due to no admin privilege with this error ??? Unknown Error: None
+2024-03-20 16:58:04,520 - INFO - 127.0.0.1 - - [20/Mar/2024 16:58:04] "GET /get_pending_exhibitions HTTP/1.1" 200 -
+2024-03-20 16:58:04,540 - WARNING - Action denied due to no admin privilege
+2024-03-20 16:58:04,540 - WARNING - Action denied due to no admin privilege with this error ??? Unknown Error: None
+2024-03-20 16:58:04,551 - INFO - 127.0.0.1 - - [20/Mar/2024 16:58:04] "GET /get_pending_exhibitions HTTP/1.1" 200 -
+2024-03-20 16:58:47,880 - INFO - 127.0.0.1 - - [20/Mar/2024 16:58:47] "POST /custom-login HTTP/1.1" 200 -
+2024-03-20 16:58:54,720 - INFO - 127.0.0.1 - - [20/Mar/2024 16:58:54] "OPTIONS /get_all_exhibition_paintings HTTP/1.1" 200 -
+2024-03-20 16:58:55,066 - INFO - 127.0.0.1 - - [20/Mar/2024 16:58:55] "GET /get_all_exhibition_paintings HTTP/1.1" 200 -
+2024-03-20 16:59:29,337 - INFO - 127.0.0.1 - - [20/Mar/2024 16:59:29] "OPTIONS /get_all_exhibitions HTTP/1.1" 200 -
+2024-03-20 16:59:29,503 - INFO - 127.0.0.1 - - [20/Mar/2024 16:59:29] "GET /get_all_exhibitions HTTP/1.1" 200 -
+2024-03-20 16:59:34,425 - INFO - 127.0.0.1 - - [20/Mar/2024 16:59:34] "OPTIONS /change_exhibition_status HTTP/1.1" 200 -
+2024-03-20 16:59:34,604 - INFO - 127.0.0.1 - - [20/Mar/2024 16:59:34] "PUT /change_exhibition_status HTTP/1.1" 200 -
+2024-03-20 16:59:49,941 - INFO - 127.0.0.1 - - [20/Mar/2024 16:59:49] "OPTIONS /change_exhibition_status HTTP/1.1" 200 -
+2024-03-20 16:59:50,139 - INFO - 127.0.0.1 - - [20/Mar/2024 16:59:50] "PUT /change_exhibition_status HTTP/1.1" 200 -
+2024-03-20 17:00:13,284 - INFO - 127.0.0.1 - - [20/Mar/2024 17:00:13] "OPTIONS /change_exhibition_status HTTP/1.1" 200 -
+2024-03-20 17:00:13,486 - INFO - 127.0.0.1 - - [20/Mar/2024 17:00:13] "PUT /change_exhibition_status HTTP/1.1" 200 -
+2024-03-20 17:00:18,344 - INFO - 127.0.0.1 - - [20/Mar/2024 17:00:18] "PUT /change_exhibition_status HTTP/1.1" 200 -
+2024-03-20 17:00:37,504 - INFO - 127.0.0.1 - - [20/Mar/2024 17:00:37] "OPTIONS /change_exhibition_status HTTP/1.1" 200 -
+2024-03-20 17:00:37,686 - INFO - 127.0.0.1 - - [20/Mar/2024 17:00:37] "PUT /change_exhibition_status HTTP/1.1" 200 -
+2024-03-20 17:00:45,802 - INFO - 127.0.0.1 - - [20/Mar/2024 17:00:45] "OPTIONS /get_exhibitions HTTP/1.1" 200 -
+2024-03-20 17:00:45,999 - INFO - 127.0.0.1 - - [20/Mar/2024 17:00:45] "GET /get_paintings HTTP/1.1" 200 -
+2024-03-20 17:00:46,038 - INFO - 127.0.0.1 - - [20/Mar/2024 17:00:46] "GET /get_exhibitions HTTP/1.1" 200 -
+2024-03-20 17:00:46,044 - INFO - 127.0.0.1 - - [20/Mar/2024 17:00:46] "GET /get_paintings HTTP/1.1" 200 -
+2024-03-20 17:00:46,219 - INFO - 127.0.0.1 - - [20/Mar/2024 17:00:46] "OPTIONS /get_pending_exhibitions HTTP/1.1" 200 -
+2024-03-20 17:00:46,244 - INFO - 127.0.0.1 - - [20/Mar/2024 17:00:46] "GET /get_exhibitions HTTP/1.1" 200 -
+2024-03-20 17:00:46,382 - INFO - 127.0.0.1 - - [20/Mar/2024 17:00:46] "GET /get_pending_exhibitions HTTP/1.1" 200 -
+2024-03-20 17:00:46,558 - INFO - 127.0.0.1 - - [20/Mar/2024 17:00:46] "GET /get_pending_exhibitions HTTP/1.1" 200 -
+2024-03-20 17:00:46,684 - INFO - 127.0.0.1 - - [20/Mar/2024 17:00:46] "GET /get_pending_exhibitions HTTP/1.1" 200 -
+2024-03-20 17:00:46,824 - INFO - 127.0.0.1 - - [20/Mar/2024 17:00:46] "GET /get_pending_exhibitions HTTP/1.1" 200 -
+2024-03-20 17:00:47,095 - INFO - 127.0.0.1 - - [20/Mar/2024 17:00:47] "GET /get_pending_exhibitions HTTP/1.1" 200 -
+2024-03-20 17:00:47,268 - INFO - 127.0.0.1 - - [20/Mar/2024 17:00:47] "GET /get_pending_exhibitions HTTP/1.1" 200 -
+2024-03-20 17:01:36,072 - INFO - 127.0.0.1 - - [20/Mar/2024 17:01:36] "OPTIONS /change_exhibition_status HTTP/1.1" 200 -
+2024-03-20 17:01:36,252 - INFO - 127.0.0.1 - - [20/Mar/2024 17:01:36] "PUT /change_exhibition_status HTTP/1.1" 200 -
+2024-03-20 17:01:40,123 - INFO - 127.0.0.1 - - [20/Mar/2024 17:01:40] "OPTIONS /get_exhibitions HTTP/1.1" 200 -
+2024-03-20 17:01:40,307 - INFO - 127.0.0.1 - - [20/Mar/2024 17:01:40] "GET /get_paintings HTTP/1.1" 200 -
+2024-03-20 17:01:40,324 - INFO - 127.0.0.1 - - [20/Mar/2024 17:01:40] "GET /get_exhibitions HTTP/1.1" 200 -
+2024-03-20 17:01:40,346 - INFO - 127.0.0.1 - - [20/Mar/2024 17:01:40] "GET /get_paintings HTTP/1.1" 200 -
+2024-03-20 17:01:40,505 - INFO - 127.0.0.1 - - [20/Mar/2024 17:01:40] "OPTIONS /get_pending_exhibitions HTTP/1.1" 200 -
+2024-03-20 17:01:40,540 - INFO - 127.0.0.1 - - [20/Mar/2024 17:01:40] "GET /get_exhibitions HTTP/1.1" 200 -
+2024-03-20 17:01:40,674 - INFO - 127.0.0.1 - - [20/Mar/2024 17:01:40] "GET /get_pending_exhibitions HTTP/1.1" 200 -
+2024-03-20 17:01:40,820 - INFO - 127.0.0.1 - - [20/Mar/2024 17:01:40] "GET /get_pending_exhibitions HTTP/1.1" 200 -
+2024-03-20 17:01:40,953 - INFO - 127.0.0.1 - - [20/Mar/2024 17:01:40] "GET /get_pending_exhibitions HTTP/1.1" 200 -
+2024-03-20 17:01:41,094 - INFO - 127.0.0.1 - - [20/Mar/2024 17:01:41] "GET /get_pending_exhibitions HTTP/1.1" 200 -
+2024-03-20 17:01:41,235 - INFO - 127.0.0.1 - - [20/Mar/2024 17:01:41] "GET /get_pending_exhibitions HTTP/1.1" 200 -
+2024-03-20 17:01:41,372 - INFO - 127.0.0.1 - - [20/Mar/2024 17:01:41] "GET /get_pending_exhibitions HTTP/1.1" 200 -
+2024-03-20 17:03:00,604 - INFO - 127.0.0.1 - - [20/Mar/2024 17:03:00] "OPTIONS /change_exhibition_status HTTP/1.1" 200 -
+2024-03-20 17:03:00,809 - INFO - 127.0.0.1 - - [20/Mar/2024 17:03:00] "PUT /change_exhibition_status HTTP/1.1" 200 -
+2024-03-20 17:03:05,519 - INFO - 127.0.0.1 - - [20/Mar/2024 17:03:05] "PUT /change_exhibition_status HTTP/1.1" 200 -
+2024-03-20 17:03:55,734 - INFO - 127.0.0.1 - - [20/Mar/2024 17:03:55] "OPTIONS /change_exhibition_status HTTP/1.1" 200 -
+2024-03-20 17:03:55,984 - INFO - 127.0.0.1 - - [20/Mar/2024 17:03:55] "PUT /change_exhibition_status HTTP/1.1" 200 -
+2024-03-20 17:04:19,241 - INFO - 127.0.0.1 - - [20/Mar/2024 17:04:19] "OPTIONS /change_exhibition_status HTTP/1.1" 200 -
+2024-03-20 17:04:19,423 - INFO - 127.0.0.1 - - [20/Mar/2024 17:04:19] "PUT /change_exhibition_status HTTP/1.1" 200 -
+2024-03-20 17:04:34,431 - INFO - 127.0.0.1 - - [20/Mar/2024 17:04:34] "OPTIONS /get_customers HTTP/1.1" 200 -
+2024-03-20 17:04:34,619 - INFO - 127.0.0.1 - - [20/Mar/2024 17:04:34] "GET /get_customers HTTP/1.1" 200 -
+2024-03-20 17:04:43,210 - INFO - 127.0.0.1 - - [20/Mar/2024 17:04:43] "OPTIONS /update_customer_status HTTP/1.1" 200 -
+2024-03-20 17:04:43,429 - INFO - 127.0.0.1 - - [20/Mar/2024 17:04:43] "POST /update_customer_status HTTP/1.1" 200 -
+2024-03-20 17:04:53,748 - INFO - 127.0.0.1 - - [20/Mar/2024 17:04:53] "OPTIONS /get_exhibitions HTTP/1.1" 200 -
+2024-03-20 17:04:53,967 - INFO - 127.0.0.1 - - [20/Mar/2024 17:04:53] "GET /get_paintings HTTP/1.1" 200 -
+2024-03-20 17:04:54,005 - INFO - 127.0.0.1 - - [20/Mar/2024 17:04:54] "GET /get_exhibitions HTTP/1.1" 200 -
+2024-03-20 17:04:54,018 - INFO - 127.0.0.1 - - [20/Mar/2024 17:04:54] "GET /get_paintings HTTP/1.1" 200 -
+2024-03-20 17:04:54,196 - INFO - 127.0.0.1 - - [20/Mar/2024 17:04:54] "GET /get_exhibitions HTTP/1.1" 200 -
+2024-03-20 17:04:54,202 - INFO - 127.0.0.1 - - [20/Mar/2024 17:04:54] "OPTIONS /get_pending_exhibitions HTTP/1.1" 200 -
+2024-03-20 17:04:54,365 - INFO - 127.0.0.1 - - [20/Mar/2024 17:04:54] "GET /get_pending_exhibitions HTTP/1.1" 200 -
+2024-03-20 17:04:54,550 - INFO - 127.0.0.1 - - [20/Mar/2024 17:04:54] "GET /get_pending_exhibitions HTTP/1.1" 200 -
+2024-03-20 17:04:54,683 - INFO - 127.0.0.1 - - [20/Mar/2024 17:04:54] "GET /get_pending_exhibitions HTTP/1.1" 200 -
+2024-03-20 17:04:54,805 - INFO - 127.0.0.1 - - [20/Mar/2024 17:04:54] "GET /get_pending_exhibitions HTTP/1.1" 200 -
+2024-03-20 17:04:54,926 - INFO - 127.0.0.1 - - [20/Mar/2024 17:04:54] "GET /get_pending_exhibitions HTTP/1.1" 200 -
+2024-03-20 17:04:55,120 - INFO - 127.0.0.1 - - [20/Mar/2024 17:04:55] "GET /get_pending_exhibitions HTTP/1.1" 200 -
+2024-03-20 17:05:00,783 - INFO - 127.0.0.1 - - [20/Mar/2024 17:05:00] "OPTIONS /get_exhibitions HTTP/1.1" 200 -
+2024-03-20 17:05:00,977 - INFO - 127.0.0.1 - - [20/Mar/2024 17:05:00] "GET /get_paintings HTTP/1.1" 200 -
+2024-03-20 17:05:00,977 - INFO - 127.0.0.1 - - [20/Mar/2024 17:05:00] "GET /get_exhibitions HTTP/1.1" 200 -
+2024-03-20 17:05:01,037 - INFO - 127.0.0.1 - - [20/Mar/2024 17:05:01] "GET /get_paintings HTTP/1.1" 200 -
+2024-03-20 17:05:01,163 - INFO - 127.0.0.1 - - [20/Mar/2024 17:05:01] "GET /get_exhibitions HTTP/1.1" 200 -
+2024-03-20 17:05:04,102 - INFO - 127.0.0.1 - - [20/Mar/2024 17:05:04] "POST /check_payment HTTP/1.1" 200 -
+2024-03-20 17:05:04,403 - INFO - 127.0.0.1 - - [20/Mar/2024 17:05:04] "OPTIONS /get_exhibition_paintings/b6fb20aa-227e-4040-a824-aa3413d1c6f9 HTTP/1.1" 200 -
+2024-03-20 17:05:04,624 - INFO - 127.0.0.1 - - [20/Mar/2024 17:05:04] "GET /get_exhibition_paintings/b6fb20aa-227e-4040-a824-aa3413d1c6f9 HTTP/1.1" 200 -
+2024-03-20 17:05:04,908 - INFO - 127.0.0.1 - - [20/Mar/2024 17:05:04] "GET /get_exhibition_paintings/b6fb20aa-227e-4040-a824-aa3413d1c6f9 HTTP/1.1" 200 -
+2024-03-20 17:06:11,166 - INFO - 127.0.0.1 - - [20/Mar/2024 17:06:11] "OPTIONS /get_all_exhibitions HTTP/1.1" 200 -
+2024-03-20 17:06:11,169 - INFO - 127.0.0.1 - - [20/Mar/2024 17:06:11] "OPTIONS /get_painters HTTP/1.1" 200 -
+2024-03-20 17:06:11,313 - INFO - 127.0.0.1 - - [20/Mar/2024 17:06:11] "GET /get_painters HTTP/1.1" 200 -
+2024-03-20 17:06:11,313 - INFO - 127.0.0.1 - - [20/Mar/2024 17:06:11] "GET /get_all_exhibitions HTTP/1.1" 200 -
+2024-03-20 17:06:11,470 - INFO - 127.0.0.1 - - [20/Mar/2024 17:06:11] "GET /get_all_exhibitions HTTP/1.1" 200 -
+2024-03-20 17:06:11,470 - INFO - 127.0.0.1 - - [20/Mar/2024 17:06:11] "GET /get_painters HTTP/1.1" 200 -
+2024-03-20 17:07:03,204 - INFO - 127.0.0.1 - - [20/Mar/2024 17:07:03] "OPTIONS /add_exhibition_painting HTTP/1.1" 200 -
+2024-03-20 17:07:03,524 - INFO - 127.0.0.1 - - [20/Mar/2024 17:07:03] "POST /add_exhibition_painting HTTP/1.1" 200 -
+2024-03-20 17:07:03,578 - DEBUG - Starting new HTTPS connection (1): api.cloudinary.com:443
+2024-03-20 17:07:03,588 - DEBUG - Incremented Retry for (url='/v1_1/dqlv0vkoe/image/upload'): Retry(total=2, connect=None, read=None, redirect=None, status=None)
+2024-03-20 17:07:03,588 - WARNING - Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x00000242B31637D0>: Failed to resolve 'api.cloudinary.com' ([Errno 11001] getaddrinfo failed)")': /v1_1/dqlv0vkoe/image/upload
+2024-03-20 17:07:03,588 - DEBUG - Starting new HTTPS connection (2): api.cloudinary.com:443
+2024-03-20 17:07:03,588 - DEBUG - Incremented Retry for (url='/v1_1/dqlv0vkoe/image/upload'): Retry(total=1, connect=None, read=None, redirect=None, status=None)
+2024-03-20 17:07:03,588 - WARNING - Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x00000242B2E2D290>: Failed to resolve 'api.cloudinary.com' ([Errno 11001] getaddrinfo failed)")': /v1_1/dqlv0vkoe/image/upload
+2024-03-20 17:07:03,594 - DEBUG - Starting new HTTPS connection (3): api.cloudinary.com:443
+2024-03-20 17:07:03,594 - DEBUG - Incremented Retry for (url='/v1_1/dqlv0vkoe/image/upload'): Retry(total=0, connect=None, read=None, redirect=None, status=None)
+2024-03-20 17:07:03,594 - WARNING - Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x00000242B31792D0>: Failed to resolve 'api.cloudinary.com' ([Errno 11001] getaddrinfo failed)")': /v1_1/dqlv0vkoe/image/upload
+2024-03-20 17:07:03,594 - DEBUG - Starting new HTTPS connection (4): api.cloudinary.com:443
+2024-03-20 17:07:09,280 - INFO - 127.0.0.1 - - [20/Mar/2024 17:07:09] "OPTIONS /get_exhibitions HTTP/1.1" 200 -
+2024-03-20 17:07:09,449 - INFO - 127.0.0.1 - - [20/Mar/2024 17:07:09] "GET /get_paintings HTTP/1.1" 200 -
+2024-03-20 17:07:09,460 - INFO - 127.0.0.1 - - [20/Mar/2024 17:07:09] "GET /get_exhibitions HTTP/1.1" 200 -
+2024-03-20 17:07:09,498 - INFO - 127.0.0.1 - - [20/Mar/2024 17:07:09] "GET /get_paintings HTTP/1.1" 200 -
+2024-03-20 17:07:09,601 - INFO - 127.0.0.1 - - [20/Mar/2024 17:07:09] "OPTIONS /get_exhibition_paintings/b6fb20aa-227e-4040-a824-aa3413d1c6f9 HTTP/1.1" 200 -
+2024-03-20 17:07:09,641 - INFO - 127.0.0.1 - - [20/Mar/2024 17:07:09] "GET /get_exhibitions HTTP/1.1" 200 -
+2024-03-20 17:07:09,865 - INFO - 127.0.0.1 - - [20/Mar/2024 17:07:09] "GET /get_exhibition_paintings/b6fb20aa-227e-4040-a824-aa3413d1c6f9 HTTP/1.1" 200 -
+2024-03-20 17:07:10,099 - INFO - 127.0.0.1 - - [20/Mar/2024 17:07:10] "GET /get_exhibition_paintings/b6fb20aa-227e-4040-a824-aa3413d1c6f9 HTTP/1.1" 200 -
+2024-03-20 17:07:10,467 - INFO - 127.0.0.1 - - [20/Mar/2024 17:07:10] "GET /get_exhibition_paintings/b6fb20aa-227e-4040-a824-aa3413d1c6f9 HTTP/1.1" 200 -
+2024-03-20 17:07:10,751 - INFO - 127.0.0.1 - - [20/Mar/2024 17:07:10] "GET /get_exhibition_paintings/b6fb20aa-227e-4040-a824-aa3413d1c6f9 HTTP/1.1" 200 -
+2024-03-20 17:08:01,349 - INFO - 127.0.0.1 - - [20/Mar/2024 17:08:01] "OPTIONS /get_pending_exhibitions HTTP/1.1" 200 -
+2024-03-20 17:08:01,555 - INFO - 127.0.0.1 - - [20/Mar/2024 17:08:01] "GET /get_pending_exhibitions HTTP/1.1" 200 -
+2024-03-20 17:08:01,728 - INFO - 127.0.0.1 - - [20/Mar/2024 17:08:01] "GET /get_pending_exhibitions HTTP/1.1" 200 -
+2024-03-21 07:04:56,528 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://127.0.0.1:5000
+2024-03-21 07:04:56,528 - INFO - [33mPress CTRL+C to quit[0m
+2024-03-21 07:04:56,540 - INFO -  * Restarting with stat
+2024-03-21 07:04:58,179 - WARNING -  * Debugger is active!
+2024-03-21 07:04:58,179 - INFO -  * Debugger PIN: 361-236-400
+2024-03-21 07:05:13,273 - INFO - 127.0.0.1 - - [21/Mar/2024 07:05:13] "OPTIONS /get_exhibitions HTTP/1.1" 200 -
+2024-03-21 07:05:13,487 - INFO - 127.0.0.1 - - [21/Mar/2024 07:05:13] "GET /get_exhibitions HTTP/1.1" 200 -
+2024-03-21 07:05:13,507 - INFO - 127.0.0.1 - - [21/Mar/2024 07:05:13] "GET /get_paintings HTTP/1.1" 200 -
+2024-03-21 07:05:13,509 - INFO - 127.0.0.1 - - [21/Mar/2024 07:05:13] "GET /get_paintings HTTP/1.1" 200 -
+2024-03-21 07:05:13,641 - INFO - 127.0.0.1 - - [21/Mar/2024 07:05:13] "GET /get_exhibitions HTTP/1.1" 200 -
+2024-03-21 07:05:13,744 - INFO - 127.0.0.1 - - [21/Mar/2024 07:05:13] "OPTIONS /get_pending_exhibitions HTTP/1.1" 200 -
+2024-03-21 07:05:13,903 - INFO - 127.0.0.1 - - [21/Mar/2024 07:05:13] "GET /get_pending_exhibitions HTTP/1.1" 200 -
+2024-03-21 07:05:14,029 - INFO - 127.0.0.1 - - [21/Mar/2024 07:05:14] "GET /get_pending_exhibitions HTTP/1.1" 200 -
+2024-03-21 07:05:14,045 - INFO - 127.0.0.1 - - [21/Mar/2024 07:05:14] "GET /get_pending_exhibitions HTTP/1.1" 200 -
+2024-03-21 07:05:14,265 - INFO - 127.0.0.1 - - [21/Mar/2024 07:05:14] "GET /get_pending_exhibitions HTTP/1.1" 200 -
+2024-03-21 07:05:14,281 - INFO - 127.0.0.1 - - [21/Mar/2024 07:05:14] "GET /get_pending_exhibitions HTTP/1.1" 200 -
+2024-03-21 07:05:14,283 - INFO - 127.0.0.1 - - [21/Mar/2024 07:05:14] "GET /get_pending_exhibitions HTTP/1.1" 200 -
+2024-03-21 07:05:34,471 - INFO - 127.0.0.1 - - [21/Mar/2024 07:05:34] "OPTIONS /get_exhibitions HTTP/1.1" 200 -
+2024-03-21 07:05:34,628 - INFO - 127.0.0.1 - - [21/Mar/2024 07:05:34] "GET /get_paintings HTTP/1.1" 200 -
+2024-03-21 07:05:34,655 - INFO - 127.0.0.1 - - [21/Mar/2024 07:05:34] "GET /get_exhibitions HTTP/1.1" 200 -
+2024-03-21 07:05:34,676 - INFO - 127.0.0.1 - - [21/Mar/2024 07:05:34] "GET /get_paintings HTTP/1.1" 200 -
+2024-03-21 07:05:34,842 - INFO - 127.0.0.1 - - [21/Mar/2024 07:05:34] "GET /get_exhibitions HTTP/1.1" 200 -
+2024-03-21 07:05:43,158 - INFO - 127.0.0.1 - - [21/Mar/2024 07:05:43] "OPTIONS /get_exhibitions HTTP/1.1" 200 -
+2024-03-21 07:05:43,346 - INFO - 127.0.0.1 - - [21/Mar/2024 07:05:43] "GET /get_paintings HTTP/1.1" 200 -
+2024-03-21 07:05:43,350 - INFO - 127.0.0.1 - - [21/Mar/2024 07:05:43] "GET /get_exhibitions HTTP/1.1" 200 -
+2024-03-21 07:05:43,365 - INFO - 127.0.0.1 - - [21/Mar/2024 07:05:43] "GET /get_paintings HTTP/1.1" 200 -
+2024-03-21 07:05:43,522 - INFO - 127.0.0.1 - - [21/Mar/2024 07:05:43] "GET /get_exhibitions HTTP/1.1" 200 -
+2024-03-21 07:05:43,703 - INFO - 127.0.0.1 - - [21/Mar/2024 07:05:43] "OPTIONS /get_pending_exhibitions HTTP/1.1" 200 -
+2024-03-21 07:05:43,854 - INFO - 127.0.0.1 - - [21/Mar/2024 07:05:43] "GET /get_pending_exhibitions HTTP/1.1" 200 -
+2024-03-21 07:05:43,987 - INFO - 127.0.0.1 - - [21/Mar/2024 07:05:43] "GET /get_pending_exhibitions HTTP/1.1" 200 -
+2024-03-21 07:05:44,106 - INFO - 127.0.0.1 - - [21/Mar/2024 07:05:44] "GET /get_pending_exhibitions HTTP/1.1" 200 -
+2024-03-21 07:05:44,233 - INFO - 127.0.0.1 - - [21/Mar/2024 07:05:44] "GET /get_pending_exhibitions HTTP/1.1" 200 -
+2024-03-21 07:05:51,763 - INFO - 127.0.0.1 - - [21/Mar/2024 07:05:51] "POST /custom-login HTTP/1.1" 200 -
+2024-03-21 07:05:59,824 - INFO - 127.0.0.1 - - [21/Mar/2024 07:05:59] "OPTIONS /get_customers HTTP/1.1" 200 -
+2024-03-21 07:05:59,979 - INFO - 127.0.0.1 - - [21/Mar/2024 07:05:59] "GET /get_customers HTTP/1.1" 200 -
+2024-03-21 07:06:14,918 - INFO - 127.0.0.1 - - [21/Mar/2024 07:06:14] "POST /check_payment HTTP/1.1" 200 -
+2024-03-21 07:06:15,222 - INFO - 127.0.0.1 - - [21/Mar/2024 07:06:15] "OPTIONS /get_exhibition_paintings/b6fb20aa-227e-4040-a824-aa3413d1c6f9 HTTP/1.1" 200 -
+2024-03-21 07:06:15,443 - INFO - 127.0.0.1 - - [21/Mar/2024 07:06:15] "GET /get_exhibition_paintings/b6fb20aa-227e-4040-a824-aa3413d1c6f9 HTTP/1.1" 200 -
+2024-03-21 07:06:15,727 - INFO - 127.0.0.1 - - [21/Mar/2024 07:06:15] "GET /get_exhibition_paintings/b6fb20aa-227e-4040-a824-aa3413d1c6f9 HTTP/1.1" 200 -
+2024-03-21 07:06:34,098 - INFO - 127.0.0.1 - - [21/Mar/2024 07:06:34] "OPTIONS /update_customer_status HTTP/1.1" 200 -
+2024-03-21 07:06:34,265 - INFO - 127.0.0.1 - - [21/Mar/2024 07:06:34] "POST /update_customer_status HTTP/1.1" 200 -
+2024-03-21 07:06:37,936 - INFO - 127.0.0.1 - - [21/Mar/2024 07:06:37] "POST /update_customer_status HTTP/1.1" 200 -
+2024-03-21 07:07:03,354 - INFO - 127.0.0.1 - - [21/Mar/2024 07:07:03] "OPTIONS /get_pending_exhibitions HTTP/1.1" 200 -
+2024-03-21 07:07:03,520 - INFO - 127.0.0.1 - - [21/Mar/2024 07:07:03] "GET /get_pending_exhibitions HTTP/1.1" 200 -
+2024-03-21 07:07:03,620 - INFO - 127.0.0.1 - - [21/Mar/2024 07:07:03] "GET /get_pending_exhibitions HTTP/1.1" 200 -
+2024-03-21 07:07:10,883 - INFO - 127.0.0.1 - - [21/Mar/2024 07:07:10] "OPTIONS /get_pending_exhibitions HTTP/1.1" 200 -
+2024-03-21 07:07:11,009 - INFO - 127.0.0.1 - - [21/Mar/2024 07:07:11] "GET /get_pending_exhibitions HTTP/1.1" 200 -
+2024-03-21 07:07:11,160 - INFO - 127.0.0.1 - - [21/Mar/2024 07:07:11] "GET /get_pending_exhibitions HTTP/1.1" 200 -
+2024-03-21 07:07:47,293 - INFO - 127.0.0.1 - - [21/Mar/2024 07:07:47] "OPTIONS /get_exhibitions HTTP/1.1" 200 -
+2024-03-21 07:07:47,445 - INFO - 127.0.0.1 - - [21/Mar/2024 07:07:47] "GET /get_paintings HTTP/1.1" 200 -
+2024-03-21 07:07:47,471 - INFO - 127.0.0.1 - - [21/Mar/2024 07:07:47] "GET /get_exhibitions HTTP/1.1" 200 -
+2024-03-21 07:07:47,489 - INFO - 127.0.0.1 - - [21/Mar/2024 07:07:47] "GET /get_paintings HTTP/1.1" 200 -
+2024-03-21 07:07:47,666 - INFO - 127.0.0.1 - - [21/Mar/2024 07:07:47] "GET /get_exhibitions HTTP/1.1" 200 -
+2024-03-21 07:07:55,505 - INFO - 127.0.0.1 - - [21/Mar/2024 07:07:55] "OPTIONS /update_customer_status HTTP/1.1" 200 -
+2024-03-21 07:07:55,665 - INFO - 127.0.0.1 - - [21/Mar/2024 07:07:55] "POST /update_customer_status HTTP/1.1" 200 -
+2024-03-21 07:07:58,920 - INFO - 127.0.0.1 - - [21/Mar/2024 07:07:58] "POST /check_payment HTTP/1.1" 200 -
+2024-03-21 07:08:04,711 - INFO - 127.0.0.1 - - [21/Mar/2024 07:08:04] "OPTIONS /update_customer_status HTTP/1.1" 200 -
+2024-03-21 07:08:04,891 - INFO - 127.0.0.1 - - [21/Mar/2024 07:08:04] "POST /update_customer_status HTTP/1.1" 200 -
+2024-03-21 07:08:08,232 - INFO - 127.0.0.1 - - [21/Mar/2024 07:08:08] "POST /check_payment HTTP/1.1" 200 -
+2024-03-21 07:08:08,335 - INFO - 127.0.0.1 - - [21/Mar/2024 07:08:08] "OPTIONS /get_exhibition_paintings/b6fb20aa-227e-4040-a824-aa3413d1c6f9 HTTP/1.1" 200 -
+2024-03-21 07:08:08,542 - INFO - 127.0.0.1 - - [21/Mar/2024 07:08:08] "GET /get_exhibition_paintings/b6fb20aa-227e-4040-a824-aa3413d1c6f9 HTTP/1.1" 200 -
+2024-03-21 07:08:08,811 - INFO - 127.0.0.1 - - [21/Mar/2024 07:08:08] "GET /get_exhibition_paintings/b6fb20aa-227e-4040-a824-aa3413d1c6f9 HTTP/1.1" 200 -
+2024-03-21 07:10:32,945 - INFO - 127.0.0.1 - - [21/Mar/2024 07:10:32] "OPTIONS /get_exhibitions HTTP/1.1" 200 -
+2024-03-21 07:10:33,104 - INFO - 127.0.0.1 - - [21/Mar/2024 07:10:33] "GET /get_paintings HTTP/1.1" 200 -
+2024-03-21 07:10:33,134 - INFO - 127.0.0.1 - - [21/Mar/2024 07:10:33] "GET /get_exhibitions HTTP/1.1" 200 -
+2024-03-21 07:10:33,151 - INFO - 127.0.0.1 - - [21/Mar/2024 07:10:33] "GET /get_paintings HTTP/1.1" 200 -
+2024-03-21 07:10:33,283 - INFO - 127.0.0.1 - - [21/Mar/2024 07:10:33] "GET /get_exhibitions HTTP/1.1" 200 -
+2024-03-21 07:10:33,296 - INFO - 127.0.0.1 - - [21/Mar/2024 07:10:33] "OPTIONS /get_pending_exhibitions HTTP/1.1" 200 -
+2024-03-21 07:10:33,438 - INFO - 127.0.0.1 - - [21/Mar/2024 07:10:33] "GET /get_pending_exhibitions HTTP/1.1" 200 -
+2024-03-21 07:10:33,579 - INFO - 127.0.0.1 - - [21/Mar/2024 07:10:33] "GET /get_pending_exhibitions HTTP/1.1" 200 -
+2024-03-21 07:10:33,705 - INFO - 127.0.0.1 - - [21/Mar/2024 07:10:33] "GET /get_pending_exhibitions HTTP/1.1" 200 -
+2024-03-21 07:10:33,815 - INFO - 127.0.0.1 - - [21/Mar/2024 07:10:33] "GET /get_pending_exhibitions HTTP/1.1" 200 -
+2024-03-21 07:10:33,834 - INFO - 127.0.0.1 - - [21/Mar/2024 07:10:33] "GET /get_pending_exhibitions HTTP/1.1" 200 -
+2024-03-21 07:10:33,941 - INFO - 127.0.0.1 - - [21/Mar/2024 07:10:33] "GET /get_pending_exhibitions HTTP/1.1" 200 -
+2024-03-21 07:13:35,380 - INFO - 127.0.0.1 - - [21/Mar/2024 07:13:35] "OPTIONS /get_pending_exhibitions HTTP/1.1" 200 -
+2024-03-21 07:13:35,513 - INFO - 127.0.0.1 - - [21/Mar/2024 07:13:35] "GET /get_pending_exhibitions HTTP/1.1" 200 -
+2024-03-21 07:13:35,650 - INFO - 127.0.0.1 - - [21/Mar/2024 07:13:35] "GET /get_pending_exhibitions HTTP/1.1" 200 -
+2024-03-21 07:21:21,435 - INFO - 127.0.0.1 - - [21/Mar/2024 07:21:21] "OPTIONS /get_pending_exhibitions HTTP/1.1" 200 -
+2024-03-21 07:21:21,612 - INFO - 127.0.0.1 - - [21/Mar/2024 07:21:21] "GET /get_pending_exhibitions HTTP/1.1" 200 -
+2024-03-21 07:21:21,716 - INFO - 127.0.0.1 - - [21/Mar/2024 07:21:21] "GET /get_pending_exhibitions HTTP/1.1" 200 -
+2024-03-21 07:21:26,529 - INFO - 127.0.0.1 - - [21/Mar/2024 07:21:26] "OPTIONS /get_pending_exhibitions HTTP/1.1" 200 -
+2024-03-21 07:21:26,655 - INFO - 127.0.0.1 - - [21/Mar/2024 07:21:26] "GET /get_pending_exhibitions HTTP/1.1" 200 -
+2024-03-21 07:21:26,765 - INFO - 127.0.0.1 - - [21/Mar/2024 07:21:26] "GET /get_pending_exhibitions HTTP/1.1" 200 -
+2024-03-21 07:21:35,349 - INFO - 127.0.0.1 - - [21/Mar/2024 07:21:35] "OPTIONS /get_pending_exhibitions HTTP/1.1" 200 -
+2024-03-21 07:21:35,491 - INFO - 127.0.0.1 - - [21/Mar/2024 07:21:35] "GET /get_pending_exhibitions HTTP/1.1" 200 -
+2024-03-21 07:21:35,631 - INFO - 127.0.0.1 - - [21/Mar/2024 07:21:35] "GET /get_pending_exhibitions HTTP/1.1" 200 -
+2024-03-21 07:22:12,070 - INFO - 127.0.0.1 - - [21/Mar/2024 07:22:12] "OPTIONS /get_pending_exhibitions HTTP/1.1" 200 -
+2024-03-21 07:22:12,226 - INFO - 127.0.0.1 - - [21/Mar/2024 07:22:12] "GET /get_pending_exhibitions HTTP/1.1" 200 -
+2024-03-21 07:22:12,336 - INFO - 127.0.0.1 - - [21/Mar/2024 07:22:12] "GET /get_pending_exhibitions HTTP/1.1" 200 -
+2024-03-21 07:24:26,860 - INFO - 127.0.0.1 - - [21/Mar/2024 07:24:26] "OPTIONS /get_pending_exhibitions HTTP/1.1" 200 -
+2024-03-21 07:24:26,997 - INFO - 127.0.0.1 - - [21/Mar/2024 07:24:26] "GET /get_pending_exhibitions HTTP/1.1" 200 -
+2024-03-21 07:24:27,128 - INFO - 127.0.0.1 - - [21/Mar/2024 07:24:27] "GET /get_pending_exhibitions HTTP/1.1" 200 -
+2024-03-21 07:25:50,414 - INFO - 127.0.0.1 - - [21/Mar/2024 07:25:50] "OPTIONS /get_pending_exhibitions HTTP/1.1" 200 -
+2024-03-21 07:25:50,548 - INFO - 127.0.0.1 - - [21/Mar/2024 07:25:50] "GET /get_pending_exhibitions HTTP/1.1" 200 -
+2024-03-21 07:25:50,658 - INFO - 127.0.0.1 - - [21/Mar/2024 07:25:50] "GET /get_pending_exhibitions HTTP/1.1" 200 -
+2024-03-21 07:26:24,269 - INFO - 127.0.0.1 - - [21/Mar/2024 07:26:24] "POST /custom-login HTTP/1.1" 200 -
+2024-03-21 07:27:00,336 - INFO - 127.0.0.1 - - [21/Mar/2024 07:27:00] "OPTIONS /add_new_painting HTTP/1.1" 200 -
+2024-03-21 07:27:00,860 - DEBUG - Starting new HTTPS connection (1): api.cloudinary.com:443
+2024-03-21 07:27:00,864 - DEBUG - Incremented Retry for (url='/v1_1/dqlv0vkoe/image/upload'): Retry(total=2, connect=None, read=None, redirect=None, status=None)
+2024-03-21 07:27:00,864 - WARNING - Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x0000025AE97AC750>: Failed to resolve 'api.cloudinary.com' ([Errno 11001] getaddrinfo failed)")': /v1_1/dqlv0vkoe/image/upload
+2024-03-21 07:27:00,864 - DEBUG - Starting new HTTPS connection (2): api.cloudinary.com:443
+2024-03-21 07:27:00,864 - DEBUG - Incremented Retry for (url='/v1_1/dqlv0vkoe/image/upload'): Retry(total=1, connect=None, read=None, redirect=None, status=None)
+2024-03-21 07:27:00,864 - WARNING - Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x0000025AE97DF610>: Failed to resolve 'api.cloudinary.com' ([Errno 11001] getaddrinfo failed)")': /v1_1/dqlv0vkoe/image/upload
+2024-03-21 07:27:00,864 - DEBUG - Starting new HTTPS connection (3): api.cloudinary.com:443
+2024-03-21 07:27:00,869 - DEBUG - Incremented Retry for (url='/v1_1/dqlv0vkoe/image/upload'): Retry(total=0, connect=None, read=None, redirect=None, status=None)
+2024-03-21 07:27:00,869 - WARNING - Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x0000025AE97DFE90>: Failed to resolve 'api.cloudinary.com' ([Errno 11001] getaddrinfo failed)")': /v1_1/dqlv0vkoe/image/upload
+2024-03-21 07:27:00,869 - DEBUG - Starting new HTTPS connection (4): api.cloudinary.com:443
+2024-03-21 07:27:00,886 - INFO - 127.0.0.1 - - [21/Mar/2024 07:27:00] "PUT /add_new_painting HTTP/1.1" 200 -
+2024-03-21 07:27:18,236 - INFO - 127.0.0.1 - - [21/Mar/2024 07:27:18] "OPTIONS /add_new_painting HTTP/1.1" 200 -
+2024-03-21 07:27:18,419 - DEBUG - Starting new HTTPS connection (5): api.cloudinary.com:443
+2024-03-21 07:27:18,419 - DEBUG - Incremented Retry for (url='/v1_1/dqlv0vkoe/image/upload'): Retry(total=2, connect=None, read=None, redirect=None, status=None)
+2024-03-21 07:27:18,419 - WARNING - Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x0000025AE97E5590>: Failed to resolve 'api.cloudinary.com' ([Errno 11001] getaddrinfo failed)")': /v1_1/dqlv0vkoe/image/upload
+2024-03-21 07:27:18,422 - DEBUG - Starting new HTTPS connection (6): api.cloudinary.com:443
+2024-03-21 07:27:18,422 - DEBUG - Incremented Retry for (url='/v1_1/dqlv0vkoe/image/upload'): Retry(total=1, connect=None, read=None, redirect=None, status=None)
+2024-03-21 07:27:18,422 - WARNING - Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x0000025AE97E6890>: Failed to resolve 'api.cloudinary.com' ([Errno 11001] getaddrinfo failed)")': /v1_1/dqlv0vkoe/image/upload
+2024-03-21 07:27:18,422 - DEBUG - Starting new HTTPS connection (7): api.cloudinary.com:443
+2024-03-21 07:27:18,422 - DEBUG - Incremented Retry for (url='/v1_1/dqlv0vkoe/image/upload'): Retry(total=0, connect=None, read=None, redirect=None, status=None)
+2024-03-21 07:27:18,422 - WARNING - Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x0000025AE97E6E90>: Failed to resolve 'api.cloudinary.com' ([Errno 11001] getaddrinfo failed)")': /v1_1/dqlv0vkoe/image/upload
+2024-03-21 07:27:18,427 - DEBUG - Starting new HTTPS connection (8): api.cloudinary.com:443
+2024-03-21 07:27:18,576 - INFO - 127.0.0.1 - - [21/Mar/2024 07:27:18] "PUT /add_new_painting HTTP/1.1" 200 -
+2024-03-21 07:27:33,498 - INFO - 127.0.0.1 - - [21/Mar/2024 07:27:33] "OPTIONS /add_new_painting HTTP/1.1" 200 -
+2024-03-21 07:27:33,738 - DEBUG - Starting new HTTPS connection (9): api.cloudinary.com:443
+2024-03-21 07:27:33,738 - DEBUG - Incremented Retry for (url='/v1_1/dqlv0vkoe/image/upload'): Retry(total=2, connect=None, read=None, redirect=None, status=None)
+2024-03-21 07:27:33,738 - WARNING - Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x0000025AE97AA990>: Failed to resolve 'api.cloudinary.com' ([Errno 11001] getaddrinfo failed)")': /v1_1/dqlv0vkoe/image/upload
+2024-03-21 07:27:33,738 - DEBUG - Starting new HTTPS connection (10): api.cloudinary.com:443
+2024-03-21 07:27:33,746 - DEBUG - Incremented Retry for (url='/v1_1/dqlv0vkoe/image/upload'): Retry(total=1, connect=None, read=None, redirect=None, status=None)
+2024-03-21 07:27:33,746 - WARNING - Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x0000025AE97F2ED0>: Failed to resolve 'api.cloudinary.com' ([Errno 11001] getaddrinfo failed)")': /v1_1/dqlv0vkoe/image/upload
+2024-03-21 07:27:33,746 - DEBUG - Starting new HTTPS connection (11): api.cloudinary.com:443
+2024-03-21 07:27:33,746 - DEBUG - Incremented Retry for (url='/v1_1/dqlv0vkoe/image/upload'): Retry(total=0, connect=None, read=None, redirect=None, status=None)
+2024-03-21 07:27:33,746 - WARNING - Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x0000025AE97F3610>: Failed to resolve 'api.cloudinary.com' ([Errno 11001] getaddrinfo failed)")': /v1_1/dqlv0vkoe/image/upload
+2024-03-21 07:27:33,746 - DEBUG - Starting new HTTPS connection (12): api.cloudinary.com:443
+2024-03-21 07:27:33,865 - INFO - 127.0.0.1 - - [21/Mar/2024 07:27:33] "PUT /add_new_painting HTTP/1.1" 200 -
+2024-03-21 07:27:47,064 - INFO - 127.0.0.1 - - [21/Mar/2024 07:27:47] "OPTIONS /add_new_painting HTTP/1.1" 200 -
+2024-03-21 07:27:47,272 - DEBUG - Starting new HTTPS connection (13): api.cloudinary.com:443
+2024-03-21 07:27:47,272 - DEBUG - Incremented Retry for (url='/v1_1/dqlv0vkoe/image/upload'): Retry(total=2, connect=None, read=None, redirect=None, status=None)
+2024-03-21 07:27:47,272 - WARNING - Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x0000025AE97E6050>: Failed to resolve 'api.cloudinary.com' ([Errno 11001] getaddrinfo failed)")': /v1_1/dqlv0vkoe/image/upload
+2024-03-21 07:27:47,272 - DEBUG - Starting new HTTPS connection (14): api.cloudinary.com:443
+2024-03-21 07:27:47,272 - DEBUG - Incremented Retry for (url='/v1_1/dqlv0vkoe/image/upload'): Retry(total=1, connect=None, read=None, redirect=None, status=None)
+2024-03-21 07:27:47,272 - WARNING - Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x0000025AE97E5D50>: Failed to resolve 'api.cloudinary.com' ([Errno 11001] getaddrinfo failed)")': /v1_1/dqlv0vkoe/image/upload
+2024-03-21 07:27:47,272 - DEBUG - Starting new HTTPS connection (15): api.cloudinary.com:443
+2024-03-21 07:27:47,272 - DEBUG - Incremented Retry for (url='/v1_1/dqlv0vkoe/image/upload'): Retry(total=0, connect=None, read=None, redirect=None, status=None)
+2024-03-21 07:27:47,272 - WARNING - Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x0000025AE97E55D0>: Failed to resolve 'api.cloudinary.com' ([Errno 11001] getaddrinfo failed)")': /v1_1/dqlv0vkoe/image/upload
+2024-03-21 07:27:47,272 - DEBUG - Starting new HTTPS connection (16): api.cloudinary.com:443
+2024-03-21 07:27:47,410 - INFO - 127.0.0.1 - - [21/Mar/2024 07:27:47] "PUT /add_new_painting HTTP/1.1" 200 -
+2024-03-21 07:27:52,836 - INFO - 127.0.0.1 - - [21/Mar/2024 07:27:52] "OPTIONS /get_exhibitions HTTP/1.1" 200 -
+2024-03-21 07:27:52,942 - INFO - 127.0.0.1 - - [21/Mar/2024 07:27:52] "GET /get_paintings HTTP/1.1" 200 -
+2024-03-21 07:27:52,942 - INFO - 127.0.0.1 - - [21/Mar/2024 07:27:52] "GET /get_paintings HTTP/1.1" 200 -
+2024-03-21 07:27:53,005 - INFO - 127.0.0.1 - - [21/Mar/2024 07:27:53] "GET /get_exhibitions HTTP/1.1" 200 -
+2024-03-21 07:27:53,118 - INFO - 127.0.0.1 - - [21/Mar/2024 07:27:53] "OPTIONS /get_pending_exhibitions HTTP/1.1" 200 -
+2024-03-21 07:27:53,147 - INFO - 127.0.0.1 - - [21/Mar/2024 07:27:53] "GET /get_exhibitions HTTP/1.1" 200 -
+2024-03-21 07:27:53,322 - INFO - 127.0.0.1 - - [21/Mar/2024 07:27:53] "GET /get_pending_exhibitions HTTP/1.1" 200 -
+2024-03-21 07:27:53,464 - INFO - 127.0.0.1 - - [21/Mar/2024 07:27:53] "GET /get_pending_exhibitions HTTP/1.1" 200 -
+2024-03-21 07:27:53,574 - INFO - 127.0.0.1 - - [21/Mar/2024 07:27:53] "GET /get_pending_exhibitions HTTP/1.1" 200 -
+2024-03-21 07:27:53,686 - INFO - 127.0.0.1 - - [21/Mar/2024 07:27:53] "GET /get_pending_exhibitions HTTP/1.1" 200 -
+2024-03-21 07:28:19,015 - INFO - 127.0.0.1 - - [21/Mar/2024 07:28:19] "OPTIONS /get_pending_exhibitions HTTP/1.1" 200 -
+2024-03-21 07:28:19,171 - INFO - 127.0.0.1 - - [21/Mar/2024 07:28:19] "GET /get_pending_exhibitions HTTP/1.1" 200 -
+2024-03-21 07:28:19,288 - INFO - 127.0.0.1 - - [21/Mar/2024 07:28:19] "GET /get_pending_exhibitions HTTP/1.1" 200 -
+2024-03-21 07:28:41,322 - INFO - 127.0.0.1 - - [21/Mar/2024 07:28:41] "OPTIONS /add_new_painting HTTP/1.1" 200 -
+2024-03-21 07:28:41,514 - DEBUG - Starting new HTTPS connection (17): api.cloudinary.com:443
+2024-03-21 07:28:41,514 - DEBUG - Incremented Retry for (url='/v1_1/dqlv0vkoe/image/upload'): Retry(total=2, connect=None, read=None, redirect=None, status=None)
+2024-03-21 07:28:41,514 - WARNING - Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x0000025AE97C0750>: Failed to resolve 'api.cloudinary.com' ([Errno 11001] getaddrinfo failed)")': /v1_1/dqlv0vkoe/image/upload
+2024-03-21 07:28:41,520 - DEBUG - Starting new HTTPS connection (18): api.cloudinary.com:443
+2024-03-21 07:28:41,520 - DEBUG - Incremented Retry for (url='/v1_1/dqlv0vkoe/image/upload'): Retry(total=1, connect=None, read=None, redirect=None, status=None)
+2024-03-21 07:28:41,520 - WARNING - Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x0000025AE9805210>: Failed to resolve 'api.cloudinary.com' ([Errno 11001] getaddrinfo failed)")': /v1_1/dqlv0vkoe/image/upload
+2024-03-21 07:28:41,520 - DEBUG - Starting new HTTPS connection (19): api.cloudinary.com:443
+2024-03-21 07:28:41,524 - DEBUG - Incremented Retry for (url='/v1_1/dqlv0vkoe/image/upload'): Retry(total=0, connect=None, read=None, redirect=None, status=None)
+2024-03-21 07:28:41,524 - WARNING - Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x0000025AE9804410>: Failed to resolve 'api.cloudinary.com' ([Errno 11001] getaddrinfo failed)")': /v1_1/dqlv0vkoe/image/upload
+2024-03-21 07:28:41,524 - DEBUG - Starting new HTTPS connection (20): api.cloudinary.com:443
+2024-03-21 07:28:41,655 - INFO - 127.0.0.1 - - [21/Mar/2024 07:28:41] "PUT /add_new_painting HTTP/1.1" 200 -
+2024-03-21 07:28:47,257 - INFO - 127.0.0.1 - - [21/Mar/2024 07:28:47] "OPTIONS /get_exhibitions HTTP/1.1" 200 -
+2024-03-21 07:28:47,407 - INFO - 127.0.0.1 - - [21/Mar/2024 07:28:47] "GET /get_paintings HTTP/1.1" 200 -
+2024-03-21 07:28:47,428 - INFO - 127.0.0.1 - - [21/Mar/2024 07:28:47] "GET /get_exhibitions HTTP/1.1" 200 -
+2024-03-21 07:28:47,446 - INFO - 127.0.0.1 - - [21/Mar/2024 07:28:47] "GET /get_paintings HTTP/1.1" 200 -
+2024-03-21 07:28:47,604 - INFO - 127.0.0.1 - - [21/Mar/2024 07:28:47] "GET /get_exhibitions HTTP/1.1" 200 -
+2024-03-21 07:29:11,877 - INFO - 127.0.0.1 - - [21/Mar/2024 07:29:11] "OPTIONS /get_pending_exhibitions HTTP/1.1" 200 -
+2024-03-21 07:29:12,050 - INFO - 127.0.0.1 - - [21/Mar/2024 07:29:12] "GET /get_pending_exhibitions HTTP/1.1" 200 -
+2024-03-21 07:29:12,160 - INFO - 127.0.0.1 - - [21/Mar/2024 07:29:12] "GET /get_pending_exhibitions HTTP/1.1" 200 -
+2024-03-21 07:29:38,959 - INFO - 127.0.0.1 - - [21/Mar/2024 07:29:38] "OPTIONS /get_pending_exhibitions HTTP/1.1" 200 -
+2024-03-21 07:29:39,133 - INFO - 127.0.0.1 - - [21/Mar/2024 07:29:39] "GET /get_pending_exhibitions HTTP/1.1" 200 -
+2024-03-21 07:29:39,259 - INFO - 127.0.0.1 - - [21/Mar/2024 07:29:39] "GET /get_pending_exhibitions HTTP/1.1" 200 -
+2024-03-21 07:29:49,416 - INFO - 127.0.0.1 - - [21/Mar/2024 07:29:49] "OPTIONS /get_pending_exhibitions HTTP/1.1" 200 -
+2024-03-21 07:29:49,572 - INFO - 127.0.0.1 - - [21/Mar/2024 07:29:49] "GET /get_pending_exhibitions HTTP/1.1" 200 -
+2024-03-21 07:29:49,682 - INFO - 127.0.0.1 - - [21/Mar/2024 07:29:49] "GET /get_pending_exhibitions HTTP/1.1" 200 -
+2024-03-21 07:33:46,053 - INFO - 127.0.0.1 - - [21/Mar/2024 07:33:46] "OPTIONS /get_exhibitions HTTP/1.1" 200 -
+2024-03-21 07:33:46,181 - INFO - 127.0.0.1 - - [21/Mar/2024 07:33:46] "GET /get_paintings HTTP/1.1" 200 -
+2024-03-21 07:33:46,219 - INFO - 127.0.0.1 - - [21/Mar/2024 07:33:46] "GET /get_paintings HTTP/1.1" 200 -
+2024-03-21 07:33:46,323 - INFO - 127.0.0.1 - - [21/Mar/2024 07:33:46] "GET /get_exhibitions HTTP/1.1" 200 -
+2024-03-21 07:33:46,748 - INFO - 127.0.0.1 - - [21/Mar/2024 07:33:46] "GET /get_exhibitions HTTP/1.1" 200 -
+2024-03-21 07:33:47,296 - INFO - 127.0.0.1 - - [21/Mar/2024 07:33:47] "OPTIONS /get_pending_exhibitions HTTP/1.1" 200 -
+2024-03-21 07:33:47,457 - INFO - 127.0.0.1 - - [21/Mar/2024 07:33:47] "GET /get_pending_exhibitions HTTP/1.1" 200 -
+2024-03-21 07:33:47,581 - INFO - 127.0.0.1 - - [21/Mar/2024 07:33:47] "GET /get_pending_exhibitions HTTP/1.1" 200 -
+2024-03-21 07:33:47,712 - INFO - 127.0.0.1 - - [21/Mar/2024 07:33:47] "GET /get_pending_exhibitions HTTP/1.1" 200 -
+2024-03-21 07:33:47,866 - INFO - 127.0.0.1 - - [21/Mar/2024 07:33:47] "GET /get_pending_exhibitions HTTP/1.1" 200 -
+2024-03-21 07:35:19,673 - INFO - 127.0.0.1 - - [21/Mar/2024 07:35:19] "OPTIONS /get_pending_exhibitions HTTP/1.1" 200 -
+2024-03-21 07:35:19,832 - INFO - 127.0.0.1 - - [21/Mar/2024 07:35:19] "GET /get_pending_exhibitions HTTP/1.1" 200 -
+2024-03-21 07:35:19,937 - INFO - 127.0.0.1 - - [21/Mar/2024 07:35:19] "GET /get_pending_exhibitions HTTP/1.1" 200 -
+2024-03-21 07:41:51,751 - INFO - 127.0.0.1 - - [21/Mar/2024 07:41:51] "OPTIONS /get_pending_exhibitions HTTP/1.1" 200 -
+2024-03-21 07:41:51,905 - INFO - 127.0.0.1 - - [21/Mar/2024 07:41:51] "GET /get_pending_exhibitions HTTP/1.1" 200 -
+2024-03-21 07:41:52,106 - INFO - 127.0.0.1 - - [21/Mar/2024 07:41:52] "GET /get_pending_exhibitions HTTP/1.1" 200 -
+2024-03-21 07:41:59,227 - INFO - 127.0.0.1 - - [21/Mar/2024 07:41:59] "OPTIONS /get_pending_exhibitions HTTP/1.1" 200 -
+2024-03-21 07:41:59,393 - INFO - 127.0.0.1 - - [21/Mar/2024 07:41:59] "GET /get_pending_exhibitions HTTP/1.1" 200 -
+2024-03-21 07:41:59,504 - INFO - 127.0.0.1 - - [21/Mar/2024 07:41:59] "GET /get_pending_exhibitions HTTP/1.1" 200 -
+2024-03-21 07:42:38,876 - INFO - 127.0.0.1 - - [21/Mar/2024 07:42:38] "OPTIONS /get_pending_exhibitions HTTP/1.1" 200 -
+2024-03-21 07:42:39,082 - INFO - 127.0.0.1 - - [21/Mar/2024 07:42:39] "GET /get_pending_exhibitions HTTP/1.1" 200 -
+2024-03-21 07:42:39,294 - INFO - 127.0.0.1 - - [21/Mar/2024 07:42:39] "GET /get_pending_exhibitions HTTP/1.1" 200 -
+2024-03-21 07:42:49,355 - INFO - 127.0.0.1 - - [21/Mar/2024 07:42:49] "OPTIONS /get_pending_exhibitions HTTP/1.1" 200 -
+2024-03-21 07:42:49,530 - INFO - 127.0.0.1 - - [21/Mar/2024 07:42:49] "GET /get_pending_exhibitions HTTP/1.1" 200 -
+2024-03-21 07:42:49,656 - INFO - 127.0.0.1 - - [21/Mar/2024 07:42:49] "GET /get_pending_exhibitions HTTP/1.1" 200 -
+2024-03-21 07:46:20,475 - INFO - 127.0.0.1 - - [21/Mar/2024 07:46:20] "OPTIONS /get_exhibitions HTTP/1.1" 200 -
+2024-03-21 07:46:20,555 - INFO - 127.0.0.1 - - [21/Mar/2024 07:46:20] "GET /get_paintings HTTP/1.1" 200 -
+2024-03-21 07:46:20,569 - INFO - 127.0.0.1 - - [21/Mar/2024 07:46:20] "GET /get_paintings HTTP/1.1" 200 -
+2024-03-21 07:46:20,611 - INFO - 127.0.0.1 - - [21/Mar/2024 07:46:20] "GET /get_exhibitions HTTP/1.1" 200 -
+2024-03-21 07:46:20,783 - INFO - 127.0.0.1 - - [21/Mar/2024 07:46:20] "GET /get_exhibitions HTTP/1.1" 200 -
+2024-03-21 07:46:21,015 - INFO - 127.0.0.1 - - [21/Mar/2024 07:46:21] "OPTIONS /get_pending_exhibitions HTTP/1.1" 200 -
+2024-03-21 07:46:21,176 - INFO - 127.0.0.1 - - [21/Mar/2024 07:46:21] "GET /get_pending_exhibitions HTTP/1.1" 200 -
+2024-03-21 07:46:21,301 - INFO - 127.0.0.1 - - [21/Mar/2024 07:46:21] "GET /get_pending_exhibitions HTTP/1.1" 200 -
+2024-03-21 07:46:21,437 - INFO - 127.0.0.1 - - [21/Mar/2024 07:46:21] "GET /get_pending_exhibitions HTTP/1.1" 200 -
+2024-03-21 07:46:21,591 - INFO - 127.0.0.1 - - [21/Mar/2024 07:46:21] "GET /get_pending_exhibitions HTTP/1.1" 200 -
+2024-03-21 07:47:27,829 - INFO - 127.0.0.1 - - [21/Mar/2024 07:47:27] "OPTIONS /get_exhibitions HTTP/1.1" 200 -
+2024-03-21 07:47:27,996 - INFO - 127.0.0.1 - - [21/Mar/2024 07:47:27] "GET /get_paintings HTTP/1.1" 200 -
+2024-03-21 07:47:28,043 - INFO - 127.0.0.1 - - [21/Mar/2024 07:47:28] "GET /get_exhibitions HTTP/1.1" 200 -
+2024-03-21 07:47:28,101 - INFO - 127.0.0.1 - - [21/Mar/2024 07:47:28] "GET /get_paintings HTTP/1.1" 200 -
+2024-03-21 07:47:28,217 - INFO - 127.0.0.1 - - [21/Mar/2024 07:47:28] "GET /get_exhibitions HTTP/1.1" 200 -
+2024-03-21 07:47:28,692 - INFO - 127.0.0.1 - - [21/Mar/2024 07:47:28] "OPTIONS /get_pending_exhibitions HTTP/1.1" 200 -
+2024-03-21 07:47:28,834 - INFO - 127.0.0.1 - - [21/Mar/2024 07:47:28] "GET /get_pending_exhibitions HTTP/1.1" 200 -
+2024-03-21 07:47:28,967 - INFO - 127.0.0.1 - - [21/Mar/2024 07:47:28] "GET /get_pending_exhibitions HTTP/1.1" 200 -
+2024-03-21 07:47:28,976 - INFO - 127.0.0.1 - - [21/Mar/2024 07:47:28] "GET /get_pending_exhibitions HTTP/1.1" 200 -
+2024-03-21 07:47:29,159 - INFO - 127.0.0.1 - - [21/Mar/2024 07:47:29] "GET /get_pending_exhibitions HTTP/1.1" 200 -
+2024-03-21 07:47:29,161 - INFO - 127.0.0.1 - - [21/Mar/2024 07:47:29] "GET /get_pending_exhibitions HTTP/1.1" 200 -
+2024-03-21 07:47:29,190 - INFO - 127.0.0.1 - - [21/Mar/2024 07:47:29] "GET /get_pending_exhibitions HTTP/1.1" 200 -
+2024-03-21 07:49:02,635 - INFO - 127.0.0.1 - - [21/Mar/2024 07:49:02] "OPTIONS /get_pending_exhibitions HTTP/1.1" 200 -
+2024-03-21 07:49:02,820 - INFO - 127.0.0.1 - - [21/Mar/2024 07:49:02] "GET /get_pending_exhibitions HTTP/1.1" 200 -
+2024-03-21 07:49:02,978 - INFO - 127.0.0.1 - - [21/Mar/2024 07:49:02] "GET /get_pending_exhibitions HTTP/1.1" 200 -
+2024-03-21 07:49:25,482 - INFO - 127.0.0.1 - - [21/Mar/2024 07:49:25] "OPTIONS /get_pending_exhibitions HTTP/1.1" 200 -
+2024-03-21 07:49:25,624 - INFO - 127.0.0.1 - - [21/Mar/2024 07:49:25] "GET /get_pending_exhibitions HTTP/1.1" 200 -
+2024-03-21 07:49:25,735 - INFO - 127.0.0.1 - - [21/Mar/2024 07:49:25] "GET /get_pending_exhibitions HTTP/1.1" 200 -
+2024-03-21 07:49:31,706 - INFO - 127.0.0.1 - - [21/Mar/2024 07:49:31] "OPTIONS /get_pending_exhibitions HTTP/1.1" 200 -
+2024-03-21 07:49:31,870 - INFO - 127.0.0.1 - - [21/Mar/2024 07:49:31] "GET /get_pending_exhibitions HTTP/1.1" 200 -
+2024-03-21 07:49:31,964 - INFO - 127.0.0.1 - - [21/Mar/2024 07:49:31] "GET /get_pending_exhibitions HTTP/1.1" 200 -
+2024-03-21 07:55:09,377 - INFO - 127.0.0.1 - - [21/Mar/2024 07:55:09] "OPTIONS /get_exhibitions HTTP/1.1" 200 -
+2024-03-21 07:55:09,519 - INFO - 127.0.0.1 - - [21/Mar/2024 07:55:09] "GET /get_paintings HTTP/1.1" 200 -
+2024-03-21 07:55:09,535 - INFO - 127.0.0.1 - - [21/Mar/2024 07:55:09] "GET /get_exhibitions HTTP/1.1" 200 -
+2024-03-21 07:55:09,582 - INFO - 127.0.0.1 - - [21/Mar/2024 07:55:09] "GET /get_paintings HTTP/1.1" 200 -
+2024-03-21 07:55:09,709 - INFO - 127.0.0.1 - - [21/Mar/2024 07:55:09] "OPTIONS /get_pending_exhibitions HTTP/1.1" 200 -
+2024-03-21 07:55:09,724 - INFO - 127.0.0.1 - - [21/Mar/2024 07:55:09] "GET /get_exhibitions HTTP/1.1" 200 -
+2024-03-21 07:55:09,899 - INFO - 127.0.0.1 - - [21/Mar/2024 07:55:09] "GET /get_pending_exhibitions HTTP/1.1" 200 -
+2024-03-21 07:55:10,057 - INFO - 127.0.0.1 - - [21/Mar/2024 07:55:10] "GET /get_pending_exhibitions HTTP/1.1" 200 -
+2024-03-21 07:55:10,183 - INFO - 127.0.0.1 - - [21/Mar/2024 07:55:10] "GET /get_pending_exhibitions HTTP/1.1" 200 -
+2024-03-21 07:55:10,278 - INFO - 127.0.0.1 - - [21/Mar/2024 07:55:10] "GET /get_pending_exhibitions HTTP/1.1" 200 -
+2024-03-21 07:55:10,389 - INFO - 127.0.0.1 - - [21/Mar/2024 07:55:10] "GET /get_pending_exhibitions HTTP/1.1" 200 -
+2024-03-21 07:55:10,498 - INFO - 127.0.0.1 - - [21/Mar/2024 07:55:10] "GET /get_pending_exhibitions HTTP/1.1" 200 -
+2024-03-21 07:56:37,606 - INFO - 127.0.0.1 - - [21/Mar/2024 07:56:37] "GET /get_paintings HTTP/1.1" 200 -
+2024-03-21 07:56:37,700 - INFO - 127.0.0.1 - - [21/Mar/2024 07:56:37] "GET /get_paintings HTTP/1.1" 200 -
+2024-03-21 07:56:37,968 - INFO - 127.0.0.1 - - [21/Mar/2024 07:56:37] "OPTIONS /get_exhibitions HTTP/1.1" 200 -
+2024-03-21 07:56:38,176 - INFO - 127.0.0.1 - - [21/Mar/2024 07:56:38] "GET /get_exhibitions HTTP/1.1" 200 -
+2024-03-21 07:56:38,367 - INFO - 127.0.0.1 - - [21/Mar/2024 07:56:38] "GET /get_exhibitions HTTP/1.1" 200 -
+2024-03-21 07:56:38,602 - INFO - 127.0.0.1 - - [21/Mar/2024 07:56:38] "OPTIONS /get_pending_exhibitions HTTP/1.1" 200 -
+2024-03-21 07:56:38,981 - INFO - 127.0.0.1 - - [21/Mar/2024 07:56:38] "GET /get_pending_exhibitions HTTP/1.1" 200 -
+2024-03-21 07:56:39,156 - INFO - 127.0.0.1 - - [21/Mar/2024 07:56:39] "GET /get_pending_exhibitions HTTP/1.1" 200 -
+2024-03-21 07:56:39,156 - INFO - 127.0.0.1 - - [21/Mar/2024 07:56:39] "GET /get_pending_exhibitions HTTP/1.1" 200 -
+2024-03-21 07:56:39,315 - INFO - 127.0.0.1 - - [21/Mar/2024 07:56:39] "GET /get_pending_exhibitions HTTP/1.1" 200 -
+2024-03-21 07:57:59,223 - INFO - 127.0.0.1 - - [21/Mar/2024 07:57:59] "OPTIONS /get_exhibitions HTTP/1.1" 200 -
+2024-03-21 07:57:59,392 - INFO - 127.0.0.1 - - [21/Mar/2024 07:57:59] "GET /get_exhibitions HTTP/1.1" 200 -
+2024-03-21 07:57:59,395 - INFO - 127.0.0.1 - - [21/Mar/2024 07:57:59] "GET /get_paintings HTTP/1.1" 200 -
+2024-03-21 07:57:59,422 - INFO - 127.0.0.1 - - [21/Mar/2024 07:57:59] "GET /get_paintings HTTP/1.1" 200 -
+2024-03-21 07:57:59,576 - INFO - 127.0.0.1 - - [21/Mar/2024 07:57:59] "OPTIONS /get_pending_exhibitions HTTP/1.1" 200 -
+2024-03-21 07:57:59,584 - INFO - 127.0.0.1 - - [21/Mar/2024 07:57:59] "GET /get_exhibitions HTTP/1.1" 200 -
+2024-03-21 07:57:59,733 - INFO - 127.0.0.1 - - [21/Mar/2024 07:57:59] "GET /get_pending_exhibitions HTTP/1.1" 200 -
+2024-03-21 07:57:59,890 - INFO - 127.0.0.1 - - [21/Mar/2024 07:57:59] "GET /get_pending_exhibitions HTTP/1.1" 200 -
+2024-03-21 07:58:00,007 - INFO - 127.0.0.1 - - [21/Mar/2024 07:58:00] "GET /get_pending_exhibitions HTTP/1.1" 200 -
+2024-03-21 07:58:00,136 - INFO - 127.0.0.1 - - [21/Mar/2024 07:58:00] "GET /get_pending_exhibitions HTTP/1.1" 200 -
+2024-03-21 07:58:00,270 - INFO - 127.0.0.1 - - [21/Mar/2024 07:58:00] "GET /get_pending_exhibitions HTTP/1.1" 200 -
+2024-03-21 07:58:00,390 - INFO - 127.0.0.1 - - [21/Mar/2024 07:58:00] "GET /get_pending_exhibitions HTTP/1.1" 200 -
+2024-03-21 07:59:36,452 - INFO - 127.0.0.1 - - [21/Mar/2024 07:59:36] "OPTIONS /get_pending_exhibitions HTTP/1.1" 200 -
+2024-03-21 07:59:36,617 - INFO - 127.0.0.1 - - [21/Mar/2024 07:59:36] "GET /get_pending_exhibitions HTTP/1.1" 200 -
+2024-03-21 07:59:36,744 - INFO - 127.0.0.1 - - [21/Mar/2024 07:59:36] "GET /get_pending_exhibitions HTTP/1.1" 200 -
+2024-03-21 07:59:49,625 - INFO - 127.0.0.1 - - [21/Mar/2024 07:59:49] "OPTIONS /get_pending_exhibitions HTTP/1.1" 200 -
+2024-03-21 07:59:49,849 - INFO - 127.0.0.1 - - [21/Mar/2024 07:59:49] "GET /get_pending_exhibitions HTTP/1.1" 200 -
+2024-03-21 07:59:49,972 - INFO - 127.0.0.1 - - [21/Mar/2024 07:59:49] "GET /get_pending_exhibitions HTTP/1.1" 200 -
+2024-03-21 08:05:41,013 - INFO - 127.0.0.1 - - [21/Mar/2024 08:05:41] "OPTIONS /get_pending_exhibitions HTTP/1.1" 200 -
+2024-03-21 08:05:41,182 - INFO - 127.0.0.1 - - [21/Mar/2024 08:05:41] "GET /get_pending_exhibitions HTTP/1.1" 200 -
+2024-03-21 08:05:41,310 - INFO - 127.0.0.1 - - [21/Mar/2024 08:05:41] "GET /get_pending_exhibitions HTTP/1.1" 200 -
+2024-03-21 08:08:07,669 - INFO - 127.0.0.1 - - [21/Mar/2024 08:08:07] "OPTIONS /get_pending_exhibitions HTTP/1.1" 200 -
+2024-03-21 08:08:07,834 - INFO - 127.0.0.1 - - [21/Mar/2024 08:08:07] "GET /get_pending_exhibitions HTTP/1.1" 200 -
+2024-03-21 08:08:07,944 - INFO - 127.0.0.1 - - [21/Mar/2024 08:08:07] "GET /get_pending_exhibitions HTTP/1.1" 200 -
+2024-03-21 08:08:10,560 - INFO - 127.0.0.1 - - [21/Mar/2024 08:08:10] "OPTIONS /get_exhibitions HTTP/1.1" 200 -
+2024-03-21 08:08:10,710 - INFO - 127.0.0.1 - - [21/Mar/2024 08:08:10] "GET /get_paintings HTTP/1.1" 200 -
+2024-03-21 08:08:10,750 - INFO - 127.0.0.1 - - [21/Mar/2024 08:08:10] "GET /get_exhibitions HTTP/1.1" 200 -
+2024-03-21 08:08:10,759 - INFO - 127.0.0.1 - - [21/Mar/2024 08:08:10] "GET /get_paintings HTTP/1.1" 200 -
+2024-03-21 08:08:10,923 - INFO - 127.0.0.1 - - [21/Mar/2024 08:08:10] "GET /get_exhibitions HTTP/1.1" 200 -
+2024-03-21 08:08:11,067 - INFO - 127.0.0.1 - - [21/Mar/2024 08:08:11] "GET /get_pending_exhibitions HTTP/1.1" 200 -
+2024-03-21 08:08:11,225 - INFO - 127.0.0.1 - - [21/Mar/2024 08:08:11] "GET /get_pending_exhibitions HTTP/1.1" 200 -
+2024-03-21 08:08:11,374 - INFO - 127.0.0.1 - - [21/Mar/2024 08:08:11] "GET /get_pending_exhibitions HTTP/1.1" 200 -
+2024-03-21 08:08:11,492 - INFO - 127.0.0.1 - - [21/Mar/2024 08:08:11] "GET /get_pending_exhibitions HTTP/1.1" 200 -
+2024-03-21 08:08:11,617 - INFO - 127.0.0.1 - - [21/Mar/2024 08:08:11] "GET /get_pending_exhibitions HTTP/1.1" 200 -
+2024-03-21 08:08:11,743 - INFO - 127.0.0.1 - - [21/Mar/2024 08:08:11] "GET /get_pending_exhibitions HTTP/1.1" 200 -
+2024-03-21 08:08:25,019 - INFO - 127.0.0.1 - - [21/Mar/2024 08:08:25] "OPTIONS /get_pending_exhibitions HTTP/1.1" 200 -
+2024-03-21 08:08:25,213 - INFO - 127.0.0.1 - - [21/Mar/2024 08:08:25] "GET /get_pending_exhibitions HTTP/1.1" 200 -
+2024-03-21 08:08:25,327 - INFO - 127.0.0.1 - - [21/Mar/2024 08:08:25] "GET /get_pending_exhibitions HTTP/1.1" 200 -
+2024-03-21 08:11:52,026 - INFO - 127.0.0.1 - - [21/Mar/2024 08:11:52] "OPTIONS /get_pending_exhibitions HTTP/1.1" 200 -
+2024-03-21 08:11:52,177 - INFO - 127.0.0.1 - - [21/Mar/2024 08:11:52] "GET /get_pending_exhibitions HTTP/1.1" 200 -
+2024-03-21 08:11:52,295 - INFO - 127.0.0.1 - - [21/Mar/2024 08:11:52] "GET /get_pending_exhibitions HTTP/1.1" 200 -
+2024-03-21 08:12:03,796 - INFO - 127.0.0.1 - - [21/Mar/2024 08:12:03] "OPTIONS /get_pending_exhibitions HTTP/1.1" 200 -
+2024-03-21 08:12:03,951 - INFO - 127.0.0.1 - - [21/Mar/2024 08:12:03] "GET /get_pending_exhibitions HTTP/1.1" 200 -
+2024-03-21 08:12:04,071 - INFO - 127.0.0.1 - - [21/Mar/2024 08:12:04] "GET /get_pending_exhibitions HTTP/1.1" 200 -
+2024-03-21 08:14:19,604 - INFO - 127.0.0.1 - - [21/Mar/2024 08:14:19] "GET /get_paintings HTTP/1.1" 200 -
+2024-03-21 08:14:19,614 - INFO - 127.0.0.1 - - [21/Mar/2024 08:14:19] "GET /get_paintings HTTP/1.1" 200 -
+2024-03-21 08:14:19,890 - INFO - 127.0.0.1 - - [21/Mar/2024 08:14:19] "OPTIONS /get_exhibitions HTTP/1.1" 200 -
+2024-03-21 08:14:20,332 - INFO - 127.0.0.1 - - [21/Mar/2024 08:14:20] "GET /get_exhibitions HTTP/1.1" 200 -
+2024-03-21 08:14:20,564 - INFO - 127.0.0.1 - - [21/Mar/2024 08:14:20] "GET /get_exhibitions HTTP/1.1" 200 -
+2024-03-21 08:14:20,612 - INFO - 127.0.0.1 - - [21/Mar/2024 08:14:20] "OPTIONS /get_pending_exhibitions HTTP/1.1" 200 -
+2024-03-21 08:14:20,786 - INFO - 127.0.0.1 - - [21/Mar/2024 08:14:20] "GET /get_pending_exhibitions HTTP/1.1" 200 -
+2024-03-21 08:14:21,024 - INFO - 127.0.0.1 - - [21/Mar/2024 08:14:21] "GET /get_pending_exhibitions HTTP/1.1" 200 -
+2024-03-21 08:14:21,292 - INFO - 127.0.0.1 - - [21/Mar/2024 08:14:21] "GET /get_pending_exhibitions HTTP/1.1" 200 -
+2024-03-21 08:14:21,482 - INFO - 127.0.0.1 - - [21/Mar/2024 08:14:21] "GET /get_pending_exhibitions HTTP/1.1" 200 -
+2024-03-21 08:17:24,627 - INFO - 127.0.0.1 - - [21/Mar/2024 08:17:24] "OPTIONS /get_pending_exhibitions HTTP/1.1" 200 -
+2024-03-21 08:17:24,747 - INFO - 127.0.0.1 - - [21/Mar/2024 08:17:24] "GET /get_pending_exhibitions HTTP/1.1" 200 -
+2024-03-21 08:17:24,874 - INFO - 127.0.0.1 - - [21/Mar/2024 08:17:24] "GET /get_pending_exhibitions HTTP/1.1" 200 -
+2024-03-21 08:17:32,441 - INFO - 127.0.0.1 - - [21/Mar/2024 08:17:32] "OPTIONS /get_exhibitions HTTP/1.1" 200 -
+2024-03-21 08:17:32,441 - INFO - 127.0.0.1 - - [21/Mar/2024 08:17:32] "OPTIONS /get_exhibitions HTTP/1.1" 200 -
+2024-03-21 08:17:32,739 - INFO - 127.0.0.1 - - [21/Mar/2024 08:17:32] "OPTIONS /get_pending_exhibitions HTTP/1.1" 200 -
+2024-03-21 08:17:32,898 - INFO - 127.0.0.1 - - [21/Mar/2024 08:17:32] "GET /get_pending_exhibitions HTTP/1.1" 200 -
+2024-03-21 08:17:33,009 - INFO - 127.0.0.1 - - [21/Mar/2024 08:17:33] "GET /get_pending_exhibitions HTTP/1.1" 200 -
+2024-03-21 08:17:39,146 - INFO - 127.0.0.1 - - [21/Mar/2024 08:17:39] "OPTIONS /get_exhibitions HTTP/1.1" 200 -
+2024-03-21 08:17:39,299 - INFO - 127.0.0.1 - - [21/Mar/2024 08:17:39] "GET /get_paintings HTTP/1.1" 200 -
+2024-03-21 08:17:39,331 - INFO - 127.0.0.1 - - [21/Mar/2024 08:17:39] "GET /get_paintings HTTP/1.1" 200 -
+2024-03-21 08:17:39,344 - INFO - 127.0.0.1 - - [21/Mar/2024 08:17:39] "GET /get_exhibitions HTTP/1.1" 200 -
+2024-03-21 08:17:39,473 - INFO - 127.0.0.1 - - [21/Mar/2024 08:17:39] "OPTIONS /get_pending_exhibitions HTTP/1.1" 200 -
+2024-03-21 08:17:39,489 - INFO - 127.0.0.1 - - [21/Mar/2024 08:17:39] "GET /get_exhibitions HTTP/1.1" 200 -
+2024-03-21 08:17:39,632 - INFO - 127.0.0.1 - - [21/Mar/2024 08:17:39] "GET /get_pending_exhibitions HTTP/1.1" 200 -
+2024-03-21 08:17:39,788 - INFO - 127.0.0.1 - - [21/Mar/2024 08:17:39] "GET /get_pending_exhibitions HTTP/1.1" 200 -
+2024-03-21 08:17:39,897 - INFO - 127.0.0.1 - - [21/Mar/2024 08:17:39] "GET /get_pending_exhibitions HTTP/1.1" 200 -
+2024-03-21 08:17:40,102 - INFO - 127.0.0.1 - - [21/Mar/2024 08:17:40] "GET /get_pending_exhibitions HTTP/1.1" 200 -
+2024-03-21 08:18:16,400 - INFO - 127.0.0.1 - - [21/Mar/2024 08:18:16] "OPTIONS /get_pending_exhibitions HTTP/1.1" 200 -
+2024-03-21 08:18:16,520 - INFO - 127.0.0.1 - - [21/Mar/2024 08:18:16] "GET /get_pending_exhibitions HTTP/1.1" 200 -
+2024-03-21 08:18:16,631 - INFO - 127.0.0.1 - - [21/Mar/2024 08:18:16] "GET /get_pending_exhibitions HTTP/1.1" 200 -
+2024-03-21 08:18:20,442 - INFO - 127.0.0.1 - - [21/Mar/2024 08:18:20] "OPTIONS /get_exhibitions HTTP/1.1" 200 -
+2024-03-21 08:18:20,609 - INFO - 127.0.0.1 - - [21/Mar/2024 08:18:20] "GET /get_paintings HTTP/1.1" 200 -
+2024-03-21 08:18:20,633 - INFO - 127.0.0.1 - - [21/Mar/2024 08:18:20] "GET /get_exhibitions HTTP/1.1" 200 -
+2024-03-21 08:18:20,643 - INFO - 127.0.0.1 - - [21/Mar/2024 08:18:20] "GET /get_paintings HTTP/1.1" 200 -
+2024-03-21 08:18:20,791 - INFO - 127.0.0.1 - - [21/Mar/2024 08:18:20] "GET /get_exhibitions HTTP/1.1" 200 -
+2024-03-21 08:18:20,902 - INFO - 127.0.0.1 - - [21/Mar/2024 08:18:20] "GET /get_pending_exhibitions HTTP/1.1" 200 -
+2024-03-21 08:18:21,038 - INFO - 127.0.0.1 - - [21/Mar/2024 08:18:21] "GET /get_pending_exhibitions HTTP/1.1" 200 -
+2024-03-21 08:18:21,157 - INFO - 127.0.0.1 - - [21/Mar/2024 08:18:21] "GET /get_pending_exhibitions HTTP/1.1" 200 -
+2024-03-21 08:18:21,273 - INFO - 127.0.0.1 - - [21/Mar/2024 08:18:21] "GET /get_pending_exhibitions HTTP/1.1" 200 -
+2024-03-21 08:18:21,415 - INFO - 127.0.0.1 - - [21/Mar/2024 08:18:21] "GET /get_pending_exhibitions HTTP/1.1" 200 -
+2024-03-21 08:18:21,430 - INFO - 127.0.0.1 - - [21/Mar/2024 08:18:21] "OPTIONS /get_pending_exhibitions HTTP/1.1" 200 -
+2024-03-21 08:18:21,554 - INFO - 127.0.0.1 - - [21/Mar/2024 08:18:21] "GET /get_pending_exhibitions HTTP/1.1" 200 -
+2024-03-21 08:18:40,272 - INFO - 127.0.0.1 - - [21/Mar/2024 08:18:40] "OPTIONS /get_pending_exhibitions HTTP/1.1" 200 -
+2024-03-21 08:18:40,407 - INFO - 127.0.0.1 - - [21/Mar/2024 08:18:40] "GET /get_pending_exhibitions HTTP/1.1" 200 -
+2024-03-21 08:18:40,533 - INFO - 127.0.0.1 - - [21/Mar/2024 08:18:40] "GET /get_pending_exhibitions HTTP/1.1" 200 -
+2024-03-21 08:19:13,618 - INFO - 127.0.0.1 - - [21/Mar/2024 08:19:13] "OPTIONS /get_pending_exhibitions HTTP/1.1" 200 -
+2024-03-21 08:19:13,761 - INFO - 127.0.0.1 - - [21/Mar/2024 08:19:13] "GET /get_pending_exhibitions HTTP/1.1" 200 -
+2024-03-21 08:19:13,888 - INFO - 127.0.0.1 - - [21/Mar/2024 08:19:13] "GET /get_pending_exhibitions HTTP/1.1" 200 -
+2024-03-21 08:19:23,917 - INFO - 127.0.0.1 - - [21/Mar/2024 08:19:23] "OPTIONS /get_pending_exhibitions HTTP/1.1" 200 -
+2024-03-21 08:19:24,055 - INFO - 127.0.0.1 - - [21/Mar/2024 08:19:24] "GET /get_pending_exhibitions HTTP/1.1" 200 -
+2024-03-21 08:19:24,165 - INFO - 127.0.0.1 - - [21/Mar/2024 08:19:24] "GET /get_pending_exhibitions HTTP/1.1" 200 -
+2024-03-21 08:21:57,285 - INFO - 127.0.0.1 - - [21/Mar/2024 08:21:57] "OPTIONS /get_exhibitions HTTP/1.1" 200 -
+2024-03-21 08:21:57,421 - INFO - 127.0.0.1 - - [21/Mar/2024 08:21:57] "GET /get_paintings HTTP/1.1" 200 -
+2024-03-21 08:21:57,437 - INFO - 127.0.0.1 - - [21/Mar/2024 08:21:57] "GET /get_paintings HTTP/1.1" 200 -
+2024-03-21 08:21:57,451 - INFO - 127.0.0.1 - - [21/Mar/2024 08:21:57] "GET /get_exhibitions HTTP/1.1" 200 -
+2024-03-21 08:21:57,547 - INFO - 127.0.0.1 - - [21/Mar/2024 08:21:57] "GET /get_exhibitions HTTP/1.1" 200 -
+2024-03-21 08:22:30,936 - INFO - 127.0.0.1 - - [21/Mar/2024 08:22:30] "OPTIONS /get_exhibitions HTTP/1.1" 200 -
+2024-03-21 08:22:31,101 - INFO - 127.0.0.1 - - [21/Mar/2024 08:22:31] "GET /get_exhibitions HTTP/1.1" 200 -
+2024-03-21 08:22:31,193 - INFO - 127.0.0.1 - - [21/Mar/2024 08:22:31] "GET /get_paintings HTTP/1.1" 200 -
+2024-03-21 08:22:31,203 - INFO - 127.0.0.1 - - [21/Mar/2024 08:22:31] "GET /get_paintings HTTP/1.1" 200 -
+2024-03-21 08:22:31,307 - INFO - 127.0.0.1 - - [21/Mar/2024 08:22:31] "GET /get_exhibitions HTTP/1.1" 200 -
+2024-03-21 08:23:34,525 - INFO - 127.0.0.1 - - [21/Mar/2024 08:23:34] "OPTIONS /get_exhibitions HTTP/1.1" 200 -
+2024-03-21 08:23:34,699 - INFO - 127.0.0.1 - - [21/Mar/2024 08:23:34] "GET /get_exhibitions HTTP/1.1" 200 -
+2024-03-21 08:23:34,715 - INFO - 127.0.0.1 - - [21/Mar/2024 08:23:34] "GET /get_paintings HTTP/1.1" 200 -
+2024-03-21 08:23:34,744 - INFO - 127.0.0.1 - - [21/Mar/2024 08:23:34] "GET /get_paintings HTTP/1.1" 200 -
+2024-03-21 08:23:34,857 - INFO - 127.0.0.1 - - [21/Mar/2024 08:23:34] "GET /get_exhibitions HTTP/1.1" 200 -
+2024-03-21 08:24:18,405 - INFO - 127.0.0.1 - - [21/Mar/2024 08:24:18] "OPTIONS /get_pending_exhibitions HTTP/1.1" 200 -
+2024-03-21 08:24:18,603 - INFO - 127.0.0.1 - - [21/Mar/2024 08:24:18] "GET /get_pending_exhibitions HTTP/1.1" 200 -
+2024-03-21 08:24:19,614 - INFO - 127.0.0.1 - - [21/Mar/2024 08:24:19] "GET /get_pending_exhibitions HTTP/1.1" 200 -

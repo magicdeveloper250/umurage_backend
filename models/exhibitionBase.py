@@ -8,6 +8,7 @@ class ExhibitionBase:
         e_host,
         e_entrace_fees,
         e_banner,
+        status,
     ) -> None:
         self._name = e_name
         self._start_date = e_start_date
@@ -15,7 +16,8 @@ class ExhibitionBase:
         self._host = e_host
         self._fees = (e_entrace_fees,)
         self._banner = e_banner
-        self._id = id if id else None
+        self._id = id
+        self._status = status
 
     def get_name(self) -> str:
         return self._name
@@ -38,6 +40,9 @@ class ExhibitionBase:
     def get_id(self) -> str:
         return self._id
 
+    def get_status(self) -> str:
+        return self._status
+
     @staticmethod
     def dict(self):
         return {
@@ -48,4 +53,5 @@ class ExhibitionBase:
             "host": self.get_host(),
             "fees": self.get_fees(),
             "image": self.get_banner(),
+            "status": self.get_status(),
         }

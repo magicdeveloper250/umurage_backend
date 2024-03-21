@@ -10,7 +10,7 @@ def add_new_exhibition(exhibition: ExhibitionBase):
             cursor.execute("SET search_path TO public")
             stmt = "INSERT INTO exhibitions (e_name, e_start_date, e_end_date, e_host, e_entrace_fees, e_banner) "
             stmt += "VALUES ({0},{1},{2},{3},{4},{5}) "
-            stmt += "RETURNING e_id,e_name, e_start_date, e_end_date, e_host, e_entrace_fees, e_banner"
+            stmt += "RETURNING e_id,e_name, e_start_date, e_end_date, e_host, e_entrace_fees, e_banner, e_status"
             query = sql.SQL(stmt).format(
                 sql.Literal(exhibition.get_name()),
                 sql.Literal(exhibition.get_start_date()),
@@ -57,6 +57,24 @@ def update_exhibition(exhibition: ExhibitionBase, id):
             return True
 
 
+def change_exhibition_status(id, new_status):
+    with get_db() as connection:
+        with contextlib.closing(connection.cursor()) as cursor:
+            cursor.execute("SET search_path TO public")
+            stmt = "BEGIN;"
+            stmt += "UPDATE exhibitions SET e_status={0}"
+            stmt += " WHERE e_id ={1} "
+            stmt += "RETURNING e_id,e_name, e_start_date, e_end_date, e_host, e_entrace_fees, e_banner, e_status;"
+            query = sql.SQL(stmt).format(
+                sql.Literal(new_status),
+                sql.Literal(id),
+            )
+            cursor.execute(query)
+            exhibition = cursor.fetchone()
+            cursor.execute("COMMIT")
+            return ExhibitionBase.dict(ExhibitionBase(*exhibition))
+
+
 def delete_exhibition(id):
     with get_db() as connection:
         with contextlib.closing(connection.cursor()) as cursor:
@@ -64,7 +82,6 @@ def delete_exhibition(id):
             cursor.execute("BEGIN")
             stmt = "DELETE FROM exhibitions "
             stmt += "WHERE e_id={0} "
-            stmt += "RETURNING e_id,e_name, e_start_date, e_end_date, e_host, e_entrace_fees, e_banner"
             query = sql.SQL(stmt).format(sql.Literal(id))
             cursor.execute(query)
             cursor.execute("COMMIT")
@@ -75,7 +92,7 @@ def get_exhibition(id):
     with get_db() as connection:
         with contextlib.closing(connection.cursor()) as cursor:
             cursor.execute("SET search_path TO public")
-            stmt = "SELECT e_id, e_name, e_start_date, e_end_date, e_host, e_entrace_fees, e_banner FROM exhibitions WHERE e_id={0}"
+            stmt = "SELECT e_id, e_name, e_start_date, e_end_date, e_host, e_entrace_fees, e_banner, e_status FROM exhibitions WHERE e_id={0}"
             query = sql.SQL(stmt).format(sql.Literal(id))
             cursor.execute(query)
             return list(ExhibitionBase.dict(ExhibitionBase(*cursor.fetchone())))
@@ -85,9 +102,34 @@ def get_exhibitions():
     with get_db() as connection:
         with contextlib.closing(connection.cursor()) as cursor:
             cursor.execute("SET search_path TO public")
-            stmt = "SELECT e_id, e_name, e_start_date, e_end_date, e_host, e_entrace_fees, e_banner  "
+            stmt = "SELECT e_id, e_name, e_start_date, e_end_date, e_host, e_entrace_fees, e_banner, e_status  "
             stmt += "FROM exhibitions "
             cursor.execute(stmt)
             rows = cursor.fetchall()
             result = map(lambda ex: ExhibitionBase.dict(ExhibitionBase(*ex)), rows)
             return list(result)
+
+
+def get_active_exhibitions():
+    with get_db() as connection:
+        with contextlib.closing(connection.cursor()) as cursor:
+            cursor.execute("SET search_path TO public")
+            stmt = "SELECT e_id, e_name, e_start_date, e_end_date, e_host, e_entrace_fees, e_banner, e_status  "
+            stmt += "FROM exhibitions "
+            stmt += "WHERE e_status='active' "
+            cursor.execute(stmt)
+            rows = cursor.fetchall()
+            result = map(lambda ex: ExhibitionBase.dict(ExhibitionBase(*ex)), rows)
+            return list(result)
+
+
+def get_pending_exhibitions():
+    with get_db() as connection:
+        with contextlib.closing(connection.cursor()) as cursor:
+            cursor.execute("SET search_path TO public")
+            stmt = "SELECT e_name, e_start_date, e_end_date, e_banner "
+            stmt += "FROM exhibitions "
+            stmt += "WHERE e_status='pending' "
+            cursor.execute(stmt)
+            rows = cursor.fetchall()
+            return rows

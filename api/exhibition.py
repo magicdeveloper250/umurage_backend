@@ -33,6 +33,7 @@ def add_exhibition():
             request.form.get("host"),
             request.form.get("entrace_fees"),
             image_url,
+            None,
         )
         new_item = exhibition.add_exhibition()
         return jsonify({"success": True, "data": new_item})
@@ -75,14 +76,46 @@ def get_exhibition(id):
         return jsonify([])
 
 
-@exhibition.route("/get_exhibitions", methods=["GET"])
+@exhibition.route("/get_all_exhibitions", methods=["GET"])
+@admin_required
 def get_exhibitions():
     """ROUTE FOR GETTING ALL EXHIBITIONS"""
     try:
-        return jsonify(Exhibition.get_exhibitions())
+        return jsonify({"success": True, "data": Exhibition.get_exhibitions()})
+    except Exception as error:
+        current_app.logger.error(str(error))
+        return jsonify(
+            {
+                "success": True,
+                "message": "unable to find what you are looking for try again",
+            }
+        )
+
+
+@exhibition.route("/get_exhibitions", methods=["GET"])
+def get_active_exhibitions():
+    """ROUTE FOR GETTING ALL EXHIBITIONS"""
+    try:
+        return jsonify({"success": True, "data": Exhibition.get_active_exhibitions()})
     except Exception as error:
         current_app.logger.error(str(error))
         return jsonify([])
+
+
+@exhibition.route("/get_pending_exhibitions", methods=["GET"])
+@admin_required
+def get_pending_exhibitions():
+    """ROUTE FOR GETTING ALL EXHIBITIONS"""
+    try:
+        return jsonify({"success": True, "data": Exhibition.get_pending_exhibitions()})
+    except Exception as error:
+        current_app.logger.error(str(error))
+        return jsonify(
+            {
+                "success": True,
+                "message": "unable to find what you are looking for try again",
+            }
+        )
 
 
 @exhibition.route("/delete_exhibition/<id>/<name>", methods=["DELETE"])
@@ -127,3 +160,33 @@ def update_exhibition(id, name):
     except FileExistsError as error:
         current_app.logger.error(str(error))
         return jsonify({"exhibitionExist": True})
+
+
+@exhibition.route("/change_exhibition_status", methods=["PUT"])
+@admin_required
+def change_exhibition_status():
+    try:
+        id = request.form.get("id")
+        current_status = request.form.get("current_status")
+        new_status = "active" if current_status == "pending" else "pending"
+        updated_exhibition = Exhibition.change_exhibition_status(id, new_status)
+        if update_exhibition:
+            return jsonify({"success": True, "data": updated_exhibition})
+        else:
+            return jsonify(
+                {
+                    "success": False,
+                    "message": "unable to update exhibition right now. try again later",
+                }
+            )
+    except FileExistsError as error:
+        current_app.logger.error(str(error))
+        return jsonify({"success": False, "message": "there is some duplication"})
+    except Exception as error:
+        current_app.logger.error(str(error))
+        return jsonify(
+            {
+                "success": False,
+                "message": "unable to update exhibition right now. try again later",
+            }
+        )
