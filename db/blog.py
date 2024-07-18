@@ -5,7 +5,7 @@ import contextlib
 
 
 def add_blog(blog: BlogBase):
-    with get_db() as connection:
+    with contextlib.closing(get_db()) as connection:
         with contextlib.closing(connection.cursor()) as cursor:
             cursor.execute("SET search_path TO public")
             stmt = "INSERT INTO blogs (b_title, b_content, b_created, b_author) "
@@ -18,12 +18,13 @@ def add_blog(blog: BlogBase):
                 sql.Literal(blog.get_author()),
             )
             cursor.execute(query)
-            blogs = map(lambda b: BlogBase.dict(BlogBase(*b)), cursor.fetchall())
+            blogs = map(lambda b: BlogBase(*b).dict(), cursor.fetchall())
+            cursor.execute("COMMIT")
             return list(blogs)
 
 
 def get_blogs(id=None):
-    with get_db() as connection:
+    with contextlib.closing(get_db()) as connection:
         with contextlib.closing(connection.cursor()) as cursor:
             cursor.execute("SET search_path TO public")
             record = None
@@ -33,18 +34,18 @@ def get_blogs(id=None):
                 stmt += "WHERE b_id ={0}"
                 query = sql.SQL(stmt).format(sql.Literal(id))
                 cursor.execute(query)
-                record = map(lambda b: BlogBase.dict(BlogBase(*b)), cursor.fetchall())
+                record = map(lambda b: BlogBase(*b).dict(), cursor.fetchall())
             else:
                 stmt = "SELECT * "
                 stmt += "FROM blogs "
                 query = sql.SQL(stmt)
                 cursor.execute(query)
-                record = map(lambda b: BlogBase.dict(BlogBase(*b)), cursor.fetchall())
+                record = map(lambda b: BlogBase(*b).dict(), cursor.fetchall())
             return list(record)
 
 
 def delete_blog(id):
-    with get_db() as connection:
+    with contextlib.closing(get_db()) as connection:
         with contextlib.closing(connection.cursor()) as cursor:
             cursor.execute("SET search_path TO public")
             stmt = "BEGIN;"

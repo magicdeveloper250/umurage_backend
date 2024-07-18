@@ -74,6 +74,69 @@ def add_new_painter():
         return jsonify({"success": False, "message": "uncaught error"})
 
 
+@painter.route("/update_painter", methods=["POST"])
+@custom_login_required
+def update_painter():
+    """ROUTE FOR ADDING NEW PAINTER ACCOUNT"""
+    try:
+        print(request.form)
+        print(request.files)
+        profilepicture = request.files.get("profilepicture")
+        image_url = None
+        # use jwt library for decoding and validating token from email
+        user = jwt.decode(
+            request.headers.get("Authorization").split(" ")[1],
+            os.environ.get("SESSION_KEY"),
+            algorithms=["HS256"],
+        )
+        # decrypting user id sent in an email
+        user_id = cryptocode.decrypt(
+            dict(user).get("id"), os.environ.get("SESSION_KEY")
+        )
+
+        if profilepicture:
+            image_url = filemanager.add_user_profile_file(
+                profilepicture, os.urandom(24).hex()
+            )
+        else:
+            image_url = request.form.get("profilepicture")
+
+        # instantiate new painter object with information from frontend
+        painter = Painter(
+            user_id,
+            request.form.get("username"),
+            request.form.get("phonenumber"),
+            image_url,
+            request.form.get("fullname"),
+            request.form.get("email"),
+            None,
+            0,
+            password=None,
+        )
+        painter_updated = painter.update_painter()
+
+        return jsonify({"success": painter_updated})
+    except IntegrityError as error:
+        current_app.logger.error(str(error))
+        return jsonify({"success": False, "message": "User already exist"})
+    except (DatabaseError, OperationalError) as error:
+        current_app.logger.error(str(error))
+        return jsonify(
+            {"success": False, "message": "Data submitted has an error, try again"}
+        )
+    except (
+        ConnectionAbortedError,
+        ConnectionRefusedError,
+        ConnectionResetError,
+        ConnectionError,
+    ):
+        return jsonify({"success": False, "message": "Connection error"})
+
+    except Exception as error:
+        current_app.logger.error(str(error))
+        return jsonify({"success": False, "message": "uncaught error"})
+
+
 @painter.route("/get_painters", methods=["GET"])
 @admin_required
 def list_painters():

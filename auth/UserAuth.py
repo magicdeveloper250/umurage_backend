@@ -142,6 +142,7 @@ def custom_login():
                     {
                         "user": user.username,
                         "role": user.role,
+                        "phone": user.phone,
                         "picture": user.picture,
                         "email": user.email,
                         "fullname": user.fullname,

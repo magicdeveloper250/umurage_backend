@@ -30,6 +30,9 @@ class Painter(PainterBase):
     def add_painter(self) -> bool:
         return database.add_new_painter(self)
 
+    def update_painter(self) -> bool:
+        return database.update_painter(self)
+
     @staticmethod
     def get_painters() -> list:
         return database.get_painters()

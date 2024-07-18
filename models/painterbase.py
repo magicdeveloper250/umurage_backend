@@ -51,16 +51,15 @@ class PainterBase:
     def get_verified(self) -> str:
         return self._verified
 
-    @staticmethod
-    def dict(object) -> dict:
+    def dict(cls) -> dict:
         return {
-            "id": object.get_id(),
-            "username": object.get_username(),
-            "phone": object.get_phone(),
-            "image": object.get_picture(),
-            "fullname": object.get_fullname(),
-            "role": object.get_role(),
-            "password": object.get_password(),
-            "email": object.get_email(),
-            "verified": object.get_verified(),
+            "id": cls.get_id(),
+            "username": cls.get_username(),
+            "phone": cls.get_phone(),
+            "image": cls.get_picture(),
+            "fullname": cls.get_fullname(),
+            "role": cls.get_role(),
+            "password": cls.get_password(),
+            "email": cls.get_email(),
+            "verified": cls.get_verified(),
         }

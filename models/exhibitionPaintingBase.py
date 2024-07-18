@@ -29,14 +29,13 @@ class ExhibitionPaintingBase:
     def get_painter(self) -> str:
         return self._painter
 
-    @staticmethod
-    def dict(object) -> dict:
+    def dict(cls) -> dict:
         return {
-            "id": object.get_id(),
-            "name": object.get_name(),
-            "description": object.get_description(),
-            "image": object.get_image(),
-            "audio": object.get_audio(),
-            "owner": object.get_owner(),
-            "painter": object.get_painter(),
+            "id": cls.get_id(),
+            "name": cls.get_name(),
+            "description": cls.get_description(),
+            "image": cls.get_image(),
+            "audio": cls.get_audio(),
+            "owner": cls.get_owner(),
+            "painter": cls.get_painter(),
         }

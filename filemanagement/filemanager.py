@@ -8,28 +8,17 @@ import uuid
 import datetime
 import cryptocode
 from auth import EXHIBITION_PAINTINGS_KEY
-
-# from . import (
-#     CWD,
-#     EXHIBITION_DIR,
-#     EXHIBITION_PAINTINGS_DIR,
-#     PAINTING_DIR,
-#     PROFILE_DIR,
-#     UPLOAD_DIR,
-# )
 from werkzeug.utils import secure_filename
-
-# import logging
-# import os
-# import shutil
 import threading
+import os
 
 config = cloudinary.config(secure=True)
 
 
 ############################ CLOUDINARY FILE MANAGEMENT BLOCK
-def process_audio_file(file, public_id):
-    with open(file, "rb") as f:
+def process_audio_file(f, public_id):
+    f.save(dst=os.path.join(os.getcwd(), f.name))
+    with open(f.name, "rb") as f:
         res = cloudinary.uploader.upload_large(
             f,
             public_id=public_id,

@@ -103,7 +103,6 @@ def get_active_exhibitions():
 
 
 @exhibition.route("/get_pending_exhibitions", methods=["GET"])
-@admin_required
 def get_pending_exhibitions():
     """ROUTE FOR GETTING ALL EXHIBITIONS"""
     try:

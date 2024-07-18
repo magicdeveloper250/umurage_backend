@@ -51,7 +51,8 @@ def add_new_painting():
         ConnectionRefusedError,
         ConnectionResetError,
         ConnectionError,
-    ):
+    ) as error:
+        current_app.logger.error(str(error))
         return abort(
             jsonify(
                 {
@@ -60,7 +61,8 @@ def add_new_painting():
                 }
             )
         )
-    except (DatabaseError, OperationalError):
+    except (DatabaseError, OperationalError) as error:
+        current_app.logger.error(str(error))
         return abort(
             jsonify(
                 {
@@ -140,7 +142,8 @@ def get_user_paintings():
             }
         )
         return response
-    except (DatabaseError, OperationalError):
+    except (DatabaseError, OperationalError) as error:
+        current_app.logger.error(str(error))
         return jsonify(
             {
                 "success": False,
@@ -152,7 +155,8 @@ def get_user_paintings():
         ConnectionRefusedError,
         ConnectionResetError,
         ConnectionError,
-    ):
+    ) as error:
+        current_app.logger.error(str(error))
         return jsonify({"success": False, "message": "Connection error"})
     except Exception as error:
         current_app.logger.error(str(error))
@@ -173,9 +177,16 @@ def like(painting_id):
                     "success": False,
                 }
             )
+    except (
+        ConnectionAbortedError,
+        ConnectionRefusedError,
+        ConnectionResetError,
+        ConnectionError,
+    ):
+        return jsonify({"success": False, "message": "Connection error"})
     except Exception as error:
         current_app.logger.error(str(error))
-        return jsonify({"success": False, "error": error})
+        return jsonify({"success": False, "message": "uncaught error"})
 
 
 @painting.route("/dislike/<painting_id>", methods=["POST"])
@@ -192,6 +203,13 @@ def dislike(painting_id):
                     "success": False,
                 }
             )
+    except (
+        ConnectionAbortedError,
+        ConnectionRefusedError,
+        ConnectionResetError,
+        ConnectionError,
+    ):
+        return jsonify({"success": False, "message": "Connection error"})
     except Exception as error:
         current_app.logger.error(str(error))
-        return jsonify({"success": False, "error": error})
+        return jsonify({"success": False, "message": "uncaught error"})

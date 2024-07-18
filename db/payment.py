@@ -5,7 +5,7 @@ import time
 
 
 def add_payment(payment_info):
-    with get_db() as connection:
+    with contextlib.closing(get_db()) as connection:
         with contextlib.closing(connection.cursor()) as cursor:
             cursor.execute("SET search_path TO public")
             stmt = "INSERT INTO payments "
@@ -20,10 +20,11 @@ def add_payment(payment_info):
                 sql.Literal(payment_info["pay_phone_number"]),
             )
             cursor.execute(query)
+            cursor.execute("COMMIT")
 
 
 def get_payments():
-    with get_db() as connection:
+    with contextlib.closing(get_db()) as connection:
         with contextlib.closing(connection.cursor()) as cursor:
             cursor.execute("SET search_path TO public")
             stmt = "SELECT * FROM payments "
@@ -32,7 +33,7 @@ def get_payments():
 
 
 def delete_payments(id):
-    with get_db() as connection:
+    with contextlib.closing(get_db()) as connection:
         with contextlib.closing(connection.cursor()) as cursor:
             cursor.execute("SET search_path TO public")
             stmt = "BEGIN "

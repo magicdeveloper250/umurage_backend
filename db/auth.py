@@ -4,7 +4,7 @@ import contextlib
 
 
 def get_user(userId):
-    with get_db() as connection:
+    with contextlib.closing(get_db()) as connection:
         with contextlib.closing(connection.cursor()) as cursor:
             cursor.execute("SET search_path TO public")
             stmt = "SELECT * FROM painters "

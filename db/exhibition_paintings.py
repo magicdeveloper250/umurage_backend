@@ -5,7 +5,7 @@ import contextlib
 
 
 def add_exhibition_paintings(painting: ExhibitionPaintingBase):
-    with get_db() as connection:
+    with contextlib.closing(get_db()) as connection:
         with contextlib.closing(connection.cursor()) as cursor:
             cursor.execute("SET search_path TO public")
             stmt = "INSERT INTO exhibition_painting "
@@ -20,11 +20,12 @@ def add_exhibition_paintings(painting: ExhibitionPaintingBase):
                 sql.Literal(painting.get_painter()),
             )
             cursor.execute(query)
+            cursor.execute("COMMIT")
             return True
 
 
 def get_exhibition_painting(exhibition_id):
-    with get_db() as connection:
+    with contextlib.closing(get_db()) as connection:
         with contextlib.closing(connection.cursor()) as cursor:
             cursor.execute("SET search_path TO public")
             stmt = "SELECT * "
@@ -33,14 +34,14 @@ def get_exhibition_painting(exhibition_id):
             query = sql.SQL(stmt).format(sql.Literal(exhibition_id))
             cursor.execute(query)
             paintings = map(
-                lambda ep: ExhibitionPaintingBase.dict(ExhibitionPaintingBase(*ep)),
+                lambda ep: ExhibitionPaintingBase(*ep).dict(),
                 cursor.fetchall(),
             )
             return list(paintings)
 
 
 def get_all_exhibition_painting():
-    with get_db() as connection:
+    with contextlib.closing(get_db()) as connection:
         with contextlib.closing(connection.cursor()) as cursor:
             cursor.execute("SET search_path TO public")
             stmt = "SELECT * "
@@ -48,14 +49,14 @@ def get_all_exhibition_painting():
             query = sql.SQL(stmt)
             cursor.execute(query)
             paintings = map(
-                lambda ep: ExhibitionPaintingBase.dict(ExhibitionPaintingBase(*ep)),
+                lambda ep: ExhibitionPaintingBase(*ep).dict(),
                 cursor.fetchall(),
             )
             return list(paintings)
 
 
 def delete_xhibition_painting(id):
-    with get_db() as connection:
+    with contextlib.closing(get_db()) as connection:
         with contextlib.closing(connection.cursor()) as cursor:
             cursor.execute("SET search_path TO public")
             stmt = "BEGIN;"

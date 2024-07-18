@@ -5,12 +5,12 @@ import contextlib
 
 
 def add_new_painting(painting: PaintingBase):
-    with get_db() as connection:
+    with contextlib.closing(get_db()) as connection:
         with contextlib.closing(connection.cursor()) as cursor:
             cursor.execute("SET search_path TO public")
             stmt = "INSERT INTO paintings (g_name, g_category, g_owner, g_created, g_image) "
-            stmt += "VALUES ({0},{1},{2},{3},{4})"
-            stmt += " RETURNING g_id,g_image, likes"
+            stmt += "VALUES ({0},{1},{2},{3},{4}) "
+            stmt += "RETURNING g_id,g_image, likes"
             query = sql.SQL(stmt).format(
                 sql.Literal(painting.get_name()),
                 sql.Literal(painting.get_category()),
@@ -20,11 +20,12 @@ def add_new_painting(painting: PaintingBase):
             )
             cursor.execute(query)
             added_painting = cursor.fetchall()
+            cursor.execute("COMMIT")
             return added_painting
 
 
 def get_paintings():
-    with get_db() as connection:
+    with contextlib.closing(get_db()) as connection:
         with contextlib.closing(connection.cursor()) as cursor:
             cursor.execute("SET search_path TO public")
             stmt = "SELECT g_id, g_name, username, g_category,g_created, g_image, phone, likes "
@@ -36,7 +37,7 @@ def get_paintings():
 
 
 def get_painting_by_id(userId):
-    with get_db() as connection:
+    with contextlib.closing(get_db()) as connection:
         with contextlib.closing(connection.cursor()) as cursor:
             cursor.execute("SET search_path TO public")
             stmt = "SELECT g_id, g_name,g_category, g_image,likes "
@@ -49,7 +50,7 @@ def get_painting_by_id(userId):
 
 
 def delete_painting(painting_id):
-    with get_db() as connection:
+    with contextlib.closing(get_db()) as connection:
         with contextlib.closing(connection.cursor()) as cursor:
             cursor.execute("SET search_path TO public")
             stmt = "BEGIN;"
@@ -62,7 +63,7 @@ def delete_painting(painting_id):
 
 
 def like(painting_id):
-    with get_db() as connection:
+    with contextlib.closing(get_db()) as connection:
         with contextlib.closing(connection.cursor()) as cursor:
             cursor.execute("SET search_path TO public")
             stmt = "BEGIN;"
@@ -76,7 +77,7 @@ def like(painting_id):
 
 
 def dislike(painting_id):
-    with get_db() as connection:
+    with contextlib.closing(get_db()) as connection:
         with contextlib.closing(connection.cursor()) as cursor:
             cursor.execute("SET search_path TO public")
             stmt = "BEGIN;"
@@ -90,7 +91,7 @@ def dislike(painting_id):
 
 
 def get_likes(painting_id):
-    with get_db() as connection:
+    with contextlib.closing(get_db()) as connection:
         with contextlib.closing(connection.cursor()) as cursor:
             cursor.execute("SET search_path TO public")
             stmt = "SELECT likes "

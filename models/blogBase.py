@@ -21,12 +21,11 @@ class BlogBase:
     def get_author(self) -> str:
         return self._author
 
-    @staticmethod
-    def dict(object) -> dict:
+    def dict(cls) -> dict:
         return {
-            "id": object.get_id(),
-            "title": object.get_title(),
-            "content": object.get_content(),
-            "created": object.get_created(),
-            "author": object.get_author(),
+            "id": cls.get_id(),
+            "title": cls.get_title(),
+            "content": cls.get_content(),
+            "created": cls.get_created(),
+            "author": cls.get_author(),
         }

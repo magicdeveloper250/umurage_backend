@@ -4,7 +4,7 @@ from psycopg2 import sql
 
 
 def get_dashboard():
-    with get_db() as connection:
+    with contextlib.closing(get_db()) as connection:
         with contextlib.closing(connection.cursor()) as cursor:
             cursor.execute("SET search_path TO public")
             stmt = "SELECT  e_id, g_id, id, c_id "

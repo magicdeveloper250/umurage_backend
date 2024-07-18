@@ -2,11 +2,10 @@ from models.painterbase import PainterBase
 from psycopg2 import sql
 from . import get_db
 import contextlib
-import psycopg2
 
 
 def add_new_painter(painter: PainterBase):
-    with get_db() as connection:
+    with contextlib.closing(get_db()) as connection:
         with contextlib.closing(connection.cursor()) as cursor:
             cursor.execute("SET search_path TO public")
             stmt = "INSERT INTO painters (username,phone, picture, fullname, password, email) "
@@ -21,12 +20,13 @@ def add_new_painter(painter: PainterBase):
                 sql.Literal(painter.get_email()),
             )
             cursor.execute(query)
-            added = PainterBase.dict(PainterBase(*cursor.fetchone()))
+            added = PainterBase(*cursor.fetchone()).dict()
+            cursor.execute("COMMIT")
             return added
 
 
 def get_painter(id):
-    with get_db() as connection:
+    with contextlib.closing(get_db()) as connection:
         with contextlib.closing(connection.cursor()) as cursor:
             cursor.execute("SET search_path TO public")
             stmt = "SELECT id,username,phone, picture, fullname, password,role, email "
@@ -39,7 +39,7 @@ def get_painter(id):
 
 
 def verify_email(id, email):
-    with get_db() as connection:
+    with contextlib.closing(get_db()) as connection:
         with contextlib.closing(connection.cursor()) as cursor:
             cursor.execute("SET search_path TO public")
             stmt = "BEGIN;"
@@ -53,7 +53,7 @@ def verify_email(id, email):
 
 
 def change_password(user_id, new_password):
-    with get_db() as connection:
+    with contextlib.closing(get_db()) as connection:
         with contextlib.closing(connection.cursor()) as cursor:
             cursor.execute("SET search_path TO public")
             cursor.execute("BEGIN")
@@ -69,7 +69,7 @@ def change_password(user_id, new_password):
 
 
 def get_painter_by_email(email):
-    with get_db() as connection:
+    with contextlib.closing(get_db()) as connection:
         with contextlib.closing(connection.cursor()) as cursor:
             cursor.execute("SET search_path TO public")
             stmt = "SELECT id,username,phone, picture, fullname, password,role, email "
@@ -82,7 +82,7 @@ def get_painter_by_email(email):
 
 
 def get_painter_by_username(username):
-    with get_db() as connection:
+    with contextlib.closing(get_db()) as connection:
         with contextlib.closing(connection.cursor()) as cursor:
             cursor.execute("SET search_path TO public")
             stmt = "SELECT  id,username,phone, picture, fullname, password,role, email"
@@ -95,25 +95,18 @@ def get_painter_by_username(username):
 
 
 def get_painters():
-    try:
-        with get_db() as connection:
-            with contextlib.closing(connection.cursor()) as cursor:
-                cursor.execute("SET search_path TO public")
-                stmt = (
-                    "SELECT id,username,phone, picture, fullname,email, role, verified "
-                )
-                stmt += "FROM painters"
-                cursor.execute(stmt)
-                painters = map(
-                    lambda p: PainterBase.dict(PainterBase(*p)), cursor.fetchall()
-                )
-                return list(painters)
-    except psycopg2.DatabaseError as error:
-        return error
+    with contextlib.closing(get_db()) as connection:
+        with contextlib.closing(connection.cursor()) as cursor:
+            cursor.execute("SET search_path TO public")
+            stmt = "SELECT id,username,phone, picture, fullname,email, role, verified "
+            stmt += "FROM painters"
+            cursor.execute(stmt)
+            painters = map(lambda p: PainterBase(*p).dict(), cursor.fetchall())
+            return list(painters)
 
 
 def delete_painter(id):
-    with get_db() as connection:
+    with contextlib.closing(get_db()) as connection:
         with contextlib.closing(connection.cursor()) as cursor:
             cursor.execute("SET search_path TO public")
             cursor.execute("BEGIN")
@@ -125,3 +118,23 @@ def delete_painter(id):
             deleted_painter = cursor.fetchall()
             cursor.execute("COMMIT")
             return deleted_painter
+
+
+def update_painter(painter: PainterBase):
+    with contextlib.closing(get_db()) as connection:
+        with contextlib.closing(connection.cursor()) as cursor:
+            cursor.execute("SET search_path TO public")
+            cursor.execute("BEGIN")
+            stmt = "UPDATE painters "
+            stmt += "SET username={0},phone={1}, picture={2}, fullname={3} "
+            stmt += "WHERE id={4}"
+            query = sql.SQL(stmt).format(
+                sql.Literal(painter.get_username()),
+                sql.Literal(painter.get_phone()),
+                sql.Literal(painter.get_picture()),
+                sql.Literal(painter.get_fullname()),
+                sql.Literal(painter.get_id()),
+            )
+            cursor.execute(query)
+            cursor.execute("COMMIT")
+            return True

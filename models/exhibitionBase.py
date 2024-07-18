@@ -43,15 +43,14 @@ class ExhibitionBase:
     def get_status(self) -> str:
         return self._status
 
-    @staticmethod
-    def dict(self):
+    def dict(cls):
         return {
-            "id": self.get_id(),
-            "name": self.get_name(),
-            "startdate": self.get_start_date(),
-            "enddate": self.get_end_date(),
-            "host": self.get_host(),
-            "fees": self.get_fees(),
-            "image": self.get_banner(),
-            "status": self.get_status(),
+            "id": cls.get_id(),
+            "name": cls.get_name(),
+            "startdate": cls.get_start_date(),
+            "enddate": cls.get_end_date(),
+            "host": cls.get_host(),
+            "fees": cls.get_fees(),
+            "image": cls.get_banner(),
+            "status": cls.get_status(),
         }

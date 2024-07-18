@@ -11,7 +11,7 @@ class CustomerBase:
         status="pending",
         datetime=None,
     ) -> None:
-        self._id = id if id else None
+        self._id = id
         self._first_name = c_first_name
         self._lastname = c_last_name
         self._email = c_email
@@ -51,16 +51,15 @@ class CustomerBase:
     def get_datetime(self) -> str:
         return self._datetime
 
-    @staticmethod
-    def dict(object) -> dict:
+    def dict(cls) -> dict:
         return {
-            "id": object.get_id(),
-            "firstName": object.get_first_name(),
-            "lastName": object.get_last_name(),
-            "email": object.get_email(),
-            "phone": object.get_phone(),
-            "exId": object.get_register_for(),
-            "exName": object.get_ex_name(),
-            "status": object.get_status(),
-            "datetime": object.get_datetime(),
+            "id": cls.get_id(),
+            "firstName": cls.get_first_name(),
+            "lastName": cls.get_last_name(),
+            "email": cls.get_email(),
+            "phone": cls.get_phone(),
+            "exId": cls.get_register_for(),
+            "exName": cls.get_ex_name(),
+            "status": cls.get_status(),
+            "datetime": cls.get_datetime(),
         }
