@@ -39,5 +39,6 @@ log_format = "%(asctime)s - %(levelname)s - %(message)s"
 logging.basicConfig(level=log_level, filename=log_file, format=log_format)
 CORS(
     app,
-    origins=[os.environ.get("FRONT_END_SERVER")],
+    origins=["*"],
+    # origins=[os.environ.get("FRONT_END_SERVER")],
 )

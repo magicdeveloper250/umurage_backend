@@ -30,6 +30,7 @@ class Exhibition(ExhibitionBase):
 
     @staticmethod
     def get_exhibition(ex_id) -> ExhibitionBase:
+        print(database.get_exhibition(ex_id))
         return database.get_exhibition(ex_id)
 
     @staticmethod

@@ -13,12 +13,12 @@ class CustomerEmailWorker(Thread):
     def __init__(
         self,
         group: None = None,
-        target: Callable[..., object] | None = None,
-        name: str | None = None,
+        target=None,
+        name=None,
         args: Iterable[Any] = ...,
-        kwargs: Mapping[str, Any] | None = None,
+        kwargs=None,
         *,
-        daemon: bool | None = None
+        daemon=None
     ) -> None:
         super(CustomerEmailWorker, self).__init__(
             group, target, name, args, kwargs, daemon=daemon

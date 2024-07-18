@@ -43,7 +43,8 @@ def add_exhibition():
     except FileExistsError as error:
         current_app.logger.error(str(error))
         return jsonify({"success": False, "message": "Exhibition already exists"})
-    except (DatabaseError, OperationalError):
+    except (DatabaseError, OperationalError) as err:
+        print(err)
         return jsonify(
             {"success": False, "message": "Data submitted has an error, try again"}
         )
@@ -96,6 +97,7 @@ def get_exhibitions():
 def get_active_exhibitions():
     """ROUTE FOR GETTING ALL EXHIBITIONS"""
     try:
+
         return jsonify({"success": True, "data": Exhibition.get_active_exhibitions()})
     except Exception as error:
         current_app.logger.error(str(error))

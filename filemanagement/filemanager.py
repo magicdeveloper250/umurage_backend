@@ -32,12 +32,12 @@ def add_painting_file(file_owner, image, audio):
     IMAGE_PUBLIC_ID = (
         file_owner
         + str(uuid.uuid4())
-        + str(datetime.datetime.now(datetime.UTC)).replace(" ", "_").lower()
+        + str(datetime.datetime.now()).replace(" ", "_").lower()
     )
     AUDIO_PUBLIC_ID = (
         file_owner
         + str(uuid.uuid4())
-        + str(datetime.datetime.now(datetime.UTC)).replace(" ", "_").lower()
+        + str(datetime.datetime.now()).replace(" ", "_").lower()
     )
     image_thread = threading.Thread(
         daemon=True,
@@ -71,7 +71,7 @@ def add_user_painting_file(image_file, image_owner):
     PUBLIC_ID = (
         image_owner
         + str(uuid.uuid4())
-        + str(datetime.datetime.now(datetime.UTC)).replace(" ", "_").lower()
+        + str(datetime.datetime.now()).replace(" ", "_").lower()
     )
     upload_thread = threading.Thread(
         target=lambda: cloudinary.uploader.upload(
@@ -91,7 +91,7 @@ def save_exhibition_banner_file(image_file, image_owner):
     PUBLIC_ID = (
         image_owner
         + str(uuid.uuid4())
-        + str(datetime.datetime.utcnow()).replace(" ", "_").lower()
+        + str(datetime.datetime.now()).replace(" ", "_").lower()
     )
     upload_thread = threading.Thread(
         target=lambda: cloudinary.uploader.upload(
@@ -111,7 +111,7 @@ def add_user_profile_file(image_file, image_owner):
     PUBLIC_ID = (
         image_owner
         + str(uuid.uuid4())
-        + str(datetime.datetime.utcnow()).replace(" ", "_").lower()
+        + str(datetime.datetime.now()).replace(" ", "_").lower()
     )
     upload_thread = threading.Thread(
         target=lambda: cloudinary.uploader.upload(
