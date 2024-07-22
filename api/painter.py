@@ -79,14 +79,13 @@ def add_new_painter():
 def update_painter():
     """ROUTE FOR ADDING NEW PAINTER ACCOUNT"""
     try:
-        print(request.form)
-        print(request.files)
+
         profilepicture = request.files.get("profilepicture")
         image_url = None
         # use jwt library for decoding and validating token from email
         user = jwt.decode(
             request.headers.get("Authorization").split(" ")[1],
-            os.environ.get("SESSION_KEY"),
+            os.environ.get("TOKEN_KEY"),
             algorithms=["HS256"],
         )
         # decrypting user id sent in an email
@@ -96,8 +95,9 @@ def update_painter():
 
         if profilepicture:
             image_url = filemanager.add_user_profile_file(
-                profilepicture, os.urandom(24).hex()
+                profilepicture, str(os.urandom(24).hex()) + "updated"
             )
+
         else:
             image_url = request.form.get("profilepicture")
 
@@ -165,7 +165,7 @@ def change_password():
         # use jwt library for decoding and validating token from email
         user = jwt.decode(
             request.headers.get("Authorization").split(" ")[1],
-            os.environ.get("SESSION_KEY"),
+            os.environ.get("TOKEN_KEY"),
             algorithms=["HS256"],
         )
         # decrypting user id sent in an email

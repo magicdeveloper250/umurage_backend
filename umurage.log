@@ -6618,3 +6618,130 @@ server closed the connection unexpectedly
 2024-07-22 02:20:51,441 - INFO -  * Debugger PIN: 142-594-215
 2024-07-22 02:21:14,759 - INFO -  * Detected change in 'C:\\Users\\IMPANO\\Desktop\\painting_ecommerce_website\\backend\\db\\__init__.py', reloading
 2024-07-22 02:21:14,813 - INFO -  * Restarting with stat
+2024-07-22 02:59:54,835 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.211.145:5000
+2024-07-22 02:59:54,835 - INFO - [33mPress CTRL+C to quit[0m
+2024-07-22 02:59:54,838 - INFO -  * Restarting with stat
+2024-07-22 02:59:57,724 - WARNING -  * Debugger is active!
+2024-07-22 02:59:57,759 - INFO -  * Debugger PIN: 142-594-215
+2024-07-22 03:00:18,874 - INFO - 127.0.0.1 - - [22/Jul/2024 03:00:18] "OPTIONS /get_exhibitions HTTP/1.1" 200 -
+2024-07-22 03:00:18,879 - INFO - 127.0.0.1 - - [22/Jul/2024 03:00:18] "OPTIONS /get_pending_exhibitions HTTP/1.1" 200 -
+2024-07-22 03:00:20,091 - INFO - 127.0.0.1 - - [22/Jul/2024 03:00:20] "GET /get_paintings HTTP/1.1" 200 -
+2024-07-22 03:00:21,927 - INFO - 127.0.0.1 - - [22/Jul/2024 03:00:21] "GET /get_paintings HTTP/1.1" 200 -
+2024-07-22 03:00:24,264 - INFO - 127.0.0.1 - - [22/Jul/2024 03:00:24] "GET /get_exhibitions HTTP/1.1" 200 -
+2024-07-22 03:00:24,281 - INFO - 127.0.0.1 - - [22/Jul/2024 03:00:24] "OPTIONS /get_exhibitions HTTP/1.1" 200 -
+2024-07-22 03:00:26,209 - INFO - 127.0.0.1 - - [22/Jul/2024 03:00:26] "GET /get_pending_exhibitions HTTP/1.1" 200 -
+2024-07-22 03:00:26,259 - INFO - 127.0.0.1 - - [22/Jul/2024 03:00:26] "OPTIONS /get_pending_exhibitions HTTP/1.1" 200 -
+2024-07-22 03:00:28,016 - INFO - 127.0.0.1 - - [22/Jul/2024 03:00:28] "GET /get_exhibitions HTTP/1.1" 200 -
+2024-07-22 03:00:29,924 - INFO - 127.0.0.1 - - [22/Jul/2024 03:00:29] "GET /get_pending_exhibitions HTTP/1.1" 200 -
+2024-07-22 03:00:39,417 - INFO - 127.0.0.1 - - [22/Jul/2024 03:00:39] "POST /custom-login HTTP/1.1" 200 -
+2024-07-22 03:01:52,566 - INFO - 127.0.0.1 - - [22/Jul/2024 03:01:52] "OPTIONS /change_password HTTP/1.1" 200 -
+2024-07-22 03:01:52,601 - ERROR - Signature verification failed
+2024-07-22 03:01:52,603 - INFO - 127.0.0.1 - - [22/Jul/2024 03:01:52] "POST /change_password HTTP/1.1" 200 -
+2024-07-22 03:04:13,487 - INFO -  * Detected change in 'C:\\Users\\IMPANO\\Desktop\\painting_ecommerce_website\\backend\\api\\painter.py', reloading
+2024-07-22 03:04:13,716 - INFO -  * Restarting with stat
+2024-07-22 03:04:17,125 - WARNING -  * Debugger is active!
+2024-07-22 03:04:17,158 - INFO -  * Debugger PIN: 142-594-215
+2024-07-22 03:04:18,910 - INFO - 127.0.0.1 - - [22/Jul/2024 03:04:18] "OPTIONS /change_password HTTP/1.1" 200 -
+2024-07-22 03:04:22,037 - INFO - 127.0.0.1 - - [22/Jul/2024 03:04:22] "POST /change_password HTTP/1.1" 200 -
+2024-07-22 03:04:35,254 - INFO - 127.0.0.1 - - [22/Jul/2024 03:04:35] "OPTIONS /update_painter HTTP/1.1" 200 -
+2024-07-22 03:04:35,272 - ERROR - Signature verification failed
+2024-07-22 03:04:35,273 - INFO - 127.0.0.1 - - [22/Jul/2024 03:04:35] "POST /update_painter HTTP/1.1" 200 -
+2024-07-22 03:05:06,346 - INFO -  * Detected change in 'C:\\Users\\IMPANO\\Desktop\\painting_ecommerce_website\\backend\\api\\painter.py', reloading
+2024-07-22 03:05:06,418 - INFO -  * Restarting with stat
+2024-07-22 03:05:09,240 - WARNING -  * Debugger is active!
+2024-07-22 03:05:09,256 - INFO -  * Debugger PIN: 142-594-215
+2024-07-22 03:05:11,511 - INFO - 127.0.0.1 - - [22/Jul/2024 03:05:11] "OPTIONS /update_painter HTTP/1.1" 200 -
+2024-07-22 03:05:11,808 - DEBUG - Starting new HTTPS connection (1): api.cloudinary.com:443
+2024-07-22 03:05:13,866 - INFO - 127.0.0.1 - - [22/Jul/2024 03:05:13] "POST /update_painter HTTP/1.1" 200 -
+2024-07-22 03:05:18,296 - DEBUG - https://api.cloudinary.com:443 "POST /v1_1/dqlv0vkoe/image/upload HTTP/1.1" 200 None
+2024-07-22 03:05:20,557 - INFO - 127.0.0.1 - - [22/Jul/2024 03:05:20] "OPTIONS /get_pending_exhibitions HTTP/1.1" 200 -
+2024-07-22 03:05:20,558 - INFO - 127.0.0.1 - - [22/Jul/2024 03:05:20] "OPTIONS /get_exhibitions HTTP/1.1" 200 -
+2024-07-22 03:05:23,433 - INFO - 127.0.0.1 - - [22/Jul/2024 03:05:23] "GET /get_paintings HTTP/1.1" 200 -
+2024-07-22 03:05:25,525 - INFO - 127.0.0.1 - - [22/Jul/2024 03:05:25] "GET /get_pending_exhibitions HTTP/1.1" 200 -
+2024-07-22 03:05:27,676 - INFO - 127.0.0.1 - - [22/Jul/2024 03:05:27] "GET /get_exhibitions HTTP/1.1" 200 -
+2024-07-22 03:05:27,728 - INFO - 127.0.0.1 - - [22/Jul/2024 03:05:27] "OPTIONS /get_exhibitions HTTP/1.1" 200 -
+2024-07-22 03:05:30,234 - INFO - 127.0.0.1 - - [22/Jul/2024 03:05:30] "GET /get_paintings HTTP/1.1" 200 -
+2024-07-22 03:05:30,319 - INFO - 127.0.0.1 - - [22/Jul/2024 03:05:30] "OPTIONS /get_pending_exhibitions HTTP/1.1" 200 -
+2024-07-22 03:05:30,320 - INFO - 127.0.0.1 - - [22/Jul/2024 03:05:30] "OPTIONS /get_exhibitions HTTP/1.1" 200 -
+2024-07-22 03:05:32,183 - INFO - 127.0.0.1 - - [22/Jul/2024 03:05:32] "GET /get_pending_exhibitions HTTP/1.1" 200 -
+2024-07-22 03:05:34,331 - INFO - 127.0.0.1 - - [22/Jul/2024 03:05:34] "GET /get_exhibitions HTTP/1.1" 200 -
+2024-07-22 03:05:36,378 - INFO - 127.0.0.1 - - [22/Jul/2024 03:05:36] "GET /get_paintings HTTP/1.1" 200 -
+2024-07-22 03:05:38,325 - INFO - 127.0.0.1 - - [22/Jul/2024 03:05:38] "GET /get_pending_exhibitions HTTP/1.1" 200 -
+2024-07-22 03:05:38,351 - INFO - 127.0.0.1 - - [22/Jul/2024 03:05:38] "OPTIONS /get_pending_exhibitions HTTP/1.1" 200 -
+2024-07-22 03:05:40,478 - INFO - 127.0.0.1 - - [22/Jul/2024 03:05:40] "GET /get_exhibitions HTTP/1.1" 200 -
+2024-07-22 03:05:40,549 - INFO - 127.0.0.1 - - [22/Jul/2024 03:05:40] "OPTIONS /get_exhibitions HTTP/1.1" 200 -
+2024-07-22 03:05:42,669 - INFO - 127.0.0.1 - - [22/Jul/2024 03:05:42] "GET /get_paintings HTTP/1.1" 200 -
+2024-07-22 03:05:45,115 - INFO - 127.0.0.1 - - [22/Jul/2024 03:05:45] "GET /get_pending_exhibitions HTTP/1.1" 200 -
+2024-07-22 03:05:47,847 - INFO - 127.0.0.1 - - [22/Jul/2024 03:05:47] "GET /get_exhibitions HTTP/1.1" 200 -
+2024-07-22 03:06:37,225 - INFO -  * Detected change in 'C:\\Users\\IMPANO\\Desktop\\painting_ecommerce_website\\backend\\api\\painter.py', reloading
+2024-07-22 03:06:37,291 - INFO -  * Restarting with stat
+2024-07-22 03:06:40,085 - WARNING -  * Debugger is active!
+2024-07-22 03:06:40,125 - INFO -  * Debugger PIN: 142-594-215
+2024-07-22 03:06:47,238 - INFO - 127.0.0.1 - - [22/Jul/2024 03:06:47] "OPTIONS /update_painter HTTP/1.1" 200 -
+2024-07-22 03:06:47,753 - DEBUG - Starting new HTTPS connection (1): api.cloudinary.com:443
+2024-07-22 03:06:50,316 - INFO - 127.0.0.1 - - [22/Jul/2024 03:06:50] "POST /update_painter HTTP/1.1" 200 -
+2024-07-22 03:06:55,078 - DEBUG - https://api.cloudinary.com:443 "POST /v1_1/dqlv0vkoe/image/upload HTTP/1.1" 200 None
+2024-07-22 03:07:40,636 - INFO -  * Detected change in 'C:\\Users\\IMPANO\\Desktop\\painting_ecommerce_website\\backend\\api\\painter.py', reloading
+2024-07-22 03:07:40,706 - INFO -  * Restarting with stat
+2024-07-22 03:07:43,771 - WARNING -  * Debugger is active!
+2024-07-22 03:07:43,780 - INFO -  * Debugger PIN: 142-594-215
+2024-07-22 03:07:43,795 - INFO - 127.0.0.1 - - [22/Jul/2024 03:07:43] "OPTIONS /update_painter HTTP/1.1" 200 -
+2024-07-22 03:07:44,053 - DEBUG - Starting new HTTPS connection (1): api.cloudinary.com:443
+2024-07-22 03:07:46,222 - INFO - 127.0.0.1 - - [22/Jul/2024 03:07:46] "POST /update_painter HTTP/1.1" 200 -
+2024-07-22 03:07:50,666 - DEBUG - https://api.cloudinary.com:443 "POST /v1_1/dqlv0vkoe/image/upload HTTP/1.1" 200 None
+2024-07-22 03:08:53,226 - INFO -  * Detected change in 'C:\\Users\\IMPANO\\Desktop\\painting_ecommerce_website\\backend\\api\\painter.py', reloading
+2024-07-22 03:08:53,301 - INFO -  * Restarting with stat
+2024-07-22 03:08:57,200 - WARNING -  * Debugger is active!
+2024-07-22 03:08:57,207 - INFO -  * Debugger PIN: 142-594-215
+2024-07-22 03:09:00,899 - INFO - 127.0.0.1 - - [22/Jul/2024 03:09:00] "OPTIONS /update_painter HTTP/1.1" 200 -
+2024-07-22 03:09:01,149 - DEBUG - Starting new HTTPS connection (1): api.cloudinary.com:443
+2024-07-22 03:09:03,638 - INFO - 127.0.0.1 - - [22/Jul/2024 03:09:03] "POST /update_painter HTTP/1.1" 200 -
+2024-07-22 03:09:09,633 - DEBUG - https://api.cloudinary.com:443 "POST /v1_1/dqlv0vkoe/image/upload HTTP/1.1" 200 None
+2024-07-22 03:09:17,727 - INFO - 127.0.0.1 - - [22/Jul/2024 03:09:17] "OPTIONS /get_pending_exhibitions HTTP/1.1" 200 -
+2024-07-22 03:09:17,728 - INFO - 127.0.0.1 - - [22/Jul/2024 03:09:17] "OPTIONS /get_exhibitions HTTP/1.1" 200 -
+2024-07-22 03:09:21,473 - INFO - 127.0.0.1 - - [22/Jul/2024 03:09:21] "GET /get_paintings HTTP/1.1" 200 -
+2024-07-22 03:09:23,503 - INFO - 127.0.0.1 - - [22/Jul/2024 03:09:23] "GET /get_pending_exhibitions HTTP/1.1" 200 -
+2024-07-22 03:09:23,523 - INFO - 127.0.0.1 - - [22/Jul/2024 03:09:23] "OPTIONS /get_pending_exhibitions HTTP/1.1" 200 -
+2024-07-22 03:09:26,299 - INFO - 127.0.0.1 - - [22/Jul/2024 03:09:26] "GET /get_exhibitions HTTP/1.1" 200 -
+2024-07-22 03:09:26,314 - INFO - 127.0.0.1 - - [22/Jul/2024 03:09:26] "OPTIONS /get_exhibitions HTTP/1.1" 200 -
+2024-07-22 03:09:29,237 - INFO - 127.0.0.1 - - [22/Jul/2024 03:09:29] "GET /get_paintings HTTP/1.1" 200 -
+2024-07-22 03:09:33,745 - INFO - 127.0.0.1 - - [22/Jul/2024 03:09:33] "GET /get_pending_exhibitions HTTP/1.1" 200 -
+2024-07-22 03:09:37,225 - INFO - 127.0.0.1 - - [22/Jul/2024 03:09:37] "GET /get_exhibitions HTTP/1.1" 200 -
+2024-07-22 03:09:53,043 - INFO - 127.0.0.1 - - [22/Jul/2024 03:09:53] "POST /custom-login HTTP/1.1" 200 -
+2024-07-22 03:10:11,051 - INFO -  * Detected change in 'C:\\Users\\IMPANO\\Desktop\\painting_ecommerce_website\\backend\\api\\painter.py', reloading
+2024-07-22 03:10:11,128 - INFO -  * Restarting with stat
+2024-07-22 03:10:15,338 - WARNING -  * Debugger is active!
+2024-07-22 03:10:15,346 - INFO -  * Debugger PIN: 142-594-215
+2024-07-22 03:10:36,163 - INFO - 127.0.0.1 - - [22/Jul/2024 03:10:36] "OPTIONS /update_painter HTTP/1.1" 200 -
+2024-07-22 03:10:39,280 - INFO - 127.0.0.1 - - [22/Jul/2024 03:10:39] "POST /update_painter HTTP/1.1" 200 -
+2024-07-22 03:11:00,514 - INFO - 127.0.0.1 - - [22/Jul/2024 03:11:00] "POST /custom-login HTTP/1.1" 200 -
+2024-07-22 03:11:10,265 - INFO - 127.0.0.1 - - [22/Jul/2024 03:11:10] "OPTIONS /get_user_paintings HTTP/1.1" 200 -
+2024-07-22 03:11:10,267 - INFO - 127.0.0.1 - - [22/Jul/2024 03:11:10] "OPTIONS /get_user_paintings HTTP/1.1" 200 -
+2024-07-22 03:11:15,427 - INFO - 127.0.0.1 - - [22/Jul/2024 03:11:15] "POST /get_user_paintings HTTP/1.1" 200 -
+2024-07-22 03:11:18,395 - INFO - 127.0.0.1 - - [22/Jul/2024 03:11:18] "POST /get_user_paintings HTTP/1.1" 200 -
+2024-07-22 03:11:29,243 - INFO - 127.0.0.1 - - [22/Jul/2024 03:11:29] "OPTIONS /add_new_painting HTTP/1.1" 200 -
+2024-07-22 03:11:29,617 - DEBUG - Starting new HTTPS connection (1): api.cloudinary.com:443
+2024-07-22 03:11:35,696 - INFO - 127.0.0.1 - - [22/Jul/2024 03:11:35] "PUT /add_new_painting HTTP/1.1" 200 -
+2024-07-22 03:11:36,834 - DEBUG - https://api.cloudinary.com:443 "POST /v1_1/dqlv0vkoe/image/upload HTTP/1.1" 200 None
+2024-07-22 03:11:41,855 - INFO - 127.0.0.1 - - [22/Jul/2024 03:11:41] "OPTIONS /get_exhibitions HTTP/1.1" 200 -
+2024-07-22 03:11:41,864 - INFO - 127.0.0.1 - - [22/Jul/2024 03:11:41] "OPTIONS /get_pending_exhibitions HTTP/1.1" 200 -
+2024-07-22 03:11:45,211 - INFO - 127.0.0.1 - - [22/Jul/2024 03:11:45] "GET /get_paintings HTTP/1.1" 200 -
+2024-07-22 03:11:48,402 - INFO - 127.0.0.1 - - [22/Jul/2024 03:11:48] "GET /get_pending_exhibitions HTTP/1.1" 200 -
+2024-07-22 03:11:48,430 - INFO - 127.0.0.1 - - [22/Jul/2024 03:11:48] "OPTIONS /get_pending_exhibitions HTTP/1.1" 200 -
+2024-07-22 03:11:51,249 - INFO - 127.0.0.1 - - [22/Jul/2024 03:11:51] "GET /get_exhibitions HTTP/1.1" 200 -
+2024-07-22 03:11:51,270 - INFO - 127.0.0.1 - - [22/Jul/2024 03:11:51] "OPTIONS /get_exhibitions HTTP/1.1" 200 -
+2024-07-22 03:11:51,486 - INFO - 127.0.0.1 - - [22/Jul/2024 03:11:51] "OPTIONS /get_user_paintings HTTP/1.1" 200 -
+2024-07-22 03:11:51,487 - INFO - 127.0.0.1 - - [22/Jul/2024 03:11:51] "OPTIONS /get_user_paintings HTTP/1.1" 200 -
+2024-07-22 03:11:54,137 - INFO - 127.0.0.1 - - [22/Jul/2024 03:11:54] "GET /get_paintings HTTP/1.1" 200 -
+2024-07-22 03:11:56,768 - INFO - 127.0.0.1 - - [22/Jul/2024 03:11:56] "GET /get_pending_exhibitions HTTP/1.1" 200 -
+2024-07-22 03:11:59,666 - INFO - 127.0.0.1 - - [22/Jul/2024 03:11:59] "GET /get_exhibitions HTTP/1.1" 200 -
+2024-07-22 03:12:03,150 - INFO - 127.0.0.1 - - [22/Jul/2024 03:12:03] "POST /get_user_paintings HTTP/1.1" 200 -
+2024-07-22 03:12:05,951 - INFO - 127.0.0.1 - - [22/Jul/2024 03:12:05] "POST /get_user_paintings HTTP/1.1" 200 -
+2024-07-22 03:12:07,515 - INFO - 127.0.0.1 - - [22/Jul/2024 03:12:07] "OPTIONS /delete_painting/85e6bc58-d445-48af-80a1-5504811032c2 HTTP/1.1" 200 -
+2024-07-22 03:12:17,585 - INFO - 127.0.0.1 - - [22/Jul/2024 03:12:17] "DELETE /delete_painting/85e6bc58-d445-48af-80a1-5504811032c2 HTTP/1.1" 200 -
+2024-07-22 03:13:39,365 - INFO - 127.0.0.1 - - [22/Jul/2024 03:13:39] "POST /custom-login HTTP/1.1" 200 -
+2024-07-22 03:14:02,704 - INFO -  * Detected change in 'C:\\Users\\IMPANO\\Desktop\\painting_ecommerce_website\\backend\\db\\__init__.py', reloading
+2024-07-22 03:14:02,772 - INFO -  * Restarting with stat
