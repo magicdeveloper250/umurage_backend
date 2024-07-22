@@ -50,7 +50,12 @@ def add_painting_file(file_owner, image, audio):
     audio_thread = threading.Thread(
         target=lambda: process_audio_file(audio, AUDIO_PUBLIC_ID), daemon=True
     )
-    audio_url = cloudinary.CloudinaryImage(AUDIO_PUBLIC_ID).build_url()
+    audio_url = (
+        cloudinary.CloudinaryImage(AUDIO_PUBLIC_ID)
+        .build_url()
+        .replace("/image/", "/video/")
+        + ".mp4"
+    )
 
     image_url = cloudinary.CloudinaryImage(IMAGE_PUBLIC_ID).build_url()
 
