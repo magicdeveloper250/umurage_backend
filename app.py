@@ -1,6 +1,6 @@
 from dotenv import load_dotenv, find_dotenv
 
-load_dotenv(find_dotenv())
+load_dotenv()
 
 from flask import Flask
 from api.painter import painter
@@ -39,6 +39,8 @@ log_format = "%(asctime)s - %(levelname)s - %(message)s"
 logging.basicConfig(level=log_level, filename=log_file, format=log_format)
 CORS(
     app,
-    origins=["*"],
-    # origins=[os.environ.get("FRONT_END_SERVER")],
+    supports_credentials=True,
+    resources={
+        r"/*": {"origins": [os.environ.get("FRONT_END_SERVER"), "http://localhost"]}
+    },
 )

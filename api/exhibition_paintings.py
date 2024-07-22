@@ -1,7 +1,6 @@
 from psycopg2.errors import DatabaseError, OperationalError
 from auth.UserAuth import admin_required, payment_required
 from flask import Blueprint, request, jsonify
-from helperfunctions import convertToObject
 from models.exhibitionPainting import ExhibitionPainting
 from filemanagement import filemanager
 from flask import current_app
@@ -32,13 +31,16 @@ def add_painting():
             request.form.get("owner"),
         )
         resp = painting.add_exhibition_painting()
-        return jsonify({"success": resp})
+        return jsonify({"success": resp}), 201
     except (DatabaseError, OperationalError):
-        return jsonify(
-            {
-                "success": False,
-                "message": "The information submitted has an error, please check",
-            }
+        return (
+            jsonify(
+                {
+                    "success": False,
+                    "message": "The information submitted has an error, please check",
+                }
+            ),
+            400,
         )
 
     except (
@@ -47,10 +49,10 @@ def add_painting():
         ConnectionRefusedError,
         ConnectionResetError,
     ):
-        return jsonify({"success": False, "message": "connection error"})
+        return jsonify({"success": False, "message": "connection error"}), 500
     except Exception as error:
         current_app.logger.error(str(error))
-        return jsonify({"success": False, "message": "uncaught error try again"})
+        return jsonify({"success": False, "message": "unknown error"}), 500
 
 
 @exhibition_paintings.route("/get_exhibition_paintings/<id>", methods=["GET"])
@@ -59,16 +61,11 @@ def get_exhibition_painting(id):
     """ROUTE FOR GETTING EXHIBITION PAINTING"""
     try:
         paintings = ExhibitionPainting.get_exhibition_painting(id)
-        if paintings:
-            return jsonify({"success": True, "data": paintings})
-        return jsonify(
-            {"success": False, "message": "You are not authorized to access this"}
-        )
+        return jsonify({"success": True, "data": paintings}), 200
+
     except Exception as error:
         current_app.logger.error(str(error))
-        return jsonify(
-            {"success": False, "message": "You are not authorized to access this"}
-        )
+        return jsonify({"success": False, "message": "unknown error"}), 500
 
 
 @exhibition_paintings.route("/get_all_exhibition_paintings", methods=["GET"])
@@ -77,16 +74,11 @@ def get_exhibition_all_paintings():
     """ROUTE FOR GETTING EXHIBITION PAINTING"""
     try:
         paintings = ExhibitionPainting.get_all_paintings()
-        if paintings:
-            return jsonify({"success": True, "data": paintings})
-        return jsonify(
-            {"success": False, "message": "You are not authorized to access this"}
-        )
+        return jsonify({"success": True, "data": paintings}), 200
+
     except Exception as error:
         current_app.logger.error(str(error))
-        return jsonify(
-            {"success": False, "message": "You are not authorized to access this"}
-        )
+        return jsonify({"success": False, "message": "unknown error"}), 500
 
 
 @exhibition_paintings.route("/delete_exhibition_painting/<id>", methods=["DELETE"])
@@ -96,16 +88,16 @@ def delete_exhibition_painting(id):
     try:
         painting_deleted = ExhibitionPainting.delete_exhibition_painting(id)
         if painting_deleted:
-            return jsonify(
-                {
-                    "success": painting_deleted,
-                }
+            return (
+                jsonify(
+                    {
+                        "success": painting_deleted,
+                    }
+                ),
+                204,
             )
-        return jsonify(
-            {"success": False, "message": "You are not authorized to access this"}
-        )
+
+        return jsonify({"success": False, "message": "unknown error"}), 500
     except Exception as error:
         current_app.logger.error(str(error))
-        return jsonify(
-            {"success": False, "message": "You are not authorized to access this"}
-        )
+        return jsonify({"success": False, "message": "Unknown error"}), 500

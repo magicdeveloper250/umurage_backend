@@ -35,19 +35,25 @@ def add_customer():
             }
         )
         email_worker.start()
-        return jsonify(
-            {
-                "success": True,
-                "data": [added_customer],
-            },
+        return (
+            jsonify(
+                {
+                    "success": True,
+                    "data": [added_customer],
+                },
+            ),
+            201,
         )
     except (DatabaseError, OperationalError) as error:
         current_app.logger.error(str(error))
-        return jsonify(
-            {
-                "success": False,
-                "message": "information submitted to the server has error. Please check your info",
-            }
+        return (
+            jsonify(
+                {
+                    "success": False,
+                    "message": "information submitted to the server has error. Please check your info",
+                }
+            ),
+            400,
         )
     except (
         ConnectionAbortedError,
@@ -55,10 +61,10 @@ def add_customer():
         ConnectionResetError,
         ConnectionError,
     ):
-        return jsonify({"success": False, "message": "Connection error"})
+        return jsonify({"success": False, "message": "Connection error"}), 500
     except Exception as error:
         current_app.logger.error(str(error))
-        return jsonify({"success": False, "message": "uncaught error"})
+        return jsonify({"success": False, "message": "uncaught error"}), 500
 
 
 @customer.route("/get_customers", methods=["GET"])
@@ -66,14 +72,17 @@ def add_customer():
 def get_customers():
     """ROUTE FOR GETTING CUSTOMERS"""
     try:
-        return jsonify({"success": True, "data": Customer.get_customers(id=None)})
+        return jsonify({"success": True, "data": Customer.get_customers(id=None)}), 200
     except (DatabaseError, OperationalError) as error:
         current_app.logger.error(str(error))
-        return jsonify(
-            {
-                "success": False,
-                "message": "information submitted to the server has an error. Please check your info",
-            }
+        return (
+            jsonify(
+                {
+                    "success": False,
+                    "message": "information submitted to the server has an error. Please check your info",
+                }
+            ),
+            500,
         )
     except (
         ConnectionAbortedError,
@@ -81,10 +90,10 @@ def get_customers():
         ConnectionResetError,
         ConnectionError,
     ):
-        return jsonify({"success": False, "message": "Connection error"})
+        return jsonify({"success": False, "message": "Connection error"}), 500
     except Exception as error:
         current_app.logger.error(str(error))
-        return jsonify({"success": False, "message": "uncaught error"})
+        return jsonify({"success": False, "message": "uncaught error"}), 500
 
 
 @customer.route("/update_customer_status", methods=["POST"])
@@ -98,14 +107,17 @@ def update_customer_status():
     try:
         new_status = "active" if current_status == "pending" else "pending"
         customer = Customer.update_customer_status(customer_id, new_status, e_name)
-        return jsonify({"success": True, "data": customer})
+        return jsonify({"success": True, "data": customer}), 201
     except (DatabaseError, OperationalError) as error:
         current_app.logger.error(str(error))
-        return jsonify(
-            {
-                "success": False,
-                "message": "information submitted to the server has error. Please check your info",
-            }
+        return (
+            jsonify(
+                {
+                    "success": False,
+                    "message": "information submitted to the server has error. Please check your info",
+                }
+            ),
+            400,
         )
     except (
         ConnectionAbortedError,
@@ -113,10 +125,10 @@ def update_customer_status():
         ConnectionResetError,
         ConnectionError,
     ):
-        return jsonify({"success": False, "message": "Connection error"})
+        return jsonify({"success": False, "message": "Connection error"}), 500
     except Exception as error:
         current_app.logger.error(str(error))
-        return jsonify({"success": False, "message": "uncaught error"})
+        return jsonify({"success": False, "message": "uncaught error"}), 500
 
 
 @customer.route("/delete_customer", methods=["DELETE"])
@@ -130,7 +142,7 @@ def delete_customer():
         return jsonify({"success": True, "data": customers})
     except Exception as error:
         current_app.logger.error(str(error))
-        return abort(jsonify({"success": False}))
+        return abort(jsonify({"success": False})), 500
 
 
 @customer.route("/get_customer/<customer_id>", methods=["GET"])
@@ -140,11 +152,14 @@ def get_customer(customer_id):
         return jsonify({"success": True, "data": customer})
     except (DatabaseError, OperationalError) as error:
         current_app.logger.error(str(error))
-        return jsonify(
-            {
-                "success": False,
-                "message": "information submitted to the server has error. Please check your info",
-            }
+        return (
+            jsonify(
+                {
+                    "success": False,
+                    "message": "information submitted to the server has error. Please check your info",
+                }
+            ),
+            400,
         )
     except (
         ConnectionAbortedError,
@@ -153,10 +168,10 @@ def get_customer(customer_id):
         ConnectionError,
     ) as error:
         current_app.logger.error(str(error))
-        return jsonify({"success": False, "message": "Connection error"})
+        return jsonify({"success": False, "message": "Connection error"}), 500
     except Exception as error:
         current_app.logger.error(str(error))
-        return jsonify({"success": False, "message": "uncaught error"})
+        return jsonify({"success": False, "message": "uncaught error"}), 500
 
 
 @customer.route("/check_payment", methods=["POST"])
@@ -167,23 +182,29 @@ def check_payment():
         exId = request.form.get("exhibitionId")
         response = Customer.check_payment(id=id, e_id=exId)
         if response:
-            return jsonify({"success": True, "id": exId, "c_id": response[1]})
+            return jsonify({"success": True, "id": exId, "c_id": response[1]}), 200
         else:
-            return jsonify(
-                {
-                    "success": False,
-                    "message": "You haven't enrolled to attend this exhibition",
-                }
+            return (
+                jsonify(
+                    {
+                        "success": False,
+                        "message": "You haven't enrolled to attend this exhibition",
+                    }
+                ),
+                404,
             )
     except InvalidTextRepresentation:
-        return jsonify({"ssuccess": False, "message": "Invalid key"})
+        return jsonify({"ssuccess": False, "message": "Invalid key"}), 400
     except (DatabaseError, OperationalError) as error:
         current_app.logger.error(str(error))
-        return jsonify(
-            {
-                "success": False,
-                "message": "information submitted to the server has error. Please check your info",
-            }
+        return (
+            jsonify(
+                {
+                    "success": False,
+                    "message": "information submitted to the server has error. Please check your info",
+                }
+            ),
+            400,
         )
     except (
         ConnectionAbortedError,
@@ -192,7 +213,7 @@ def check_payment():
         ConnectionError,
     ) as error:
         current_app.logger.error(str(error))
-        return jsonify({"success": False, "message": "Connection error"})
+        return jsonify({"success": False, "message": "Connection error"}), 500
     except Exception as error:
         current_app.logger.error(str(error))
-        return jsonify({"success": False, "message": "uncaught error"})
+        return jsonify({"success": False, "message": "uncaught error"}), 500

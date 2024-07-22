@@ -36,17 +36,16 @@ def add_exhibition():
             None,
         )
         new_item = exhibition.add_exhibition()
-        return jsonify({"success": True, "data": new_item})
+        return jsonify({"success": True, "data": new_item}), 201
     except IntegrityError as error:
         current_app.logger.error(str(error))
-        return jsonify({"success": False, "messag": "Exhibition already exists"})
+        return jsonify({"success": False, "message": "Exhibition already exists"}), 409
     except FileExistsError as error:
         current_app.logger.error(str(error))
-        return jsonify({"success": False, "message": "Exhibition already exists"})
-    except (DatabaseError, OperationalError) as err:
-        print(err)
+        return jsonify({"success": False, "message": "Exhibition already exists"}), 409
+    except (DatabaseError, OperationalError):
         return jsonify(
-            {"success": False, "message": "Data submitted has an error, try again"}
+            {"success": False, "message": "Data submitted has an error, try again"}, 400
         )
     except (
         ConnectionAbortedError,
@@ -59,19 +58,18 @@ def add_exhibition():
         HTTPWarning,
         HTTPError,
     ):
-        return jsonify({"success": False, "message": "Connection error"})
+        return jsonify({"success": False, "message": "Connection error"}), 500
 
     except Exception as error:
         current_app.logger.error(str(error))
-        print(str(error))
-        return jsonify({"success": False, "message": "uncaught error, try again"})
+        return jsonify({"success": False, "message": "unknown error, try again"}), 500
 
 
 @exhibition.route("/get_exhibition/<id>", methods=["GET"])
 def get_exhibition(id):
     """ROUTE FOR GETTING EXHIBITIONS BY ID"""
     try:
-        return jsonify(Exhibition.get_exhibition(id))
+        return jsonify(Exhibition.get_exhibition(id)), 200
     except Exception as error:
         current_app.logger.error(str(error))
         return jsonify([])
@@ -82,14 +80,17 @@ def get_exhibition(id):
 def get_exhibitions():
     """ROUTE FOR GETTING ALL EXHIBITIONS"""
     try:
-        return jsonify({"success": True, "data": Exhibition.get_exhibitions()})
+        return jsonify({"success": True, "data": Exhibition.get_exhibitions()}), 200
     except Exception as error:
         current_app.logger.error(str(error))
-        return jsonify(
-            {
-                "success": True,
-                "message": "unable to find what you are looking for try again",
-            }
+        return (
+            jsonify(
+                {
+                    "success": True,
+                    "message": "unknown error",
+                }
+            ),
+            500,
         )
 
 
@@ -98,24 +99,33 @@ def get_active_exhibitions():
     """ROUTE FOR GETTING ALL EXHIBITIONS"""
     try:
 
-        return jsonify({"success": True, "data": Exhibition.get_active_exhibitions()})
+        return (
+            jsonify({"success": True, "data": Exhibition.get_active_exhibitions()}),
+            200,
+        )
     except Exception as error:
         current_app.logger.error(str(error))
-        return jsonify([])
+        return jsonify([]), 500
 
 
 @exhibition.route("/get_pending_exhibitions", methods=["GET"])
 def get_pending_exhibitions():
     """ROUTE FOR GETTING ALL EXHIBITIONS"""
     try:
-        return jsonify({"success": True, "data": Exhibition.get_pending_exhibitions()})
+        return (
+            jsonify({"success": True, "data": Exhibition.get_pending_exhibitions()}),
+            200,
+        )
     except Exception as error:
         current_app.logger.error(str(error))
-        return jsonify(
-            {
-                "success": True,
-                "message": "unable to find what you are looking for try again",
-            }
+        return (
+            jsonify(
+                {
+                    "success": True,
+                    "message": "unknown error",
+                }
+            ),
+            500,
         )
 
 
@@ -133,10 +143,10 @@ def delete_exhibition(id, name):
         ConnectionResetError,
         ConnectionError,
     ):
-        return jsonify({"success": False, "message": "Connection error"})
+        return jsonify({"success": False, "message": "Connection error"}), 500
     except Exception as error:
         current_app.logger.error(str(error))
-        return jsonify({"success": False, "message": "uncaught error"})
+        return jsonify({"success": False, "message": "unknown error"}), 500
 
 
 @exhibition.route("/update_exhibition/<id>/<name>", methods=["PUT"])
@@ -157,10 +167,13 @@ def update_exhibition(id, name):
             image_url,
         )
         exhibition.add_exhibition()
-        return jsonify({"success": True})
+        return jsonify({"success": True}), 200
     except FileExistsError as error:
         current_app.logger.error(str(error))
-        return jsonify({"exhibitionExist": True})
+        return jsonify({"success": False, "exhibitionExist": True}), 409
+    except Exception as error:
+        current_app.logger.error(str(error))
+        return jsonify({"success": False, "message": "unknown error"}), 500
 
 
 @exhibition.route("/change_exhibition_status", methods=["PUT"])
@@ -171,23 +184,19 @@ def change_exhibition_status():
         current_status = request.form.get("current_status")
         new_status = "active" if current_status == "pending" else "pending"
         updated_exhibition = Exhibition.change_exhibition_status(id, new_status)
-        if update_exhibition:
-            return jsonify({"success": True, "data": updated_exhibition})
-        else:
-            return jsonify(
-                {
-                    "success": False,
-                    "message": "unable to update exhibition right now. try again later",
-                }
-            )
+        return jsonify({"success": True, "data": updated_exhibition}), 201
+
     except FileExistsError as error:
         current_app.logger.error(str(error))
-        return jsonify({"success": False, "message": "there is some duplication"})
+        return jsonify({"success": False, "message": "file already exists"}), 409
     except Exception as error:
         current_app.logger.error(str(error))
-        return jsonify(
-            {
-                "success": False,
-                "message": "unable to update exhibition right now. try again later",
-            }
+        return (
+            jsonify(
+                {
+                    "success": False,
+                    "message": "unknown error",
+                }
+            ),
+            500,
         )

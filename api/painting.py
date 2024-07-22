@@ -1,5 +1,5 @@
 from auth.UserAuth import custom_login_required, user_or_admin_required
-from flask import Blueprint, request, abort, jsonify, send_file
+from flask import Blueprint, request, abort, jsonify
 from psycopg2.errors import DatabaseError, OperationalError
 from helperfunctions import convertToObject
 from filemanagement import filemanager
@@ -110,7 +110,8 @@ def delete_painting(painting_id):
         )
         header = MIN_HEADER if not admin else HEADERS
         return jsonify({"success": True, "data": convertToObject(header, paintings)})
-    except (DatabaseError, OperationalError):
+    except (DatabaseError, OperationalError) as error:
+        print(error)
         return jsonify(
             {"success": False, "message": "Data submitted has an error, try again"}
         )
@@ -133,22 +134,27 @@ def get_user_paintings():
     global MIN_HEADER
     userId = cryptocode.decrypt(request.form.get("userId"), SESSION_KEY)
     try:
-        response = jsonify(
-            {
-                "success": True,
-                "data": convertToObject(
-                    MIN_HEADER, Painting.get_user_paintings(userId)
-                ),
-            }
+        return (
+            jsonify(
+                {
+                    "success": True,
+                    "data": convertToObject(
+                        MIN_HEADER, Painting.get_user_paintings(userId)
+                    ),
+                }
+            ),
+            200,
         )
-        return response
     except (DatabaseError, OperationalError) as error:
         current_app.logger.error(str(error))
-        return jsonify(
-            {
-                "success": False,
-                "message": "information submitted to the server has error. Please check your info",
-            }
+        return (
+            jsonify(
+                {
+                    "success": False,
+                    "message": "information submitted to the server has error. Please check your info",
+                }
+            ),
+            500,
         )
     except (
         ConnectionAbortedError,
@@ -157,10 +163,10 @@ def get_user_paintings():
         ConnectionError,
     ) as error:
         current_app.logger.error(str(error))
-        return jsonify({"success": False, "message": "Connection error"})
+        return jsonify({"success": False, "message": "Connection error"}), 500
     except Exception as error:
         current_app.logger.error(str(error))
-        return jsonify({"success": False, "message": "uncaught error"})
+        return jsonify({"success": False, "message": "uncaught error"}), 500
 
 
 @painting.route("/like/<painting_id>", methods=["POST"])
@@ -170,12 +176,15 @@ def like(painting_id):
         liked = Painting.like(painting_id)
         if liked:
             likes = Painting.get_likes(painting_id)
-            return jsonify({"success": True, "likes": likes[0]})
+            return jsonify({"success": True, "likes": likes[0]}), 201
         else:
-            return jsonify(
-                {
-                    "success": False,
-                }
+            return (
+                jsonify(
+                    {
+                        "success": False,
+                    }
+                ),
+                500,
             )
     except (
         ConnectionAbortedError,
@@ -183,10 +192,10 @@ def like(painting_id):
         ConnectionResetError,
         ConnectionError,
     ):
-        return jsonify({"success": False, "message": "Connection error"})
+        return jsonify({"success": False, "message": "Connection error"}), 500
     except Exception as error:
         current_app.logger.error(str(error))
-        return jsonify({"success": False, "message": "uncaught error"})
+        return jsonify({"success": False, "message": "uncaught error"}), 500
 
 
 @painting.route("/dislike/<painting_id>", methods=["POST"])
@@ -196,12 +205,15 @@ def dislike(painting_id):
         liked = Painting.dislike(painting_id)
         if liked:
             likes = Painting.get_likes(painting_id)
-            return jsonify({"success": True, "likes": likes[0]})
+            return jsonify({"success": True, "likes": likes[0]}), 201
         else:
-            return jsonify(
-                {
-                    "success": False,
-                }
+            return (
+                jsonify(
+                    {
+                        "success": False,
+                    }
+                ),
+                500,
             )
     except (
         ConnectionAbortedError,
@@ -209,7 +221,7 @@ def dislike(painting_id):
         ConnectionResetError,
         ConnectionError,
     ):
-        return jsonify({"success": False, "message": "Connection error"})
+        return jsonify({"success": False, "message": "Connection error"}), 500
     except Exception as error:
         current_app.logger.error(str(error))
-        return jsonify({"success": False, "message": "uncaught error"})
+        return jsonify({"success": False, "message": "uncaught error"}), 500

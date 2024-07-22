@@ -102,7 +102,7 @@ def save_exhibition_banner_file(image_file, image_owner):
         )
     )
     image_url = cloudinary.CloudinaryImage(PUBLIC_ID).build_url()
-    # upload_thread.start()
+    upload_thread.start()
     return image_url
 
 

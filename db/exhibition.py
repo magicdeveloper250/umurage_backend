@@ -20,7 +20,7 @@ def add_new_exhibition(exhibition: ExhibitionBase):
                 sql.Literal(exhibition.get_banner()),
             )
             cursor.execute(query)
-            new_exhibition = ExhibitionBase(*cursor.fetchall()[0]).dict()
+            new_exhibition = ExhibitionBase(*cursor.fetchall()[0])
             cursor.execute("COMMIT")
             stmt = "INSERT INTO our_exhibitions (e_id,e_name, e_start_date, e_end_date, e_host, e_entrace_fees, e_banner) "
             stmt += "VALUES ({0},{1},{2},{3},{4},{5},{6}) "
@@ -35,7 +35,7 @@ def add_new_exhibition(exhibition: ExhibitionBase):
             )
             cursor.execute(query)
             cursor.execute("COMMIT")
-            return list(new_exhibition)
+            return list(new_exhibition.dict())
 
 
 def update_exhibition(exhibition: ExhibitionBase, id):

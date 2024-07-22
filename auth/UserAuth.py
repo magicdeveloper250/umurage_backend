@@ -1,4 +1,4 @@
-from flask import abort, request, redirect, Blueprint, jsonify
+from flask import abort, request, redirect, Blueprint, jsonify, make_response
 from jwt.exceptions import ExpiredSignatureError, PyJWTError
 from oauthlib.oauth2 import WebApplicationClient
 from db.painter import get_painter_by_email
@@ -16,6 +16,8 @@ from . import (
     GOOGLE_CLIENT_SECRET,
     GOOGLE_DISCOVERY_URL,
     SESSION_KEY,
+    TOKEN_KEY,
+    REFRESH_KEY,
     GOOGLE_REDIRECT_URL,
     SESSION_TIME,
 )
@@ -23,6 +25,7 @@ from flask_login import (
     login_required,
     logout_user,
 )
+import os
 
 auth = Blueprint(name="UserAuth", import_name="auth")
 client = WebApplicationClient(GOOGLE_CLIENT_ID)
@@ -120,25 +123,53 @@ def logout():
 """CUSTOM LOGIN SYSTEM"""
 
 
+def generate_access_token(payload):
+    payload["exp"] = datetime.datetime.utcnow() + datetime.timedelta(
+        minutes=SESSION_TIME
+    )
+    token = jwt.encode(
+        payload,
+        TOKEN_KEY,
+        algorithm="HS256",
+    )
+    return token
+
+
+def generate_refresh_token(payload):
+    payload["exp"] = datetime.datetime.utcnow() + datetime.timedelta(days=1)
+    token = jwt.encode(
+        payload,
+        REFRESH_KEY,
+        algorithm="HS256",
+    )
+    return token
+
+
 @auth.route("/custom-login", methods=["POST"])
 def custom_login():
     username = request.form.get("username")
     password = request.form.get("password")
     error = None
-    authorization_key = None
+    token = None
     if username and password:
         user = User.getByUsername(username)
         try:
             if not user:
-                return jsonify(
-                    {"success": False, "message": "username or password incorrect"}
+                return (
+                    jsonify(
+                        {"success": False, "message": "username or password incorrect"}
+                    ),
+                    401,
                 )
             if bcrypt.checkpw(password.encode(), user.password.encode()) == False:
-                return jsonify(
-                    {"success": False, "message": "username or password incorrect"}
+                return (
+                    jsonify(
+                        {"success": False, "message": "username or password incorrect"}
+                    ),
+                    401,
                 )
             else:
-                authorization_key = jwt.encode(
+                token = generate_access_token(
                     {
                         "user": user.username,
                         "role": user.role,
@@ -147,28 +178,68 @@ def custom_login():
                         "email": user.email,
                         "fullname": user.fullname,
                         "id": cryptocode.encrypt(user.id, SESSION_KEY),
-                        "exp": datetime.datetime.utcnow()
-                        + datetime.timedelta(minutes=SESSION_TIME),
-                    },
-                    SESSION_KEY,
-                )
-                return jsonify(
-                    {
-                        "success": True,
-                        "token": authorization_key,
                     }
                 )
+                refresh_token = generate_refresh_token(
+                    {
+                        "user": user.username,
+                    }
+                )
+                response = make_response(jsonify({"success": True, "token": token}))
+                response.set_cookie(
+                    "refresh_token",
+                    refresh_token,
+                    max_age=24 * 60 * 60 * 1000,
+                    samesite="lax",
+                    secure=False,
+                    httponly=True,  # Set max_age in seconds (1 day here)
+                )
+                return response
 
         except Exception as error:
             current_app.logger.warning(
                 f"login attempt failed with this error {str(error)}"
             )
-            return jsonify({"success": False, "message": "uncaught error, try again"})
+            return (
+                jsonify({"success": False, "message": "uncaught error, try again"}),
+                401,
+            )
     else:
         current_app.logger.warning(
             f"login attempt failed with this error: no username and password provided"
         )
-        return jsonify({"success": False, "message": "username or password incorrect"})
+        return (
+            jsonify({"success": False, "message": "username or password incorrect"}),
+            401,
+        )
+
+
+@auth.route("/refresh", methods=["GET"])
+def refresh_token():
+    refresh_token = request.cookies.get("refresh_token")
+    if refresh_token:
+        payload = jwt.decode(
+            refresh_token,
+            REFRESH_KEY,
+            algorithms=["HS256"],
+        )
+
+        if user := User.getByUsername(payload.get("user")):
+            token = generate_access_token(
+                {
+                    "user": user.username,
+                    "role": user.role,
+                    "phone": user.phone,
+                    "picture": user.picture,
+                    "email": user.email,
+                    "fullname": user.fullname,
+                    "id": cryptocode.encrypt(user.id, SESSION_KEY),
+                }
+            )
+            return jsonify({"success": True, "token": token}), 200
+        else:
+            return jsonify({"success": False, "message": "Unauthorized"}), 401
+    return jsonify({"success": False, "message": "Unauthorized"}), 401
 
 
 def admin_required(f):
@@ -176,21 +247,24 @@ def admin_required(f):
     def decorated(*args, **kwargs):
         try:
             key_from_request = request.headers.get("Authorization").split(" ")[1]
-            payload = jwt.decode(key_from_request, SESSION_KEY, algorithms=["HS256"])
+            payload = jwt.decode(key_from_request, TOKEN_KEY, algorithms=["HS256"])
             if dict(payload).get("role") != "admin":
                 current_app.logger.warning(f"Action denied due to no admin privilege")
                 return abort(jsonify({"message": False, "unauthorized": True}))
         except ExpiredSignatureError:
-            return jsonify(
-                {"success": False, "message": "Your session expired. Login again"}
+            return (
+                jsonify(
+                    {"success": False, "message": "Your session expired. Login again"}
+                ),
+                403,
             )
         except PyJWTError:
-            return jsonify({"success": False, "message": "Unauthorized"})
+            return jsonify({"success": False, "message": "Unauthorized"}), 401
         except Exception as error:
             current_app.logger.warning(
                 f"Action denied due to no admin privilege with this error {error}"
             )
-            return abort(jsonify({"success": False, "message": "unKnown"}))
+            return jsonify({"success": False, "message": "unAuthorized"}), 401
         return f(*args, **kwargs)
 
     return decorated
@@ -204,19 +278,22 @@ def custom_login_required(f):
     def decorated(*args, **kwargs):
         try:
             key_from_request = request.headers.get("Authorization").split(" ")[1]
-            jwt.decode(key_from_request, SESSION_KEY, algorithms=["HS256"])
+            jwt.decode(key_from_request, TOKEN_KEY, algorithms=["HS256"])
 
         except ExpiredSignatureError:
-            return jsonify(
-                {"success": False, "message": "Your session expired. Login again"}
+            return (
+                jsonify(
+                    {"success": False, "message": "Your session expired. Login again"}
+                ),
+                403,
             )
         except PyJWTError:
-            return jsonify({"success": False, "message": "Unauthorized"})
+            return jsonify({"success": False, "message": "Unauthorized"}), 401
         except Exception as error:
             current_app.logger.warning(
                 f"Action denied due to no admin privilege with this error {str(error)}"
             )
-            return abort(jsonify({"success": False, "message": "unKnown"}))
+            return jsonify({"success": False, "message": str(error)}), 401
         return f(*args, **kwargs)
 
     return decorated
@@ -225,7 +302,7 @@ def custom_login_required(f):
 @auth.route("/api/authorize/<userId>", methods=["POST", "GET"])
 @admin_required
 def authorize_user(userId):
-    authorized = get_user(cryptocode.decrypt(userId, SESSION_KEY))
+    authorized = get_user(cryptocode.decrypt(userId, TOKEN_KEY))
     return jsonify({"message": True if authorized != None else False})
 
 
@@ -246,8 +323,9 @@ def payment_required(f):
                 )
                 return abort(
                     jsonify(
-                        {"message": False, "unauthorized": True},
-                    )
+                        {"message": False, "message": "Payment required"},
+                    ),
+                    402,
                 )
 
         except Exception as error:
@@ -255,9 +333,7 @@ def payment_required(f):
                 f"Unauthorized user tried to access protected asset which require payment with thiss error {error}"
             )
             return abort(
-                jsonify(
-                    {"message": False, "unauthorized": True},
-                )
+                jsonify({"message": False, "message": "payment required"}, 402)
             )
         return f(*args, **kwargs)
 
@@ -267,7 +343,7 @@ def payment_required(f):
 def user_or_admin_required():
     admin, user = (False, False)
     key_from_request = request.headers.get("Authorization").split(" ")[1]
-    payload = jwt.decode(key_from_request, SESSION_KEY, algorithms=["HS256"])
+    payload = jwt.decode(key_from_request, TOKEN_KEY, algorithms=["HS256"])
     if dict(payload).get("role") == "admin":
         admin = True
     elif dict(payload).get("role") == None:
@@ -276,7 +352,7 @@ def user_or_admin_required():
         current_app.logger.warning(
             f"Unauthorized user tried to access protected asset which requires registered user or admin"
         )
-        return abort(jsonify({"message": False, "unauthorized": True}))
+        return jsonify({"message": False, "message": "Unauthorized"}), 401
     return (user, admin)
 
 
@@ -296,21 +372,23 @@ def image_protected(f):
                 current_app.logger.warning(
                     f"Unauthorized user tried to access protected image which requires payment"
                 )
-                return abort(
+                return (
                     jsonify(
-                        {"message": False, "unauthorized": True},
-                    )
+                        {"message": False, "message": "Unauthorized"},
+                    ),
+                    402,
                 )
 
         except Exception as error:
             current_app.logger.warning(
                 f"Unauthorized user tried to access protected asset with this error {error}"
             )
-            return abort(
+            return (
                 jsonify(
-                    {"message": False, "unauthorized": True},
-                )
-            )
+                    {"message": False, "message": "Unauthorized"},
+                ),
+            ), 402
+
         return f(*args, **kwargs)
 
     return decorated

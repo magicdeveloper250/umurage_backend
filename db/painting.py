@@ -55,8 +55,8 @@ def delete_painting(painting_id):
             cursor.execute("SET search_path TO public")
             stmt = "BEGIN;"
             stmt += "DELETE FROM paintings "
-            stmt += "WHERE g_id={0} "
-            stmt + "COMMIT;"
+            stmt += "WHERE g_id={0}; "
+            stmt += "COMMIT;"
             query = sql.SQL(stmt).format(sql.Literal(painting_id))
             cursor.execute(query)
             return True
