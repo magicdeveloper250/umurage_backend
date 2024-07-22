@@ -6745,3 +6745,339 @@ server closed the connection unexpectedly
 2024-07-22 03:13:39,365 - INFO - 127.0.0.1 - - [22/Jul/2024 03:13:39] "POST /custom-login HTTP/1.1" 200 -
 2024-07-22 03:14:02,704 - INFO -  * Detected change in 'C:\\Users\\IMPANO\\Desktop\\painting_ecommerce_website\\backend\\db\\__init__.py', reloading
 2024-07-22 03:14:02,772 - INFO -  * Restarting with stat
+2024-07-22 03:54:00,906 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.211.145:5000
+2024-07-22 03:54:00,907 - INFO - [33mPress CTRL+C to quit[0m
+2024-07-22 03:54:00,911 - INFO -  * Restarting with stat
+2024-07-22 03:54:03,882 - WARNING -  * Debugger is active!
+2024-07-22 03:54:03,909 - INFO -  * Debugger PIN: 142-594-215
+2024-07-22 03:54:09,515 - INFO - 127.0.0.1 - - [22/Jul/2024 03:54:09] "OPTIONS /get_pending_exhibitions HTTP/1.1" 200 -
+2024-07-22 03:54:09,517 - INFO - 127.0.0.1 - - [22/Jul/2024 03:54:09] "OPTIONS /get_exhibitions HTTP/1.1" 200 -
+2024-07-22 03:54:10,834 - INFO - 127.0.0.1 - - [22/Jul/2024 03:54:10] "GET /get_paintings HTTP/1.1" 200 -
+2024-07-22 03:54:12,760 - INFO - 127.0.0.1 - - [22/Jul/2024 03:54:12] "GET /get_pending_exhibitions HTTP/1.1" 200 -
+2024-07-22 03:54:14,991 - INFO - 127.0.0.1 - - [22/Jul/2024 03:54:14] "GET /get_exhibitions HTTP/1.1" 200 -
+2024-07-22 03:54:15,000 - INFO - 127.0.0.1 - - [22/Jul/2024 03:54:15] "OPTIONS /get_exhibitions HTTP/1.1" 200 -
+2024-07-22 03:54:17,214 - INFO - 127.0.0.1 - - [22/Jul/2024 03:54:17] "GET /get_paintings HTTP/1.1" 200 -
+2024-07-22 03:54:20,112 - INFO - 127.0.0.1 - - [22/Jul/2024 03:54:20] "GET /get_pending_exhibitions HTTP/1.1" 200 -
+2024-07-22 03:54:23,594 - INFO - 127.0.0.1 - - [22/Jul/2024 03:54:23] "GET /get_exhibitions HTTP/1.1" 200 -
+2024-07-22 03:54:32,163 - INFO - 127.0.0.1 - - [22/Jul/2024 03:54:32] "[31m[1mPOST /custom-login HTTP/1.1[0m" 401 -
+2024-07-22 03:54:38,647 - INFO - 127.0.0.1 - - [22/Jul/2024 03:54:38] "POST /custom-login HTTP/1.1" 200 -
+2024-07-22 03:54:42,233 - INFO - 127.0.0.1 - - [22/Jul/2024 03:54:42] "OPTIONS /get_all_exhibition_paintings HTTP/1.1" 200 -
+2024-07-22 03:54:48,274 - INFO - 127.0.0.1 - - [22/Jul/2024 03:54:48] "GET /get_all_exhibition_paintings HTTP/1.1" 200 -
+2024-07-22 03:54:48,287 - INFO - 127.0.0.1 - - [22/Jul/2024 03:54:48] "OPTIONS /get_all_exhibition_paintings HTTP/1.1" 200 -
+2024-07-22 03:54:52,040 - INFO - 127.0.0.1 - - [22/Jul/2024 03:54:52] "GET /get_all_exhibition_paintings HTTP/1.1" 200 -
+2024-07-22 03:54:55,364 - INFO - 127.0.0.1 - - [22/Jul/2024 03:54:55] "OPTIONS /get_painters HTTP/1.1" 200 -
+2024-07-22 03:54:55,365 - INFO - 127.0.0.1 - - [22/Jul/2024 03:54:55] "OPTIONS /get_all_exhibitions HTTP/1.1" 200 -
+2024-07-22 03:55:00,768 - INFO - 127.0.0.1 - - [22/Jul/2024 03:55:00] "GET /get_painters HTTP/1.1" 200 -
+2024-07-22 03:55:00,789 - INFO - 127.0.0.1 - - [22/Jul/2024 03:55:00] "OPTIONS /get_painters HTTP/1.1" 200 -
+2024-07-22 03:55:03,336 - INFO - 127.0.0.1 - - [22/Jul/2024 03:55:03] "GET /get_all_exhibitions HTTP/1.1" 200 -
+2024-07-22 03:55:03,347 - INFO - 127.0.0.1 - - [22/Jul/2024 03:55:03] "OPTIONS /get_all_exhibitions HTTP/1.1" 200 -
+2024-07-22 03:55:05,580 - INFO - 127.0.0.1 - - [22/Jul/2024 03:55:05] "GET /get_painters HTTP/1.1" 200 -
+2024-07-22 03:55:08,446 - INFO - 127.0.0.1 - - [22/Jul/2024 03:55:08] "GET /get_all_exhibitions HTTP/1.1" 200 -
+2024-07-22 03:55:38,941 - INFO - 127.0.0.1 - - [22/Jul/2024 03:55:38] "OPTIONS /add_exhibition_painting HTTP/1.1" 200 -
+2024-07-22 03:55:39,365 - DEBUG - Starting new HTTPS connection (1): api.cloudinary.com:443
+2024-07-22 03:55:39,369 - DEBUG - Starting new HTTPS connection (2): api.cloudinary.com:443
+2024-07-22 03:55:43,309 - INFO - 127.0.0.1 - - [22/Jul/2024 03:55:43] "[35m[1mPOST /add_exhibition_painting HTTP/1.1[0m" 201 -
+2024-07-22 03:55:47,144 - DEBUG - https://api.cloudinary.com:443 "POST /v1_1/dqlv0vkoe/image/upload HTTP/1.1" 200 None
+2024-07-22 03:56:03,718 - DEBUG - https://api.cloudinary.com:443 "POST /v1_1/dqlv0vkoe/video/upload HTTP/1.1" 200 None
+2024-07-22 03:56:03,720 - WARNING - Connection pool is full, discarding connection: api.cloudinary.com. Connection pool size: 1
+2024-07-22 04:03:13,447 - INFO - 127.0.0.1 - - [22/Jul/2024 04:03:13] "OPTIONS /get_exhibitions HTTP/1.1" 200 -
+2024-07-22 04:03:13,448 - INFO - 127.0.0.1 - - [22/Jul/2024 04:03:13] "OPTIONS /get_pending_exhibitions HTTP/1.1" 200 -
+2024-07-22 04:03:16,382 - INFO - 127.0.0.1 - - [22/Jul/2024 04:03:16] "GET /get_paintings HTTP/1.1" 200 -
+2024-07-22 04:03:18,314 - INFO - 127.0.0.1 - - [22/Jul/2024 04:03:18] "GET /get_exhibitions HTTP/1.1" 200 -
+2024-07-22 04:03:20,584 - INFO - 127.0.0.1 - - [22/Jul/2024 04:03:20] "GET /get_pending_exhibitions HTTP/1.1" 200 -
+2024-07-22 04:03:20,596 - INFO - 127.0.0.1 - - [22/Jul/2024 04:03:20] "OPTIONS /get_pending_exhibitions HTTP/1.1" 200 -
+2024-07-22 04:03:20,852 - INFO - 127.0.0.1 - - [22/Jul/2024 04:03:20] "OPTIONS /get_painters HTTP/1.1" 200 -
+2024-07-22 04:03:20,853 - INFO - 127.0.0.1 - - [22/Jul/2024 04:03:20] "OPTIONS /get_all_exhibitions HTTP/1.1" 200 -
+2024-07-22 04:03:20,854 - INFO - 127.0.0.1 - - [22/Jul/2024 04:03:20] "OPTIONS /get_all_exhibition_paintings HTTP/1.1" 200 -
+2024-07-22 04:03:24,062 - INFO - 127.0.0.1 - - [22/Jul/2024 04:03:24] "GET /get_paintings HTTP/1.1" 200 -
+2024-07-22 04:03:26,979 - INFO - 127.0.0.1 - - [22/Jul/2024 04:03:26] "GET /get_exhibitions HTTP/1.1" 200 -
+2024-07-22 04:03:29,900 - INFO - 127.0.0.1 - - [22/Jul/2024 04:03:29] "GET /get_pending_exhibitions HTTP/1.1" 200 -
+2024-07-22 04:03:32,460 - INFO - 127.0.0.1 - - [22/Jul/2024 04:03:32] "GET /get_painters HTTP/1.1" 200 -
+2024-07-22 04:03:32,469 - INFO - 127.0.0.1 - - [22/Jul/2024 04:03:32] "OPTIONS /get_painters HTTP/1.1" 200 -
+2024-07-22 04:03:35,329 - INFO - 127.0.0.1 - - [22/Jul/2024 04:03:35] "GET /get_all_exhibitions HTTP/1.1" 200 -
+2024-07-22 04:03:35,346 - INFO - 127.0.0.1 - - [22/Jul/2024 04:03:35] "OPTIONS /get_all_exhibitions HTTP/1.1" 200 -
+2024-07-22 04:03:37,889 - INFO - 127.0.0.1 - - [22/Jul/2024 04:03:37] "GET /get_all_exhibition_paintings HTTP/1.1" 200 -
+2024-07-22 04:03:37,907 - INFO - 127.0.0.1 - - [22/Jul/2024 04:03:37] "OPTIONS /get_all_exhibition_paintings HTTP/1.1" 200 -
+2024-07-22 04:03:40,082 - INFO - 127.0.0.1 - - [22/Jul/2024 04:03:40] "GET /get_painters HTTP/1.1" 200 -
+2024-07-22 04:03:42,290 - INFO - 127.0.0.1 - - [22/Jul/2024 04:03:42] "GET /get_all_exhibitions HTTP/1.1" 200 -
+2024-07-22 04:03:45,840 - INFO - 127.0.0.1 - - [22/Jul/2024 04:03:45] "GET /get_all_exhibition_paintings HTTP/1.1" 200 -
+2024-07-22 04:04:29,272 - INFO - 127.0.0.1 - - [22/Jul/2024 04:04:29] "OPTIONS /delete_exhibition_painting/06f8dc49-0c02-47a7-a2b4-9e118a23f2cc HTTP/1.1" 200 -
+2024-07-22 04:04:33,492 - INFO - 127.0.0.1 - - [22/Jul/2024 04:04:33] "[35m[1mDELETE /delete_exhibition_painting/06f8dc49-0c02-47a7-a2b4-9e118a23f2cc HTTP/1.1[0m" 204 -
+2024-07-22 04:05:51,468 - INFO - 127.0.0.1 - - [22/Jul/2024 04:05:51] "OPTIONS /delete_exhibition_painting/06f8dc49-0c02-47a7-a2b4-9e118a23f2cc HTTP/1.1" 200 -
+2024-07-22 04:05:56,742 - INFO - 127.0.0.1 - - [22/Jul/2024 04:05:56] "[35m[1mDELETE /delete_exhibition_painting/06f8dc49-0c02-47a7-a2b4-9e118a23f2cc HTTP/1.1[0m" 204 -
+2024-07-22 04:06:43,102 - INFO - 127.0.0.1 - - [22/Jul/2024 04:06:43] "OPTIONS /get_all_exhibition_paintings HTTP/1.1" 200 -
+2024-07-22 04:06:43,105 - INFO - 127.0.0.1 - - [22/Jul/2024 04:06:43] "OPTIONS /get_exhibitions HTTP/1.1" 200 -
+2024-07-22 04:06:43,108 - INFO - 127.0.0.1 - - [22/Jul/2024 04:06:43] "OPTIONS /get_pending_exhibitions HTTP/1.1" 200 -
+2024-07-22 04:06:47,941 - INFO - 127.0.0.1 - - [22/Jul/2024 04:06:47] "GET /get_paintings HTTP/1.1" 200 -
+2024-07-22 04:06:51,238 - INFO - 127.0.0.1 - - [22/Jul/2024 04:06:51] "GET /get_all_exhibition_paintings HTTP/1.1" 200 -
+2024-07-22 04:06:54,766 - INFO - 127.0.0.1 - - [22/Jul/2024 04:06:54] "GET /get_exhibitions HTTP/1.1" 200 -
+2024-07-22 04:06:58,179 - INFO - 127.0.0.1 - - [22/Jul/2024 04:06:58] "GET /get_pending_exhibitions HTTP/1.1" 200 -
+2024-07-22 04:07:02,903 - INFO - 127.0.0.1 - - [22/Jul/2024 04:07:02] "OPTIONS /delete_exhibition_painting/77542170-0606-4f2e-878f-059abee8d84e HTTP/1.1" 200 -
+2024-07-22 04:07:07,908 - INFO - 127.0.0.1 - - [22/Jul/2024 04:07:07] "[35m[1mDELETE /delete_exhibition_painting/77542170-0606-4f2e-878f-059abee8d84e HTTP/1.1[0m" 204 -
+2024-07-22 04:07:22,970 - INFO - 127.0.0.1 - - [22/Jul/2024 04:07:22] "OPTIONS /get_pending_exhibitions HTTP/1.1" 200 -
+2024-07-22 04:07:22,971 - INFO - 127.0.0.1 - - [22/Jul/2024 04:07:22] "OPTIONS /get_all_exhibition_paintings HTTP/1.1" 200 -
+2024-07-22 04:07:22,972 - INFO - 127.0.0.1 - - [22/Jul/2024 04:07:22] "OPTIONS /get_exhibitions HTTP/1.1" 200 -
+2024-07-22 04:07:27,367 - INFO - 127.0.0.1 - - [22/Jul/2024 04:07:27] "GET /get_paintings HTTP/1.1" 200 -
+2024-07-22 04:07:30,849 - INFO - 127.0.0.1 - - [22/Jul/2024 04:07:30] "GET /get_pending_exhibitions HTTP/1.1" 200 -
+2024-07-22 04:07:33,717 - INFO - 127.0.0.1 - - [22/Jul/2024 04:07:33] "GET /get_all_exhibition_paintings HTTP/1.1" 200 -
+2024-07-22 04:07:36,585 - INFO - 127.0.0.1 - - [22/Jul/2024 04:07:36] "GET /get_exhibitions HTTP/1.1" 200 -
+2024-07-22 04:07:47,888 - INFO - 127.0.0.1 - - [22/Jul/2024 04:07:47] "OPTIONS /get_all_exhibition_paintings HTTP/1.1" 200 -
+2024-07-22 04:07:53,579 - INFO - 127.0.0.1 - - [22/Jul/2024 04:07:53] "GET /get_all_exhibition_paintings HTTP/1.1" 200 -
+2024-07-22 04:09:24,113 - INFO - 127.0.0.1 - - [22/Jul/2024 04:09:24] "OPTIONS /get_painters HTTP/1.1" 200 -
+2024-07-22 04:09:24,115 - INFO - 127.0.0.1 - - [22/Jul/2024 04:09:24] "OPTIONS /get_all_exhibitions HTTP/1.1" 200 -
+2024-07-22 04:09:28,677 - INFO - 127.0.0.1 - - [22/Jul/2024 04:09:28] "GET /get_painters HTTP/1.1" 200 -
+2024-07-22 04:09:30,856 - INFO - 127.0.0.1 - - [22/Jul/2024 04:09:30] "GET /get_all_exhibitions HTTP/1.1" 200 -
+2024-07-22 04:09:30,868 - INFO - 127.0.0.1 - - [22/Jul/2024 04:09:30] "OPTIONS /get_all_exhibitions HTTP/1.1" 200 -
+2024-07-22 04:09:34,037 - INFO - 127.0.0.1 - - [22/Jul/2024 04:09:34] "GET /get_painters HTTP/1.1" 200 -
+2024-07-22 04:09:36,625 - INFO - 127.0.0.1 - - [22/Jul/2024 04:09:36] "GET /get_all_exhibitions HTTP/1.1" 200 -
+2024-07-22 04:10:22,614 - INFO - 127.0.0.1 - - [22/Jul/2024 04:10:22] "OPTIONS /add_exhibition_painting HTTP/1.1" 200 -
+2024-07-22 04:10:22,681 - DEBUG - Resetting dropped connection: api.cloudinary.com
+2024-07-22 04:10:22,726 - DEBUG - Starting new HTTPS connection (3): api.cloudinary.com:443
+2024-07-22 04:10:25,894 - INFO - 127.0.0.1 - - [22/Jul/2024 04:10:25] "[35m[1mPOST /add_exhibition_painting HTTP/1.1[0m" 201 -
+2024-07-22 04:10:28,850 - DEBUG - https://api.cloudinary.com:443 "POST /v1_1/dqlv0vkoe/image/upload HTTP/1.1" 200 None
+2024-07-22 04:10:40,915 - DEBUG - https://api.cloudinary.com:443 "POST /v1_1/dqlv0vkoe/video/upload HTTP/1.1" 200 None
+2024-07-22 04:10:40,920 - WARNING - Connection pool is full, discarding connection: api.cloudinary.com. Connection pool size: 1
+2024-07-22 04:10:59,797 - INFO - 127.0.0.1 - - [22/Jul/2024 04:10:59] "OPTIONS /get_pending_exhibitions HTTP/1.1" 200 -
+2024-07-22 04:10:59,798 - INFO - 127.0.0.1 - - [22/Jul/2024 04:10:59] "OPTIONS /get_exhibitions HTTP/1.1" 200 -
+2024-07-22 04:11:03,023 - INFO - 127.0.0.1 - - [22/Jul/2024 04:11:03] "GET /get_paintings HTTP/1.1" 200 -
+2024-07-22 04:11:05,258 - INFO - 127.0.0.1 - - [22/Jul/2024 04:11:05] "GET /get_pending_exhibitions HTTP/1.1" 200 -
+2024-07-22 04:11:05,266 - INFO - 127.0.0.1 - - [22/Jul/2024 04:11:05] "OPTIONS /get_pending_exhibitions HTTP/1.1" 200 -
+2024-07-22 04:11:08,141 - INFO - 127.0.0.1 - - [22/Jul/2024 04:11:08] "GET /get_exhibitions HTTP/1.1" 200 -
+2024-07-22 04:11:08,152 - INFO - 127.0.0.1 - - [22/Jul/2024 04:11:08] "OPTIONS /get_exhibitions HTTP/1.1" 200 -
+2024-07-22 04:11:08,424 - INFO - 127.0.0.1 - - [22/Jul/2024 04:11:08] "OPTIONS /get_painters HTTP/1.1" 200 -
+2024-07-22 04:11:08,425 - INFO - 127.0.0.1 - - [22/Jul/2024 04:11:08] "OPTIONS /get_all_exhibitions HTTP/1.1" 200 -
+2024-07-22 04:11:08,425 - INFO - 127.0.0.1 - - [22/Jul/2024 04:11:08] "OPTIONS /get_all_exhibition_paintings HTTP/1.1" 200 -
+2024-07-22 04:11:10,841 - INFO - 127.0.0.1 - - [22/Jul/2024 04:11:10] "GET /get_paintings HTTP/1.1" 200 -
+2024-07-22 04:11:13,260 - INFO - 127.0.0.1 - - [22/Jul/2024 04:11:13] "GET /get_pending_exhibitions HTTP/1.1" 200 -
+2024-07-22 04:11:15,822 - INFO - 127.0.0.1 - - [22/Jul/2024 04:11:15] "GET /get_exhibitions HTTP/1.1" 200 -
+2024-07-22 04:11:18,077 - INFO - 127.0.0.1 - - [22/Jul/2024 04:11:18] "GET /get_painters HTTP/1.1" 200 -
+2024-07-22 04:11:18,092 - INFO - 127.0.0.1 - - [22/Jul/2024 04:11:18] "OPTIONS /get_painters HTTP/1.1" 200 -
+2024-07-22 04:11:20,227 - INFO - 127.0.0.1 - - [22/Jul/2024 04:11:20] "GET /get_all_exhibitions HTTP/1.1" 200 -
+2024-07-22 04:11:20,246 - INFO - 127.0.0.1 - - [22/Jul/2024 04:11:20] "OPTIONS /get_all_exhibitions HTTP/1.1" 200 -
+2024-07-22 04:11:22,886 - INFO - 127.0.0.1 - - [22/Jul/2024 04:11:22] "GET /get_all_exhibition_paintings HTTP/1.1" 200 -
+2024-07-22 04:11:22,902 - INFO - 127.0.0.1 - - [22/Jul/2024 04:11:22] "OPTIONS /get_all_exhibition_paintings HTTP/1.1" 200 -
+2024-07-22 04:11:25,140 - INFO - 127.0.0.1 - - [22/Jul/2024 04:11:25] "GET /get_painters HTTP/1.1" 200 -
+2024-07-22 04:11:27,955 - INFO - 127.0.0.1 - - [22/Jul/2024 04:11:27] "GET /get_all_exhibitions HTTP/1.1" 200 -
+2024-07-22 04:11:30,259 - INFO - 127.0.0.1 - - [22/Jul/2024 04:11:30] "GET /get_all_exhibition_paintings HTTP/1.1" 200 -
+2024-07-22 04:12:29,795 - INFO - 127.0.0.1 - - [22/Jul/2024 04:12:29] "OPTIONS /get_customers HTTP/1.1" 200 -
+2024-07-22 04:12:34,873 - INFO - 127.0.0.1 - - [22/Jul/2024 04:12:34] "GET /get_customers HTTP/1.1" 200 -
+2024-07-22 04:12:34,879 - INFO - 127.0.0.1 - - [22/Jul/2024 04:12:34] "OPTIONS /get_customers HTTP/1.1" 200 -
+2024-07-22 04:12:40,308 - INFO - 127.0.0.1 - - [22/Jul/2024 04:12:40] "GET /get_customers HTTP/1.1" 200 -
+2024-07-22 04:12:48,283 - INFO - 127.0.0.1 - - [22/Jul/2024 04:12:48] "OPTIONS /get_pending_exhibitions HTTP/1.1" 200 -
+2024-07-22 04:12:48,284 - INFO - 127.0.0.1 - - [22/Jul/2024 04:12:48] "OPTIONS /get_exhibitions HTTP/1.1" 200 -
+2024-07-22 04:12:52,370 - INFO - 127.0.0.1 - - [22/Jul/2024 04:12:52] "GET /get_paintings HTTP/1.1" 200 -
+2024-07-22 04:12:55,659 - INFO - 127.0.0.1 - - [22/Jul/2024 04:12:55] "GET /get_pending_exhibitions HTTP/1.1" 200 -
+2024-07-22 04:12:55,666 - INFO - 127.0.0.1 - - [22/Jul/2024 04:12:55] "OPTIONS /get_pending_exhibitions HTTP/1.1" 200 -
+2024-07-22 04:12:58,838 - INFO - 127.0.0.1 - - [22/Jul/2024 04:12:58] "GET /get_exhibitions HTTP/1.1" 200 -
+2024-07-22 04:12:58,851 - INFO - 127.0.0.1 - - [22/Jul/2024 04:12:58] "OPTIONS /get_exhibitions HTTP/1.1" 200 -
+2024-07-22 04:13:01,960 - INFO - 127.0.0.1 - - [22/Jul/2024 04:13:01] "GET /get_paintings HTTP/1.1" 200 -
+2024-07-22 04:13:04,875 - INFO - 127.0.0.1 - - [22/Jul/2024 04:13:04] "GET /get_pending_exhibitions HTTP/1.1" 200 -
+2024-07-22 04:13:08,051 - INFO - 127.0.0.1 - - [22/Jul/2024 04:13:08] "GET /get_exhibitions HTTP/1.1" 200 -
+2024-07-22 04:13:38,475 - INFO - 127.0.0.1 - - [22/Jul/2024 04:13:38] "[35m[1mPOST /add_customer HTTP/1.1[0m" 201 -
+2024-07-22 04:14:29,868 - INFO - 127.0.0.1 - - [22/Jul/2024 04:14:29] "OPTIONS /get_pending_exhibitions HTTP/1.1" 200 -
+2024-07-22 04:14:29,869 - INFO - 127.0.0.1 - - [22/Jul/2024 04:14:29] "OPTIONS /get_exhibitions HTTP/1.1" 200 -
+2024-07-22 04:14:33,528 - INFO - 127.0.0.1 - - [22/Jul/2024 04:14:33] "GET /get_paintings HTTP/1.1" 200 -
+2024-07-22 04:14:36,117 - INFO - 127.0.0.1 - - [22/Jul/2024 04:14:36] "GET /get_pending_exhibitions HTTP/1.1" 200 -
+2024-07-22 04:14:36,131 - INFO - 127.0.0.1 - - [22/Jul/2024 04:14:36] "OPTIONS /get_pending_exhibitions HTTP/1.1" 200 -
+2024-07-22 04:14:39,243 - INFO - 127.0.0.1 - - [22/Jul/2024 04:14:39] "GET /get_exhibitions HTTP/1.1" 200 -
+2024-07-22 04:14:39,258 - INFO - 127.0.0.1 - - [22/Jul/2024 04:14:39] "OPTIONS /get_exhibitions HTTP/1.1" 200 -
+2024-07-22 04:14:39,470 - INFO - 127.0.0.1 - - [22/Jul/2024 04:14:39] "OPTIONS /get_customers HTTP/1.1" 200 -
+2024-07-22 04:14:42,466 - INFO - 127.0.0.1 - - [22/Jul/2024 04:14:42] "GET /get_paintings HTTP/1.1" 200 -
+2024-07-22 04:14:45,436 - INFO - 127.0.0.1 - - [22/Jul/2024 04:14:45] "GET /get_pending_exhibitions HTTP/1.1" 200 -
+2024-07-22 04:14:47,949 - INFO - 127.0.0.1 - - [22/Jul/2024 04:14:47] "GET /get_exhibitions HTTP/1.1" 200 -
+2024-07-22 04:14:51,168 - INFO - 127.0.0.1 - - [22/Jul/2024 04:14:51] "GET /get_customers HTTP/1.1" 200 -
+2024-07-22 04:14:51,184 - INFO - 127.0.0.1 - - [22/Jul/2024 04:14:51] "OPTIONS /get_customers HTTP/1.1" 200 -
+2024-07-22 04:14:56,594 - INFO - 127.0.0.1 - - [22/Jul/2024 04:14:56] "GET /get_customers HTTP/1.1" 200 -
+2024-07-22 04:14:59,080 - INFO - 127.0.0.1 - - [22/Jul/2024 04:14:59] "OPTIONS /update_customer_status HTTP/1.1" 200 -
+2024-07-22 04:15:04,583 - INFO - 127.0.0.1 - - [22/Jul/2024 04:15:04] "[35m[1mPOST /update_customer_status HTTP/1.1[0m" 201 -
+2024-07-22 04:15:26,928 - INFO - 127.0.0.1 - - [22/Jul/2024 04:15:26] "POST /check_payment HTTP/1.1" 200 -
+2024-07-22 04:15:27,030 - INFO - 127.0.0.1 - - [22/Jul/2024 04:15:27] "OPTIONS /get_exhibition_paintings/db0238fc-3d35-4cac-bbbc-57d6a6cf7c59 HTTP/1.1" 200 -
+2024-07-22 04:15:37,247 - INFO - 127.0.0.1 - - [22/Jul/2024 04:15:37] "GET /get_exhibition_paintings/db0238fc-3d35-4cac-bbbc-57d6a6cf7c59 HTTP/1.1" 200 -
+2024-07-22 04:15:37,257 - INFO - 127.0.0.1 - - [22/Jul/2024 04:15:37] "OPTIONS /get_exhibition_paintings/db0238fc-3d35-4cac-bbbc-57d6a6cf7c59 HTTP/1.1" 200 -
+2024-07-22 04:15:43,051 - INFO - 127.0.0.1 - - [22/Jul/2024 04:15:43] "OPTIONS /get_pending_exhibitions HTTP/1.1" 200 -
+2024-07-22 04:15:43,052 - INFO - 127.0.0.1 - - [22/Jul/2024 04:15:43] "OPTIONS /get_exhibitions HTTP/1.1" 200 -
+2024-07-22 04:15:45,497 - INFO - 127.0.0.1 - - [22/Jul/2024 04:15:45] "GET /get_exhibition_paintings/db0238fc-3d35-4cac-bbbc-57d6a6cf7c59 HTTP/1.1" 200 -
+2024-07-22 04:15:48,718 - INFO - 127.0.0.1 - - [22/Jul/2024 04:15:48] "GET /get_paintings HTTP/1.1" 200 -
+2024-07-22 04:15:51,587 - INFO - 127.0.0.1 - - [22/Jul/2024 04:15:51] "GET /get_pending_exhibitions HTTP/1.1" 200 -
+2024-07-22 04:15:51,600 - INFO - 127.0.0.1 - - [22/Jul/2024 04:15:51] "OPTIONS /get_pending_exhibitions HTTP/1.1" 200 -
+2024-07-22 04:15:54,854 - INFO - 127.0.0.1 - - [22/Jul/2024 04:15:54] "GET /get_exhibitions HTTP/1.1" 200 -
+2024-07-22 04:15:54,867 - INFO - 127.0.0.1 - - [22/Jul/2024 04:15:54] "OPTIONS /get_exhibitions HTTP/1.1" 200 -
+2024-07-22 04:15:57,642 - INFO - 127.0.0.1 - - [22/Jul/2024 04:15:57] "GET /get_paintings HTTP/1.1" 200 -
+2024-07-22 04:16:00,699 - INFO - 127.0.0.1 - - [22/Jul/2024 04:16:00] "GET /get_pending_exhibitions HTTP/1.1" 200 -
+2024-07-22 04:16:04,077 - INFO - 127.0.0.1 - - [22/Jul/2024 04:16:04] "GET /get_exhibitions HTTP/1.1" 200 -
+2024-07-22 04:24:58,034 - INFO - 127.0.0.1 - - [22/Jul/2024 04:24:58] "OPTIONS /get_exhibition_paintings/db0238fc-3d35-4cac-bbbc-57d6a6cf7c59 HTTP/1.1" 200 -
+2024-07-22 04:24:58,061 - WARNING - Unauthorized user tried to access protected asset which require payment with thiss error could not translate host name "dpg-cqcfpmd6l47c73d3mbf0-a.oregon-postgres.render.com" to address: No such host is known. 
+
+2024-07-22 04:24:58,067 - INFO - 127.0.0.1 - - [22/Jul/2024 04:24:58] "GET /get_exhibition_paintings/db0238fc-3d35-4cac-bbbc-57d6a6cf7c59 HTTP/1.1" 200 -
+2024-07-22 04:24:58,081 - WARNING - Unauthorized user tried to access protected asset which require payment with thiss error could not translate host name "dpg-cqcfpmd6l47c73d3mbf0-a.oregon-postgres.render.com" to address: No such host is known. 
+
+2024-07-22 04:24:58,082 - INFO - 127.0.0.1 - - [22/Jul/2024 04:24:58] "GET /get_exhibition_paintings/db0238fc-3d35-4cac-bbbc-57d6a6cf7c59 HTTP/1.1" 200 -
+2024-07-22 04:25:04,626 - INFO - 127.0.0.1 - - [22/Jul/2024 04:25:04] "OPTIONS /get_pending_exhibitions HTTP/1.1" 200 -
+2024-07-22 04:25:04,627 - INFO - 127.0.0.1 - - [22/Jul/2024 04:25:04] "OPTIONS /get_exhibitions HTTP/1.1" 200 -
+2024-07-22 04:25:04,627 - ERROR - could not translate host name "dpg-cqcfpmd6l47c73d3mbf0-a.oregon-postgres.render.com" to address: No such host is known. 
+
+2024-07-22 04:25:04,637 - ERROR - could not translate host name "dpg-cqcfpmd6l47c73d3mbf0-a.oregon-postgres.render.com" to address: No such host is known. 
+
+2024-07-22 04:25:04,638 - INFO - 127.0.0.1 - - [22/Jul/2024 04:25:04] "[35m[1mGET /get_pending_exhibitions HTTP/1.1[0m" 500 -
+2024-07-22 04:25:04,640 - ERROR - could not translate host name "dpg-cqcfpmd6l47c73d3mbf0-a.oregon-postgres.render.com" to address: No such host is known. 
+
+2024-07-22 04:25:04,641 - INFO - 127.0.0.1 - - [22/Jul/2024 04:25:04] "[35m[1mGET /get_exhibitions HTTP/1.1[0m" 500 -
+2024-07-22 04:25:04,650 - ERROR - could not translate host name "dpg-cqcfpmd6l47c73d3mbf0-a.oregon-postgres.render.com" to address: No such host is known. 
+
+2024-07-22 04:25:04,650 - INFO - 127.0.0.1 - - [22/Jul/2024 04:25:04] "[35m[1mGET /get_pending_exhibitions HTTP/1.1[0m" 500 -
+2024-07-22 04:25:04,651 - INFO - 127.0.0.1 - - [22/Jul/2024 04:25:04] "GET /get_paintings HTTP/1.1" 200 -
+2024-07-22 04:25:04,656 - ERROR - could not translate host name "dpg-cqcfpmd6l47c73d3mbf0-a.oregon-postgres.render.com" to address: No such host is known. 
+
+2024-07-22 04:25:04,657 - INFO - 127.0.0.1 - - [22/Jul/2024 04:25:04] "[35m[1mGET /get_exhibitions HTTP/1.1[0m" 500 -
+2024-07-22 04:25:04,659 - ERROR - could not translate host name "dpg-cqcfpmd6l47c73d3mbf0-a.oregon-postgres.render.com" to address: No such host is known. 
+
+2024-07-22 04:25:04,662 - INFO - 127.0.0.1 - - [22/Jul/2024 04:25:04] "GET /get_paintings HTTP/1.1" 200 -
+2024-07-22 04:25:05,006 - INFO - 127.0.0.1 - - [22/Jul/2024 04:25:05] "OPTIONS /get_exhibition_paintings/db0238fc-3d35-4cac-bbbc-57d6a6cf7c59 HTTP/1.1" 200 -
+2024-07-22 04:25:05,015 - WARNING - Unauthorized user tried to access protected asset which require payment with thiss error could not translate host name "dpg-cqcfpmd6l47c73d3mbf0-a.oregon-postgres.render.com" to address: No such host is known. 
+
+2024-07-22 04:25:05,015 - INFO - 127.0.0.1 - - [22/Jul/2024 04:25:05] "GET /get_exhibition_paintings/db0238fc-3d35-4cac-bbbc-57d6a6cf7c59 HTTP/1.1" 200 -
+2024-07-22 04:25:05,020 - WARNING - Unauthorized user tried to access protected asset which require payment with thiss error could not translate host name "dpg-cqcfpmd6l47c73d3mbf0-a.oregon-postgres.render.com" to address: No such host is known. 
+
+2024-07-22 04:25:05,021 - INFO - 127.0.0.1 - - [22/Jul/2024 04:25:05] "GET /get_exhibition_paintings/db0238fc-3d35-4cac-bbbc-57d6a6cf7c59 HTTP/1.1" 200 -
+2024-07-22 04:25:17,370 - ERROR - could not translate host name "dpg-cqcfpmd6l47c73d3mbf0-a.oregon-postgres.render.com" to address: No such host is known. 
+
+2024-07-22 04:25:17,372 - INFO - 127.0.0.1 - - [22/Jul/2024 04:25:17] "GET /get_paintings HTTP/1.1" 200 -
+2024-07-22 04:25:17,380 - INFO - 127.0.0.1 - - [22/Jul/2024 04:25:17] "OPTIONS /get_pending_exhibitions HTTP/1.1" 200 -
+2024-07-22 04:25:17,381 - INFO - 127.0.0.1 - - [22/Jul/2024 04:25:17] "OPTIONS /get_exhibitions HTTP/1.1" 200 -
+2024-07-22 04:25:17,382 - INFO - 127.0.0.1 - - [22/Jul/2024 04:25:17] "OPTIONS /get_pending_exhibitions HTTP/1.1" 200 -
+2024-07-22 04:25:17,383 - INFO - 127.0.0.1 - - [22/Jul/2024 04:25:17] "OPTIONS /get_exhibitions HTTP/1.1" 200 -
+2024-07-22 04:25:17,385 - ERROR - could not translate host name "dpg-cqcfpmd6l47c73d3mbf0-a.oregon-postgres.render.com" to address: No such host is known. 
+
+2024-07-22 04:25:17,392 - INFO - 127.0.0.1 - - [22/Jul/2024 04:25:17] "GET /get_paintings HTTP/1.1" 200 -
+2024-07-22 04:25:17,397 - ERROR - could not translate host name "dpg-cqcfpmd6l47c73d3mbf0-a.oregon-postgres.render.com" to address: No such host is known. 
+
+2024-07-22 04:25:17,398 - INFO - 127.0.0.1 - - [22/Jul/2024 04:25:17] "[35m[1mGET /get_pending_exhibitions HTTP/1.1[0m" 500 -
+2024-07-22 04:25:17,400 - ERROR - could not translate host name "dpg-cqcfpmd6l47c73d3mbf0-a.oregon-postgres.render.com" to address: No such host is known. 
+
+2024-07-22 04:25:17,401 - INFO - 127.0.0.1 - - [22/Jul/2024 04:25:17] "[35m[1mGET /get_exhibitions HTTP/1.1[0m" 500 -
+2024-07-22 04:25:17,403 - ERROR - could not translate host name "dpg-cqcfpmd6l47c73d3mbf0-a.oregon-postgres.render.com" to address: No such host is known. 
+
+2024-07-22 04:25:17,403 - INFO - 127.0.0.1 - - [22/Jul/2024 04:25:17] "[35m[1mGET /get_pending_exhibitions HTTP/1.1[0m" 500 -
+2024-07-22 04:25:17,408 - ERROR - could not translate host name "dpg-cqcfpmd6l47c73d3mbf0-a.oregon-postgres.render.com" to address: No such host is known. 
+
+2024-07-22 04:25:17,408 - INFO - 127.0.0.1 - - [22/Jul/2024 04:25:17] "[35m[1mGET /get_exhibitions HTTP/1.1[0m" 500 -
+2024-07-22 04:25:17,571 - INFO - 127.0.0.1 - - [22/Jul/2024 04:25:17] "OPTIONS /get_exhibition_paintings/db0238fc-3d35-4cac-bbbc-57d6a6cf7c59 HTTP/1.1" 200 -
+2024-07-22 04:25:17,579 - WARNING - Unauthorized user tried to access protected asset which require payment with thiss error could not translate host name "dpg-cqcfpmd6l47c73d3mbf0-a.oregon-postgres.render.com" to address: No such host is known. 
+
+2024-07-22 04:25:17,580 - INFO - 127.0.0.1 - - [22/Jul/2024 04:25:17] "GET /get_exhibition_paintings/db0238fc-3d35-4cac-bbbc-57d6a6cf7c59 HTTP/1.1" 200 -
+2024-07-22 04:25:17,585 - WARNING - Unauthorized user tried to access protected asset which require payment with thiss error could not translate host name "dpg-cqcfpmd6l47c73d3mbf0-a.oregon-postgres.render.com" to address: No such host is known. 
+
+2024-07-22 04:25:17,586 - INFO - 127.0.0.1 - - [22/Jul/2024 04:25:17] "GET /get_exhibition_paintings/db0238fc-3d35-4cac-bbbc-57d6a6cf7c59 HTTP/1.1" 200 -
+2024-07-22 04:25:47,088 - INFO - 127.0.0.1 - - [22/Jul/2024 04:25:47] "OPTIONS /get_pending_exhibitions HTTP/1.1" 200 -
+2024-07-22 04:25:47,089 - INFO - 127.0.0.1 - - [22/Jul/2024 04:25:47] "OPTIONS /get_pending_exhibitions HTTP/1.1" 200 -
+2024-07-22 04:25:47,091 - INFO - 127.0.0.1 - - [22/Jul/2024 04:25:47] "OPTIONS /get_exhibitions HTTP/1.1" 200 -
+2024-07-22 04:25:47,092 - INFO - 127.0.0.1 - - [22/Jul/2024 04:25:47] "OPTIONS /get_exhibitions HTTP/1.1" 200 -
+2024-07-22 04:25:47,092 - ERROR - could not translate host name "dpg-cqcfpmd6l47c73d3mbf0-a.oregon-postgres.render.com" to address: No such host is known. 
+
+2024-07-22 04:25:47,107 - INFO - 127.0.0.1 - - [22/Jul/2024 04:25:47] "GET /get_paintings HTTP/1.1" 200 -
+2024-07-22 04:25:47,108 - ERROR - could not translate host name "dpg-cqcfpmd6l47c73d3mbf0-a.oregon-postgres.render.com" to address: No such host is known. 
+
+2024-07-22 04:25:47,110 - INFO - 127.0.0.1 - - [22/Jul/2024 04:25:47] "[35m[1mGET /get_pending_exhibitions HTTP/1.1[0m" 500 -
+2024-07-22 04:25:47,116 - ERROR - could not translate host name "dpg-cqcfpmd6l47c73d3mbf0-a.oregon-postgres.render.com" to address: No such host is known. 
+
+2024-07-22 04:25:47,117 - INFO - 127.0.0.1 - - [22/Jul/2024 04:25:47] "[35m[1mGET /get_pending_exhibitions HTTP/1.1[0m" 500 -
+2024-07-22 04:25:47,123 - ERROR - could not translate host name "dpg-cqcfpmd6l47c73d3mbf0-a.oregon-postgres.render.com" to address: No such host is known. 
+
+2024-07-22 04:25:47,123 - INFO - 127.0.0.1 - - [22/Jul/2024 04:25:47] "[35m[1mGET /get_exhibitions HTTP/1.1[0m" 500 -
+2024-07-22 04:25:47,128 - ERROR - could not translate host name "dpg-cqcfpmd6l47c73d3mbf0-a.oregon-postgres.render.com" to address: No such host is known. 
+
+2024-07-22 04:25:47,129 - INFO - 127.0.0.1 - - [22/Jul/2024 04:25:47] "[35m[1mGET /get_exhibitions HTTP/1.1[0m" 500 -
+2024-07-22 04:25:47,133 - ERROR - could not translate host name "dpg-cqcfpmd6l47c73d3mbf0-a.oregon-postgres.render.com" to address: No such host is known. 
+
+2024-07-22 04:25:47,135 - INFO - 127.0.0.1 - - [22/Jul/2024 04:25:47] "GET /get_paintings HTTP/1.1" 200 -
+2024-07-22 04:25:47,302 - INFO - 127.0.0.1 - - [22/Jul/2024 04:25:47] "OPTIONS /get_exhibition_paintings/db0238fc-3d35-4cac-bbbc-57d6a6cf7c59 HTTP/1.1" 200 -
+2024-07-22 04:25:47,316 - WARNING - Unauthorized user tried to access protected asset which require payment with thiss error could not translate host name "dpg-cqcfpmd6l47c73d3mbf0-a.oregon-postgres.render.com" to address: No such host is known. 
+
+2024-07-22 04:25:47,317 - INFO - 127.0.0.1 - - [22/Jul/2024 04:25:47] "GET /get_exhibition_paintings/db0238fc-3d35-4cac-bbbc-57d6a6cf7c59 HTTP/1.1" 200 -
+2024-07-22 04:25:47,327 - WARNING - Unauthorized user tried to access protected asset which require payment with thiss error could not translate host name "dpg-cqcfpmd6l47c73d3mbf0-a.oregon-postgres.render.com" to address: No such host is known. 
+
+2024-07-22 04:25:47,328 - INFO - 127.0.0.1 - - [22/Jul/2024 04:25:47] "GET /get_exhibition_paintings/db0238fc-3d35-4cac-bbbc-57d6a6cf7c59 HTTP/1.1" 200 -
+2024-07-22 04:26:03,946 - ERROR - could not translate host name "dpg-cqcfpmd6l47c73d3mbf0-a.oregon-postgres.render.com" to address: No such host is known. 
+
+2024-07-22 04:26:03,947 - INFO - 127.0.0.1 - - [22/Jul/2024 04:26:03] "[31m[1mPOST /check_payment HTTP/1.1[0m" 400 -
+2024-07-22 04:26:47,009 - ERROR - could not translate host name "dpg-cqcfpmd6l47c73d3mbf0-a.oregon-postgres.render.com" to address: No such host is known. 
+
+2024-07-22 04:26:47,010 - INFO - 127.0.0.1 - - [22/Jul/2024 04:26:47] "[31m[1mPOST /check_payment HTTP/1.1[0m" 400 -
+2024-07-22 04:28:00,110 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.211.145:5000
+2024-07-22 04:28:00,111 - INFO - [33mPress CTRL+C to quit[0m
+2024-07-22 04:28:00,113 - INFO -  * Restarting with stat
+2024-07-22 04:28:03,476 - WARNING -  * Debugger is active!
+2024-07-22 04:28:03,502 - INFO -  * Debugger PIN: 142-594-215
+2024-07-22 04:28:07,333 - INFO - 127.0.0.1 - - [22/Jul/2024 04:28:07] "POST /check_payment HTTP/1.1" 200 -
+2024-07-22 04:28:07,418 - INFO - 127.0.0.1 - - [22/Jul/2024 04:28:07] "OPTIONS /get_exhibition_paintings/db0238fc-3d35-4cac-bbbc-57d6a6cf7c59 HTTP/1.1" 200 -
+2024-07-22 04:28:15,653 - INFO - 127.0.0.1 - - [22/Jul/2024 04:28:15] "GET /get_exhibition_paintings/db0238fc-3d35-4cac-bbbc-57d6a6cf7c59 HTTP/1.1" 200 -
+2024-07-22 04:28:15,667 - INFO - 127.0.0.1 - - [22/Jul/2024 04:28:15] "OPTIONS /get_exhibition_paintings/db0238fc-3d35-4cac-bbbc-57d6a6cf7c59 HTTP/1.1" 200 -
+2024-07-22 04:28:20,679 - INFO - 127.0.0.1 - - [22/Jul/2024 04:28:20] "OPTIONS /get_pending_exhibitions HTTP/1.1" 200 -
+2024-07-22 04:28:20,680 - INFO - 127.0.0.1 - - [22/Jul/2024 04:28:20] "OPTIONS /get_exhibitions HTTP/1.1" 200 -
+2024-07-22 04:28:20,681 - INFO - 127.0.0.1 - - [22/Jul/2024 04:28:20] "OPTIONS /get_pending_exhibitions HTTP/1.1" 200 -
+2024-07-22 04:28:20,682 - INFO - 127.0.0.1 - - [22/Jul/2024 04:28:20] "OPTIONS /get_exhibitions HTTP/1.1" 200 -
+2024-07-22 04:28:23,003 - INFO - 127.0.0.1 - - [22/Jul/2024 04:28:23] "GET /get_exhibition_paintings/db0238fc-3d35-4cac-bbbc-57d6a6cf7c59 HTTP/1.1" 200 -
+2024-07-22 04:28:25,231 - INFO - 127.0.0.1 - - [22/Jul/2024 04:28:25] "GET /get_paintings HTTP/1.1" 200 -
+2024-07-22 04:28:28,163 - INFO - 127.0.0.1 - - [22/Jul/2024 04:28:28] "GET /get_pending_exhibitions HTTP/1.1" 200 -
+2024-07-22 04:28:30,677 - INFO - 127.0.0.1 - - [22/Jul/2024 04:28:30] "GET /get_exhibitions HTTP/1.1" 200 -
+2024-07-22 04:28:32,962 - INFO - 127.0.0.1 - - [22/Jul/2024 04:28:32] "GET /get_pending_exhibitions HTTP/1.1" 200 -
+2024-07-22 04:28:35,761 - INFO - 127.0.0.1 - - [22/Jul/2024 04:28:35] "GET /get_exhibitions HTTP/1.1" 200 -
+2024-07-22 04:28:38,664 - INFO - 127.0.0.1 - - [22/Jul/2024 04:28:38] "GET /get_paintings HTTP/1.1" 200 -
+2024-07-22 04:30:20,994 - INFO - 127.0.0.1 - - [22/Jul/2024 04:30:20] "OPTIONS /get_pending_exhibitions HTTP/1.1" 200 -
+2024-07-22 04:30:20,998 - INFO - 127.0.0.1 - - [22/Jul/2024 04:30:20] "OPTIONS /get_exhibitions HTTP/1.1" 200 -
+2024-07-22 04:30:23,861 - INFO - 127.0.0.1 - - [22/Jul/2024 04:30:23] "GET /get_paintings HTTP/1.1" 200 -
+2024-07-22 04:30:26,206 - INFO - 127.0.0.1 - - [22/Jul/2024 04:30:26] "GET /get_paintings HTTP/1.1" 200 -
+2024-07-22 04:30:28,786 - INFO - 127.0.0.1 - - [22/Jul/2024 04:30:28] "GET /get_pending_exhibitions HTTP/1.1" 200 -
+2024-07-22 04:30:28,806 - INFO - 127.0.0.1 - - [22/Jul/2024 04:30:28] "OPTIONS /get_pending_exhibitions HTTP/1.1" 200 -
+2024-07-22 04:30:32,187 - INFO - 127.0.0.1 - - [22/Jul/2024 04:30:32] "GET /get_exhibitions HTTP/1.1" 200 -
+2024-07-22 04:30:32,313 - INFO - 127.0.0.1 - - [22/Jul/2024 04:30:32] "OPTIONS /get_exhibitions HTTP/1.1" 200 -
+2024-07-22 04:30:32,471 - INFO - 127.0.0.1 - - [22/Jul/2024 04:30:32] "OPTIONS /get_exhibition_paintings/db0238fc-3d35-4cac-bbbc-57d6a6cf7c59 HTTP/1.1" 200 -
+2024-07-22 04:30:33,912 - INFO - 127.0.0.1 - - [22/Jul/2024 04:30:33] "GET /get_pending_exhibitions HTTP/1.1" 200 -
+2024-07-22 04:30:36,432 - INFO - 127.0.0.1 - - [22/Jul/2024 04:30:36] "GET /get_exhibitions HTTP/1.1" 200 -
+2024-07-22 04:30:45,435 - INFO - 127.0.0.1 - - [22/Jul/2024 04:30:45] "GET /get_exhibition_paintings/db0238fc-3d35-4cac-bbbc-57d6a6cf7c59 HTTP/1.1" 200 -
+2024-07-22 04:30:45,467 - INFO - 127.0.0.1 - - [22/Jul/2024 04:30:45] "OPTIONS /get_exhibition_paintings/db0238fc-3d35-4cac-bbbc-57d6a6cf7c59 HTTP/1.1" 200 -
+2024-07-22 04:30:54,670 - INFO - 127.0.0.1 - - [22/Jul/2024 04:30:54] "GET /get_exhibition_paintings/db0238fc-3d35-4cac-bbbc-57d6a6cf7c59 HTTP/1.1" 200 -
+2024-07-22 04:31:51,849 - INFO - 127.0.0.1 - - [22/Jul/2024 04:31:51] "OPTIONS /get_exhibition_paintings/db0238fc-3d35-4cac-bbbc-57d6a6cf7c59 HTTP/1.1" 200 -
+2024-07-22 04:32:01,316 - INFO - 127.0.0.1 - - [22/Jul/2024 04:32:01] "GET /get_exhibition_paintings/db0238fc-3d35-4cac-bbbc-57d6a6cf7c59 HTTP/1.1" 200 -
+2024-07-22 04:32:01,346 - INFO - 127.0.0.1 - - [22/Jul/2024 04:32:01] "OPTIONS /get_exhibition_paintings/db0238fc-3d35-4cac-bbbc-57d6a6cf7c59 HTTP/1.1" 200 -
+2024-07-22 04:32:11,450 - INFO - 127.0.0.1 - - [22/Jul/2024 04:32:11] "GET /get_exhibition_paintings/db0238fc-3d35-4cac-bbbc-57d6a6cf7c59 HTTP/1.1" 200 -
+2024-07-22 04:32:11,464 - INFO - 127.0.0.1 - - [22/Jul/2024 04:32:11] "OPTIONS /get_exhibition_paintings/db0238fc-3d35-4cac-bbbc-57d6a6cf7c59 HTTP/1.1" 200 -
+2024-07-22 04:32:21,384 - INFO - 127.0.0.1 - - [22/Jul/2024 04:32:21] "GET /get_exhibition_paintings/db0238fc-3d35-4cac-bbbc-57d6a6cf7c59 HTTP/1.1" 200 -
+2024-07-22 04:32:21,401 - INFO - 127.0.0.1 - - [22/Jul/2024 04:32:21] "OPTIONS /get_exhibition_paintings/db0238fc-3d35-4cac-bbbc-57d6a6cf7c59 HTTP/1.1" 200 -
+2024-07-22 04:32:31,630 - INFO - 127.0.0.1 - - [22/Jul/2024 04:32:31] "GET /get_exhibition_paintings/db0238fc-3d35-4cac-bbbc-57d6a6cf7c59 HTTP/1.1" 200 -
+2024-07-22 04:33:06,820 - INFO - 127.0.0.1 - - [22/Jul/2024 04:33:06] "OPTIONS /get_exhibition_paintings/db0238fc-3d35-4cac-bbbc-57d6a6cf7c59 HTTP/1.1" 200 -
+2024-07-22 04:33:17,720 - INFO - 127.0.0.1 - - [22/Jul/2024 04:33:17] "GET /get_exhibition_paintings/db0238fc-3d35-4cac-bbbc-57d6a6cf7c59 HTTP/1.1" 200 -
+2024-07-22 04:33:41,157 - INFO - 127.0.0.1 - - [22/Jul/2024 04:33:41] "POST /check_payment HTTP/1.1" 200 -
+2024-07-22 04:33:41,232 - INFO - 127.0.0.1 - - [22/Jul/2024 04:33:41] "OPTIONS /get_exhibition_paintings/db0238fc-3d35-4cac-bbbc-57d6a6cf7c59 HTTP/1.1" 200 -
+2024-07-22 04:33:48,742 - INFO - 127.0.0.1 - - [22/Jul/2024 04:33:48] "GET /get_exhibition_paintings/db0238fc-3d35-4cac-bbbc-57d6a6cf7c59 HTTP/1.1" 200 -
+2024-07-22 04:33:48,759 - INFO - 127.0.0.1 - - [22/Jul/2024 04:33:48] "OPTIONS /get_exhibition_paintings/db0238fc-3d35-4cac-bbbc-57d6a6cf7c59 HTTP/1.1" 200 -
+2024-07-22 04:33:58,357 - INFO - 127.0.0.1 - - [22/Jul/2024 04:33:58] "GET /get_exhibition_paintings/db0238fc-3d35-4cac-bbbc-57d6a6cf7c59 HTTP/1.1" 200 -
+2024-07-22 04:35:49,858 - INFO - 127.0.0.1 - - [22/Jul/2024 04:35:49] "OPTIONS /get_exhibition_paintings/db0238fc-3d35-4cac-bbbc-57d6a6cf7c59 HTTP/1.1" 200 -
+2024-07-22 04:35:56,516 - INFO - 127.0.0.1 - - [22/Jul/2024 04:35:56] "OPTIONS /get_pending_exhibitions HTTP/1.1" 200 -
+2024-07-22 04:35:56,517 - INFO - 127.0.0.1 - - [22/Jul/2024 04:35:56] "OPTIONS /get_exhibitions HTTP/1.1" 200 -
+2024-07-22 04:35:57,184 - INFO - 127.0.0.1 - - [22/Jul/2024 04:35:57] "GET /get_exhibition_paintings/db0238fc-3d35-4cac-bbbc-57d6a6cf7c59 HTTP/1.1" 200 -
+2024-07-22 04:35:59,456 - INFO - 127.0.0.1 - - [22/Jul/2024 04:35:59] "GET /get_paintings HTTP/1.1" 200 -
+2024-07-22 04:36:01,244 - INFO - 127.0.0.1 - - [22/Jul/2024 04:36:01] "GET /get_pending_exhibitions HTTP/1.1" 200 -
+2024-07-22 04:36:03,103 - INFO - 127.0.0.1 - - [22/Jul/2024 04:36:03] "GET /get_exhibitions HTTP/1.1" 200 -
+2024-07-22 04:36:03,112 - INFO - 127.0.0.1 - - [22/Jul/2024 04:36:03] "OPTIONS /get_exhibitions HTTP/1.1" 200 -
+2024-07-22 04:36:03,225 - INFO - 127.0.0.1 - - [22/Jul/2024 04:36:03] "OPTIONS /get_exhibition_paintings/db0238fc-3d35-4cac-bbbc-57d6a6cf7c59 HTTP/1.1" 200 -
+2024-07-22 04:36:04,940 - INFO - 127.0.0.1 - - [22/Jul/2024 04:36:04] "GET /get_paintings HTTP/1.1" 200 -
+2024-07-22 04:36:06,675 - INFO - 127.0.0.1 - - [22/Jul/2024 04:36:06] "GET /get_pending_exhibitions HTTP/1.1" 200 -
+2024-07-22 04:36:08,407 - INFO - 127.0.0.1 - - [22/Jul/2024 04:36:08] "GET /get_exhibitions HTTP/1.1" 200 -
+2024-07-22 04:36:15,164 - INFO - 127.0.0.1 - - [22/Jul/2024 04:36:15] "GET /get_exhibition_paintings/db0238fc-3d35-4cac-bbbc-57d6a6cf7c59 HTTP/1.1" 200 -
+2024-07-22 04:36:15,176 - INFO - 127.0.0.1 - - [22/Jul/2024 04:36:15] "OPTIONS /get_exhibition_paintings/db0238fc-3d35-4cac-bbbc-57d6a6cf7c59 HTTP/1.1" 200 -
+2024-07-22 04:36:22,376 - INFO - 127.0.0.1 - - [22/Jul/2024 04:36:22] "GET /get_exhibition_paintings/db0238fc-3d35-4cac-bbbc-57d6a6cf7c59 HTTP/1.1" 200 -
+2024-07-22 04:36:32,436 - INFO - 127.0.0.1 - - [22/Jul/2024 04:36:32] "OPTIONS /get_exhibition_paintings/db0238fc-3d35-4cac-bbbc-57d6a6cf7c59 HTTP/1.1" 200 -
+2024-07-22 04:36:41,070 - INFO - 127.0.0.1 - - [22/Jul/2024 04:36:41] "GET /get_exhibition_paintings/db0238fc-3d35-4cac-bbbc-57d6a6cf7c59 HTTP/1.1" 200 -
+2024-07-22 04:36:41,086 - INFO - 127.0.0.1 - - [22/Jul/2024 04:36:41] "OPTIONS /get_exhibition_paintings/db0238fc-3d35-4cac-bbbc-57d6a6cf7c59 HTTP/1.1" 200 -
+2024-07-22 04:36:50,084 - INFO - 127.0.0.1 - - [22/Jul/2024 04:36:50] "GET /get_exhibition_paintings/db0238fc-3d35-4cac-bbbc-57d6a6cf7c59 HTTP/1.1" 200 -
+2024-07-22 04:36:55,003 - INFO - 127.0.0.1 - - [22/Jul/2024 04:36:55] "OPTIONS /get_exhibition_paintings/db0238fc-3d35-4cac-bbbc-57d6a6cf7c59 HTTP/1.1" 200 -
+2024-07-22 04:37:03,188 - INFO - 127.0.0.1 - - [22/Jul/2024 04:37:03] "GET /get_exhibition_paintings/db0238fc-3d35-4cac-bbbc-57d6a6cf7c59 HTTP/1.1" 200 -
+2024-07-22 04:37:03,197 - INFO - 127.0.0.1 - - [22/Jul/2024 04:37:03] "OPTIONS /get_exhibition_paintings/db0238fc-3d35-4cac-bbbc-57d6a6cf7c59 HTTP/1.1" 200 -
+2024-07-22 04:37:11,483 - INFO - 127.0.0.1 - - [22/Jul/2024 04:37:11] "GET /get_exhibition_paintings/db0238fc-3d35-4cac-bbbc-57d6a6cf7c59 HTTP/1.1" 200 -
