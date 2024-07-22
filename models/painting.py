@@ -18,6 +18,10 @@ class Painting(PaintingBase):
         return database.get_painting_by_id(userId)
 
     @staticmethod
+    def get_painting_by_id(username, p_id) -> list:
+        return database.get_painting_by_painting_id(username, p_id)
+
+    @staticmethod
     def like(painting_id) -> bool:
         return database.like(painting_id)
 

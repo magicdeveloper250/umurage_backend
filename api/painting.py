@@ -92,7 +92,6 @@ def get_paintings():
         )
     except Exception as error:
         current_app.logger.error(str(error))
-        print(error)
         return abort(jsonify({"success": str(error), "data": []}))
 
 
@@ -141,6 +140,46 @@ def get_user_paintings():
                     "data": convertToObject(
                         MIN_HEADER, Painting.get_user_paintings(userId)
                     ),
+                }
+            ),
+            200,
+        )
+    except (DatabaseError, OperationalError) as error:
+        current_app.logger.error(str(error))
+        return (
+            jsonify(
+                {
+                    "success": False,
+                    "message": "information submitted to the server has error. Please check your info",
+                }
+            ),
+            500,
+        )
+    except (
+        ConnectionAbortedError,
+        ConnectionRefusedError,
+        ConnectionResetError,
+        ConnectionError,
+    ) as error:
+        current_app.logger.error(str(error))
+        return jsonify({"success": False, "message": "Connection error"}), 500
+    except Exception as error:
+        current_app.logger.error(str(error))
+        return jsonify({"success": False, "message": "uncaught error"}), 500
+
+
+@painting.route("/painting/<username>/<id>", methods=["GET", "POST"])
+def get_painiting_by_id(username, id):
+    """ROUTE FOR GETTING USER PAINTINGS"""
+    global MIN_HEADER
+    try:
+        return (
+            jsonify(
+                {
+                    "success": True,
+                    "data": convertToObject(
+                        HEADERS, Painting.get_painting_by_id(username, id)
+                    )[0],
                 }
             ),
             200,

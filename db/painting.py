@@ -49,6 +49,19 @@ def get_painting_by_id(userId):
             return paintings
 
 
+def get_painting_by_painting_id(username, p_id):
+    with contextlib.closing(get_db()) as connection:
+        with contextlib.closing(connection.cursor()) as cursor:
+            cursor.execute("SET search_path TO public")
+            stmt = "SELECT g_id, g_name, username, g_category,g_created, g_image, phone, likes "
+            stmt += "FROM paintings g, painters p "
+            stmt += "WHERE g.g_owner=(SELECT id FROM painters WHERE username={0}) AND g.g_id={1}"
+            query = sql.SQL(stmt).format(sql.Literal(username), sql.Literal(p_id))
+            cursor.execute(query)
+            painting = cursor.fetchall()
+            return painting
+
+
 def delete_painting(painting_id):
     with contextlib.closing(get_db()) as connection:
         with contextlib.closing(connection.cursor()) as cursor:
