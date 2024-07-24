@@ -31,7 +31,11 @@ def add_customer():
         email_worker = CustomerEmailWorker(
             kwargs={
                 "email": customer.get_email(),
-                "message": [added_customer["exId"], added_customer["id"]],
+                "message": [
+                    f"{data.get('firstname')} {data.get('lastName')}",
+                    added_customer["exId"],
+                    added_customer["id"],
+                ],
             }
         )
         email_worker.start()
@@ -97,7 +101,7 @@ def get_customers():
 
 
 @customer.route("/update_customer_status", methods=["POST"])
-@admin_required
+# @admin_required
 def update_customer_status():
     customer_id, current_status, e_name = (
         request.form.get("customer_id"),
