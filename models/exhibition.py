@@ -13,6 +13,7 @@ class Exhibition(ExhibitionBase):
         e_entrace_fees,
         e_banner,
         status,
+        description,
     ) -> None:
         super(Exhibition, self).__init__(
             id,
@@ -23,6 +24,7 @@ class Exhibition(ExhibitionBase):
             e_entrace_fees,
             e_banner,
             status,
+            description,
         )
 
     def add_exhibition(self) -> ExhibitionBase:
@@ -30,7 +32,6 @@ class Exhibition(ExhibitionBase):
 
     @staticmethod
     def get_exhibition(ex_id) -> ExhibitionBase:
-        print(database.get_exhibition(ex_id))
         return database.get_exhibition(ex_id)
 
     @staticmethod

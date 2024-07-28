@@ -34,6 +34,7 @@ def add_exhibition():
             request.form.get("entrace_fees"),
             image_url,
             None,
+            request.form.get("description"),
         )
         new_item = exhibition.add_exhibition()
         return jsonify({"success": True, "data": new_item}), 201
@@ -165,6 +166,8 @@ def update_exhibition(id, name):
             request.form.get("host"),
             request.form.get("entrace_fees"),
             image_url,
+            None,
+            request.form.get("description"),
         )
         exhibition.add_exhibition()
         return jsonify({"success": True}), 200

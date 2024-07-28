@@ -9,6 +9,7 @@ class ExhibitionBase:
         e_entrace_fees,
         e_banner,
         status,
+        description,
     ) -> None:
         self._name = e_name
         self._start_date = e_start_date
@@ -18,6 +19,7 @@ class ExhibitionBase:
         self._banner = e_banner
         self._id = id
         self._status = status
+        self._description = description
 
     def get_name(self) -> str:
         return self._name
@@ -43,6 +45,9 @@ class ExhibitionBase:
     def get_status(self) -> str:
         return self._status
 
+    def get_description(self) -> str:
+        return self._description
+
     def dict(cls):
         return {
             "id": cls.get_id(),
@@ -53,4 +58,5 @@ class ExhibitionBase:
             "fees": cls.get_fees(),
             "image": cls.get_banner(),
             "status": cls.get_status(),
+            "description": cls.get_description(),
         }
