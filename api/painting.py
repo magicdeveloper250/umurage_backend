@@ -14,6 +14,7 @@ HEADERS = [
     "id",
     "name",
     "owner",
+    "profile",
     "category",
     "created",
     "image",

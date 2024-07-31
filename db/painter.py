@@ -8,8 +8,8 @@ def add_new_painter(painter: PainterBase):
     with contextlib.closing(get_db()) as connection:
         with contextlib.closing(connection.cursor()) as cursor:
             cursor.execute("SET search_path TO public")
-            stmt = "INSERT INTO painters (username,phone, picture, fullname, password, email) "
-            stmt += "VALUES ({0}, {1}, {2},{3},{4},{5}) "
+            stmt = "INSERT INTO painters (username,phone, picture, fullname, password, email, bio) "
+            stmt += "VALUES ({0}, {1}, {2},{3},{4},{5}, {6}) "
             stmt += "RETURNING id, username, phone, picture, fullname,email,role, verified, password;"
             query = sql.SQL(stmt).format(
                 sql.Literal(painter.get_username()),
@@ -18,9 +18,22 @@ def add_new_painter(painter: PainterBase):
                 sql.Literal(painter.get_fullname()),
                 sql.Literal(painter.get_password()),
                 sql.Literal(painter.get_email()),
+                sql.Literal(painter.get_bio()),
             )
             cursor.execute(query)
             added = PainterBase(*cursor.fetchone()).dict()
+            cursor.execute("COMMIT")
+            stmt = "INSERT INTO social_medias (p_id,instagram, facebook, x, youtube, tiktok) "
+            stmt += "VALUES ({0}, {1}, {2},{3},{4},{5}) "
+            stmt += sql.SQL(stmt).format(
+                sql.Literal(added[0]),
+                sql.Literal(painter.get_instagram()),
+                sql.Literal(painter.get_facebook()),
+                sql.Literal(painter.get_x()),
+                sql.Literal(painter.get_youtube()),
+                sql.Literal(painter.get_tiktok()),
+            )
+            cursor.execute(query)
             cursor.execute("COMMIT")
             return added
 
@@ -101,8 +114,35 @@ def get_painters():
             stmt = "SELECT id,username,phone, picture, fullname,email, role, verified "
             stmt += "FROM painters"
             cursor.execute(stmt)
-            painters = map(lambda p: PainterBase(*p).dict(), cursor.fetchall())
-            return list(painters)
+            painters = cursor.fetchall()
+            painter = map(lambda p: PainterBase(*p).dict(), painters)
+            return list(painter)
+
+
+def get_profile(username):
+
+    with contextlib.closing(get_db()) as connection:
+        with contextlib.closing(connection.cursor()) as cursor:
+            cursor.execute("SET search_path TO public")
+            stmt = "SELECT username, phone, picture, email,bio, facebook, instagram, x, tiktok, youtube "
+            stmt += "FROM painters "
+            stmt += "LEFT JOIN social_medias ON painters.id = social_medias.p_id "
+            stmt += "WHERE painters.id = (SELECT id FROM painters WHERE username = {0})"
+            query = sql.SQL(stmt).format(sql.Literal(username))
+            cursor.execute(query)
+            painter = cursor.fetchone()
+            return {
+                "username": painter[0],
+                "phone": painter[1],
+                "picture": painter[2],
+                "email": painter[3],
+                "bio": painter[4],
+                "facebook": painter[5],
+                "instagram": painter[6],
+                "x": painter[7],
+                "tiktok": painter[8],
+                "youtube": painter[9],
+            }
 
 
 def delete_painter(id):
@@ -126,13 +166,36 @@ def update_painter(painter: PainterBase):
             cursor.execute("SET search_path TO public")
             cursor.execute("BEGIN")
             stmt = "UPDATE painters "
-            stmt += "SET username={0},phone={1}, picture={2}, fullname={3} "
-            stmt += "WHERE id={4}"
+            stmt += "SET username={0},phone={1}, picture={2}, fullname={3}, bio={4} "
+            stmt += "WHERE id={5}"
             query = sql.SQL(stmt).format(
                 sql.Literal(painter.get_username()),
                 sql.Literal(painter.get_phone()),
                 sql.Literal(painter.get_picture()),
                 sql.Literal(painter.get_fullname()),
+                sql.Literal(painter.get_bio()),
+                sql.Literal(painter.get_id()),
+            )
+            cursor.execute(query)
+            cursor.execute("COMMIT")
+            update_social_medias(painter)
+            return True
+
+
+def update_social_medias(painter: PainterBase):
+    with contextlib.closing(get_db()) as connection:
+        with contextlib.closing(connection.cursor()) as cursor:
+            cursor.execute("SET search_path TO public")
+            cursor.execute("BEGIN")
+            stmt = "UPDATE social_medias "
+            stmt += "SET instagram={0},facebook={1}, x={2}, tiktok={3}, youtube={4} "
+            stmt += "WHERE p_id={5}"
+            query = sql.SQL(stmt).format(
+                sql.Literal(painter.get_instagram()),
+                sql.Literal(painter.get_facebook()),
+                sql.Literal(painter.get_x()),
+                sql.Literal(painter.get_tiktok()),
+                sql.Literal(painter.get_youtube()),
                 sql.Literal(painter.get_id()),
             )
             cursor.execute(query)

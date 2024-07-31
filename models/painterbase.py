@@ -10,6 +10,12 @@ class PainterBase:
         role=None,
         verified=0,
         password=None,
+        bio=None,
+        instagram=None,
+        facebook=None,
+        tiktok=None,
+        youtube=None,
+        x=None,
     ) -> None:
         self._id = id
         self._username = username
@@ -18,6 +24,12 @@ class PainterBase:
         self._fullname = fullname
         self._password = password
         self._email = email
+        self._bio = bio
+        self._facebook = facebook
+        self._instagram = instagram
+        self._tiktok = tiktok
+        self._youtube = youtube
+        self._x = x
         self._role = role
         self._verified = verified
 
@@ -50,6 +62,24 @@ class PainterBase:
 
     def get_verified(self) -> str:
         return self._verified
+
+    def get_bio(self) -> str:
+        return self._bio
+
+    def get_instagram(self) -> str:
+        return self._instagram
+
+    def get_facebook(self) -> str:
+        return self._facebook
+
+    def get_tiktok(self) -> str:
+        return self._tiktok
+
+    def get_youtube(self) -> str:
+        return self._youtube
+
+    def get_x(self) -> str:
+        return self._x
 
     def dict(cls) -> dict:
         return {

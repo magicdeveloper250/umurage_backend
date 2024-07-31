@@ -14,6 +14,12 @@ class Painter(PainterBase):
         role=None,
         verified=0,
         password=None,
+        bio=None,
+        instagram=None,
+        facebook=None,
+        tiktok=None,
+        youtube=None,
+        x=None,
     ) -> None:
         super(Painter, self).__init__(
             id,
@@ -22,6 +28,12 @@ class Painter(PainterBase):
             picture,
             fullname,
             email,
+            bio,
+            instagram,
+            facebook,
+            tiktok,
+            youtube,
+            x,
             role,
             verified,
             password,
@@ -60,3 +72,7 @@ class Painter(PainterBase):
     @staticmethod
     def delete_painter(painter_id) -> list:
         return database.delete_painter(painter_id)
+
+    @staticmethod
+    def get_profile(username) -> list:
+        return database.get_profile(username)

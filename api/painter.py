@@ -18,6 +18,16 @@ painter = Blueprint(name="painter", import_name="painter")
 def add_new_painter():
     """ROUTE FOR ADDING NEW PAINTER ACCOUNT"""
     try:
+        username = request.form.get("username")
+        phone = request.form.get("phonenumber")
+        fullname = request.form.get("fullname")
+        email = request.form.get("email")
+        bio = request.form.get("bio")
+        instagram = request.form.get("instagram")
+        facebook = request.form.get("facebook")
+        tiktok = request.form.get("tiktok")
+        x = request.form.get("x")
+        youtube = request.form.get("youtube")
         # hashing password from frontend to be saved in database
         hashedpw = bcrypt.hashpw(
             request.form.get("password").encode(), bcrypt.gensalt()
@@ -30,14 +40,20 @@ def add_new_painter():
         # instantiate new painter object with information from frontend
         new_painter = Painter(
             None,
-            request.form.get("username"),
-            request.form.get("phonenumber"),
+            username,
+            phone,
             image_url,
-            request.form.get("fullname"),
-            request.form.get("email"),
+            fullname,
+            email,
             None,
             0,
             password=str(hashedpw).removeprefix("b'").removesuffix("'"),
+            bio=bio,
+            instagram=instagram,
+            facebook=facebook,
+            tiktok=tiktok,
+            youtube=youtube,
+            x=x,
         )
         added_painter = (
             new_painter.add_painter()
@@ -55,11 +71,14 @@ def add_new_painter():
         return jsonify({"success": True})
     except IntegrityError as error:
         current_app.logger.error(str(error))
-        return jsonify({"success": False, "message": "User already exist"})
+        return jsonify({"success": False, "message": "User already exist"}), 409
     except (DatabaseError, OperationalError) as error:
         current_app.logger.error(str(error))
-        return jsonify(
-            {"success": False, "message": "Data submitted has an error, try again"}
+        return (
+            jsonify(
+                {"success": False, "message": "Data submitted has an error, try again"}
+            ),
+            400,
         )
     except (
         ConnectionAbortedError,
@@ -67,11 +86,11 @@ def add_new_painter():
         ConnectionResetError,
         ConnectionError,
     ):
-        return jsonify({"success": False, "message": "Connection error"})
+        return jsonify({"success": False, "message": "Connection error"}), 500
 
     except Exception as error:
         current_app.logger.error(str(error))
-        return jsonify({"success": False, "message": "uncaught error"})
+        return jsonify({"success": False, "message": "uncaught error"}), 500
 
 
 @painter.route("/update_painter", methods=["POST"])
@@ -79,7 +98,16 @@ def add_new_painter():
 def update_painter():
     """ROUTE FOR ADDING NEW PAINTER ACCOUNT"""
     try:
-
+        username = request.form.get("username")
+        phone = request.form.get("phonenumber")
+        fullname = request.form.get("fullname")
+        email = request.form.get("email")
+        bio = request.form.get("bio")
+        instagram = request.form.get("instagram")
+        facebook = request.form.get("facebook")
+        tiktok = request.form.get("tiktok")
+        x = request.form.get("x")
+        youtube = request.form.get("youtube")
         profilepicture = request.files.get("profilepicture")
         image_url = None
         # use jwt library for decoding and validating token from email
@@ -104,25 +132,34 @@ def update_painter():
         # instantiate new painter object with information from frontend
         painter = Painter(
             user_id,
-            request.form.get("username"),
-            request.form.get("phonenumber"),
+            username,
+            phone,
             image_url,
-            request.form.get("fullname"),
-            request.form.get("email"),
+            fullname,
+            email,
             None,
             0,
             password=None,
+            bio=bio,
+            instagram=instagram,
+            facebook=facebook,
+            tiktok=tiktok,
+            youtube=youtube,
+            x=x,
         )
         painter_updated = painter.update_painter()
 
         return jsonify({"success": painter_updated})
     except IntegrityError as error:
         current_app.logger.error(str(error))
-        return jsonify({"success": False, "message": "User already exist"})
+        return jsonify({"success": False, "message": "User already exist"}), 409
     except (DatabaseError, OperationalError) as error:
         current_app.logger.error(str(error))
-        return jsonify(
-            {"success": False, "message": "Data submitted has an error, try again"}
+        return (
+            jsonify(
+                {"success": False, "message": "Data submitted has an error, try again"}
+            ),
+            500,
         )
     except (
         ConnectionAbortedError,
@@ -130,11 +167,11 @@ def update_painter():
         ConnectionResetError,
         ConnectionError,
     ):
-        return jsonify({"success": False, "message": "Connection error"})
+        return jsonify({"success": False, "message": "Connection error"}), 500
 
     except Exception as error:
         current_app.logger.error(str(error))
-        return jsonify({"success": False, "message": "uncaught error"})
+        return jsonify({"success": False, "message": "uncaught error"}), 500
 
 
 @painter.route("/get_painters", methods=["GET"])
@@ -143,18 +180,18 @@ def list_painters():
     """ROUTE FOR GETTING LIST OF PAINTERS"""
     try:
         painters = Painter.get_painters()
-        return jsonify({"success": True, "data": painters})
+        return jsonify({"success": True, "data": painters}), 200
     except (
         ConnectionAbortedError,
         ConnectionRefusedError,
         ConnectionResetError,
         ConnectionError,
     ):
-        return jsonify({"success": False, "message": "Connection error"})
+        return jsonify({"success": False, "message": "Connection error"}), 500
 
     except Exception as error:
         current_app.logger.error(str(error))
-        return jsonify({"success": False, "message": "uncaught error"})
+        return jsonify({"success": False, "message": "uncaught error"}), 500
 
 
 @painter.route("/change_password", methods=["POST"])
@@ -178,13 +215,16 @@ def change_password():
         # sanitize new password
         new_password = str(hashedpw).removeprefix("b'").removesuffix("'")
         Painter.change_password(user_id, new_password)
-        return jsonify({"success": True, "message": "password changed"})
+        return jsonify({"success": True, "message": "password changed"}), 200
     except IntegrityError as error:
         current_app.logger.error(str(error))
-        return jsonify({"success": False, "message": "Invalid password"})
+        return jsonify({"success": False, "message": "Invalid password"}), 400
     except (DatabaseError, OperationalError):
-        return jsonify(
-            {"success": False, "message": "Data submitted has an error, try again"}
+        return (
+            jsonify(
+                {"success": False, "message": "Data submitted has an error, try again"}
+            ),
+            400,
         )
     except (
         ConnectionAbortedError,
@@ -192,10 +232,10 @@ def change_password():
         ConnectionResetError,
         ConnectionError,
     ):
-        return jsonify({"success": False, "message": "Connection error"})
+        return jsonify({"success": False, "message": "Connection error"}), 500
     except Exception as error:
         current_app.logger.error(str(error))
-        return jsonify({"success": False, "message": "uncaught error"})
+        return jsonify({"success": False, "message": "uncaught error"}), 500
 
 
 @painter.route("/delete_painter/<id>", methods=["DELETE"])
@@ -207,8 +247,11 @@ def delete_painter(id):
         painters = Painter.get_painters()
         return jsonify({"success": True, "data": painters})
     except (DatabaseError, OperationalError):
-        return jsonify(
-            {"success": False, "message": "Data submitted has an error, try again"}
+        return (
+            jsonify(
+                {"success": False, "message": "Data submitted has an error, try again"}
+            ),
+            400,
         )
     except (
         ConnectionAbortedError,
@@ -216,7 +259,26 @@ def delete_painter(id):
         ConnectionResetError,
         ConnectionError,
     ):
-        return jsonify({"success": False, "message": "Connection error"})
+        return jsonify({"success": False, "message": "Connection error"}), 500
     except Exception as error:
         current_app.logger.error(str(error))
-        return jsonify({"success": False, "message": "uncaught error"})
+        return jsonify({"success": False, "message": "uncaught error"}), 500
+
+
+@painter.route("/profile/<username>", methods=["GET"])
+def get_profile(username):
+    """ROUTE FOR GETTING painter profile"""
+    try:
+        profile = Painter.get_profile(username)
+        return jsonify({"success": True, "data": profile}), 200
+    except (
+        ConnectionAbortedError,
+        ConnectionRefusedError,
+        ConnectionResetError,
+        ConnectionError,
+    ):
+        return jsonify({"success": False, "message": "Connection error"}), 500
+
+    except Exception as error:
+        current_app.logger.error(str(error))
+        return jsonify({"success": False, "message": "uncaught error"}), 500
