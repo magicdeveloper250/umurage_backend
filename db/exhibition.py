@@ -69,7 +69,7 @@ def change_exhibition_status(id, new_status):
             stmt = "BEGIN;"
             stmt += "UPDATE exhibitions SET e_status={0}"
             stmt += " WHERE e_id ={1} "
-            stmt += "RETURNING e_id,e_name, e_start_date, e_end_date, e_host, e_entrace_fees, e_banner, e_status, desciption;"
+            stmt += "RETURNING e_id,e_name, e_start_date, e_end_date, e_host, e_entrace_fees, e_banner, e_status, description;"
             query = sql.SQL(stmt).format(
                 sql.Literal(new_status),
                 sql.Literal(id),
