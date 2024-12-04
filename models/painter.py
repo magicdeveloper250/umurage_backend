@@ -28,15 +28,18 @@ class Painter(PainterBase):
             picture,
             fullname,
             email,
+             role,
+             verified,
+             password,
             bio,
             instagram,
             facebook,
             tiktok,
             youtube,
             x,
-            role,
-            verified,
-            password,
+           
+            
+            
         )
 
     def add_painter(self) -> bool:
@@ -76,3 +79,8 @@ class Painter(PainterBase):
     @staticmethod
     def get_profile(username) -> list:
         return database.get_profile(username)
+    
+
+    @staticmethod
+    def get_profiles() -> list:
+        return database.get_profiles()

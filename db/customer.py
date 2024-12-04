@@ -46,6 +46,19 @@ def get_customers(id):
             return list(record)
 
 
+def get_customer_with_email_and_id(email, ex_id):
+    with contextlib.closing(get_db()) as connection:
+        with contextlib.closing(connection.cursor()) as cursor:
+            stmt = "SELECT c_id, c_first_name, c_last_name, c_email, c_phone, registered_for,status,datetime FROM customers "
+            stmt += "WHERE c_email ={0} AND registered_for={1}"
+            query = sql.SQL(stmt).format(sql.Literal(email), sql.Literal(ex_id))
+            cursor.execute(query)
+            record = cursor.fetchone()
+            if record:
+                return (record[3], record[6])
+            return None
+
+
 def update_customer_status(customerid, new_status, e_name):
     with contextlib.closing(get_db()) as connection:
         with contextlib.closing(connection.cursor()) as cursor:

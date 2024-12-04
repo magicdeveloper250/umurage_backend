@@ -20,8 +20,10 @@ HEADERS = [
     "image",
     "phone",
     "likes",
+    "profile",
 ]
 MIN_HEADER = ["id", "name", "category", "image", "likes"]
+SMALL_HEADER = ["id", "name", "owner", "category", "created", "image", "phone", "likes"]
 
 
 @painting.route("/add_new_painting", methods=["PUT"])
@@ -179,7 +181,7 @@ def get_painiting_by_id(username, id):
                 {
                     "success": True,
                     "data": convertToObject(
-                        HEADERS, Painting.get_painting_by_id(username, id)
+                        SMALL_HEADER, Painting.get_painting_by_id(username, id)
                     )[0],
                 }
             ),

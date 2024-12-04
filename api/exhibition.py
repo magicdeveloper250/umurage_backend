@@ -1,5 +1,5 @@
 from psycopg2 import IntegrityError, DatabaseError, OperationalError
-from flask import Blueprint, request, jsonify, send_file
+from flask import Blueprint, request, jsonify
 from auth.UserAuth import admin_required
 from models.exhibition import Exhibition
 from filemanagement import filemanager
@@ -150,27 +150,52 @@ def delete_exhibition(id, name):
         return jsonify({"success": False, "message": "unknown error"}), 500
 
 
-@exhibition.route("/update_exhibition/<id>/<name>", methods=["PUT"])
+@exhibition.route("/update_exhibition/<id>", methods=["PUT"])
 @admin_required
-def update_exhibition(id, name):
+def update_exhibition(id):
     try:
         exhibition_banner_file = request.files.get("banner")
+        exhbition_banner_str = request.form.get("banner")
+        image_url = None
+        new_banner = False
 
-        image_url = filemanager.save_exhibition_banner_file(
-            exhibition_banner_file, request.form.get("host")
-        )
+        # check if new exhibition banner uploaded or the existing one is stil available
+        if exhibition_banner_file:
+            new_banner = True
+        elif exhbition_banner_str:
+            new_banner = False
+
+        if new_banner:
+            image_url = filemanager.save_exhibition_banner_file(
+                exhibition_banner_file, request.form.get("host")
+            )
+        else:
+            image_url = exhbition_banner_str
+
         exhibition = Exhibition(
+            str(id),
             request.form.get("name"),
             request.form.get("start_date"),
             request.form.get("end_date"),
             request.form.get("host"),
             request.form.get("entrace_fees"),
             image_url,
-            None,
+            request.form.get("status"),
             request.form.get("description"),
         )
-        exhibition.add_exhibition()
-        return jsonify({"success": True}), 200
+        exhibition.update_exhibition()
+        updated_exhibition = {
+            "id": id,
+            "description": request.form.get("description"),
+            "enddate": request.form.get("end_date"),
+            "fees": [request.form.get("entrace_fees")],
+            "host": request.form.get("host"),
+            "image": image_url,
+            "name": request.form.get("name"),
+            "startdate": request.form.get("start_date"),
+            "status": request.form.get("status"),
+        }
+        return jsonify({"success": True, "data": updated_exhibition}), 200
     except FileExistsError as error:
         current_app.logger.error(str(error))
         return jsonify({"success": False, "exhibitionExist": True}), 409

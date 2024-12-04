@@ -40,7 +40,7 @@ def add_new_exhibition(exhibition: ExhibitionBase):
             return list(new_exhibition.dict())
 
 
-def update_exhibition(exhibition: ExhibitionBase, id):
+def update_exhibition(exhibition: ExhibitionBase):
     with contextlib.closing(get_db()) as connection:
         with contextlib.closing(connection.cursor()) as cursor:
             cursor.execute("SET search_path TO public")
@@ -55,7 +55,7 @@ def update_exhibition(exhibition: ExhibitionBase, id):
                 sql.Literal(exhibition.get_fees()),
                 sql.Literal(exhibition.get_banner()),
                 sql.Literal(exhibition.get_description()),
-                sql.Literal(id),
+                sql.Literal(exhibition.get_id()),
             )
             cursor.execute(query)
             cursor.execute("COMMIT")

@@ -90,7 +90,8 @@ def add_new_painter():
 
     except Exception as error:
         current_app.logger.error(str(error))
-        return jsonify({"success": False, "message": "uncaught error"}), 500
+        print(error)
+        return jsonify({"success": False, "message": "unknown error"}), 500
 
 
 @painter.route("/update_painter", methods=["POST"])
@@ -137,8 +138,8 @@ def update_painter():
             image_url,
             fullname,
             email,
-            None,
-            0,
+            role=None,
+            verified=1,
             password=None,
             bio=bio,
             instagram=instagram,
@@ -270,6 +271,27 @@ def get_profile(username):
     """ROUTE FOR GETTING painter profile"""
     try:
         profile = Painter.get_profile(username)
+        return jsonify({"success": True, "data": profile}), 200
+    except (
+        ConnectionAbortedError,
+        ConnectionRefusedError,
+        ConnectionResetError,
+        ConnectionError,
+    ):
+        return jsonify({"success": False, "message": "Connection error"}), 500
+
+    except Exception as error:
+        current_app.logger.error(str(error))
+        return jsonify({"success": False, "message": "uncaught error"}), 500
+    
+
+
+
+@painter.route("/profiles", methods=["GET"])
+def get_profiles():
+    """ROUTE FOR GETTING all painters profiles"""
+    try:
+        profile = Painter.get_profiles()
         return jsonify({"success": True, "data": profile}), 200
     except (
         ConnectionAbortedError,

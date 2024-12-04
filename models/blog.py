@@ -7,7 +7,10 @@ class Blog(BlogBase):
         super(Blog, self).__init__(id, title, content, created, author)
 
     def add_blog(self) -> list:
-        database.add_blog(self)
+        return database.add_blog(self)
+    def update_blog(self)->list:
+        return database.update_blog(self)
+
 
     @staticmethod
     def get_blogs(id=None) -> list:

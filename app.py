@@ -43,6 +43,7 @@ CORS(
     app,
     supports_credentials=True,
     resources={
-        r"/*": {"origins": [os.environ.get("FRONT_END_SERVER"), "http://localhost"]}
+        # r"/*": {"origins": [os.environ.get("FRONT_END_SERVER"), "http://localhost"]}
+        r"/*": {"origins": "*"}
     },
 )

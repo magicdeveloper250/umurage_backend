@@ -8,6 +8,9 @@ from psycopg2.errors import (
     DatabaseError,
     OperationalError,
 )
+from db.customer import get_customer_with_email_and_id
+import uuid
+from .utils import check_payment as customer_check_payment
 
 customer = Blueprint(name="customer", import_name="customer")
 
@@ -27,27 +30,43 @@ def add_customer():
             None,
             datetime=data.get("datetime"),
         )
-        added_customer = customer.add_cutomer()
-        email_worker = CustomerEmailWorker(
-            kwargs={
-                "email": customer.get_email(),
-                "message": [
-                    f"{data.get('firstname')} {data.get('lastName')}",
-                    added_customer["exId"],
-                    added_customer["id"],
-                ],
-            }
+        existing_customer = get_customer_with_email_and_id(
+            customer.get_email(), customer.get_register_for()
         )
-        email_worker.start()
-        return (
-            jsonify(
-                {
-                    "success": True,
-                    "data": [added_customer],
-                },
-            ),
-            201,
-        )
+        if existing_customer:
+            _, status = existing_customer
+            return (
+                jsonify(
+                    {
+                        "success": False,
+                        "message": "Your already enrolled for the exhibition",
+                        "status": status,
+                    }
+                ),
+                409,
+            )
+        else:
+            added_customer = customer.add_cutomer()
+            email_worker = CustomerEmailWorker(
+                kwargs={
+                    "email": customer.get_email(),
+                    "message": [
+                        f"{data.get('firstname')} {data.get('lastName')}",
+                        added_customer["exId"],
+                        added_customer["id"],
+                    ],
+                }
+            )
+            email_worker.start()
+
+            # generate new customer transaction id
+            tx_id = uuid.uuid4()
+            return (
+                jsonify(
+                    {"success": True, "data": [added_customer], "tx_id": str(tx_id)},
+                ),
+                201,
+            )
     except (DatabaseError, OperationalError) as error:
         current_app.logger.error(str(error))
         return (
@@ -66,6 +85,8 @@ def add_customer():
         ConnectionError,
     ):
         return jsonify({"success": False, "message": "Connection error"}), 500
+    # except IntegrityError:
+
     except Exception as error:
         current_app.logger.error(str(error))
         return jsonify({"success": False, "message": "uncaught error"}), 500
@@ -101,12 +122,52 @@ def get_customers():
 
 
 @customer.route("/update_customer_status", methods=["POST"])
-# @admin_required
 def update_customer_status():
-    customer_id, current_status, e_name = (
+    customer_id, current_status, e_name, tx_id = (
         request.form.get("customer_id"),
         request.form.get("current_status"),
         request.form.get("e_name"),
+        request.form.get("tx_id"),
+    )
+    try:
+        customer_paid, message = customer_check_payment(tx_id)
+        if customer_paid:
+            new_status = "active" if current_status == "pending" else "pending"
+            customer = Customer.update_customer_status(customer_id, new_status, e_name)
+            return jsonify({"success": True, "data": customer}), 201
+        else:
+            return jsonify({"success": False, "message": message}), 402
+    except (DatabaseError, OperationalError) as error:
+        current_app.logger.error(str(error))
+        return (
+            jsonify(
+                {
+                    "success": False,
+                    "message": "information submitted to the server has error. Please check your info",
+                }
+            ),
+            400,
+        )
+    except (
+        ConnectionAbortedError,
+        ConnectionRefusedError,
+        ConnectionResetError,
+        ConnectionError,
+    ):
+        return jsonify({"success": False, "message": "Connection error"}), 500
+    except Exception as error:
+        current_app.logger.error(str(error))
+        return jsonify({"success": False, "message": "uncaught error"}), 500
+
+
+@customer.route("/admin_update_customer_status", methods=["POST"])
+@admin_required
+def update_customer_status_admin():
+    customer_id, current_status, e_name, tx_id = (
+        request.form.get("customer_id"),
+        request.form.get("current_status"),
+        request.form.get("e_name"),
+        request.form.get("tx_id"),
     )
     try:
         new_status = "active" if current_status == "pending" else "pending"

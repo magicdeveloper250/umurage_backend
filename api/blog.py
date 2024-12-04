@@ -4,7 +4,7 @@ from auth.UserAuth import admin_required
 from flask import current_app
 from models.blog import Blog
 
-blog = Blueprint(name="blog", import_name="blog")
+blog = Blueprint(name="blog", import_name="blog", url_prefix="/blog")
 HEADERS = ["id", "title", "content", "created", "author"]
 
 
@@ -23,14 +23,14 @@ def post_blog():
     return jsonify({"success": True, "data": added_post}), 201
 
 
-@blog.route("/blog/get_blogs", methods=["GET"])
+@blog.route("/get_blogs", methods=["GET"])
 def get_blogs():
     """ROUTE FOR GETTING ALL BLOGS"""
     blogs = Blog.get_blogs()
     return jsonify({"success": True, "data": blogs}), 200
 
 
-@blog.route("/blog/get_blogs/<id>")
+@blog.route("/get_blogs/<id>")
 def get_blog_by_id(id):
     """ROUTE FOR GETTING BLOG BY ID"""
     try:
@@ -58,7 +58,7 @@ def get_blog_by_id(id):
         return jsonify({"success": False, "message": "uncaught error"}), 500
 
 
-@blog.route("/blog/delete_blog/<id>", methods=["DELETE"])
+@blog.route("/delete_blog/<id>", methods=["DELETE"])
 @admin_required
 def delete_blog(id):
     """ROUTE FOR DELETING BLOG"""
@@ -74,6 +74,43 @@ def delete_blog(id):
                 }
             ),
             204,
+        )
+    except (
+        ConnectionAbortedError,
+        ConnectionRefusedError,
+        ConnectionResetError,
+        ConnectionError,
+    ):
+        return jsonify({"success": False, "message": "Connection error"}), 500
+    except Exception as error:
+        current_app.logger.error(str(error))
+        return jsonify({"success": False, "message": "unknown error"}), 500
+    
+
+@blog.route("/update_blog", methods=["PUT"])
+@admin_required
+def update_blog():
+    """ROUTE FOR UPDATING BLOG"""
+    try:
+        blog = Blog(
+        request.form.get("id"),
+        request.form.get("title"),
+        request.form.get("content"),
+        request.form.get("created"),
+        request.form.get("author"),
+    )
+        updated_blog= blog.update_blog()
+        return jsonify({"success": True, "data": updated_blog[0]}),201
+    except (DatabaseError, OperationalError) as database_error:
+        current_app.logger.error(str(database_error))
+        return (
+            jsonify(
+                {
+                    "success": False,
+                    "message": str(database_error),
+                }
+            ),
+            500,
         )
     except (
         ConnectionAbortedError,

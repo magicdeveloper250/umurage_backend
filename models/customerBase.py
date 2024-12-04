@@ -63,3 +63,15 @@ class CustomerBase:
             "status": cls.get_status(),
             "datetime": cls.get_datetime(),
         }
+
+    def dict2(cls) -> dict:
+        return {
+            "id": cls.get_id(),
+            "firstName": cls.get_first_name(),
+            "lastName": cls.get_last_name(),
+            "email": cls.get_email(),
+            "phone": cls.get_phone(),
+            "exId": cls.get_register_for(),
+            "status": cls.get_status(),
+            "datetime": cls.get_datetime(),
+        }

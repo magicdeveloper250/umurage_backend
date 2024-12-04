@@ -22,6 +22,25 @@ def add_blog(blog: BlogBase):
             cursor.execute("COMMIT")
             return list(blogs)
 
+def update_blog(blog:BlogBase):
+    with contextlib.closing(get_db()) as connection:
+        with contextlib.closing(connection.cursor()) as cursor:
+            cursor.execute("SET search_path TO public")
+            cursor.execute("BEGIN")
+            stmt = "UPDATE blogs SET b_title={0}, b_content={1}, b_author={2}"
+            stmt += " WHERE b_id={3}"
+            stmt += " RETURNING b_id, b_title, b_content, b_created, b_author"
+            query = sql.SQL(stmt).format(
+                sql.Literal(blog.get_title()),
+                sql.Literal(blog.get_content()),
+                sql.Literal(blog.get_author()),
+                sql.Literal(blog.get_id()),
+
+            )
+            cursor.execute(query)
+            blogs = map(lambda b: BlogBase(*b).dict(), cursor.fetchall())
+            cursor.execute("COMMIT")
+            return list(blogs)
 
 def get_blogs(id=None):
     with contextlib.closing(get_db()) as connection:

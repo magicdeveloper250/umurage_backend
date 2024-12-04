@@ -306,6 +306,38 @@ def authorize_user(userId):
     return jsonify({"message": True if authorized != None else False})
 
 
+
+def payment_required_updated(f):
+    @wraps(f)
+    def decorated(*args, **kwargs):
+        from db.customer import check_payment
+        try:
+            id = request.args.get("key")
+            exId = request.args.get("id")
+            paid = check_payment(id, exId)
+            if paid[0]:
+                pass
+            else:
+                current_app.logger.warning(
+                    f"Unauthorized user tried to access protected asset which require payment"
+                )
+                return jsonify(
+                        {"message": False, "message": "Payment required"}
+                    ), 402
+                   
+                
+
+        except Exception as error:
+            current_app.logger.warning(
+                f"Unauthorized user tried to access protected asset which require payment with thiss error {error}"
+            )
+            return jsonify({"message": False, "message": "payment required"}, ),402
+            
+        return f(*args, **kwargs)
+
+    return decorated
+
+
 def payment_required(f):
     @wraps(f)
     def decorated(*args, **kwargs):

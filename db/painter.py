@@ -25,13 +25,14 @@ def add_new_painter(painter: PainterBase):
             cursor.execute("COMMIT")
             stmt = "INSERT INTO social_medias (p_id,instagram, facebook, x, youtube, tiktok) "
             stmt += "VALUES ({0}, {1}, {2},{3},{4},{5}) "
-            stmt += sql.SQL(stmt).format(
-                sql.Literal(added[0]),
-                sql.Literal(painter.get_instagram()),
-                sql.Literal(painter.get_facebook()),
-                sql.Literal(painter.get_x()),
-                sql.Literal(painter.get_youtube()),
-                sql.Literal(painter.get_tiktok()),
+            print(painter.dict())
+            query = sql.SQL(stmt).format(
+                sql.Literal(str(added.get("id"))),
+                sql.Literal(None),
+                sql.Literal(None),
+                sql.Literal(None),
+                sql.Literal(None),
+                sql.Literal(None),
             )
             cursor.execute(query)
             cursor.execute("COMMIT")
@@ -124,7 +125,7 @@ def get_profile(username):
     with contextlib.closing(get_db()) as connection:
         with contextlib.closing(connection.cursor()) as cursor:
             cursor.execute("SET search_path TO public")
-            stmt = "SELECT username, phone, picture, email,bio, facebook, instagram, x, tiktok, youtube "
+            stmt = "SELECT username, phone, picture, email,bio, facebook, instagram, x, tiktok, youtube,fullname "
             stmt += "FROM painters "
             stmt += "LEFT JOIN social_medias ON painters.id = social_medias.p_id "
             stmt += "WHERE painters.id = (SELECT id FROM painters WHERE username = {0})"
@@ -142,7 +143,38 @@ def get_profile(username):
                 "x": painter[7],
                 "tiktok": painter[8],
                 "youtube": painter[9],
+                "fullname":painter[10]
             }
+        
+
+
+
+def get_profiles():
+
+    with contextlib.closing(get_db()) as connection:
+        with contextlib.closing(connection.cursor()) as cursor:
+            cursor.execute("SET search_path TO public")
+            stmt = "SELECT username, phone, picture, email,bio, facebook, instagram, x, tiktok, youtube,fullname "
+            stmt += "FROM painters "
+            stmt += "LEFT JOIN social_medias ON painters.id = social_medias.p_id "
+            # stmt += "WHERE painters.id = (SELECT id FROM painters WHERE username = {0})"
+            query = sql.SQL(stmt)
+            cursor.execute(query)
+            profiles = cursor.fetchall()
+            return [{
+                "username": profile[0],
+                "phone": profile[1],
+                "picture": profile[2],
+                "email": profile[3],
+                "bio": profile[4],
+                "facebook": profile[5],
+                "instagram": profile[6],
+                "x": profile[7],
+                "tiktok": profile[8],
+                "youtube": profile[9],
+                "fullname":profile[10]
+            }for profile in profiles ]
+
 
 
 def delete_painter(id):

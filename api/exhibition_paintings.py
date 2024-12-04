@@ -1,5 +1,5 @@
 from psycopg2.errors import DatabaseError, OperationalError
-from auth.UserAuth import admin_required, payment_required
+from auth.UserAuth import admin_required, payment_required, payment_required_updated
 from flask import Blueprint, request, jsonify
 from models.exhibitionPainting import ExhibitionPainting
 from filemanagement import filemanager
@@ -56,7 +56,8 @@ def add_painting():
 
 
 @exhibition_paintings.route("/get_exhibition_paintings/<id>", methods=["GET"])
-@payment_required
+# @payment_required
+@payment_required_updated
 def get_exhibition_painting(id):
     """ROUTE FOR GETTING EXHIBITION PAINTING"""
     try:
@@ -66,6 +67,8 @@ def get_exhibition_painting(id):
     except Exception as error:
         current_app.logger.error(str(error))
         return jsonify({"success": False, "message": "unknown error"}), 500
+    except:
+        return jsonify({"success": False, "message": "Internal server error"}), 500
 
 
 @exhibition_paintings.route("/get_all_exhibition_paintings", methods=["GET"])

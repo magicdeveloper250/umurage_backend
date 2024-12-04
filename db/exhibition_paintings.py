@@ -28,8 +28,8 @@ def get_exhibition_painting(exhibition_id):
     with contextlib.closing(get_db()) as connection:
         with contextlib.closing(connection.cursor()) as cursor:
             cursor.execute("SET search_path TO public")
-            stmt = "SELECT * "
-            stmt += "FROM exhibition_painting "
+            stmt = "SELECT e_p_id, e_p_name, e_p_description, e_p_image, e_p_audio, e_p_owner, username "
+            stmt += "FROM exhibition_painting ep  LEFT JOIN painters p  ON ep.e_p_p_name= p.id "
             stmt += "where e_p_owner={0}"
             query = sql.SQL(stmt).format(sql.Literal(exhibition_id))
             cursor.execute(query)
@@ -44,8 +44,8 @@ def get_all_exhibition_painting():
     with contextlib.closing(get_db()) as connection:
         with contextlib.closing(connection.cursor()) as cursor:
             cursor.execute("SET search_path TO public")
-            stmt = "SELECT * "
-            stmt += "FROM exhibition_painting "
+            stmt = "SELECT e_p_id, e_p_name, e_p_description, e_p_image, e_p_audio, e_p_owner, username "
+            stmt += "FROM exhibition_painting ep  LEFT JOIN painters p  ON ep.e_p_p_name= p.id "
             query = sql.SQL(stmt)
             cursor.execute(query)
             paintings = map(
