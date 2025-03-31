@@ -6872,3 +6872,73 @@ DETAIL:  Key (e_name)=(Impano) already exists.
 2024-12-04 23:35:35,647 - INFO - 127.0.0.1 - - [04/Dec/2024 23:35:35] "[33mGET /images/painters/isae_profilepicture_my_tender.jpg HTTP/1.1[0m" 404 -
 2024-12-04 23:36:07,799 - INFO - 127.0.0.1 - - [04/Dec/2024 23:36:07] "GET /profiles HTTP/1.1" 200 -
 2024-12-04 23:36:08,122 - INFO - 127.0.0.1 - - [04/Dec/2024 23:36:08] "[33mGET /images/painters/isae_profilepicture_my_tender.jpg HTTP/1.1[0m" 404 -
+2024-12-19 20:16:59,524 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.1.70:5000
+2024-12-19 20:16:59,525 - INFO - [33mPress CTRL+C to quit[0m
+2024-12-19 20:16:59,533 - INFO -  * Restarting with stat
+2024-12-19 20:17:01,451 - WARNING -  * Debugger is active!
+2024-12-19 20:17:01,477 - INFO -  * Debugger PIN: 929-608-347
+2024-12-19 20:17:50,343 - INFO - 127.0.0.1 - - [19/Dec/2024 20:17:50] "OPTIONS /get_pending_exhibitions HTTP/1.1" 200 -
+2024-12-19 20:17:50,386 - INFO - 127.0.0.1 - - [19/Dec/2024 20:17:50] "OPTIONS /get_exhibitions HTTP/1.1" 200 -
+2024-12-19 20:17:50,409 - INFO - 127.0.0.1 - - [19/Dec/2024 20:17:50] "OPTIONS /get_pending_exhibitions HTTP/1.1" 200 -
+2024-12-19 20:17:50,415 - INFO - 127.0.0.1 - - [19/Dec/2024 20:17:50] "OPTIONS /get_exhibitions HTTP/1.1" 200 -
+2024-12-19 20:17:50,718 - INFO - 127.0.0.1 - - [19/Dec/2024 20:17:50] "GET /get_paintings HTTP/1.1" 200 -
+2024-12-19 20:17:50,853 - INFO - 127.0.0.1 - - [19/Dec/2024 20:17:50] "GET /get_pending_exhibitions HTTP/1.1" 200 -
+2024-12-19 20:17:50,957 - INFO - 127.0.0.1 - - [19/Dec/2024 20:17:50] "GET /get_exhibitions HTTP/1.1" 200 -
+2024-12-19 20:17:51,100 - INFO - 127.0.0.1 - - [19/Dec/2024 20:17:51] "GET /get_paintings HTTP/1.1" 200 -
+2024-12-19 20:17:51,468 - INFO - 127.0.0.1 - - [19/Dec/2024 20:17:51] "GET /get_pending_exhibitions HTTP/1.1" 200 -
+2024-12-19 20:17:51,657 - INFO - 127.0.0.1 - - [19/Dec/2024 20:17:51] "GET /get_exhibitions HTTP/1.1" 200 -
+2024-12-19 20:17:54,097 - INFO - 127.0.0.1 - - [19/Dec/2024 20:17:54] "GET /profiles HTTP/1.1" 200 -
+2024-12-19 20:17:54,491 - INFO - 127.0.0.1 - - [19/Dec/2024 20:17:54] "GET /profiles HTTP/1.1" 200 -
+2024-12-19 20:17:54,716 - INFO - 127.0.0.1 - - [19/Dec/2024 20:17:54] "[33mGET /images/painters/isae_profilepicture_my_tender.jpg HTTP/1.1[0m" 404 -
+2024-12-19 23:07:07,443 - INFO - 127.0.0.1 - - [19/Dec/2024 23:07:07] "POST /custom-login HTTP/1.1" 200 -
+2024-12-19 23:07:18,267 - INFO - 127.0.0.1 - - [19/Dec/2024 23:07:18] "GET /profiles HTTP/1.1" 200 -
+2024-12-19 23:07:18,510 - INFO - 127.0.0.1 - - [19/Dec/2024 23:07:18] "GET /profiles HTTP/1.1" 200 -
+2024-12-19 23:07:18,634 - INFO - 127.0.0.1 - - [19/Dec/2024 23:07:18] "[33mGET /images/painters/isae_profilepicture_my_tender.jpg HTTP/1.1[0m" 404 -
+2024-12-19 23:08:43,403 - INFO - 127.0.0.1 - - [19/Dec/2024 23:08:43] "GET /profile/Erico HTTP/1.1" 200 -
+2024-12-19 23:08:43,575 - INFO - 127.0.0.1 - - [19/Dec/2024 23:08:43] "GET /profile/Erico HTTP/1.1" 200 -
+2024-12-19 23:09:08,020 - INFO - 127.0.0.1 - - [19/Dec/2024 23:09:08] "OPTIONS /get_pending_exhibitions HTTP/1.1" 200 -
+2024-12-19 23:09:08,025 - INFO - 127.0.0.1 - - [19/Dec/2024 23:09:08] "OPTIONS /get_exhibitions HTTP/1.1" 200 -
+2024-12-19 23:09:08,044 - INFO - 127.0.0.1 - - [19/Dec/2024 23:09:08] "OPTIONS /get_pending_exhibitions HTTP/1.1" 200 -
+2024-12-19 23:09:08,050 - INFO - 127.0.0.1 - - [19/Dec/2024 23:09:08] "OPTIONS /get_exhibitions HTTP/1.1" 200 -
+2024-12-19 23:09:08,597 - INFO - 127.0.0.1 - - [19/Dec/2024 23:09:08] "GET /profile/Erico HTTP/1.1" 200 -
+2024-12-19 23:09:08,953 - INFO - 127.0.0.1 - - [19/Dec/2024 23:09:08] "GET /profile/Erico HTTP/1.1" 200 -
+2024-12-19 23:09:18,949 - INFO - 127.0.0.1 - - [19/Dec/2024 23:09:18] "GET /profiles HTTP/1.1" 200 -
+2024-12-19 23:09:19,210 - INFO - 127.0.0.1 - - [19/Dec/2024 23:09:19] "GET /profiles HTTP/1.1" 200 -
+2024-12-19 23:09:19,269 - INFO - 127.0.0.1 - - [19/Dec/2024 23:09:19] "[33mGET /images/painters/isae_profilepicture_my_tender.jpg HTTP/1.1[0m" 404 -
+2024-12-19 23:10:38,660 - INFO - 127.0.0.1 - - [19/Dec/2024 23:10:38] "GET /profiles HTTP/1.1" 200 -
+2024-12-19 23:10:38,910 - INFO - 127.0.0.1 - - [19/Dec/2024 23:10:38] "GET /profiles HTTP/1.1" 200 -
+2024-12-19 23:10:39,261 - INFO - 127.0.0.1 - - [19/Dec/2024 23:10:39] "[33mGET /images/painters/isae_profilepicture_my_tender.jpg HTTP/1.1[0m" 404 -
+2024-12-19 23:10:52,159 - INFO - 127.0.0.1 - - [19/Dec/2024 23:10:52] "GET /profile/ngabonziza%20king HTTP/1.1" 200 -
+2024-12-19 23:10:52,411 - INFO - 127.0.0.1 - - [19/Dec/2024 23:10:52] "GET /profile/ngabonziza%20king HTTP/1.1" 200 -
+2024-12-19 23:10:55,993 - INFO - 127.0.0.1 - - [19/Dec/2024 23:10:55] "[35m[1mPOST /like/868fd024-4f85-4dde-a751-43b6d564bfd3 HTTP/1.1[0m" 201 -
+2024-12-19 23:11:01,525 - INFO - 127.0.0.1 - - [19/Dec/2024 23:11:01] "[35m[1mPOST /dislike/868fd024-4f85-4dde-a751-43b6d564bfd3 HTTP/1.1[0m" 201 -
+2024-12-19 23:11:02,368 - INFO - 127.0.0.1 - - [19/Dec/2024 23:11:02] "[35m[1mPOST /like/868fd024-4f85-4dde-a751-43b6d564bfd3 HTTP/1.1[0m" 201 -
+2024-12-19 23:11:27,945 - INFO - 127.0.0.1 - - [19/Dec/2024 23:11:27] "[35m[1mPOST /like/ec189443-f302-44ee-8e06-c3e1de27cc29 HTTP/1.1[0m" 201 -
+2024-12-19 23:11:59,252 - INFO - 127.0.0.1 - - [19/Dec/2024 23:11:59] "GET /profiles HTTP/1.1" 200 -
+2024-12-19 23:11:59,496 - INFO - 127.0.0.1 - - [19/Dec/2024 23:11:59] "GET /profiles HTTP/1.1" 200 -
+2024-12-19 23:11:59,817 - INFO - 127.0.0.1 - - [19/Dec/2024 23:11:59] "[33mGET /images/painters/isae_profilepicture_my_tender.jpg HTTP/1.1[0m" 404 -
+2024-12-20 01:24:35,791 - INFO - 127.0.0.1 - - [20/Dec/2024 01:24:35] "GET /profiles HTTP/1.1" 200 -
+2024-12-20 01:24:35,923 - INFO - 127.0.0.1 - - [20/Dec/2024 01:24:35] "GET /profiles HTTP/1.1" 200 -
+2024-12-20 01:24:36,180 - INFO - 127.0.0.1 - - [20/Dec/2024 01:24:36] "[33mGET /images/painters/isae_profilepicture_my_tender.jpg HTTP/1.1[0m" 404 -
+2024-12-20 01:26:51,242 - INFO - 127.0.0.1 - - [20/Dec/2024 01:26:51] "GET /profile/Erico HTTP/1.1" 200 -
+2024-12-20 01:26:51,409 - INFO - 127.0.0.1 - - [20/Dec/2024 01:26:51] "GET /profile/Erico HTTP/1.1" 200 -
+2024-12-20 01:45:27,164 - INFO - 127.0.0.1 - - [20/Dec/2024 01:45:27] "GET /profiles HTTP/1.1" 200 -
+2024-12-20 01:45:27,335 - INFO - 127.0.0.1 - - [20/Dec/2024 01:45:27] "GET /profiles HTTP/1.1" 200 -
+2024-12-20 01:45:27,504 - INFO - 127.0.0.1 - - [20/Dec/2024 01:45:27] "[33mGET /images/painters/isae_profilepicture_my_tender.jpg HTTP/1.1[0m" 404 -
+2024-12-20 01:46:06,761 - INFO - 127.0.0.1 - - [20/Dec/2024 01:46:06] "GET /profile/Kwizera%20denis HTTP/1.1" 200 -
+2024-12-20 01:46:07,013 - INFO - 127.0.0.1 - - [20/Dec/2024 01:46:07] "GET /profile/Kwizera%20denis HTTP/1.1" 200 -
+2024-12-20 08:28:10,965 - INFO - 127.0.0.1 - - [20/Dec/2024 08:28:10] "OPTIONS /get_pending_exhibitions HTTP/1.1" 200 -
+2024-12-20 08:28:10,968 - INFO - 127.0.0.1 - - [20/Dec/2024 08:28:10] "OPTIONS /get_exhibitions HTTP/1.1" 200 -
+2024-12-20 08:28:10,983 - INFO - 127.0.0.1 - - [20/Dec/2024 08:28:10] "OPTIONS /get_pending_exhibitions HTTP/1.1" 200 -
+2024-12-20 08:28:10,987 - INFO - 127.0.0.1 - - [20/Dec/2024 08:28:10] "OPTIONS /get_exhibitions HTTP/1.1" 200 -
+2024-12-20 08:28:11,169 - INFO - 127.0.0.1 - - [20/Dec/2024 08:28:11] "GET /get_paintings HTTP/1.1" 200 -
+2024-12-20 08:28:11,224 - INFO - 127.0.0.1 - - [20/Dec/2024 08:28:11] "GET /get_pending_exhibitions HTTP/1.1" 200 -
+2024-12-20 08:28:11,435 - INFO - 127.0.0.1 - - [20/Dec/2024 08:28:11] "GET /get_paintings HTTP/1.1" 200 -
+2024-12-20 08:28:11,555 - INFO - 127.0.0.1 - - [20/Dec/2024 08:28:11] "GET /get_exhibitions HTTP/1.1" 200 -
+2024-12-20 08:28:11,584 - INFO - 127.0.0.1 - - [20/Dec/2024 08:28:11] "GET /get_pending_exhibitions HTTP/1.1" 200 -
+2024-12-20 08:28:11,650 - INFO - 127.0.0.1 - - [20/Dec/2024 08:28:11] "GET /get_exhibitions HTTP/1.1" 200 -
+2024-12-20 08:28:12,819 - INFO - 127.0.0.1 - - [20/Dec/2024 08:28:12] "GET /profile/Kwizera%20denis HTTP/1.1" 200 -
+2024-12-20 08:28:13,058 - INFO - 127.0.0.1 - - [20/Dec/2024 08:28:13] "GET /profile/Kwizera%20denis HTTP/1.1" 200 -
